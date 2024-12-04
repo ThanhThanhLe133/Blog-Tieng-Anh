@@ -1,0 +1,53 @@
+/* animation */
+.introduce img {
+    transition: transform 0.5s;
+}
+
+.introduce img:hover {
+    transform: translateY(-20px);
+}
+
+.grid-item .image im, .register img, .sow-headline a{
+    transition: transform 0.3s ease;
+}
+.sow-headline:hover{
+    transform: scale(1.1);
+}
+.sow-headline:hover a{
+    color: #ee154b;
+}
+.grid-item .image:hover img,.register img:hover{
+    transform: scale(1.1);
+}
+/* class wave-effect -> hiệu ứng chạy khi load trang*/
+.lePopOut span {
+    display: inline-block;
+    animation: lePopOut 1s ease-in-out;
+}
+
+@keyframes lePopOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5); 
+    }
+}
+.lePushReleaseFromTop span {
+    display: inline-block;
+    animation: lePushReleaseFromTop 1s ease-in-out;
+}
+
+@keyframes lePushReleaseFromTop {
+    0%, 100% {
+        transform: translateY(-100%); 
+        opacity: 0; /* Mờ dần */
+    }
+    30% {
+        transform: translateY(100px); 
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

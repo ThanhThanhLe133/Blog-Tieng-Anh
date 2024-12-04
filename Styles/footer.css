@@ -1,0 +1,104 @@
+/* footer */
+footer{
+    margin-top: 32px;
+}
+.footer__body{
+    background-color: #485052;
+}
+.footer__grid{
+    padding: 32px 0;
+    margin: 0 auto;
+    max-width: 1150px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 10px;
+    background-color: #485052;
+    color: white;
+    font-weight: 300;
+}
+
+.footer__item{
+    display: inline-block;
+    background-color: #485052;
+}
+
+.footer__title{
+    margin: 8px auto 24px auto;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.footer__link-item{
+    margin: 8px 0;
+    line-height: 1.2em;
+}
+.footer__link{
+    color: rgba(255, 255, 252, 0.79);
+    display: inline-flex;
+    align-items: center;
+}
+.footer__link:hover{
+    color: white;
+}
+
+.footer__link::before{
+    content:url("../Images/arrow-footer.png");
+    transform:scale(0.6);
+    transform-origin: center;
+}
+.footer__contact{
+    display: inline-flex;
+    align-items: top;
+    margin: 8px 0;
+    line-height: 1.2em;
+}
+.footer__contact--location::before{
+    content:url("../Images/fa-map-marker.png");
+    margin-top: 2px;
+    transform:scale(0.5);
+    transform-origin: top;
+    margin-top: 4px;
+}
+.footer__contact--email::before{
+    content:url("../Images/fa-envelope.png");
+    transform:scale(0.5);
+    transform-origin: top;
+    margin-top: 4px;
+}
+.footer__contact--phone::before{
+    content:url("../Images/fa-phone.png");
+    transform:scale(0.5);
+    transform-origin: top;
+    margin-top: 4px;
+
+}
+.footer__social-icons {
+    display: flex;
+    gap: 10px;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.footer__social-item {
+    display: flex;
+}
+
+.footer__social-item img {
+    width: 32px;
+    height: 32px;
+}
+.footer__info{
+    background-color: #EE154B;
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+}
+.footer__copyright{
+    max-width: 1150px;
+    width: 120%;
+    margin: 0 auto;
+}

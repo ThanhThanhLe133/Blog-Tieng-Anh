@@ -1,0 +1,62 @@
+/* -----------class riêng---------------- */
+
+/* main */
+.title {
+    color: #2B2B2B;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 140px 0 24px 56px;
+    line-height: 1.2;
+}
+
+main .main-container p {
+    margin: 10px 0 30px 56px;
+    color: #485052;
+    line-height: 1.6;
+}
+
+.article-section {
+    margin-bottom: 16px;
+}
+
+.article-section-title {
+    color: #2B2B2B;
+    font-size: 34px;
+    font-weight: bold;
+    margin-left: 56px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.article-section-content p {
+    margin: 10px 0 30px 56px;
+    color: #485052;
+    line-height: 1.6;
+}
+
+.article-section-content-left p {
+    margin: 10px 0 30px 96px;
+    color: #485052;
+    line-height: 1.6;
+}
+
+.donwload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-button {
+    padding: 16px 30px;
+    font-size: 16px;
+    background-color: #f05a21;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0 10px;
+}
+
+.download-button:hover {
+    background-color: #f6823d;
+}

@@ -1,0 +1,32 @@
+
+/* -----------class riêng---------------- */
+
+/* main */
+main {
+    margin-top: 84px;
+    margin-bottom: 70px;
+}
+
+.title {
+    color: #2B2B2B;
+    font-size: 38px;
+    font-weight: bold;
+    margin: 130px 0 24px 56px;
+}
+
+.article-section-content p {
+    margin: 10px 0 0 56px;
+    color: #485052;
+    line-height: 1.2;
+}
+
+.suspension-content {
+    color: red;
+    text-align: center;
+    margin: 30px 0 30px;
+    line-height: 1.6;
+}
+
+.italic {
+    font-style: italic;
+}

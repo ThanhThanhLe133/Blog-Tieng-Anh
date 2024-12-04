@@ -1,0 +1,442 @@
+/* -----------class riêng---------------- */
+
+/* .image-slide */
+.image-slide,.fun-weeks-intro {
+    position: relative; 
+
+}
+
+.image-slide img{
+    display: block;
+    margin:0 auto;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+/* fun weeks intro */
+.fun-weeks{
+    background-color: #d9d9d9;
+    height: auto;
+    position: relative;
+    margin-bottom: 420px;
+}
+
+.fun-weeks-intro img{
+    display: block;
+    margin-left: auto;
+    padding: 60px;
+    object-fit: cover;
+    width: 44%;
+    height: auto;
+}
+
+.overlay h1{
+    position: absolute; 
+    top: 32%; 
+    left: 32%;
+    transform: translate(-50%, -50%); 
+    color:  #EE154B; 
+    font-size: 36px;
+    font-weight: bold; 
+    line-height: 1.5;
+    letter-spacing:1px;
+}
+
+.overlay p{
+    position: absolute; 
+    top: 50%; 
+    left: 32%;
+    transform: translate(-50%, -50%); 
+    color:#353535; 
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing:1px;
+    text-align: center;
+    width: 51%;
+}
+
+.overlay a{
+    position: absolute; 
+    top: 68%; 
+    left: 32%;
+    transform: translate(-50%, -50%); 
+    padding: 16px 30px;
+    border: 2px solid white;
+    border-radius: 50px;
+    color:white;
+    background-color: #f17229;
+    font-size: 16px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.overlay-img {
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 86%; 
+    height: auto; 
+    top:80%;
+    z-index: 1;
+}
+
+/* fun weeks info */
+.fun-weeks-info{
+    float: left; 
+    width: 44%; 
+    margin-left: 68px;
+}
+
+.fun-weeks-info h1{
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 110px;
+    margin-bottom: 30px;
+}
+
+.fun-weeks-info ul {
+    list-style-type: disc;
+    font-size: 17px; 
+    line-height: 2;
+    margin-left: 40px;
+}
+
+.fun-weeks-info-img {
+    float: right; 
+    width: 50%; 
+    display: flex;          
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+.fun-weeks-info-img img {
+    max-width: 100%;     
+    height: auto;         
+}
+
+.clear{
+    clear: both;
+    margin-bottom: 20px;
+}
+
+/* register reason */
+.register-reason{
+    margin: 50px auto;
+    background-color:#353535;
+    padding: 20px;
+    text-align: center; 
+}
+
+.register-reason h1{
+    color:white;
+    font-weight: bold;
+    font-size: 34px;
+    margin: 40px auto;
+    max-width: 34%;
+    line-height: 1.4;
+}
+.register-reason > .flex-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.register-reason > .flex-container > .flex-item{
+    color:#485052;
+    width: 360px;
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.register-reason > .flex-container > .flex-item img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 40px;
+}
+
+.register-reason > .flex-container > .flex-item p {
+    font-size: 16px;
+    margin: 20px 15px;
+    line-height: 1.7;
+    color: white;
+}
+
+.register-reason > .submit {
+    text-align: center;
+    padding-bottom: 50px;
+}
+.register-reason > .submit > .btn-submit{
+    margin: auto;
+    border-radius: 50px;
+    border: 2px solid #f17229;
+    background-color: transparent;
+    color: #f17229;
+    font-size: 16px;
+    padding: 16px 30px;
+    cursor: pointer;
+    font-weight: lighter;
+}
+
+.register-reason > .submit > .btn-submit:hover{
+    background-color:#f17229;
+    color: white;
+}
+
+/* parent sharing */
+.parent-sharing{
+    margin: auto;
+    padding: 20px;
+    text-align: center; 
+}
+
+.parent-sharing h1{
+    color:black;
+    font-weight: bold;
+    font-size: 34px;
+    margin: auto;
+    line-height: 1.4;
+}
+
+.parent-sharing > .flex-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.parent-sharing > .flex-container > .flex-item{
+    color:#485052;
+    width: 380px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+
+.parent-sharing > .flex-container > .flex-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+.parent-sharing > .flex-container > .flex-item h3 {
+    color:black;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 36px;
+    margin-top: -20px;
+}
+
+.parent-sharing > .flex-container > .flex-item h3 span{
+    color:#485052;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.parent-sharing > .flex-container > .flex-item p {
+    color:#485052;
+    text-align: left;
+    font-size: 16px;
+    margin: 30px 20px 80px 36px;
+    line-height: 1.6;
+}
+
+/* register and footer */
+.register-and-footer{
+    background-color:#332F2C;
+    height: auto;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* register */
+.register-form-header {
+    position: relative; 
+    z-index: 1;
+  }
+
+.register-form-header img{
+    display: block;
+    margin-left: auto;
+    object-fit: cover;
+    width: 36%;
+    height: auto;
+    margin-right: 200px;
+}
+
+.register-form-title img{
+    position: absolute;
+    left: 26%; 
+    transform: translateX(-50%); 
+    width: 36%; 
+    height: auto; 
+    top:34%;
+}
+
+.register-form-title p{
+    position: absolute;
+    left: 26%; 
+    top:56%;
+    transform: translateX(-50%); 
+    color:white; 
+    font-size: 16px;
+}
+
+.form{
+    padding:20px;
+    width: 80%; 
+    max-width: 900px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    transform:translateX(0%);
+    transform: translateY(-4%);
+}
+
+.form .kids-and-us-enrollment{
+    margin:20px;
+}
+
+.form .kids-and-us-enrollment img{
+    width:70%;
+    display: block; 
+    margin: 0 auto;
+}
+.form .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;     
+    margin: 24px 10px;
+    column-gap: 30px;
+}
+.form .grid-item{
+    display: block;
+    background-color: white;
+}
+.form .grid-item > *{
+    margin: 24px 10px;
+    margin-bottom: 10px;
+}
+.label {
+    color: #003369;
+    font-size: 14px;
+    margin-bottom:8px;
+}
+
+.label sup{
+    color: red;
+}
+
+.example {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 11px;
+    color:#7C98B6
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    background-color: #F5F8FA;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    color: transparent;  /* Ẩn giá trị mặc định */
+}
+
+input[type="date"]:valid::-webkit-datetime-edit {
+    color: black;  /* Hiển thị giá trị người dùng nhập vào */
+}
+
+textarea{
+    margin-top: 8px;
+}
+
+.privacy-policy {
+    font-size: 11px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.2em;
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+
+.form > .submit{
+    text-align: center;
+}
+.form > .submit > .btn-submit{
+    margin: 20px auto;
+    border-radius: 15px;
+    background-color:#f17229;
+    color: white;
+    font-size: 15px;
+    padding: 12px 24px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* footer */
+footer > .flex-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 200px 0 200px;
+}
+footer > .flex-container > .flex-item{
+    color:#485052;
+    width: 280px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start; 
+    align-items:flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+
+footer > .flex-container > .flex-item > .social-media {
+    display: flex; 
+    justify-content:flex-start; 
+    flex-direction: row;           
+}
+
+footer > .flex-container > .flex-item > .social-media > a img {
+    width: 66%;
+    height: auto;
+    margin:38px 10px 0 0;
+}
+
+footer > .flex-container > .flex-item p {
+    font-size: 18px;
+    margin: 20px 15px;
+    line-height: 1.7;
+    color: white;
+    font-weight: bold;
+}
+
+footer > .flex-container > .flex-item ul {
+    list-style-type: disc;
+    font-size: 16px; 
+    line-height: 2;
+    margin-left: 20px;
+    color: white;
+}
+
+

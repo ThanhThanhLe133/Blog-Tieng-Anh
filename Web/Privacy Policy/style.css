@@ -1,0 +1,46 @@
+/* -----------class riêng---------------- */
+/* main */
+main {
+    margin-top: 84px;
+}
+
+.title {
+    color: #2B2B2B;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 130px 0 24px 56px;
+}
+
+.subtitle {
+    color: #2B2B2B;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 40px 0 80px 56px;
+}
+
+.article-section {
+    margin-bottom: 76px;
+}
+
+.article-section-title {
+    color: #2B2B2B;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0 20px 56px;
+}
+
+.article-section-content-part {
+    margin-bottom: 76px;
+}
+
+.article-section p {
+    margin: 10px 0 30px 56px;
+    color: #485052;
+    line-height: 1.6;
+}
+
+.article-section-content-part p {
+    margin: 10px 0 30px 56px;
+    color: #485052;
+    line-height: 1.6;
+}

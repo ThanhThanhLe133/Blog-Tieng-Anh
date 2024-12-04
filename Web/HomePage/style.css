@@ -1,0 +1,338 @@
+/* body */
+main {
+    margin-top: 84px
+}
+
+.image-slide {
+    position: relative;
+    margin: auto;
+    overflow: hidden
+}
+
+.image-slide ul {
+    display: flex;
+    transition: transform .5s ease-in-out
+}
+
+.image-slide li {
+    min-width: 100%;
+    position: relative
+}
+
+.image-slide.top img {
+    width: 100%;
+    display: block
+}
+
+.btn-slide {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ee154b4d;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 800;
+    z-index: 10
+}
+
+.image-slide:hover .btn-slide {
+    display: block
+}
+
+.prev {
+    left: 10px
+}
+
+.top .next {
+    right: 10px
+}
+
+.method .next {
+    left: 460px
+}
+
+.introduce {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 400px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #353535
+}
+
+.introduce .content,
+.introduce .image {
+    flex: 1 1 100%;
+    margin: 24px 0
+}
+
+.textwidge {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px
+}
+
+.student-number {
+    font-size: 15px;
+    margin: 15px;
+    text-wrap: nowrap
+}
+
+.number-count {
+    font-size: 38px;
+    font-weight: 550;
+    color: #f05a21;
+    margin-bottom: 7px;
+    letter-spacing: -.5px
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    color: #F4F4F4;
+    margin-top: 48px
+}
+
+.grid-item {
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden
+}
+
+.grid-item .image img {
+    max-width: 100%
+}
+
+.grid-item .content {
+    align-items: left;
+    justify-content: center;
+    line-height: 1.5em
+}
+
+.babies,
+.english-course-for-toddlers,
+.language-learning-opportunity {
+    margin: 10px 20px;
+    font-size: 16px;
+    font-weight: 300
+}
+
+.btn-more {
+    margin: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    line-height: 2.5em;
+    padding: 0 10px;
+    width: fit-content;
+    background-color: #fff
+}
+
+.btn-more a {
+    color: #000
+}
+
+.btn-more a:hover {
+    color: #fff
+}
+
+.babies {
+    font-family: "Bodoni Moda", cursive;
+    font-style: italic;
+    font-size: 20px
+}
+
+.english-course-for-toddlers {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2em
+}
+
+.grid-item.one {
+    background: linear-gradient(to right, #11331140 0%, #f3818199 50%, #f8ae8eff 100%)
+}
+
+.grid-item.two {
+    background: linear-gradient(to right, #83cb9cff 0%, #6bb29ecc 50%, #83ddcbff 100%)
+}
+
+.grid-item.three {
+    background: linear-gradient(to left, #edb0f5ff 0%, #9e5db399 50%, #d39fdaff 100%)
+}
+
+.grid-item.four {
+    background: linear-gradient(to left, #ffc27dff 0%, #efb36e99 50%, #ed7c7cff 100%)
+}
+
+.learning-method {
+    background-color: #FEF4FD;
+    font-weight: 400
+}
+
+.learning-method .body {
+    padding: 32px 0
+}
+
+.learning-method .content {
+    text-align: center
+}
+
+.method-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1150px;
+    padding: 48px 0
+}
+
+.method-panel .image-slide {
+    align-self: center
+}
+
+.method-panel img {
+    width: 500px;
+    height: 500px
+}
+
+.method-panel .method-list {
+    text-align: left;
+    align-items: center
+}
+
+.method-asset {
+    margin: 0 auto 28px
+}
+
+.method-asset h3 {
+    font-size: 30px;
+    padding: 15px 0;
+    font-weight: 700
+}
+
+#step1 h3 {
+    color: #F6D367
+}
+
+#step2 h3 {
+    color: #FEACB9
+}
+
+#step3 h3 {
+    color: #74BEBE
+}
+
+#step4 h3 {
+    color: #FE699F
+}
+
+#step5 h3 {
+    color: #2B2B2B
+}
+
+.image {
+    position: relative;
+    display: inline-block
+}
+
+.image img {
+    width: 100%;
+    height: auto
+}
+
+.English-activities .body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1150px;
+    padding: 48px 0;
+    align-items: center
+}
+
+.English-activities .body .image {
+    margin: 0 auto 12px 24px
+}
+
+.English-activities img {
+    border: 5px solid #d9d9d999
+}
+
+.English-activities .btn-see-activities {
+    margin: 32px 0;
+    padding: 5px 28px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #4AB6AD;
+    align-items: center
+}
+
+.btn-see-activities:hover {
+    background-color: #EE154B
+}
+
+.arrow {
+    display: inline-flex;
+    align-items: center
+}
+
+.arrow::after {
+    margin-top: 10px;
+    content: url("images/arrow.png");
+    transform: scale(0.5);
+    transform-origin: right
+}
+
+.rectangle {
+    position: absolute;
+    left: 50%;
+    bottom: -11%;
+    transform: translateX(-50%);
+    width: 481px;
+    height: 106px;
+    background: #4ab6adb3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    letter-spacing: -.5px
+}
+
+.rectangle-1a,
+.rectangle-1b,
+.rectangle-1c {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.story,
+.little,
+.art,
+.time,
+.chef,
+.craft {
+    color: #fff;
+    text-align: center;
+    white-space: nowrap
+}
+
+.story,
+.little,
+.art {
+    font-size: 16px;
+    margin-bottom: 5px
+}
+
+.time,
+.chef,
+.craft {
+    font-size: 28px
+}
+
+.register__form,.register__grid-item{
+    background-color: #FFE4FC;
+}

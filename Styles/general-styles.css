@@ -1,0 +1,60 @@
+/* <!-- embed font --> */
+@font-face {
+    font-family: 'proximanova';
+    src: url('../fonts/proximanova_regular.ttf') format('truetype'); /* Chỉ định đường dẫn font */
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: -0.5px;
+}
+*{
+    box-sizing: border-box;
+}
+/* quy đổi để 1 rem=10px (mặc định 1 rem=16px) */
+html{
+    font-size:62.5%;
+}
+
+/* -----------class chung---------------- */
+body{
+    font-size:1.6rem;
+    font-family: "Roboto", sans-serif;
+    color:#353535;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.btn  {
+display: inline-block;
+padding: 0px 8px;
+line-height: 34px;
+min-width: 100px;
+color: #fff;
+font-size: 1.6rem;
+text-align: center;
+border-radius: 2px;
+background-color: #C3512F;
+border:none;  
+cursor: pointer;
+}
+.btn a{
+    color: white;
+}
+
+.btn:hover{
+    background-color: #EE154B;
+    color: white;
+}
+.title{
+    color: #ee154b;
+    font-size: 32px;
+    font-weight:bold;
+    margin-bottom:24px;
+    letter-spacing: 0.5px;
+}
+.content p{
+    font-size: 15px;
+    line-height: 1.5em;
+}

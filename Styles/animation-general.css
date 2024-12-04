@@ -1,0 +1,20 @@
+/* class wave-effect -> hiệu ứng chạy khi load trang*/
+@keyframes wave {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.wave-effect {
+    opacity: 0; /* Bắt đầu ẩn */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.wave-effect.visible {
+    animation: wave 0.8s ease-out forwards;
+}

@@ -1,0 +1,187 @@
+/* -----------class riêng---------------- */
+
+ /* main */
+ main{
+    margin-top: 84px; 
+ }
+    /* .image-slide */
+.image-slide img{
+    display: block;
+    margin:0 auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+ /* contact */
+.contact {
+    display: block;
+    float: left; 
+    width: 35%; 
+    margin-left: 64px;
+}
+
+.contact h1{
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 160px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 48px;
+}
+
+.contact-info img {
+    max-width: 10%; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.contact-info p {
+    font-size: 17px; 
+    line-height: 1.8;
+    color: #948d84;
+}
+
+.contact-info p span {
+    color: #f27240; 
+}
+
+
+/* đăng ký */
+.register {
+    float: right;
+    width:35%;
+    margin-right: 170px;
+}
+
+.register .body {
+    align-items: center;
+    padding:16px 0;
+}
+
+.register-form {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    width:120%;
+    max-width: 1200px;
+    height: 700px;
+    background-color: #FFE4FC;
+    overflow-y: auto;
+}
+
+.form{
+    padding:20px;
+}
+.kids-and-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kids-and-us img {
+    width: 70%;
+}
+
+.form .kids-and-us-enrollment{
+    text-align: center;
+    font-weight: bold;
+    color: #33475B;
+    font-size: 20px;
+    margin:20px;
+    margin-bottom: 0px;
+}
+
+.form .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;     
+    margin: 24px 10px;
+    column-gap: 30px;
+}
+
+.form .grid-item{
+    display: block;
+    background-color: #FFE4FC;
+}
+
+.form .grid-item > *{
+    margin: 24px 10px;
+    margin-bottom: 10px;
+}
+
+sup {
+    color: red;
+}
+
+.label {
+    color: #003369;
+    font-size: 14px;
+    margin-bottom:8px;
+    line-height: 1.1;
+}
+
+.example {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 11px;
+    color:#7C98B6
+}
+.study-school-select, .birth-year-select {
+    color: black; 
+}
+.study-school-select option[disabled],.birth-year-select option[disabled] {
+    color: #999;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    background-color: #F5F8FA;
+    border-radius: 15px;
+    font-size: 16px;
+    color: black;
+}
+
+.privacy-policy {
+    font-size: 11px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.2em;
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+
+.register-agreement,
+.privacy-policy-link,
+.terms-of-use-link {
+    color: #33475b;
+    font-size: 11px;
+}
+.privacy-policy-link,
+.terms-of-use-link{
+    text-decoration: underline;
+}
+.submit{
+    text-align: center;
+}
+.btn-submit{
+    margin: 16px auto;
+    border-radius: 15px;
+    background-color: #F12C3E;
+    color: white;
+    font-weight:bolder;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.clear{
+    clear: both;
+    margin-bottom: 10px;
+}
+

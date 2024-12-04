@@ -1,0 +1,123 @@
+/* chat form */
+.helpButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 10px;
+    background-color: #fe699f;
+    color: var(--white-color);
+    border: none;
+    border-radius: 10000px;
+    cursor: pointer;
+}
+
+.helpButton__icon {
+    width: 30px;
+}
+
+.helpButton:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}
+
+.popup__heading{
+    padding: 20px 20px;
+    background-color: #fe699f;
+    border-radius: 10px;
+    color: var(--white-color);
+}
+
+.popup__heading-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.popup__close {
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.popup__close:hover{
+    color: var(--hover-color);
+}
+
+.popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    width: 400px;
+    background-color: var(--white-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.popup__form {
+    width: 300px;
+    padding: 20px 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+}
+
+.popup__form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup__form-label {
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.popup__form-input,
+.popup__form-textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+    margin-top: 5px;
+}
+
+.popup__form-error {
+    color: #f2545b;
+    font-size: 14px;
+}
+
+.popup__form-input:focus,
+.popup__form-textarea:focus {
+    border-color: #fe699f;
+}
+
+.popup__form-textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+.popup__form-submit {
+    width: 100%;
+    align-self: center;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fe699f;
+    color: var(--white-color);
+}
+
+.popup__form-submit:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}

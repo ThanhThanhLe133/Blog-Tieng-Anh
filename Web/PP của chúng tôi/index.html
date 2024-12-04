@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Khoá học tiếng Anh cho trẻ 1-2 tuổi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="../../Styles/reset.css">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../../Styles/general-styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../Styles/header.css">
+    <link rel="stylesheet" href="../../Styles/register-form.css">
+    <link rel="stylesheet" href="../../Styles/footer.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="../../Styles/animation-general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Carattere&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="main-container">
+            <div class="main-container__top-header">
+                <div class="top-header__phone-number">
+                    <a class="phone-number__link" href="tel:18006175">1800 6175</a>
+                </div>
+                <div class="top-header__language">
+                    <div class="language__flag">
+                        <img src="../../images/vn flag.png" alt="VN flag" />
+                    </div>
+                    <span class="language__text">TIẾNG VIỆT</span>
+                    <div class="language__icon"><img src="../../images/chevron-down.png" alt="" /></div>
+                </div>
+            </div>
+            <div class="main-container__header--fixed">
+                <div class="header__body">
+                    <!-- logo -->
+                    <img src="../../images/kids and us.png" alt="" class="logo" />
+
+                    <!-- nav -->
+                    <nav class="header__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="../HomePage/index.html">
+                                    <p class="nav__text">TRANG CHỦ</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="course-list">
+                                        <p class="nav__text">CÁC KHOÁ HỌC &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu course-list">
+                                    <li class="submenu__item"><a class="submenu__link" href="../Demo day/index.html">Học
+                                            thử miễn phí</a>
+                                    </li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../1-2/index.html">Khóa học
+                                            cho trẻ 1-2
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../3-8/index.html">Khóa học
+                                            cho trẻ 3-8
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../9-12/index.html">Khóa
+                                            học cho trẻ
+                                            9-12
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../13-18/index.html">Khóa
+                                            học cho trẻ
+                                            13-18
+                                            tuổi</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item nav__item--active">
+                                <a class="nav__link" href="../PP của chúng tôi/index.html">
+                                    <p class="nav__text">PHƯƠNG PHÁP CỦA CHÚNG TÔI</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../Các cơ sở/index.html">
+                                    <p class="nav__text">CƠ SỞ</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="activities">
+                                        <p class="nav__text">CÁC HOẠT ĐỘNG &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu activities">
+                                    <li class="submenu__item English-activities"><a class="submenu__link"
+                                            href="../Các hoạt động bằng TA/index.html">Các
+                                            hoạt động bằng Tiếng Anh</a></li>
+                                    <li class="submenu__item Fun-week"><a class="submenu__link"
+                                            href="../Hội hè Fun Weeks/index.html">Hội hè
+                                            Fun-week</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="link-before">
+                                        <p class="nav__text">BLOG &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu blog">
+                                    <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
+                                            Anh trẻ em</a></li>
+                                    <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
+                                            con</a></li>
+                                    <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
+                                            kiện</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- btn action -->
+                    <div class="header__action">
+                        <a href="../Đăng ký/index.html" class="btn btn--register">ĐĂNG KÝ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main>
+        <div class="main-container">
+            <!-- cs-slide -->
+            <div class="image-slide top">
+                <ul>
+                    <li>
+                        <img src="images/home2.jpg" />
+                        <div class="image-content">
+                            <p class="lePushReleaseFromTop">
+                                <span>P</span><span>h</span><span>ư</span><span>ơ</span><span>n</span><span>g</span>
+                                <span> </span><span>p</span><span>h</span><span>á</span><span>p</span>
+                            </p>
+
+                            <p class="lePushReleaseFromTop">
+                                <span>c</span><span>ủ</span><span>a</span><span> </span>
+                                <span>c</span><span>h</span><span>ú</span><span>n</span><span>g</span><span></span><span>
+                                </span>
+                                <span>t</span><span>ô</span><span>i</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--introduce  -->
+            <div class="introduce wave-effect">
+                <div class="content">
+                    <h1 class="title">
+                        <span>Phương</span>
+                        <span>pháp </span>
+                        <span>của</span>
+                        <span>chúng</span>
+                        <span>tôi</span>
+                    </h1>
+                    <p>Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành
+                        trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.</p>
+                </div>
+                <div class="textwidge textwidge--method wave-effect">
+                    <div class="panel-grid">
+                        <div class="sow-image-container sow-image-container--method">
+                            <a href="#method__1">
+                                <img src="images/nghe.png" />
+                            </a>
+                        </div>
+                        <div class="sow-headline-container">
+                            <h5 class="sow-headline">
+                                <a href="#">Nghe</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="panel-grid">
+                        <div class="sow-image-container sow-image-container--method">
+                            <a href="#method__1">
+                                <img src="images/right-arrow.png" class="method__arrow" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="panel-grid">
+                        <div class="sow-image-container sow-image-container--method">
+                            <a href="#">
+                                <img src="images/hieu.png" />
+                            </a>
+                        </div>
+                        <div class="sow-headline-container">
+                            <h5 class="sow-headline">
+                                <a href="#">Hiểu</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="panel-grid">
+                        <div class="sow-image-container sow-image-container--method">
+                            <a href="#method__1">
+                                <img src="images/right-arrow.png" class="method__arrow" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="panel-grid">
+                        <div class="sow-image-container sow-image-container--method">
+                            <a href="#">
+                                <img src="images/noi.png" />
+                            </a>
+                        </div>
+                        <div class="sow-headline-container">
+                            <h5 class="sow-headline">
+                                <a href="#">Nói</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="panel-grid">
+                        <div class="sow-image-container sow-image-container--method">
+                            <img src="images/right-arrow.png" class="method__arrow" />
+                        </div>
+                    </div>
+                    <div class="panel-grid">
+                        <div class="sow-image-container sow-image-container--method">
+                            <a href="#">
+                                <img src="images/doc.png" />
+                            </a>
+                        </div>
+                        <div class="sow-headline-container">
+                            <h5 class="sow-headline">
+                                <a href="#">Đọc</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="panel-grid">
+                        <div class="sow-image-container sow-image-container--method">
+                            <img src="images/right-arrow.png" class="method__arrow" />
+                        </div>
+                    </div>
+                    <div class="panel-grid">
+                        <div class="sow-image-container sow-image-container--method">
+                            <a href="#">
+                                <img src="images/viet.png" />
+                            </a>
+                        </div>
+                        <div class="sow-headline-container">
+                            <h5 class="sow-headline">
+                                <a href="#">Viết</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courses">
+                <div class="grid-container one wave-effect">
+                    <div class="grid-item one">
+                        <div class="image">
+                            <img src="images/kid_1.png" />
+                        </div>
+                        <div class="content">
+                            <p class='method__grid-detail-title'>Bước một</p>
+                            <h3 class='method__grid-detail-sub-title-1'>Nghe</h3>
+                            <p>
+                                Tương tự khi học tiếng mẹ đẻ, tiếp xúc của trẻ với tiếng Anh nên bắt đầu từ việc Lắng
+                                Nghe. Bắt đầu nghe càng sớm, trẻ càng tiếp thu tiếng Anh sớm hơn. Vì thế tại Kids&Us,
+                                trẻ từ 1 tuổi đã được cho tiếp xúc với tiếng Anh hằng ngày.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-container two wave-effect">
+                    <div class="grid-item two">
+                        <div class="content">
+                            <p class='method__grid-detail-title'>Bước hai</p>
+                            <h3 class='method__grid-detail-sub-title-1'>Hiểu</h3>
+                            <p>
+                                Khi trò chuyện với trẻ bằng tiếng mẹ đẻ, chúng ta nói rất tự nhiên, không ngại dùng
+                                nhiều từ ngữ, giọng điệu hay các cụm, câu, cách chia thì khác nhau. Phương pháp học
+                                tiếng Anh tại Kids&Us mô phỏng điều đó và tiếng Anh được sử dụng một cách tự nhiên,
+                                không cố tình giản lược hóa.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="images/kid_2.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-container three wave-effect">
+                    <div class="grid-item three">
+                        <div class="image">
+                            <img src="images/kid_3.png" />
+                        </div>
+                        <div class="content">
+                            <p class='method__grid-detail-title'>Bước ba</p>
+                            <h3 class='method__grid-detail-sub-title-1'>Nói</h3>
+                            <p>
+                                Nói là kết quả tự nhiên sau quá trình nghe và hiểu. Ở giai đoạn này, nhiều tình huống sẽ
+                                được tạo ra trong lớp để trẻ có cơ hội dùng lời nói diễn đạt tất cả những điều đã học
+                                trước đó.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-container four wave-effect">
+                    <div class="grid-item four">
+                        <div class="content">
+                            <p class='method__grid-detail-title'>Bước bốn</p>
+                            <h3 class='method__grid-detail-sub-title-1'>Đọc</h3>
+                            <p>
+                                Kỳ vọng trẻ thạo tiếng Anh qua việc đọc và viết trước khi các em có thể nói đi ngược với
+                                quá trình tiếp thu ngôn ngữ tự nhiên. Liệu chim có thể bay nếu nó chưa học dang cánh?
+                                Trong phương pháp của Kids&Us, trẻ chỉ dành nhiều thời gian cho việc đọc một khi các em
+                                đã có thể đọc trôi chảy.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="images/kid_4.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-container five wave-effect">
+                    <div class="grid-item five">
+                        <div class="image">
+                            <img src="images/kid_5.png" />
+                        </div>
+                        <div class="content">
+                            <p class='method__grid-detail-title'>Bước năm</p>
+                            <h3 class='method__grid-detail-sub-title-1'>Viết</h3>
+                            <p>
+                                Để đạt giai đoạn này, trẻ cần phải vững cả 4 bước trước đó. Viết là quá trình diễn đạt ý
+                                nghĩ lên mặt giấy. Vì thế, học viên Kids&Us được bắt đầu viết khi các em đã có kỹ năng
+                                nói tốt và hiểu rõ những gì người khác nói.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="base-method wave-effect">
+            <div class="content">
+                <h1 class="title">
+                    <span>Nền</span>
+                    <span>tảng</span>
+                    <span>phương</span>
+                    <span>pháp</span>
+                    <span>Kids&Us</span>
+                </h1>
+            </div>
+            <div class="textwidge textwidge--method wave-effect">
+                <div class="panel-grid">
+                    <div class="sow-image-container sow-image-container--base-method">
+                        <img src="images/base_1.png" />
+                    </div>
+                </div>
+                <div class="panel-grid">
+                    <div class="sow-image-container sow-image-container--base-method">
+                        <img src="images/base_2.png" />
+                    </div>
+                </div>
+                <div class="panel-grid">
+                    <div class="sow-image-container sow-image-container--base-method">
+                        <img src="images/base_3.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="textwidge textwidge--method wave-effect">
+                <div class="panel-grid">
+                    <div class="sow-image-container sow-image-container--base-method">
+                        <img src="images/base_4.png" />
+                    </div>
+                </div>
+                <div class="panel-grid">
+                    <div class="sow-image-container sow-image-container--base-method">
+                        <img src="images/base_5.png" />
+                    </div>
+                </div>
+                <div class="panel-grid">
+                    <div class="sow-image-container sow-image-container--base-method">
+                        <img src="images/base_6.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- register -->
+        <div class="register wave-effect" id="register-form">
+            <div class="register__body">
+                <div class="register__form">
+                    <fieldset class="register__fieldset">
+                        <div class="register__logo">
+                            <img src="images/kids and us.png" alt="Kids and Us" />
+                        </div>
+                        <div class="register__announcement">Kid&Us đang tuyển sinh các bé từ 1-7 tuổi</div>
+                        <div class="register__grid">
+                            <div class="register__grid-item">
+                                <div class="register__field register__field--first-name">
+                                    <div class="register__label">First name (Tên)<sup>*</sup></div>
+                                    <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                    <input class="register__input" type="text" required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--last-name">
+                                    <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
+                                    <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                    <input class="register__input" type="text" required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                            </div>
+                            <div class="register__grid-item">
+                                <div class="register__field register__field--phone-number">
+                                    <div class="register__label">Phone number (Sdt)<sup>*</sup></div>
+                                    <input class="register__input" type="register__example" placeholder="+84"
+                                        required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--email">
+                                    <div class="register__label">Email<sup>*</sup></div>
+                                    <input class="register__input" type="email" required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                            </div>
+                            <div class="register__grid-item">
+                                <div class="register__field register__field--study-school">
+                                    <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng
+                                        ký<sup>*</sup></div>
+                                    <select class="register__select" title="Please Select">
+                                        <option value="" selected hidden>Please Select</option>
+                                        <option value="" disabled>Please Select</option>
+                                        <option value="ntt">Kid&Us Nguyen Thi Thap</option>
+                                        <option value="school2">Kid&Us City Land Park Hills</option>
+                                        <option value="school3">Kid&Us Cao Đức Lân</option>
+                                        <option value="school2">Kid&Us Sư Vạn Hạnh</option>
+                                        <option value="school3">Kid&Us Lê Văn Việt</option>
+                                        <option value="school3">Kid&Us Tên Lửa</option>
+                                    </select>
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--birth-year">
+                                    <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
+                                    <select class="register__select">
+                                        <option class="" value="" selected hidden>Please Select</option>
+                                        <option value="" disabled>Please Select</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                    </select>
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="register__privacy-policy">
+                            <span class="register__agreement">Bằng việc đăng ký thông tin, bạn đồng ý với </span>
+                            <a href="#" class="register__link register__link--privacy">Chính sách bảo mật</a>
+                            <span class="register__agreement"> và </span>
+                            <a href="#" class="register__link register__link--terms">Điều khoản sử dụng</a>
+                            <span class="register__agreement"> của chúng tôi. Cho phép Kids&Us sử dụng thông
+                                tin
+                                mà bạn đã cung cấp nhằm mục đích tư vấn, tiếp thị sản phẩm và nghiên cứu thị
+                                trường.</span>
+                        </div>
+
+                        <div class="register__submit">
+                            <button type="submit" class="btn register__button">Submit</button>
+                        </div>
+                    </fieldset>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer__body">
+            <div class="footer__grid">
+                <div class="footer__item">
+                    <h4 class="footer__title">KIDS&amp;US VIETNAM</h4>
+                    <div class="footer__content">
+                        <ul class="footer__links">
+                            <li class="footer__link-item"><a href="../General Terms Condition/index.html"
+                                    class="footer__link">General Terms &amp;
+                                    Condition</a></li>
+                            <li class="footer__link-item"><a href="../Rules Regulations/index.html"
+                                    class="footer__link">Rules &amp; Regulations</a>
+                            </li>
+                            <li class="footer__link-item"><a href="../Privacy Policy/index.html"
+                                    class="footer__link">Privacy Policy</a></li>
+                            <li class="footer__link-item"><a href="#" class="footer__link">Licenses</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <h4 class="footer__title">CÁC KHOÁ HỌC</h4>
+                    <div class="footer__content">
+                        <ul class="footer__links">
+                            <li class="footer__link-item"><a href="../1-2/index.html" class="footer__link">Khoá học
+                                    tiếng Anh cho trẻ
+                                    1-2 tuổi</a></li>
+                            <li class="footer__link-item"><a href="../3-8/index.html" class="footer__link">Khoá học
+                                    tiếng Anh cho trẻ
+                                    3-8 tuổi</a></li>
+                            <li class="footer__link-item"><a href="../9-12/index.html" class="footer__link">Khoá học
+                                    tiếng Anh cho trẻ
+                                    9-12 tuổi</a></li>
+                            <li class="footer__link-item"><a href="../13-18/index.html" class="footer__link">Khoá học
+                                    tiếng Anh cho trẻ
+                                    13-18 tuổi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <h4 class="footer__title">CƠ SỞ</h4>
+                    <div class="footer__content">
+                        <ul class="footer-links">
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Nguyễn
+                                    Thị Thập</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html"
+                                    class="footer__link">Cityland Park Hills</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Cao Đức
+                                    Lân</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Sư Vạn
+                                    Hạnh</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Lê Văn
+                                    Việt</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Tên
+                                    Lửa</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <h4 class="footer__title">LIÊN HỆ VỚI CHÚNG TÔI</h4>
+                    <div class="footer__content">
+                        <ul class="footer__contacts">
+                            <li class="footer__contact footer__contact--location"> 47-49 Nguyễn Thị Thập, Khu dân cư Him
+                                Lam, Quận 7,
+                                TP.HCM</li>
+                            <li class="footer__contact footer__contact--email"> info@kidsandus.net.vn</li>
+                            <li class="footer__contact footer__contact--phone">1800 6175</li>
+                        </ul>
+                    </div>
+                    <div class="footer__social">
+                        <ul class="footer__social-icons">
+                            <li class="footer__social-item">
+                                <a class="footer__social-link--facebook" target="_blank"
+                                    href="https://www.facebook.com/kidsandus.vn">
+                                    <img src="../../images/facebook.png">
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link--youtube" target="_blank"
+                                    href="https://www.youtube.com/channel/UCP7ErLtSVIywSh5Qdgm2AMw">
+                                    <img src="../../images/youtube.png">
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link--instagram" target="_blank"
+                                    href="https://www.instagram.com/kidsandus.vn/">
+                                    <img src="../../images/insta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="footer__copyright">
+                <p class="footer__text">Copyright © 2024 Kids&amp;Us Vietnam</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="../../Animation/header-fix.js"></script>
+    <script src="../../Animation/register-form.js"></script>
+    <script src="../../Animation/load-effect.js"></script>
+</body>
+
+</html>

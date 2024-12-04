@@ -1,0 +1,131 @@
+/* header */
+/* .top-header */
+
+.main-container__top-header {
+    top: 0;
+    background-color: #EE154B;
+    display: flex;
+    color: white;
+    height: 42px;
+    align-items: center;
+    font-size: 12px;
+    padding-left: 12%;
+    padding-right: 9%;
+    width: 100%;
+}
+
+.phone-number__link {
+    letter-spacing: -1px;
+    font-size: 15px;
+    color: white;
+}
+
+.top-header__language {
+    margin-left: auto;
+    background-color: #FFFFFF;
+    color: #857f7f;
+    height: 30px;
+    min-width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+}
+
+.language__text {
+    font-size: 12px;
+    margin: 0px 3px;
+}
+
+.language__icon {
+    align-items: center;
+}
+
+.language__icon img {
+    width: 10px;
+    margin-bottom: 2px;
+}
+
+/* .header.fixed */
+.main-container__header--fixed {
+    position: fixed;
+    z-index: 102;
+    top: 42px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 14px;
+    background-color: white;
+}
+
+.header__body {
+    display: flex;
+    align-items: center;
+    padding: 8px 0 8px;
+    padding-left: 10.5%;
+    padding-right: 10.5%;
+    border: 0.5px solid #D9D9D9;
+}
+
+.logo {
+    width: 130px;
+    height: 65px;
+}
+
+.header__nav {
+    margin-left: auto;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__text {
+    color: #AEA4A4;
+    font-size: 14px;
+    padding: 0px 8px;
+}
+
+.nav__text:hover {
+    color: #171100;
+}
+.nav__item--active p{
+    color: #171100;
+}
+.nav__submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 0;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+}
+
+.header__nav>*>*:hover .nav__submenu {
+    display: block;
+}
+
+.submenu__item {
+    padding: 4px 8px;
+}
+
+.submenu__link {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #AEA4A4;
+    font-size: 14px;
+}
+
+.submenu__link:hover {
+    color: #171100;
+}
+
+.header .btn-register {
+    min-width: 70px;
+    font-size: 14px;
+}
+
+.header__action {
+    margin-left: 10px;
+}

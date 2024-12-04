@@ -1,0 +1,23 @@
+/* animation */
+
+/* class fadeIn-effect -> hiệu ứng chạy khi load trang*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.fadeIn-effect {
+    opacity: 0; 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fadeIn-effect.visible {
+    animation: fadeIn 2.5s ease-out forwards; 
+    opacity: 1;  
+}

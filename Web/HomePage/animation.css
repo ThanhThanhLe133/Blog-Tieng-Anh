@@ -1,0 +1,21 @@
+/* animation */
+.introduce img {
+    transition: transform 0.5s;
+}
+
+.introduce img:hover {
+    transform: translateY(-20px);
+}
+.number-count:hover,.rectangle-1a:hover,.rectangle-1b:hover,.rectangle-1c:hover{
+    transform: scale(1.2);
+    color: #ee154b;
+}
+.method-asset h3:hover {
+    transform: translateY(-10px);
+}
+.grid-item .image img,.number-count,.method-asset, .rectangle-1a{
+    transition: transform 0.3s ease;
+}
+.grid-item .image:hover img{
+    transform: scale(1.1);
+}
