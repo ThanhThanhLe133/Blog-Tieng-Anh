@@ -3,6 +3,22 @@ let data = {};
 let error = {};
 let isOpen = false;
 
+window.onload = function() {
+    setTimeout(function() {
+        const prePopup = document.querySelector('.prePopup');
+        
+        prePopup.style.display = 'block'; 
+        setTimeout(function() {
+            prePopup.style.opacity = 1;
+        }, 10);
+    }, 2000);
+};
+
+function closePrePopUp(){
+    const popup = document.getElementById('prePopup');
+    popup.style.display = 'none';
+}
+
 // Toggle popup visibility
 function popUp() {
     isOpen = !isOpen;

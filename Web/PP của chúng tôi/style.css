@@ -99,6 +99,21 @@
     background-color: #d5e0a8;
 }
 
+.grid-container.three {
+    height: 460px;
+    background-color: #f5d0c2;
+}
+
+.grid-container.four {
+    height: 460px;
+    background-color: #d0eded;
+}
+
+.grid-container.five {
+    height: 460px;
+    background-color: #f6bfcf;
+}
+
 .grid-item{
     max-width: 1150px;
     margin:0 auto;
@@ -155,6 +170,18 @@ strong{
     height: 230px;
 }
 
+.sow-headline-container{
+    margin: 12px;
+}
+.sow-headline-container a{
+    color: #1e4b75;
+    font-weight: bold;
+    font-size: 18px;
+}
+.sow-headline, .sow-sub-headline{
+    margin: 12px;
+}
+
 .method__grid-detail-title{
     font-size:16px;
     font-weight:bold;
@@ -208,6 +235,21 @@ strong{
     margin-left: auto;
     margin-right: auto;
     flex-wrap: wrap;
+}
+
+.questions .content {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.answer__content{
+    line-height: 1.6em;
+}
+.title--black {
+    color: #333;
+}
+
+.title--black span {
+    color: #e12b61;
 }
 
 

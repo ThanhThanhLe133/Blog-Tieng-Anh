@@ -11,8 +11,8 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="../../Styles/general-styles.css">
-
     <link rel="stylesheet" href="../../Styles/header.css">
+    <link rel="stylesheet" href="../../Styles/chat-form.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,16 +33,16 @@
                 </div>
                 <div class="top-header__language">
                     <div class="language__flag">
-                        <img src="../../images/vn flag.png" alt="VN flag" />
+                        <img src="../../Images/vn flag.png" alt="VN flag" />
                     </div>
                     <span class="language__text">TIẾNG VIỆT</span>
-                    <div class="language__icon"><img src="../../images/chevron-down.png" alt="" /></div>
+                    <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
                 </div>
             </div>
             <div class="main-container__header--fixed">
                 <div class="header__body">
                     <!-- logo -->
-                    <img src="../../images/kids and us.png" alt="" class="logo" />
+                    <img src="../../Images/kids and us.png" alt="" class="logo" />
 
                     <!-- nav -->
                     <nav class="header__nav">
@@ -904,19 +904,19 @@
                             <li class="footer__social-item">
                                 <a class="footer__social-link--facebook" target="_blank"
                                     href="https://www.facebook.com/kidsandus.vn">
-                                    <img src="../../images/facebook.png">
+                                    <img src="../../Images/facebook.png">
                                 </a>
                             </li>
                             <li class="footer__social-item">
                                 <a class="footer__social-link--youtube" target="_blank"
                                     href="https://www.youtube.com/channel/UCP7ErLtSVIywSh5Qdgm2AMw">
-                                    <img src="../../images/youtube.png">
+                                    <img src="../../Images/youtube.png">
                                 </a>
                             </li>
                             <li class="footer__social-item">
                                 <a class="footer__social-link--instagram" target="_blank"
                                     href="https://www.instagram.com/kidsandus.vn/">
-                                    <img src="../../images/insta.png">
+                                    <img src="../../Images/insta.png">
                                 </a>
                             </li>
                         </ul>
@@ -930,8 +930,71 @@
             </div>
         </div>
     </footer>
+
+    <div id="prePopup" class="prePopup" style="display: none;">
+        <div class="prePopup__content">
+            <button class="prePopup__close" onclick="closePrePopUp()">X</button>
+            <p>Chào mừng anh/chị đến với Kid&Us Vietnam. Em là Tư vấn viên, rất vui được hỗ trợ ạ!</p>
+        </div>
+    </div>
+
+    <!-- Help Button -->
+    <button class="helpButton" onclick="popUp()">
+        <img src="../../Images/chat.png" class="helpButton__icon" alt="Help Icon" />
+    </button>
+
+    <!-- Popup Form -->
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup__heading">
+            <div class="popup__heading-image">
+                <img src="../../Images/logo-chat.png">
+                <button class="popup__close" onclick="popUp()">-</button>
+            </div>
+            <div class="popup__heading-title">
+                <h1>Kids&Us Vietnam</h1>
+            </div>
+            <p class="popup__heading-content">
+                Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị ngay khi có thể.
+            </p>
+        </div>
+
+        <form class="popup__form" onsubmit="submitForm(event)">
+            <div class="popup__form-field">
+                <label class="popup__form-label">Họ và tên<sup>*</sup></label>
+                <input type="text" name="name" class="popup__form-input" placeholder="Tên của bạn"
+                    onblur="handleBlur(event)" required />
+                <span id="name-error" class="popup__form-error" style="display: none;">Please complete this required
+                    field.</span>
+            </div>
+
+            <div class="popup__form-field">
+                <label class="popup__form-label">Số điện thoại<sup>*</sup></label>
+                <input type="text" name="phone" class="popup__form-input" placeholder="Số điện thoại của bạn"
+                    onblur="handleBlur(event)" required />
+                <span id="phone-error" class="popup__form-error" style="display: none;">Please complete this required
+                    field.</span>
+            </div>
+
+            <div class="popup__form-field">
+                <label class="popup__form-label">Email</label>
+                <input type="email" name="email" class="popup__form-input" placeholder="Email của bạn" />
+            </div>
+
+            <div class="popup__form-field">
+                <label class="popup__form-label">Lời nhắn<sup>*</sup></label>
+                <textarea name="message" class="popup__form-textarea" placeholder="Nhập tin nhắn của bạn"
+                    onblur="handleBlur(event)" required></textarea>
+                <span id="message-error" class="popup__form-error" style="display: none;">Please complete this required
+                    field.</span>
+            </div>
+
+            <button type="submit" class="popup__form-submit"><img src="../../Images/send-chat.png">GỬI TIN NHẮN</button>
+        </form>
+    </div>
+    
     <script src="script.js"></script>
     <script src="../../Animation/header-fix.js"></script>
+    <script src="../../Animation/chat-form.js"></script>
     <script src="../../Animation/register-form.js"></script>
     <script src="../../Animation/load-effect.js"></script>
 </body>
