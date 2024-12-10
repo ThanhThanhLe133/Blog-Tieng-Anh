@@ -17,12 +17,13 @@ if (isset($_POST["name"]) && isset($_POST["pass"])) {
     $result = mysqli_query($conn, $strSQL);
 
     if (mysqli_num_rows($result) > 0) {
+        $_SESSION['user_logged_in'] = true;
+        $_SESSION['user_id'] = $_POST["name"];
         echo "Chúc mừng bạn đã đăng nhập thành công";
     } else {
         echo "Đăng nhập không thành công. Vui lòng đăng nhập lại!!!";
     }
 }
-$_SESSION = [];
-session_destroy();
+
 mysqli_close($conn);
 ?>

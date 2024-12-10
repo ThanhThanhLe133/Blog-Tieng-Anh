@@ -14,9 +14,9 @@ $conn->set_charset("utf8");
 if (isset($_POST["newPassword"], $_SESSION['email'])) {
     $newPassword = $_POST["newPassword"];
     $email = $_SESSION["email"];
-
-    $stmt = $conn->prepare("SELECT password FROM admin WHERE email = ?");
-    $stmt->bind_param("s", $email);
+    $user_id = $_SESSION['user_id'];
+    $stmt = $conn->prepare("SELECT password FROM admin WHERE email = ? OR username=?");
+    $stmt->bind_param("ss", $email,$user_id);
     $stmt->execute();
     $stmt->bind_result($currentPassword);
     $stmt->fetch();
@@ -25,8 +25,8 @@ if (isset($_POST["newPassword"], $_SESSION['email'])) {
     if ($currentPassword === $newPassword) {
         echo "Mật khẩu mới không được trùng với mật khẩu hiện tại.";
     } else {
-        $stmt = $conn->prepare("UPDATE admin SET password = ? WHERE email = ?");
-        $stmt->bind_param("ss", $newPassword, $email);
+        $stmt = $conn->prepare("UPDATE admin SET password = ? WHERE email = ? OR username=?");
+        $stmt->bind_param("sss", $newPassword, $email,$user_id);
         if ($stmt->execute()) {
             $_SESSION = [];
             session_destroy();

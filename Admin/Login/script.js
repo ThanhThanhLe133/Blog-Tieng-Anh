@@ -5,7 +5,6 @@ $(document).ready(function () {
     $("#btnLogin").click(function () {
         let username = $("#username").val();
         let password = $("#password").val();
-        console.log("username" + "password");
 
         if (username === "" || password === "") {
             $(".kq")

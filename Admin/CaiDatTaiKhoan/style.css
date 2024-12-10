@@ -2,7 +2,7 @@
     position: relative;
     top: 0px;
 }
-*,
+
 ::before,
 ::after {
     --tw-border-spacing-x: 0;
@@ -345,11 +345,7 @@ video {
     vertical-align: middle
 }
 
-img,
-video {
-    max-width: 100%;
-    height: auto
-}
+
 
 [hidden]:where(:not([hidden=until-found])) {
     display: none
@@ -580,4 +576,7 @@ video {
 .focus\:outline-none:focus {
     outline: 2px solid transparent;
     outline-offset: 2px
+}
+#logout{
+    width: 5px;
 }
