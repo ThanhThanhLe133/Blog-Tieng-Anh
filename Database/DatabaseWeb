@@ -1,12 +1,12 @@
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
+USE BLOGTIENGANH;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
-
 
 
 -- --------------------------------------------------------
@@ -20,7 +20,7 @@ CREATE TABLE `admin` (
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -30,29 +30,6 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`first_name`, `last_name`, `username`, `password`) VALUES
 ('Ngan', 'Phuong', 'admin', '123');
 
--- --------------------------------------------------------
---
--- Table structure for table `branches`
---
-CREATE TABLE `branches` (
-  `branch_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `branch_name VARCHAR(255) NOT NULL,
-  `address` VARCHAR(255) NOT NULL,
-  `city` VARCHAR(255) NOT NULL,
-  `district` VARCHAR(255) NOT NULL,
-  `image` VARCHAR(255) NOT NULL,
-  `google_map_link` VARCHAR(255) NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
---
--- Dumping data for table `branches`
---
-INSERT INTO `branches` (`branch_name`,`address`, `city`, `district`, `image`, `google_map_link`) VALUES
-('Kid&Us Nguyen Thi Thap','47-49 Nguyễn Thị Thập, KDC Him Lam', 'TP.HCM', 'Quận 7', 'images/base_1.png', 'https://goo.gl/maps/MyQJqeSFyL4pDPiU6'),
-('Kid&Us City Land Park Hills','3 Đường số 3, Phường 10', 'TP.HCM', 'Quận Gò Vấp', 'images/base_2.png', 'https://maps.app.goo.gl/evErA6esjNxVaMbN9'),
-('Kid&Us Cao Đức Lân','126 Cao Đức Lân, An Phú', 'TP.HCM', 'Quận 2', 'images/base_3.png', 'https://maps.app.goo.gl/evErA6esjNxVaMbN9'),
-('Kid&Us Sư Vạn Hạnh','770 Sư Vạn Hạnh, Phường 12', 'TP.HCM', 'Quận 10', 'images/base_4.png', 'https://maps.app.goo.gl/1mAfPW2nd3SaVNZ49'),
-('Kid&Us Lê Văn Việt','695 Lê Văn Việt', 'TP.HCM', 'Thủ Đức', 'images/base_5.png', 'https://maps.app.goo.gl/WetR8VySF9ZaEKU87'),
-('Kid&Us Tên Lửa','29-31 Tên Lửa, Phường Bình Trị Đông B', 'TP.HCM', 'Quận Bình Tân', 'images/base_6.png', 'https://maps.app.goo.gl/rG6rFN4LDWuiHMzQ7');
 -- --------------------------------------------------------
 --
 -- Table structure for table `users`
@@ -67,7 +44,7 @@ CREATE TABLE `users` (
   `email` VARCHAR(255) NOT NULL,                  -- Email
   `birth_year` INT(4) NOT NULL,                   -- Năm sinh
   `branch_name` VARCHAR(255) NOT NULL,            -- Tên trường học
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Thời gian tạo
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Thời gian tạo
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -90,7 +67,7 @@ VALUES
 CREATE TABLE `categories` (
   `category_id` INT(11) NOT NULL AUTO_INCREMENT,  
   `category_name` VARCHAR(255) NOT NULL,         
-  `description` TEXT DEFAULT NULL,                -- Mo ta
+  `description` TEXT DEFAULT NULL              -- Mo ta
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -111,7 +88,7 @@ CREATE TABLE `blogs` (
   `title` VARCHAR(255) NOT NULL,           -- Tieu de
   `content` TEXT NOT NULL,                 -- Noi dung blog
   `image` VARCHAR(255) DEFAULT NULL,       
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- thoi gian tao
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- thoi gian tao
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
