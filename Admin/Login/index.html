@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Update New Passưord</title>
+    <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="../../Styles/general-styles.css">
     <link rel="stylesheet" href="../../Styles/header.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../Styles/animation-general.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -55,39 +55,31 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a class="nav__link" href="../../HomePage/index.html">
+                                <a class="nav__link" href="../Login/index.html">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="../../PP của chúng tôi/index.html">
+                                <a class="nav__link" href="../Login/index.html">
                                     <p class="nav__text">THÊM MỚI BLOG</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="#">
+                                <a class="nav__link"  href="../Login/index.html">
                                     <span class="link-before">
                                         <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
                                     </span>
                                 </a>
-                                <ul class="nav__submenu blog">
-                                    <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
-                                            Anh trẻ em</a></li>
-                                    <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
-                                            con</a></li>
-                                    <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
-                                            kiện</a></li>
-                                </ul>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../../PP của chúng tôi/index.html">
+                                <a class="nav__link"  href="../Login/index.html">
                                     <p class="nav__text">QUẢN LÝ TÀI KHOẢN</p>
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../../PP của chúng tôi/index.html">
+                                <a class="nav__link"  href="../Login/index.html">
                                     <p class="nav__text">CÀI ĐẶT</p>
                                 </a>
                             </li>
@@ -95,37 +87,40 @@
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                        <a href="../../Đăng ký/index.html" class="btn btn--logout">ĐĂNG NHẬP</a>
+                        <a  href="../Login/index.html" class="btn btn--logout">ĐĂNG NHẬP</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-   <!-- main -->
-   <main>
-        <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
-            <h2 class="text-2xl font-bold mb-4">Cập nhật mật khẩu mới</h2>
-            <p class="text-gray-600 text-sm mb-4">
-               Nhập mật khẩu mới của bạn và xác nhận lại mật khẩu mới để tiếp tục.
-            </p>
-            <form action="#" method="POST">
-               <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="new-password">Mật khẩu mới</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="new-password" placeholder="Nhập mật khẩu mới" type="password" required>
-              </div>
-              <div class="mb-4">
-                   <label class="block text-gray-700 text-sm font-bold mb-2" for="confirm-password">Xác nhận mật khẩu mới</label>
-                   <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="confirm-password" placeholder="Xác nhận mật khẩu mới" type="password" required>
-            </div>
-            <div class="flex items-center justify-between">
-                <button class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700">Cập nhật mật khẩu</button>
-                <a href="#" class="text-blue-500 hover:underline">Quay lại đăng nhập</a>
+    <!-- main -->
+    <main>
+        <form method="post">
+            <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Đăng nhập</h2>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="username" placeholder="Username" type="text">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="password" placeholder="Password" type="password">
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="button" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700"
+                        id="btnLogin" value="Login">Đăng nhập</button>
+                    <a href="../XacThucTaiKhoan/index.html" class="text-blue-500 hover:underline">Quên mật khẩu?</a>
+                </div>
             </div>
         </form>
-    </div>
-</main>
-
+        <div class="kq"></div>
+    </main>
+  
     <!-- footer -->
     <footer>
         <div class="footer__body">
@@ -169,15 +164,19 @@
                     <h4 class="footer__title">CƠ SỞ</h4>
                     <div class="footer__content">
                         <ul class="footer-links">
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Nguyễn
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html"
+                                    class="footer__link">Nguyễn
                                     Thị Thập</a></li>
                             <li class="footer__link-item"><a href="../../Các cơ sở/index.html"
                                     class="footer__link">Cityland Park Hills</a></li>
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Cao Đức
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Cao
+                                    Đức
                                     Lân</a></li>
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Sư Vạn
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Sư
+                                    Vạn
                                     Hạnh</a></li>
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Lê Văn
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Lê
+                                    Văn
                                     Việt</a></li>
                             <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Tên
                                     Lửa</a></li>
@@ -228,7 +227,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="../../Animation/load-effect.js"></script>
 
 </body>
 
