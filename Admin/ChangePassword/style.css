@@ -19,6 +19,17 @@
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
 }
+.input_pass>input{
+    border: none;
+    width: 100%;
+    outline: none;
+}
+.input_pass{
+    display: flex;
+}
+.showpass img{
+    width: 15px;
+}
 *,
 ::before,
 ::after {

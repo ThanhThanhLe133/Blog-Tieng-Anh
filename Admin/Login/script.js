@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    $(".nav__link").click(function(){
+    $(".nav__link").click(function () {
         alert("Vui lòng đăng nhập")
     })
     $("#btnLogin").click(function () {
         let username = $("#username").val();
         let password = $("#password").val();
-        console.log("username"+"password");
+        console.log("username" + "password");
 
         if (username === "" || password === "") {
             $(".kq")
@@ -15,7 +15,7 @@ $(document).ready(function () {
             return;
         }
 
-        
+
         $.post("login.php", {
             name: username,
             pass: password
@@ -25,9 +25,9 @@ $(document).ready(function () {
                     .removeClass("error")
                     .addClass("success")
                     .html(response);
-                    setTimeout(function () {
-                        window.location.href = "../CaiDatTaiKhoan/index.html";
-                    }, 500);
+                setTimeout(function () {
+                    window.location.href = "../CaiDatTaiKhoan/index.html";
+                }, 500);
             } else {
                 $(".kq")
                     .removeClass("success")
@@ -41,4 +41,19 @@ $(document).ready(function () {
                 .html("Có lỗi xảy ra, vui lòng thử lại.");
         });
     });
+
+    $(".showpass").on("click", function (e) {
+        e.preventDefault();
+        let pass = $(this).siblings("input"); 
+        let icon = $(this).find("img");
+        if (pass.attr("type") === "password") {
+            pass.attr("type", "text");
+            icon.attr("src", "../../Images/eye.png");
+        }
+        else {
+            pass.attr("type", "password");
+            icon.attr("src", "../../Images/eye_close.png");
+        }
+    })
+
 });
