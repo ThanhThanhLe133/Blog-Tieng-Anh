@@ -26,19 +26,18 @@ CREATE TABLE `branches` (
   `address` VARCHAR(255) NOT NULL,
   `city` VARCHAR(255) NOT NULL,
   `district` VARCHAR(255) NOT NULL,
-  `google_map_link` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`branch_id`),
   UNIQUE KEY `branch_name` (`branch_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table `branches`
-INSERT INTO `branches` (`branch_name`, `address`, `city`, `district`, `google_map_link`) VALUES
-('Kid&Us Nguyen Thi Thap', '47-49 Nguyễn Thị Thập, KDC Him Lam', 'TP.HCM', 'Quận 7',  'https://goo.gl/maps/MyQJqeSFyL4pDPiU6'),
-('Kid&Us City Land Park Hills', '3 Đường số 3, Phường 10', 'TP.HCM', 'Quận Gò Vấp',  'https://maps.app.goo.gl/evErA6esjNxVaMbN9'),
-('Kid&Us Cao Đức Lân', '126 Cao Đức Lân, An Phú', 'TP.HCM', 'Quận 2',  'https://maps.app.goo.gl/evErA6esjNxVaMbN9'),
-('Kid&Us Sư Vạn Hạnh', '770 Sư Vạn Hạnh, Phường 12', 'TP.HCM', 'Quận 10',  'https://maps.app.goo.gl/1mAfPW2nd3SaVNZ49'),
-('Kid&Us Lê Văn Việt', '695 Lê Văn Việt', 'TP.HCM', 'Thủ Đức',  'https://maps.app.goo.gl/WetR8VySF9ZaEKU87'),
-('Kid&Us Tên Lửa', '29-31 Tên Lửa, Phường Bình Trị Đông B', 'TP.HCM', 'Quận Bình Tân', 'https://maps.app.goo.gl/rG6rFN4LDWuiHMzQ7');
+INSERT INTO `branches` (`branch_name`, `address`, `city`, `district`) VALUES
+('Kid&Us Nguyen Thi Thap', '47-49 Nguyễn Thị Thập, KDC Him Lam', 'TP.HCM', 'Quận 7'),
+('Kid&Us City Land Park Hills', '3 Đường số 3, Phường 10', 'TP.HCM', 'Quận Gò Vấp'),
+('Kid&Us Cao Đức Lân', '126 Cao Đức Lân, An Phú', 'TP.HCM', 'Quận 2'),
+('Kid&Us Sư Vạn Hạnh', '770 Sư Vạn Hạnh, Phường 12', 'TP.HCM', 'Quận 10'),
+('Kid&Us Lê Văn Việt', '695 Lê Văn Việt', 'TP.HCM', 'Thủ Đức'),
+('Kid&Us Tên Lửa', '29-31 Tên Lửa, Phường Bình Trị Đông B', 'TP.HCM');
 
 -- --------------------------------------------------------
 -- Table structure for table `users`
