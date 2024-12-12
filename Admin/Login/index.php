@@ -1,8 +1,14 @@
+<?php
+session_start();
+session_unset();
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Update New Passưord</title>
+    <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -55,31 +61,31 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.html">
+                                <a class="nav__link" href="../Login/index.php">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.html">
+                                <a class="nav__link" href="../Login/index.php">
                                     <p class="nav__text">THÊM MỚI BLOG</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.html">
+                                <a class="nav__link" href="../Login/index.php">
                                     <span class="link-before">
                                         <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
                                     </span>
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.html">
+                                <a class="nav__link" href="../Login/index.php">
                                     <p class="nav__text">QUẢN LÝ TÀI KHOẢN</p>
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.html">
+                                <a class="nav__link" href="../Login/index.php">
                                     <p class="nav__text">CÀI ĐẶT</p>
                                 </a>
                             </li>
@@ -87,7 +93,7 @@
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                        <a href="../Login/index.html" class="btn btn--logout">ĐĂNG NHẬP</a>
+                        <a href="../Login/index.php" class="btn btn--logout">ĐĂNG NHẬP</a>
                     </div>
                 </div>
             </div>
@@ -96,39 +102,30 @@
 
     <!-- main -->
     <main>
-        <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
-            <h2 class="text-2xl font-bold mb-4">Cập nhật mật khẩu mới</h2>
-            <p class="text-gray-600 text-sm mb-4">
-                Nhập mật khẩu mới của bạn và xác nhận lại mật khẩu mới để tiếp tục.
-            </p>
-            <form action="#" method="POST">
+        <form method="post">
+            <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Đăng nhập</h2>
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="new-password">Mật khẩu mới</label>
-                    <div
-                        class="input_pass shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                        <input id="new-password" name="new-password" placeholder="Nhập mật khẩu mới" type="password"
-                            required>
-                        <button class="showpass"><img class="eye" src="../../Images/eye_close.png"></button>
-                    </div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="username" placeholder="Username" type="text">
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="confirm-password">Xác nhận mật khẩu
-                        mới</label>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
                     <div
-                        class="input_pass shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                        <input id="confirm-password" name="confirm-password" placeholder="Xác nhận mật khẩu mới"
-                            type="password" required>
-                        <button class="showpass"><img class="eye" src="../../Images/eye_close.png"></button>
+                        class="password shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <input id="password" placeholder="Password" type="password">
+                        <button class="showpass"><img src="../../Images/eye_close.png"></button>
                     </div>
                 </div>
                 <div class="flex items-center justify-between">
-                    <button class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700" id="updatePass">Cập nhật
-                        mật
-                        khẩu</button>
-                    <a href="../Login/index.html" class="text-blue-500 hover:underline">Quay lại đăng nhập</a>
+                    <button type="button" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700"
+                        id="btnLogin" value="Login">Đăng nhập</button>
+                    <a href="../XacThucTaiKhoan/index.php" class="text-blue-500 hover:underline">Quên mật khẩu?</a>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
         <div class="kq"></div>
     </main>
 
@@ -237,7 +234,62 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        $(".nav__link").click(function () {
+            alert("Vui lòng đăng nhập")
+        })
+        $("#btnLogin").on('click',function () {
+            let username = $("#username").val();
+            let password = $("#password").val();
+
+            if (username === "" || password === "") {
+                $(".kq")
+                    .removeClass("success")
+                    .addClass("error")
+                    .html("<p>Vui lòng nhập đầy đủ thông tin.</p>");
+                return;
+            }
+
+            $.post("login.php", {
+                name: username,
+                pass: password
+            }, function (response) {
+                if (response.includes("Chúc mừng")) {
+                    $(".kq")
+                        .removeClass("error")
+                        .addClass("success")
+                        .html(response);
+                    setTimeout(function () {
+                        window.location.href = "../CaiDatTaiKhoan/index.php";
+                    }, 500);
+                } else {
+                    $(".kq")
+                        .removeClass("success")
+                        .addClass("error")
+                        .html(response);
+                }
+            }).fail(function () {
+                $(".kq")
+                    .removeClass("success")
+                    .addClass("error")
+                    .html("Có lỗi xảy ra, vui lòng thử lại.");
+            });
+        });
+
+        $(".showpass").on("click", function (e) {
+            e.preventDefault();
+            let pass = $(this).siblings("input");
+            let icon = $(this).find("img");
+            if (pass.attr("type") === "password") {
+                pass.attr("type", "text");
+                icon.attr("src", "../../Images/eye.png");
+            }
+            else {
+                pass.attr("type", "password");
+                icon.attr("src", "../../Images/eye_close.png");
+            }
+        })
+    </script>
 
 </body>
 

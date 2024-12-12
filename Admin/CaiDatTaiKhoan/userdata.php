@@ -7,25 +7,16 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$DBName = "BLOGTIENGANH";
-
-$conn = mysqli_connect($servername, $username, $password, $DBName)
-    or die("<p>Không thể connect</p>" . "<p>Error code: " . mysqli_connect_error() . ": " . mysqli_connect_error() . "</p>");
-
-mysqli_set_charset($conn, "utf8");
+include "../conn.php";
 
 $user_id = $_SESSION['user_id'];
 
-$stmt = $conn->prepare("SELECT first_name, last_name, username, email FROM admin WHERE username = ?");
-$stmt->bind_param("s", $user_id);
-$stmt->execute();
-$result = $stmt->get_result();
+$sql = "SELECT first_name, last_name, username, email FROM admin WHERE username = '$user_id' ";
+
+$result =$conn->query($sql);
 // Kiểm tra kết quả
-if ($result && mysqli_num_rows($result) > 0) {
-    $user = mysqli_fetch_assoc($result);
+if ($result ->num_rows>0) {
+    $user = $result->fetch_assoc();
 
     echo '<div class="mb-4">
         <label class="block text-gray-700 text-sm font-bold mb-2" for="firstname">Firstname (Họ và tên đệm)</label>
@@ -57,6 +48,5 @@ if ($result && mysqli_num_rows($result) > 0) {
 } else {
     echo "Không tìm thấy dữ liệu người dùng.";
 }
-$stmt->close();
-mysqli_close($conn);
+$conn->close();
 ?>

@@ -23,7 +23,6 @@
             background-color: #f8d7da;
             border: 1px solid #f5c6cb;
         }
-
     </style>
     <!-- reset css -->
     <link rel="stylesheet" href="../../Styles/reset.css">
@@ -104,7 +103,7 @@
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../CaiDatTaiKhoan/index.html">
+                                <a class="nav__link" href="../CaiDatTaiKhoan/index.php">
                                     <p class="nav__text">CÀI ĐẶT</p>
                                 </a>
                             </li>
@@ -128,7 +127,7 @@
             <div class="flex items-center justify-between">
                 <button type="button" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700" id="btnSave"
                     value="Save">Lưu</button>
-                <a href="../ChangePassword/index.html" class="text-blue-500 hover:underline">Đổi mật khẩu</a>
+                <a href="../ChangePassword/index.php" class="text-blue-500 hover:underline">Đổi mật khẩu</a>
             </div>
         </div>
         <div class="kq"></div>
@@ -238,9 +237,7 @@
             </div>
         </div>
     </footer>
-   
-    <script src="script.js"> </script>
-    <script src="../logout.js"> </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

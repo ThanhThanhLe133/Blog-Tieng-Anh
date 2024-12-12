@@ -1,8 +1,11 @@
 $(document).ready(function () {
-    $('.header__action').click(function (e) {
+    $('.header__action').on('click', function () {
         var result = confirm("Bạn có chắc chắn muốn thoát?");
+
         if (result) {
-            window.location.href = "";
+            setTimeout(function () {
+                window.location.href = "../Login/index.php";
+            }, 500);
         }
     });
 })

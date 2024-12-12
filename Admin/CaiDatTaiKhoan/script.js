@@ -10,9 +10,10 @@ $(document).ready(function () {
             $(".header__action").html(response);
         });
     }
+
     loadData();
-   
-    $("#btnSave").click(function (e) {
+
+    $("#btnSave").on('click', function (e) {
         e.preventDefault();
         let firstname = $("#firstname").val();
         let lastname = $("#lastname").val();
@@ -32,7 +33,7 @@ $(document).ready(function () {
                     .addClass("success")
                     .html(response);
                 setTimeout(function () {
-                    window.location.href = "../CaiDatTaiKhoan/index.html";
+                    window.location.href = "../CaiDatTaiKhoan/index.php";
                 }, 1000);
             } else {
                 $(".kq")
@@ -46,5 +47,15 @@ $(document).ready(function () {
                 .addClass("error")
                 .html("Có lỗi xảy ra, vui lòng thử lại.");
         });
+    });
+    
+    $('.header__action').on('click', function () {
+        var result = confirm("Bạn có chắc chắn muốn thoát?");
+
+        if (result) {
+            setTimeout(function () {
+                window.location.href = "../Login/index.php";
+            }, 500);
+        }
     });
 })

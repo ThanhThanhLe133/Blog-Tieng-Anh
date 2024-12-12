@@ -83,7 +83,7 @@ $(document).ready(function () {
                     if (resultClass === "success") {
                         stopCountdown();
                         setTimeout(function () {
-                            window.location.href = "../ChangePassword/index.html";
+                            window.location.href = "../ChangePassword/index.php";
                         }, 500);
                     }
                 }).fail(function () {

@@ -54,31 +54,31 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.html">
+                                <a class="nav__link" href="../Login/index.php">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.html">
+                                <a class="nav__link" href="../Login/index.php">
                                     <p class="nav__text">THÊM MỚI BLOG</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link"  href="../Login/index.html">
+                                <a class="nav__link"  href="../Login/index.php">
                                     <span class="link-before">
                                         <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
                                     </span>
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link"  href="../Login/index.html">
+                                <a class="nav__link"  href="../Login/index.php">
                                     <p class="nav__text">QUẢN LÝ TÀI KHOẢN</p>
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link"  href="../Login/index.html">
+                                <a class="nav__link"  href="../Login/index.php">
                                     <p class="nav__text">CÀI ĐẶT</p>
                                 </a>
                             </li>
@@ -86,7 +86,7 @@
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                        <a  href="../Login/index.html" class="btn btn--logout">ĐĂNG NHẬP</a>
+                        <a  href="../Login/index.php" class="btn btn--logout">ĐĂNG NHẬP</a>
                     </div>
                 </div>
             </div>
