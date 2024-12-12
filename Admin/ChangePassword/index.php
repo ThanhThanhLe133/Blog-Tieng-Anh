@@ -55,31 +55,31 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.php">
+                                <a class="nav__link" href="../QuanLyInputForm/index.html">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.php">
+                                <a class="nav__link" href="../TaoBlog/index.html">
                                     <p class="nav__text">THÊM MỚI BLOG</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.php">
+                                <a class="nav__link" href="../QuanLyBlog/index.html">
                                     <span class="link-before">
                                         <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
                                     </span>
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.php">
+                                <a class="nav__link" href="../QuanLyTaiKhoan/index.html">
                                     <p class="nav__text">QUẢN LÝ TÀI KHOẢN</p>
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.php">
+                                <a class="nav__link" href="../CaiDatTaiKhoan/index.php">
                                     <p class="nav__text">CÀI ĐẶT</p>
                                 </a>
                             </li>
@@ -96,12 +96,12 @@
 
     <!-- main -->
     <main>
-        <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
-            <h2 class="text-2xl font-bold mb-4">Cập nhật mật khẩu mới</h2>
-            <p class="text-gray-600 text-sm mb-4">
-                Nhập mật khẩu mới của bạn và xác nhận lại mật khẩu mới để tiếp tục.
-            </p>
-            <form action="#" method="POST">
+        <form action="#" method="POST" id="changePassForm">
+            <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Cập nhật mật khẩu mới</h2>
+                <p class="text-gray-600 text-sm mb-4">
+                    Nhập mật khẩu mới của bạn và xác nhận lại mật khẩu mới để tiếp tục.
+                </p>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="new-password">Mật khẩu mới</label>
                     <div
@@ -127,9 +127,23 @@
                         khẩu</button>
                     <a href="../Login/index.php" class="text-blue-500 hover:underline">Quay lại đăng nhập</a>
                 </div>
-            </form>
-        </div>
+
+            </div>
+        </form>
+        <div id="custom-alert">
+                <div class="message">
+                    Vui lòng đăng nhập trước!
+                </div>
+                <button class="btn-close">Đóng</button>
+            </div>
         <div class="kq"></div>
+        <div id="custom-close">
+            <div class="message">
+            Bạn có chắc chắn muốn thoát?
+            </div>
+            <button class="btn-ok">Ok</button>
+            <button class="btn-close">Đóng</button>
+        </div>
     </main>
 
     <!-- footer -->

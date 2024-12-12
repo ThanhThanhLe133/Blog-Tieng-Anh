@@ -6,18 +6,21 @@
     margin-top: 20px;
     padding: 10px;
     font-size: 16px;
+    text-align: center;
 }
 
 .success {
     color: #155724;
     background-color: #d4edda;
     border: 1px solid #c3e6cb;
+    text-align: center;
 }
 
 .error {
     color: #721c24;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
+    text-align: center;
 }
 #new-password,#confirm-password{
     border: none;
@@ -29,6 +32,64 @@
 }
 .eye{
     width: 15px;
+}
+#custom-alert,#custom-close {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.message {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn-close  {
+    background-color:#c9aec2 ;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 60px;
+}
+.btn-ok {
+    background-color: #721c24;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 60px;
+}
+.btn-close:hover,.btn-ok:hover {
+    background-color: #EE154B;
+}
+
+form {
+    max-width: 60%; 
+    margin: 20px auto;
+    margin-left: 25%;
+}
+
+.text-2xl,.text-gray-600 {
+    text-align: center;
+}
+
+.items-center>* {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5px;
 }
 *,
 ::before,

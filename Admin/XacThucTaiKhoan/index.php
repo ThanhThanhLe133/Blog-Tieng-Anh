@@ -54,31 +54,31 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.php">
+                                <a class="nav__link" href="">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.php">
+                                <a class="nav__link" href="">
                                     <p class="nav__text">THÊM MỚI BLOG</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link"  href="../Login/index.php">
+                                <a class="nav__link" href="">
                                     <span class="link-before">
                                         <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
                                     </span>
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link"  href="../Login/index.php">
+                                <a class="nav__link" href="">
                                     <p class="nav__text">QUẢN LÝ TÀI KHOẢN</p>
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link"  href="../Login/index.php">
+                                <a class="nav__link" href="">
                                     <p class="nav__text">CÀI ĐẶT</p>
                                 </a>
                             </li>
@@ -86,7 +86,7 @@
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                        <a  href="../Login/index.php" class="btn btn--logout">ĐĂNG NHẬP</a>
+                        <a href="../Login/index.php" class="btn btn--logout">ĐĂNG NHẬP</a>
                     </div>
                 </div>
             </div>
@@ -95,12 +95,11 @@
 
     <!-- main -->
     <main>
-        <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
-            <h2 class="text-2xl font-bold mb-4">Quên mật khẩu</h2>
-            <p class="text-gray-600 text-sm mb-4">
-                Nhập email của bạn.
-            </p>
-            <form action="#" method="POST">
+        <form action="#" method="POST" id="verifyForm">
+            <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
+
+                <h2 class="text-2xl font-bold mb-4">Quên mật khẩu</h2>
+
                 <!-- Nhập email -->
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
@@ -116,7 +115,7 @@
                         Gửi mã xác thực
                     </button>
                     <p id="countdown" class="text-gray-600 mt-4" style="display: none;">
-                        Bạn có thể gửi lại mã sau: <span id="timer">30</span>s
+                        Bạn có thể gửi lại mã sau: <span id="timer">60</span>s
                     </p>
                 </div>
 
@@ -140,8 +139,13 @@
                     <a href="../Login/index.html" class="text-blue-500 hover:underline">Quay lại đăng nhập</a>
                 </div>
                 <div class="check-code"></div>
-            </form>
-
+        </form>
+        <div id="custom-alert">
+            <div class="message">
+                Vui lòng đăng nhập trước!
+            </div>
+            <button class="btn-close">Đóng</button>
+        </div>
         </div>
     </main>
 

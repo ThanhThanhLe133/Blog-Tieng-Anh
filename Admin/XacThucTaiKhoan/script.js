@@ -1,14 +1,34 @@
 $(document).ready(function () {
-    $('#email').click(function (e) {
+
+    //click email -> xoá OTP + email + thông báo
+    $('#email').on("click", function (e) {
+        e.preventDefault();
         $(".send").html("");
         $(".send").removeClass("error success");
+        $("#verification-code").val("");
+        $("#email").val("");
     });
-    $('#verification-code').click(function (e) {
+
+    //chưa đăng nhập -> ko vào đc menu
+    $(".nav__item").on("click", function (e) {
+        e.preventDefault();
+        $("#custom-alert").show();
+    });
+
+    $(".btn-close").on("click", function () {
+        $("#custom-alert").hide();
+    });
+
+    //click vào OTP -> xoá + thông báo
+    $('#verification-code').on("click",function (e) {
+        $("#verification-code").val("");
         $(".check-code").html("");
         $(".check-code").removeClass("error success");
     });
     let countdownInterval;
-    $('#sendCode').click(function (e) {
+
+    //xử lý gửi OTP tới email
+    $('#sendCode').on("click", function (e) {
         e.preventDefault();
         let email = $("#email").val();
         $(".send").html("");
@@ -41,14 +61,16 @@ $(document).ready(function () {
             });
         }
     });
+    //gửi lại mã sau 60s
     function resetCountdown() {
         clearInterval(countdownInterval);
-        $('#countdown').html("Bạn có thể gửi lại mã sau: <span id='timer'>30</span>s");
-        $('#timer').text("30");
+        $('#countdown').html("Bạn có thể gửi lại mã sau: <span id='timer'>60</span>s");
+        $('#timer').text("60");
         $('#sendCode').prop("disabled", false);
     }
+    //bắt đầu đếm ngược
     function startCountdown() {
-        let time = 29;
+        let time = 59;
         countdownInterval = setInterval(function () {
             $('#timer').text(time);
             if (time <= 0) {
@@ -60,13 +82,16 @@ $(document).ready(function () {
             }
         }, 1000);
     }
+    //dừng đếm ngược
     function stopCountdown() {
         clearInterval(countdownInterval);
         $('#timer').text('0');
         $('#countdown').text('');
         $('#sendCode').prop("disabled", false);
     }
-    $('#verifyCode').click(function (e) {
+
+    //xác nhận OTP
+    $('#verifyCode').on("click", function (e) {
         e.preventDefault();
         let code = $("#verification-code").val();
         $(".check-code").html("");

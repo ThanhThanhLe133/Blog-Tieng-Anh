@@ -1,9 +1,12 @@
 $(document).ready(function () {
+    //load button đăng nhập/đăng ký +user info
     function loadData() {
         $.post("userdata.php", {}, function (response) {
             $("#user-info").html(response);
         }).fail(function () {
             $("#error").html(response);
+            $("#btnSave").hide();
+            $(".changePass").hide();
         });
 
         $.post("../isLogin.php", {}, function (response) {
@@ -13,8 +16,20 @@ $(document).ready(function () {
 
     loadData();
 
+    //sự kiện enter tới form -> handleUpdateSettings
+    $("#settingForm").on('keydown', function (e) {
+        if (e.keyCode === 13) {
+            e.preventDefault();
+            handleUpdateSettings();
+        }
+    });
+
+    //sự kiện ấn nút lưu -> handleUpdateSettings
     $("#btnSave").on('click', function (e) {
         e.preventDefault();
+        handleUpdateSettings();
+    });
+    function handleUpdateSettings() {
         let firstname = $("#firstname").val();
         let lastname = $("#lastname").val();
         let username = $("#username").val();
@@ -47,15 +62,22 @@ $(document).ready(function () {
                 .addClass("error")
                 .html("Có lỗi xảy ra, vui lòng thử lại.");
         });
-    });
-    
-    $('.header__action').on('click', function () {
-        var result = confirm("Bạn có chắc chắn muốn thoát?");
+    }
 
-        if (result) {
-            setTimeout(function () {
-                window.location.href = "../Login/index.php";
-            }, 500);
-        }
+    //nhấn đăng xuất
+    $('.header__action').on('click', function (e) {
+        e.preventDefault();
+        $("#custom-close").show();
+
+    });
+    $(".btn-ok").on('click', function (e) {
+        e.preventDefault();
+        setTimeout(function () {
+            window.location.href = "../Login/index.php";
+        }, 500);
+    });
+    $(".btn-close").on('click', function (e) {
+        e.preventDefault();
+        $("#custom-alert").hide();
     });
 })

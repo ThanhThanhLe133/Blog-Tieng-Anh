@@ -5,25 +5,6 @@
     <title>Quản lý blog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .kq {
-            margin-top: 20px;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        .success {
-            color: #155724;
-            background-color: #d4edda;
-            border: 1px solid #c3e6cb;
-        }
-
-        .error {
-            color: #721c24;
-            background-color: #f8d7da;
-            border: 1px solid #f5c6cb;
-        }
-    </style>
     <!-- reset css -->
     <link rel="stylesheet" href="../../Styles/reset.css">
     <!-- styles -->
@@ -120,17 +101,26 @@
 
     <!-- main -->
     <main>
-        <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
-            <h2 class="text-2xl font-bold mb-4">Cài đặt tài khoản Admin</h2>
-            <div id="user-info"></div>
-            <div id="error"></div>
-            <div class="flex items-center justify-between">
-                <button type="button" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700" id="btnSave"
-                    value="Save">Lưu</button>
-                <a href="../ChangePassword/index.php" class="text-blue-500 hover:underline">Đổi mật khẩu</a>
+        <form method="post" id="settingForm">
+            <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Cài đặt tài khoản Admin</h2>
+                <div id="user-info"></div>
+                <div id="error"></div>
+                <div class="flex items-center justify-between">
+                    <button type="button" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700"
+                        id="btnSave" value="Save">Lưu</button>
+                    <a href="../ChangePassword/index.php" class="text-blue-500 changePass hover:underline">Đổi mật khẩu</a>
+                </div>
             </div>
-        </div>
+        </form>
         <div class="kq"></div>
+        <div id="custom-close">
+            <div class="message">
+            Bạn có chắc chắn muốn thoát?
+            </div>
+            <button class="btn-ok">Ok</button>
+            <button class="btn-close">Đóng</button>
+        </div>
     </main>
 
     <!-- footer -->

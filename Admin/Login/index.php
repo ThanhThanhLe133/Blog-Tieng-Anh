@@ -33,6 +33,12 @@ session_destroy();
     <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            e.preventDefault();
+
+        });
+    </script>
 </head>
 
 <body>
@@ -102,7 +108,7 @@ session_destroy();
 
     <!-- main -->
     <main>
-        <form method="post">
+        <form method="post" id="loginForm">
             <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
                 <h2 class="text-2xl font-bold mb-4">Đăng nhập</h2>
                 <div class="mb-4">
@@ -119,7 +125,7 @@ session_destroy();
                         <button class="showpass"><img src="../../Images/eye_close.png"></button>
                     </div>
                 </div>
-                <div class="flex items-center justify-between">
+                <div class="items-center">
                     <button type="button" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700"
                         id="btnLogin" value="Login">Đăng nhập</button>
                     <a href="../XacThucTaiKhoan/index.php" class="text-blue-500 hover:underline">Quên mật khẩu?</a>
@@ -127,6 +133,12 @@ session_destroy();
             </div>
         </form>
         <div class="kq"></div>
+        <div id="custom-alert">
+            <div class="message">
+                Vui lòng đăng nhập trước!
+            </div>
+            <button class="btn-close">Đóng</button>
+        </div>
     </main>
 
     <!-- footer -->
@@ -234,62 +246,7 @@ session_destroy();
         </div>
     </footer>
 
-    <script>
-        $(".nav__link").click(function () {
-            alert("Vui lòng đăng nhập")
-        })
-        $("#btnLogin").on('click',function () {
-            let username = $("#username").val();
-            let password = $("#password").val();
-
-            if (username === "" || password === "") {
-                $(".kq")
-                    .removeClass("success")
-                    .addClass("error")
-                    .html("<p>Vui lòng nhập đầy đủ thông tin.</p>");
-                return;
-            }
-
-            $.post("login.php", {
-                name: username,
-                pass: password
-            }, function (response) {
-                if (response.includes("Chúc mừng")) {
-                    $(".kq")
-                        .removeClass("error")
-                        .addClass("success")
-                        .html(response);
-                    setTimeout(function () {
-                        window.location.href = "../CaiDatTaiKhoan/index.php";
-                    }, 500);
-                } else {
-                    $(".kq")
-                        .removeClass("success")
-                        .addClass("error")
-                        .html(response);
-                }
-            }).fail(function () {
-                $(".kq")
-                    .removeClass("success")
-                    .addClass("error")
-                    .html("Có lỗi xảy ra, vui lòng thử lại.");
-            });
-        });
-
-        $(".showpass").on("click", function (e) {
-            e.preventDefault();
-            let pass = $(this).siblings("input");
-            let icon = $(this).find("img");
-            if (pass.attr("type") === "password") {
-                pass.attr("type", "text");
-                icon.attr("src", "../../Images/eye.png");
-            }
-            else {
-                pass.attr("type", "password");
-                icon.attr("src", "../../Images/eye_close.png");
-            }
-        })
-    </script>
+    <script src="script.js"> </script>
 
 </body>
 
