@@ -341,76 +341,73 @@
             </div>
             <!-- register -->
             <div class="register wave-effect" id="register-form">
-                <div class="register__body">
-                    <div class="register__form">
-                        <fieldset class="register__fieldset">
-                            <div class="register__logo">
-                                <img src="../../Images/kids and us.png" alt="Kids and Us" />
-                            </div>
+                <form id="register-form">
+                    <div class="register__body">
+                        <div class="register__form">
+                            <fieldset class="register__fieldset">
+                                <div class="register__logo">
+                                    <img src="../../Images/kids and us.png" alt="Kids and Us" />
+                                </div>
                             <div class="register__announcement">Kid&Us đang tuyển sinh các bé từ 1-7 tuổi</div>
-                            <div class="register__grid">
-                                <div class="register__grid-item">
-                                    <div class="register__field register__field--first-name">
-                                        <div class="register__label">First name (Tên)<sup>*</sup></div>
-                                        <div class="register__example">Tên: ví dụ : Ngọc</div>
-                                        <input class="register__input" type="text" required />
-                                        <span class="register__error">Please complete this required field.</span>
+                                <div class="register__grid">
+                                    <div class="register__grid-item">
+                                        <div class="register__field register__field--first-name">
+                                            <div class="register__label">First name (Tên)<sup>*</sup></div>
+                                            <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                            <input class="register__input" type="text" id="first_name" required />
+                                            <span class="register__error">Please complete this required field.</span>
+                                        </div>
+                                        <div class="register__field register__field--last-name">
+                                            <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
+                                            <div class="register__example">Tên: ví dụ : Nguyễn Thị</div>
+                                            <input class="register__input" type="text" id="last_name" required />
+                                            <span class="register__error">Please complete this required field.</span>
+                                        </div>
                                     </div>
-                                    <div class="register__field register__field--last-name">
-                                        <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
-                                        <div class="register__example">Tên: ví dụ : Ngọc</div>
-                                        <input class="register__input" type="text" required />
-                                        <span class="register__error">Please complete this required field.</span>
+                                    <div class="register__grid-item">
+                                        <div class="register__field register__field--phone-number">
+                                            <div class="register__label">Phone number (Sdt)<sup>*</sup></div>
+                                            <input class="register__input" type="text" id="phone" placeholder="+84" required />
+                                            <span class="register__error">Please complete this required field.</span>
+                                        </div>
+                                        <div class="register__field register__field--email">
+                                            <div class="register__label">Email<sup>*</sup></div>
+                                            <input class="register__input" type="email" id="email" required />
+                                            <span class="register__error">Please complete this required field.</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="register__grid-item">
-                                    <div class="register__field register__field--phone-number">
-                                        <div class="register__label">Phone number (Sdt)<sup>*</sup></div>
-                                        <input class="register__input" type="register__example" placeholder="+84"
-                                            required />
-                                        <span class="register__error">Please complete this required field.</span>
-                                    </div>
-                                    <div class="register__field register__field--email">
-                                        <div class="register__label">Email<sup>*</sup></div>
-                                        <input class="register__input" type="email" required />
-                                        <span class="register__error">Please complete this required field.</span>
-                                    </div>
-                                </div>
-                                <div class="register__grid-item">
-                                    <div class="register__field register__field--study-school">
-                                        <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng
-                                            ký<sup>*</sup></div>
-                                        <select class="register__select" title="Please Select">
-                                            <option value="" selected hidden>Please Select</option>
-                                            <option value="" disabled>Please Select</option>
-                                            <option value="ntt">Kid&Us Nguyen Thi Thap</option>
-                                            <option value="school2">Kid&Us City Land Park Hills</option>
-                                            <option value="school3">Kid&Us Cao Đức Lân</option>
-                                            <option value="school2">Kid&Us Sư Vạn Hạnh</option>
-                                            <option value="school3">Kid&Us Lê Văn Việt</option>
-                                            <option value="school3">Kid&Us Tên Lửa</option>
-                                        </select>
-                                        <span class="register__error">Please complete this required field.</span>
-                                    </div>
-                                    <div class="register__field register__field--birth-year">
-                                        <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
-                                        <select class="register__select">
-                                            <option class="please" value="" selected hidden>Please Select</option>
-                                            <option value="" disabled>Please Select</option>
-                                            <option value="2016">2016</option>
-                                            <option value="2017">2017</option>
-                                            <option value="2018">2018</option>
-                                            <option value="2019">2019</option>
-                                            <option value="2020">2020</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                        </select>
-                                        <span class="register__error">Please complete this required field.</span>
+                                    <div class="register__grid-item">
+                                        <div class="register__field register__field--study-school">
+                                            <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng ký<sup>*</sup></div>
+                                            <select class="register__select" id="study_school" required>
+                                                <option value="" selected hidden>Please Select</option>
+                                                <option value="ntt">Kid&Us Nguyen Thi Thap</option>
+                                                <option value="school2">Kid&Us City Land Park Hills</option>
+                                                <option value="school3">Kid&Us Cao Đức Lân</option>
+                                                <option value="school2">Kid&Us Sư Vạn Hạnh</option>
+                                                <option value="school3">Kid&Us Lê Văn Việt</option>
+                                                <option value="school3">Kid&Us Tên Lửa</option>
+                                            </select>
+                                            <span class="register__error">Please complete this required field.</span>
+                                        </div>
+                                        <div class="register__field register__field--birth-year">
+                                            <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
+                                            <select class="register__select" id="birth_year" required>
+                                                <option value="" selected hidden>Please Select</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                            </select>
+                                            <span class="register__error">Please complete this required field.</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
                             <div class="register__privacy-policy">
                                 <span class="register__agreement">Bằng việc đăng ký thông tin, bạn đồng ý với </span>
@@ -423,16 +420,54 @@
                                     trường.</span>
                             </div>
 
-                            <div class="register__submit">
-                                <button type="submit" class="btn register__button">Submit</button>
-                            </div>
-                        </fieldset>
-
+                                <div class="register__submit">
+                                    <button type="submit" class="btn register__button">Submit</button>
+                                </div>
+                            </fieldset>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </main>
+<div id="custom-alert">
+    <div class="message">Thông tin đã được lưu!</div>
+    <button class="btn-close" id="close-alert">Đóng</button>
+</div>
+
+<script>
+document.getElementById('register-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const firstName = document.getElementById('first_name').value;
+    const lastName = document.getElementById('last_name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const studySchool = document.getElementById('study_school').value;
+    const birthYear = document.getElementById('birth_year').value;
+
+    // Process the form data (e.g., save to localStorage)
+    let studentData = JSON.parse(localStorage.getItem('studentData')) || [];
+    studentData.push({
+        firstName, lastName, phone, email, studySchool, birthYear
+    });
+    localStorage.setItem('studentData', JSON.stringify(studentData));
+
+    // Show custom alert
+    const customAlert = document.getElementById('custom-alert');
+    customAlert.style.display = 'block';
+
+    // Close custom alert on button click
+    document.getElementById('close-alert').addEventListener('click', function () {
+        customAlert.style.display = 'none';
+    });
+
+    // Optionally reset the form
+    document.getElementById('register-form').reset();
+});
+    </script>
+
 
     <!-- footer -->
     <footer>

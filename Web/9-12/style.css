@@ -4,7 +4,39 @@
 main {
     margin-top: 84px;
 }
+#custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
 
+    #custom-alert .message {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    #custom-alert .btn-close {
+        background-color: #721c24;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 3px;
+        margin: 0 60px;
+    }
+
+        #custom-alert .btn-close:hover {
+            background-color: #a71d2a;
+        }
 /* image-slide */
 .image-slide {
     position: relative;
