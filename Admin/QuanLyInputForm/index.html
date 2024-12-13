@@ -117,10 +117,11 @@
                         <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">Email</th>
                         <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">Study School</th>
                         <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">Birth Year</th>
+                        <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">Submission Date</th> <!-- Thêm cột thời gian -->
                         <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="student-table">
                     <tr>
                         <td class="py-2 px-4 border-b border-gray-200">Ngọc</td>
                         <td class="py-2 px-4 border-b border-gray-200">Nguyễn</td>
@@ -221,6 +222,116 @@
             </table>
         </div>
     </main>
+
+<script>
+    // Lấy nội dung mặc định từ HTML
+    function getDefaultStudentData() {
+        // Default submission date for pre-populated data
+        const defaultSubmissionDate = '10/12/2024';
+        
+        const defaultStudentData = [
+            {
+                firstName: 'Ngọc',
+                lastName: 'Nguyễn',
+                phone: '+84 123456789',
+                email: 'ngoc@example.com',
+                studySchool: 'Kid&Us Nguyen Thi Thap',
+                birthYear: '2016',
+                submissionDate: defaultSubmissionDate
+            },
+            {
+                firstName: 'Linh',
+                lastName: 'Trần',
+                phone: '+84 987654321',
+                email: 'linh@example.com',
+                studySchool: 'Kid&Us City Land Park Hills',
+                birthYear: '2017',
+                submissionDate: defaultSubmissionDate
+            },
+            {
+                firstName: 'Hà',
+                lastName: 'Phạm',
+                phone: '+84 112233445',
+                email: 'ha@example.com',
+                studySchool: 'Kid&Us Cao Đức Lân',
+                birthYear: '2018',
+                submissionDate: defaultSubmissionDate
+            },
+            {
+                firstName: 'Minh',
+                lastName: 'Lê',
+                phone: '+84 556677889',
+                email: 'minh@example.com',
+                studySchool: 'Kid&Us Sư Vạn Hạnh',
+                birthYear: '2019',
+                submissionDate: defaultSubmissionDate
+            },
+            {
+                firstName: 'Anh',
+                lastName: 'Vũ',
+                phone: '+84 998877665',
+                email: 'anh@example.com',
+                studySchool: 'Kid&Us Lê Văn Việt',
+                birthYear: '2020',
+                submissionDate: defaultSubmissionDate
+            },
+            {
+                firstName: 'Hùng',
+                lastName: 'Ngô',
+                phone: '+84 334455667',
+                email: 'hung@example.com',
+                studySchool: 'Kid&Us Tên Lửa',
+                birthYear: '2021',
+                submissionDate: defaultSubmissionDate
+            }
+        ];
+
+        return defaultStudentData;
+    }
+
+    // Hiển thị dữ liệu từ localStorage khi trang được tải
+    function displayStudentData() {
+        const defaultStudentData = getDefaultStudentData();
+        const studentData = JSON.parse(localStorage.getItem('studentData')) || [];
+        const combinedData = [...defaultStudentData, ...studentData];
+        const tableBody = document.getElementById('student-table');
+        tableBody.innerHTML = ''; // Xóa các dòng cũ
+
+        combinedData.forEach(function(student) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="py-2 px-4 border-b border-gray-200">${student.firstName}</td>
+                <td class="py-2 px-4 border-b border-gray-200">${student.lastName}</td>
+                <td class="py-2 px-4 border-b border-gray-200">${student.phone}</td>
+                <td class="py-2 px-4 border-b border-gray-200">${student.email}</td>
+                <td class="py-2 px-4 border-b border-gray-200">${student.studySchool}</td>
+                <td class="py-2 px-4 border-b border-gray-200">${student.birthYear}</td>
+                <td class="py-2 px-4 border-b border-gray-200">${student.submissionDate || getCurrentDate()}</td>
+                <td class="py-2 px-4 border-b border-gray-200">
+                    <button class="text-blue-500 hover:text-blue-700 mr-2">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="text-red-500 hover:text-red-700">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Hàm lấy ngày hiện tại định dạng DD/MM/YYYY
+    function getCurrentDate() {
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = now.getFullYear();
+        return `${day}/${month}/${year}`;
+    }
+
+    // Gọi hàm để hiển thị dữ liệu khi trang được tải
+    displayStudentData();
+</script>
 
     <!-- footer -->
     <footer>
