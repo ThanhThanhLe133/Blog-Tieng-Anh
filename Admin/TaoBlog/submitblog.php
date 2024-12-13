@@ -1,15 +1,13 @@
 <?php
-// Kết nối đến cơ sở dữ liệu
 include('../conn.php');
 
-// Kiểm tra xem form đã được gửi hay chưa
+// Kiểm tra nếu form đã được gửi
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Lấy dữ liệu từ form
     $category = $_POST['category'];  // Loại blog
     $title = $_POST['title'];        // Tiêu đề blog
     $content = $_POST['content'];    // Nội dung blog
 
-    // Xử lý file hình ảnh (nếu có)
+    // Xử lý hình ảnh nếu có
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
         $image = $_FILES['image'];
         $image_name = $image['name'];
@@ -17,44 +15,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $image_path = 'uploads/' . $image_name;
 
         // Di chuyển hình ảnh vào thư mục uploads
-        if (move_uploaded_file($image_tmp, $image_path)) {
-            // Nếu upload thành công, lưu đường dẫn vào CSDL
-            $image_url = $image_path;
+        if (!move_uploaded_file($image_tmp, $image_path)) {
+            $image_url = null; // Lỗi khi upload
         } else {
-            $image_url = null; // Nếu không upload được hình ảnh
+            $image_url = $image_path; // Upload thành công
         }
     } else {
         $image_url = null; // Nếu không có hình ảnh
     }
 
-    // Tìm ID của category từ cơ sở dữ liệu
+    // Tìm category_id từ cơ sở dữ liệu
     $query = "SELECT category_id FROM categories WHERE category_name = ?";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("s", $category);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Kiểm tra nếu category tồn tại trong cơ sở dữ liệu
     if ($result->num_rows > 0) {
         $category_id = $result->fetch_assoc()['category_id'];
 
-        // Thêm blog vào CSDL
+        // Thêm blog vào cơ sở dữ liệu
         $query = "INSERT INTO blogs (category_id, title, content, images) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($query);
         $stmt->bind_param("isss", $category_id, $title, $content, $image_url);
         $stmt->execute();
 
-        // Kiểm tra kết quả
+        // Kiểm tra xem thao tác lưu blog có thành công không
         if ($stmt->affected_rows > 0) {
-            $message = "Lưu thành công!";
+            // Chuyển hướng về trang index.php và gửi thông báo thành công
+            header("Location: index.php?alert=success&message=" . urlencode("Bài viết đã được lưu thành công!"));
         } else {
-            $message = "Có lỗi khi thêm blog!";
+            // Chuyển hướng về trang index.php và gửi thông báo lỗi
+            header("Location: index.php?alert=error&message=" . urlencode("Có lỗi khi thêm blog!"));
         }
     } else {
-        $message = "Category không tồn tại trong cơ sở dữ liệu.";
+        // Nếu không tìm thấy category_id
+        header("Location: index.php?alert=error&message=" . urlencode("Category không tồn tại trong cơ sở dữ liệu."));
     }
 
-    // Hiển thị thông báo
-    echo "<script>alert('$message');</script>";
+    // Dừng tiếp tục thực thi mã sau khi chuyển hướng
+    exit;
 }
 ?>

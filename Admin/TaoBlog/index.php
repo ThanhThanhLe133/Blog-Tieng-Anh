@@ -30,7 +30,38 @@
 </head>
 
 <body>
+	<?php
+// Khởi tạo biến với giá trị mặc định
+$alert = '';
+$message = '';
 
+// Kiểm tra nếu có tham số trong URL
+if (isset($_GET['alert'])) {
+    $alert = $_GET['alert'];
+}
+
+if (isset($_GET['message'])) {
+    $message = $_GET['message'];
+}
+?>
+
+    <div id="custom-alert">
+        <div class="message"></div>
+    </div>
+
+    <?php if ($alert && $message): ?>
+        <script>
+            $(document).ready(function () {
+                $("#custom-alert .message").text("<?php echo htmlspecialchars($message); ?>");
+                $("#custom-alert").addClass("<?php echo $alert === 'success' ? 'alert-success' : 'alert-error'; ?>");
+                $("#custom-alert").fadeIn();
+
+                setTimeout(function () {
+                    $("#custom-alert").fadeOut();
+                }, 3000);
+            });
+        </script>
+    <?php endif; ?>
     <!-- header -->
     <header>
         <div class="main-container">
@@ -136,6 +167,12 @@
                     </form>
                 </div>
             </div>
+        </div>
+	<div id="custom-alert">
+    	    <div class="message">
+                Vui lòng đăng nhập trước!
+            </div>
+            <button class="btn-close">Đóng</button>
         </div>
     </main>
 

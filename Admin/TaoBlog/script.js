@@ -44,13 +44,11 @@ $(document).ready(function () {
         var title = $("#title").val();  // Lấy tiêu đề từ input
 
         // Kiểm tra xem có nhập đủ tiêu đề và nội dung hay không
-        if (!title.trim() || content.trim() === "<p><br></p>") {
-            $(".kq")
-                .removeClass("success")
-                .addClass("error")
-                .html("<p>Vui lòng nhập tiêu đề và nội dung.</p>");
-            return;
-        }
+    	if (!title.trim() || content.trim() === "<p><br></p>") {
+           $("#custom-alert .message").text("Vui lòng nhập tiêu đề và nội dung.");
+           $("#custom-alert").show();
+           return;
+    	}
 
         // Tìm tất cả hình ảnh trong nội dung
         var images = $(content).find('img');
@@ -75,8 +73,8 @@ $(document).ready(function () {
             }, function (response) {
                 if (response.includes("Thành công")) {
                     // Thông báo thành công
-                    $("#notificationText").text("Bài viết đã được lưu thành công!");
-                    $("#successModal").fadeIn();
+                    $("#custom-alert .message").text("Bài viết đã được lưu thành công!");
+                    $("#custom-alert").fadeIn();
 
                     // Xóa tiêu đề và nội dung sau khi lưu thành công
                     $("#title").val("");
@@ -85,31 +83,31 @@ $(document).ready(function () {
 
                     // Đóng hộp thông báo sau 3 giây
                     setTimeout(function () {
-                        $("#successModal").fadeOut();
+                        $("#custom-alert").fadeOut();
                     }, 3000);
                 } else {
                     // Thông báo lỗi
-                    $("#notificationText").text("Có lỗi xảy ra: " + response);
-                    $("#successModal").fadeIn();
+                    $("#custom-alert .message").text("Có lỗi xảy ra: " + response);
+                    $("#custom-alert").fadeIn();
 
                     // Đóng hộp thông báo sau 3 giây
                     setTimeout(function () {
-                        $("#successModal").fadeOut();
+                        $("#custom-alert").fadeOut();
                     }, 3000);
                 }
             }).fail(function () {
                 // Thông báo lỗi nếu AJAX thất bại
-                $("#notificationText").text("Có lỗi xảy ra, vui lòng thử lại.");
-                $("#successModal").fadeIn();
+                $("#custom-alert .message").text("Có lỗi xảy ra, vui lòng thử lại.");
+                $("#custom-alert").fadeIn();
 
                 // Đóng hộp thông báo sau 3 giây
                 setTimeout(function () {
-                    $("#successModal").fadeOut();
+                    $("#custom-alert").fadeOut();
                 }, 3000);
             });
         });
     });
-
+    
 });
 
 // Hàm chuyển đổi Data URL thành Blob
