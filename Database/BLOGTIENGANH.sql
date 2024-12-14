@@ -93,11 +93,13 @@ INSERT INTO `categories` (`category_name`, `description`) VALUES
 --
 
 CREATE TABLE `blogs` (
-  `blog_id` INT(11) NOT NULL AUTO_INCREMENT,   
-  `category_id` INT(11) NOT NULL,              -- Loại blog
-  `title` VARCHAR(255) NOT NULL,               -- Tiêu đề
-  `content` TEXT NOT NULL,                     -- Nội dung blog
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Thời gian tạo
+  `blog_id` INT(11) NOT NULL AUTO_INCREMENT,   -- Unique identifier for each blog
+  `category_id` INT(11) NOT NULL,              -- Category ID (Foreign Key from `categories`)
+  `title` VARCHAR(255) NOT NULL,               -- Title of the blog post
+  `content` TEXT NOT NULL,                     -- Content of the blog post
+  `images` VARCHAR(255) DEFAULT NULL,          -- Optional image path or URL associated with the blog
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Creation timestamp
+  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- Last update timestamp
   PRIMARY KEY (`blog_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
