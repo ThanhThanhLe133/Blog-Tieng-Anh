@@ -2,6 +2,7 @@
     position: relative;
     top: 0px;
 }
+
 *,
 ::before,
 ::after {
@@ -375,11 +376,13 @@ video {
 .min-w-full {
     min-width: 100%
 }
-.items-center{
-    align-items:center
+
+.items-center {
+    align-items: center
 }
+
 .max-w-6xl {
-    max-width: 100rem
+    max-width: 80%
 }
 
 .justify-between {
@@ -438,7 +441,8 @@ video {
 
 .text-2xl {
     font-size: 3rem;
-    line-height: 2rem
+    line-height: 2rem;
+    text-align: center;
 }
 
 .text-sm {
@@ -485,4 +489,59 @@ video {
 .hover\:text-red-700:hover {
     --tw-text-opacity: 1;
     color: rgb(185 28 28 / var(--tw-text-opacity, 1))
+}
+
+.functionBtn {
+    display: flex;
+    justify-content: flex-end;
+    /* Căn phải các nút */
+    align-items: center;
+    margin-top: 20px;
+}
+
+#search-input {
+    min-width: 400px;
+    font-size: 16px;
+    border: 1px solid rgb(189, 181, 181)
+}
+
+.filterButton,.sort-container {
+    width: 50px;
+    font-size: 18px;
+    position: relative;
+}
+
+#filterBox {
+    font-size: small;
+    display: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin-top: 10px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 100;
+    min-width: 200px;
+}
+
+#filterBox>*,#sortBox>* {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+margin: 0 auto;
+}
+
+#sortBox {
+    font-size: small;
+    display: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin-top: 10px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 100;
+    min-width: 200px;
 }

@@ -1,6 +1,6 @@
 $(document).ready(() => {
-     //register-form
-     $('input, select').on('blur', function() {
+    //register-form
+    $('input, select').on('blur', function () {
         let $select = $(this);
         if ($select.val() === "") {
             $select.addClass('error');
@@ -11,42 +11,56 @@ $(document).ready(() => {
         }
     });
 
-    $('input, select').on('focus', function() {
+    $('input, select').on('focus', function () {
         $(this).removeClass('error');
         $(this).next('.register__error').hide();
     });
-    $('select').on('click', function() {
+    $('select').on('click', function () {
         let $select = $(this);
         $select.css('color', '#353535');
     });
     $('.register__button').on('click', function (event) {
         event.preventDefault();
-    
-        const firstName = $('#first_name').val();
-        const lastName = $('#last_name').val();
-        const phone = $('#phone').val();
-        const email = $('#email').val();
-        const studySchool = $('#study_school').val();
-        const birthYear = $('#birth_year').val();
-    
-        let studentData = JSON.parse(localStorage.getItem('studentData')) || [];
-        studentData.push({
-            firstName,
-            lastName,
-            phone,
-            email,
-            studySchool,
-            birthYear
+
+        const firstName = $('.firstName').val();
+        const lastName = $('.lastName').val();
+        const phone = $('.phone').val();
+        const email = $('.email').val();
+        const studySchool = $('.studySchool').val();
+        const birthYear = $('.birthYear').val();
+        const currentDate = new Date().toISOString().split('T')[0];  
+
+        const guest = {
+            firstName: firstName,
+            lastName: lastName,
+            phone: phone,
+            email: email,
+            studySchool: studySchool,
+            birthYear: birthYear,
+            currenDate: new Date()
+        };
+        console.log(firstName);
+        $.post("../../Admin/send-form.php", {
+            firstName: firstName,
+            lastName: lastName,
+            phone: phone,
+            email: email,
+            studySchool: studySchool,
+            birthYear: birthYear,
+            currentDate: currentDate
+        }, function (response) {
+            $('#custom-alert').show();
+            $(".message").text(response);
+        }).fail(function () {
+            $('#custom-alert').show();
+            $(".message").text("Có lỗi xảy ra, vui lòng thử lại.");
         });
-        localStorage.setItem('studentData', JSON.stringify(studentData));
-        $('#custom-alert').css("display","block");
     });
-    
+
     $('#close-alert').on('click', function (e) {
         e.preventDefault();
         $('#custom-alert').hide();
         window.scrollTo(0, 0);
         location.reload();
     });
-    
 })

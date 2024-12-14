@@ -39,11 +39,20 @@
                     <a class="phone-number__link" href="tel:18006175">1800 6175</a>
                 </div>
                 <div class="top-header__language">
-                    <div class="language__flag">
-                        <img src="../../Images/vn flag.png" alt="VN flag" />
+                    <div class="language vietnamese">
+                        <div class="language__flag">
+                            <img src="../../Images/vn flag.png" alt="VN flag" />
+                        </div>
+                        <span class="language__text">TIẾNG VIỆT</span>
+                        <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
                     </div>
-                    <span class="language__text">TIẾNG VIỆT</span>
-                    <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    <div class="language english">
+                        <div class="language__flag">
+                            <img src="../../Images/us flag.png" alt="US flag" />
+                        </div>
+                        <span class="language__text">ENGLISH</span>
+                        <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    </div>
                 </div>
             </div>
             <div class="main-container__header--fixed">

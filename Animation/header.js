@@ -1,5 +1,4 @@
 $(document).ready(() => {
-
     $('.language').click(function() {
         var vietnamese = $('.language.vietnamese');
         var english = $('.language.english');

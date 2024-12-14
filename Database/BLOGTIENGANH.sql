@@ -1,4 +1,18 @@
 -- --------------------------------------------------------
+-- Table structure for table `guest`
+--
+CREATE TABLE guest (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    firstName VARCHAR(100),
+    lastName VARCHAR(100),
+    phone VARCHAR(20),
+    email VARCHAR(100),
+    studySchool VARCHAR(100),
+    birthYear INT;
+    currentDate DATE;
+);
+
+-- --------------------------------------------------------
 -- Table structure for table `admin`
 --
 

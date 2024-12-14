@@ -1,65 +1,72 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 /* quy đổi để 1 rem=10px (mặc định 1 rem=16px) */
-html{
-    font-size:62.5%;
+html {
+    font-size: 62.5%;
 }
 
 /* -----------class chung---------------- */
-body{
-    font-size:1.6rem;
+body {
+    font-size: 1.6rem;
     font-family: "Roboto", sans-serif;
-    color:#353535;
+    color: #353535;
     background-color: white;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
 
-.btn  {
-display: inline-block;
-padding: 0px 8px;
-line-height: 34px;
-min-width: 100px;
-color: #fff;
-font-size: 1.6rem;
-text-align: center;
-border-radius: 2px;
-background-color: #C3512F;
-border:none;  
-cursor: pointer;
+.btn {
+    display: inline-block;
+    padding: 0px 8px;
+    line-height: 34px;
+    min-width: 100px;
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #C3512F;
+    border: none;
+    cursor: pointer;
 }
-.btn a{
+
+.btn a {
     color: white;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #EE154B;
     color: white;
 }
-.title{
+
+.title {
     color: #ee154b;
     font-size: 32px;
-    font-weight:bold;
-    margin-bottom:24px;
+    font-weight: bold;
+    margin-bottom: 24px;
     letter-spacing: 0.5px;
 }
-.content p{
+
+.content p {
     font-size: 15px;
     line-height: 1.5em;
 }
+
 #custom-alert {
     display: none;
     position: fixed;
     top: 50%;
     left: 48%;
+    max-width: 300px;
     transform: translate(-50%, -50%);
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
-    padding: 50px;
+    padding: 30px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 9999;
@@ -68,19 +75,23 @@ cursor: pointer;
 #custom-alert .message {
     font-size: 16px;
     margin-bottom: 20px;
+    display: flex;
+    text-wrap: wrap;
+    text-align: center;
 }
 
 #custom-alert .btn-close {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
     background-color: #721c24;
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 3px;
-    margin: 0 60px;
 }
 
 #custom-alert .btn-close:hover {
     background-color: #a71d2a;
 }
-
