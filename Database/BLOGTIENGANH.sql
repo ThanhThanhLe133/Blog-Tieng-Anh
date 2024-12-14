@@ -79,7 +79,7 @@ INSERT INTO `users` (`f_name`, `l_name`, `username`, `password`, `phone_number`,
 CREATE TABLE `categories` (
   `category_id` INT(11) NOT NULL AUTO_INCREMENT,  
   `category_name` VARCHAR(255) NOT NULL,         
-  `description` TEXT DEFAULT NULL,                -- Mô tả
+  `description` VARCHAR(255) NOT NULL,                -- Mô tả
   PRIMARY KEY (`category_id`),
   UNIQUE KEY `category_name` (`category_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
