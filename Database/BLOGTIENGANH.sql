@@ -113,7 +113,7 @@ CREATE TABLE `blogs` (
   `category_id` INT(11) NOT NULL,              -- Category ID (Foreign Key from `categories`)
   `title` VARCHAR(255) NOT NULL,               -- Title of the blog post
   `content` TEXT NOT NULL,                     -- Content of the blog post
-  `images` VARCHAR(255) DEFAULT NULL,          -- Optional image path or URL associated with the blog
+  `images` BLOB DEFAULT NULL,            -- Optional image path or URL associated with the blog
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Creation timestamp
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- Last update timestamp
   PRIMARY KEY (`blog_id`)

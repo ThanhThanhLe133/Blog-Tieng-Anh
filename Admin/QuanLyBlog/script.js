@@ -18,17 +18,15 @@ $(document).ready(function () {
         }
     });
 
-    // Cập nhật nội dung Quill vào trường ẩn khi có thay đổi
     quill.on('text-change', function () {
         $("#content").val(quill.root.innerHTML);
     });
 
-    // Hàm tải lên hình ảnh
     function uploadImage(blob) {
         var formData = new FormData();
         formData.append('file', blob);
         return $.ajax({
-            url: 'upload_image.php',  // Tạo file PHP xử lý tải lên hình ảnh
+            url: 'upload_image.php', 
             type: 'POST',
             data: formData,
             processData: false,

@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../../Styles/header.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../Styles/animation-general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,11 +38,20 @@
                     <a class="phone-number__link" href="tel:18006175">1800 6175</a>
                 </div>
                 <div class="top-header__language">
-                    <div class="language__flag">
-                        <img src="../../Images/vn flag.png" alt="VN flag" />
+                    <div class="language vietnamese">
+                        <div class="language__flag">
+                            <img src="../../Images/vn flag.png" alt="VN flag" />
+                        </div>
+                        <span class="language__text">TIẾNG VIỆT</span>
+                        <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
                     </div>
-                    <span class="language__text">TIẾNG VIỆT</span>
-                    <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    <div class="language english">
+                        <div class="language__flag">
+                            <img src="../../Images/us flag.png" alt="US flag" />
+                        </div>
+                        <span class="language__text">ENGLISH</span>
+                        <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    </div>
                 </div>
             </div>
             <div class="main-container__header--fixed">
@@ -104,70 +112,32 @@
 
     <!-- main -->
     <main>
-        <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
-            <h2 class="text-2xl font-bold mb-4">Quản lý Blog</h2>
-            <button class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 mb-4">Thêm Blog</button>
-            <div class="mb-4">
-                <div class="mb-4">
-                    <table class="min-w-full bg-white">
-                        <thead>
-                            <tr>
-                                <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700">Title</th>
-                                <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700">Author</th>
-                                <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700">Date</th>
-                                <th class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-700">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="py-2 px-4 border-b border-gray-200">Blog Title 1</td>
-                                <td class="py-2 px-4 border-b border-gray-200">Admin</td>
-                                <td class="py-2 px-4 border-b border-gray-200">2023-10-01</td>
-                                <td class="py-2 px-4 border-b border-gray-200">
-                                    <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-700">Edit</button>
-                                    <button class="bg-red-500 text-white py-1 px-2 rounded hover:bg-red-700">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border-b border-gray-200">Blog Title 2</td>
-                                <td class="py-2 px-4 border-b border-gray-200">User1</td>
-                                <td class="py-2 px-4 border-b border-gray-200">2023-10-02</td>
-                                <td class="py-2 px-4 border-b border-gray-200">
-                                    <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-700">Edit</button>
-                                    <button class="bg-red-500 text-white py-1 px-2 rounded hover:bg-red-700">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border-b border-gray-200">Blog Title 3</td>
-                                <td class="py-2 px-4 border-b border-gray-200">User2</td>
-                                <td class="py-2 px-4 border-b border-gray-200">2023-10-03</td>
-                                <td class="py-2 px-4 border-b border-gray-200">
-                                    <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-700">Edit</button>
-                                    <button class="bg-red-500 text-white py-1 px-2 rounded hover:bg-red-700">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border-b border-gray-200">Blog Title 4</td>
-                                <td class="py-2 px-4 border-b border-gray-200">User3</td>
-                                <td class="py-2 px-4 border-b border-gray-200">2023-10-04</td>
-                                <td class="py-2 px-4 border-b border-gray-200">
-                                    <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-700">Edit</button>
-                                    <button class="bg-red-500 text-white py-1 px-2 rounded hover:bg-red-700">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border-b border-gray-200">Blog Title 5</td>
-                                <td class="py-2 px-4 border-b border-gray-200">User4</td>
-                                <td class="py-2 px-4 border-b border-gray-200">2023-10-05</td>
-                                <td class="py-2 px-4 border-b border-gray-200">
-                                    <button class="bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-700">Edit</button>
-                                    <button class="bg-red-500 text-white py-1 px-2 rounded hover:bg-red-700">Delete</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <div class="mx-auto p-6 bg-white shadow-md rounded-lg mt-10 blogForm">
+            <div class=" mb-6">
+                <h1 class="text-2xl font-semibold">Quản lý Thông tin Form</h1>
             </div>
+            <button class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 addBlog">Thêm Blog</button>
+            <table class="min-w-full bg-white ">
+                <thead>
+                    <tr>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Title</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Author</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Date</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="blog-table">
+
+                </tbody>
+            </table>
         </div>
     </main>
 
@@ -214,15 +184,19 @@
                     <h4 class="footer__title">CƠ SỞ</h4>
                     <div class="footer__content">
                         <ul class="footer-links">
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Nguyễn
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html"
+                                    class="footer__link">Nguyễn
                                     Thị Thập</a></li>
                             <li class="footer__link-item"><a href="../../Các cơ sở/index.html"
                                     class="footer__link">Cityland Park Hills</a></li>
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Cao Đức
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Cao
+                                    Đức
                                     Lân</a></li>
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Sư Vạn
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Sư
+                                    Vạn
                                     Hạnh</a></li>
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Lê Văn
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Lê
+                                    Văn
                                     Việt</a></li>
                             <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Tên
                                     Lửa</a></li>
@@ -273,8 +247,7 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="../../Animation/load-effect.js"></script>
-
+    <script src="../../Animation/header.js"></script>
 </body>
 
 </html>
