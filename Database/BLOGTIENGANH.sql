@@ -64,6 +64,7 @@ CREATE TABLE `users` (
   `f_name` VARCHAR(255) NOT NULL,                      -- Tên
   `l_name` VARCHAR(255) NOT NULL,                      -- Họ
   `username` VARCHAR(255) NOT NULL,   
+  `password` VARCHAR(255) NOT NULL,                    -- Mật khẩu
   `phone_number` VARCHAR(15) NOT NULL,                 -- Số điện thoại
   `email` VARCHAR(255) NOT NULL,                       -- Email
   `birth_year` INT(4) NOT NULL,                        -- Năm sinh
@@ -76,13 +77,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table `users`
-INSERT INTO `users` (`f_name`, `l_name`, `username`, `phone_number`, `email`, `birth_year`, `branch_name`) VALUES
-('Ngọc', 'Nguyễn', 'ngoc.nguyen1234', '+84 123456789', 'ngoc@example.com', 2016, 'Kid&Us Nguyen Thi Thap'),
-('Linh', 'Trần', 'linh_tran567', '+84 987654321', 'linh@example.com', 2017, 'Kid&Us City Land Park Hills'),
-('Hà', 'Phạm', 'ha_pham_hai09234', '+84 112233445', 'ha@example.com', 2018, 'Kid&Us Cao Đức Lân'),
-('Minh', 'Lê', 'minh18374957', '+84 556677889', 'minh@example.com', 2019, 'Kid&Us Sư Vạn Hạnh'),
-('Anh', 'Vũ', 'anhvuvn839', '+84 998877665', 'anh@example.com', 2020, 'Kid&Us Lê Văn Việt'),
-('Hùng', 'Ngô', 'hunghungngo8298', '+84 334455667', 'hung@example.com', 2021, 'Kid&Us Tên Lửa');
+INSERT INTO `users` (`f_name`, `l_name`, `username`, `password`, `phone_number`, `email`, `birth_year`, `branch_name`) VALUES
+('Ngọc', 'Nguyễn', 'ngoc.nguyen1234', 'password123', '+84 123456789', 'ngoc@example.com', 2016, 'Kid&Us Nguyen Thi Thap'),
+('Linh', 'Trần', 'linh_tran567', 'password456', '+84 987654321', 'linh@example.com', 2017, 'Kid&Us City Land Park Hills'),
+('Hà', 'Phạm', 'ha_pham_hai09234', 'password789', '+84 112233445', 'ha@example.com', 2018, 'Kid&Us Cao Đức Lân'),
+('Minh', 'Lê', 'minh18374957', 'password101', '+84 556677889', 'minh@example.com', 2019, 'Kid&Us Sư Vạn Hạnh'),
+('Anh', 'Vũ', 'anhvuvn839', 'password102', '+84 998877665', 'anh@example.com', 2020, 'Kid&Us Lê Văn Việt'),
+('Hùng', 'Ngô', 'hunghungngo8298', 'password103', '+84 334455667', 'hung@example.com', 2021, 'Kid&Us Tên Lửa');
+
 
 -- --------------------------------------------------------
 -- Table structure for table `categories`
@@ -91,7 +93,7 @@ INSERT INTO `users` (`f_name`, `l_name`, `username`, `phone_number`, `email`, `b
 CREATE TABLE `categories` (
   `category_id` INT(11) NOT NULL AUTO_INCREMENT,  
   `category_name` VARCHAR(255) NOT NULL,         
-  `description` TEXT DEFAULT NULL,                -- Mô tả
+  `description` VARCHAR(255) NOT NULL,                -- Mô tả
   PRIMARY KEY (`category_id`),
   UNIQUE KEY `category_name` (`category_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
