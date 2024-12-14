@@ -171,7 +171,7 @@
     text-align: center;
     padding-bottom: 50px;
 }
-.register-reason > .submit > .btn-submit{
+.register-reason > .submit > .register__button{
     margin: auto;
     border-radius: 50px;
     border: 2px solid #f17229;
@@ -183,7 +183,7 @@
     font-weight: lighter;
 }
 
-.register-reason > .submit > .btn-submit:hover{
+.register-reason > .submit > .register__button:hover{
     background-color:#f17229;
     color: white;
 }
@@ -382,7 +382,7 @@ textarea{
 .form > .submit{
     text-align: center;
 }
-.form > .submit > .btn-submit{
+.form > .submit > .register__button{
     margin: 20px auto;
     border-radius: 15px;
     background-color:#f17229;

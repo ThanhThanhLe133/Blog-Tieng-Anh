@@ -22,7 +22,7 @@ $(document).ready(() => {
 
     function updateSlidePosition1() {
         const slideContainer = $('.image-slide.top ul');
-        const slideWidth = slides1.outerWidth(); // Sử dụng outerWidth để lấy chiều rộng bao gồm padding
+        const slideWidth = slides1.outerWidth();
         slideContainer.css('transform', `translateX(-${currentIndex1 * slideWidth}px)`);
     }
 

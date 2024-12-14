@@ -16,7 +16,7 @@ CREATE TABLE `admin` (
 
 -- Dumping data for table `admin`
 INSERT INTO `admin` (`first_name`, `last_name`, `email`, `username`, `password`) VALUES
-('Ngan', 'Phuong','admin@example.com', 'admin', '123');
+('Ngan', 'Phuong','tthanh6b@gmail.com', 'admin', '123');
 
 -- --------------------------------------------------------
 -- Table structure for table `branches`

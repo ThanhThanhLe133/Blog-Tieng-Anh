@@ -10,16 +10,18 @@
     <link rel="stylesheet" href="../../Styles/reset.css">
 
     <!-- styles -->
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../Styles/chat-form.css">
-    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="../../Styles/general-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../../Styles/animation-general.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Carattere&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <style>
-    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -149,26 +151,6 @@
                                         <div class="label">Kid: Date of birth (Ngày sinh)<sup>*</sup></div>
                                         <input type="date" class="date-input" required />
                                     </div>
-                                    <div class="living">
-                                        <div class="label">Currently Living in? (Nơi ở hiện tại)<sup>*</sup></div>
-                                        <select class="study-school-select" required>
-                                            <option class="Select" value="" disabled selected>Please Select</option>
-                                            <option value="living1">An Giang</option>
-                                            <option value="living1">Bà Rịa - Vũng Tàu</option>
-                                            <option value="living1">Bến Tre</option>
-                                            <option value="living1">Cà Mau</option>
-                                            <option value="living1">Cần Thơ</option>
-                                            <option value="living1">Đà Nẵng</option>
-                                            <option value="living1">Điện Biên</option>
-                                            <option value="living1">Đồng Nai</option>
-                                            <option value="living1">Hà Nội</option>
-                                            <option value="living1">Thành phố Hồ Chí Minh</option>
-                                            <option value="living1">Phú Thọ</option>
-                                            <option value="living1">Thừa Thiên - Huế</option>
-                                            <option value="living1">Oversea</option>
-                                            <option value="living1">Khác</option>
-                                        </select>
-                                    </div>
                                 </div>
                                 <div class="grid-item">
                                     <div class="last-name">
@@ -192,14 +174,10 @@
                                             <option value="school3">Kid&Us Tên Lửa</option>
                                         </select>
                                     </div>
-                                    <div class="note">
-                                        <div class="lable">Additional Note</div>
-                                        <textarea></textarea>
-                                    </div>
                                 </div>
                             </div>
                             <div class="submit">
-                                <button type="submit" class="btn-submit">Đăng ký ngay</button>
+                                <button type="submit" class="register__button">Đăng ký ngay</button>
                             </div>
                         </fieldset>
                     </form>
@@ -244,77 +222,81 @@
                         </div>
                     </div>
                 </footer>
-
-                <div id="prePopup" class="prePopup" style="display: none;">
-                    <div class="prePopup__content">
-                        <button class="prePopup__close" onclick="closePrePopUp()">X</button>
-                        <p>Chào mừng anh/chị đến với Kid&Us Vietnam. Em là Tư vấn viên, rất vui được hỗ trợ ạ!</p>
-                    </div>
-                </div>
-
-                <!-- Help Button -->
-                <button class="helpButton" onclick="popUp()">
-                    <img src="../../Images/chat.png" class="helpButton__icon" alt="Help Icon" />
-                </button>
-
-                <!-- Popup Form -->
-                <div id="popup" class="popup" style="display: none;">
-                    <div class="popup__heading">
-                        <div class="popup__heading-image">
-                            <img src="../../Images/logo-chat.png">
-                            <button class="popup__close" onclick="popUp()">-</button>
-                        </div>
-                        <div class="popup__heading-title">
-                            <h1>Kids&Us Vietnam</h1>
-                        </div>
-                        <p class="popup__heading-content">
-                            Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị
-                            ngay khi có thể.
-                        </p>
-                    </div>
-
-                    <form class="popup__form" onsubmit="submitForm(event)">
-                        <div class="popup__form-field">
-                            <label class="popup__form-label">Họ và tên<sup>*</sup></label>
-                            <input type="text" name="name" class="popup__form-input" placeholder="Tên của bạn"
-                                onblur="handleBlur(event)" required />
-                            <span id="name-error" class="popup__form-error" style="display: none;">Please complete this
-                                required
-                                field.</span>
-                        </div>
-
-                        <div class="popup__form-field">
-                            <label class="popup__form-label">Số điện thoại<sup>*</sup></label>
-                            <input type="text" name="phone" class="popup__form-input"
-                                placeholder="Số điện thoại của bạn" onblur="handleBlur(event)" required />
-                            <span id="phone-error" class="popup__form-error" style="display: none;">Please complete this
-                                required
-                                field.</span>
-                        </div>
-
-                        <div class="popup__form-field">
-                            <label class="popup__form-label">Email</label>
-                            <input type="email" name="email" class="popup__form-input" placeholder="Email của bạn" />
-                        </div>
-
-                        <div class="popup__form-field">
-                            <label class="popup__form-label">Lời nhắn<sup>*</sup></label>
-                            <textarea name="message" class="popup__form-textarea" placeholder="Nhập tin nhắn của bạn"
-                                onblur="handleBlur(event)" required></textarea>
-                            <span id="message-error" class="popup__form-error" style="display: none;">Please complete
-                                this required
-                                field.</span>
-                        </div>
-
-                        <button type="submit" class="popup__form-submit"><img src="../../Images/send-chat.png">GỬI TIN NHẮN</button>
-                    </form>
-                </div>
             </div>
         </div>
-        </div>
     </main>
-    <script src="script.js"></script>
+    <div id="custom-alert">
+        <div class="message">Thông tin đã được lưu!</div>
+        <button class="btn-close" id="close-alert">Đóng</button>
+    </div>
+    <div id="prePopup" class="prePopup" style="display: none;">
+        <div class="prePopup__content">
+            <button class="prePopup__close" onclick="closePrePopUp()">X</button>
+            <p>Chào mừng anh/chị đến với Kid&Us Vietnam. Em là Tư vấn viên, rất vui được hỗ trợ ạ!</p>
+        </div>
+    </div>
+
+    <!-- Help Button -->
+    <button class="helpButton" onclick="popUp()">
+        <img src="../../Images/chat.png" class="helpButton__icon" alt="Help Icon" />
+    </button>
+
+    <!-- Popup Form -->
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup__heading">
+            <div class="popup__heading-image">
+                <img src="../../Images/logo-chat.png">
+                <button class="popup__close" onclick="popUp()">-</button>
+            </div>
+            <div class="popup__heading-title">
+                <h1>Kids&Us Vietnam</h1>
+            </div>
+            <p class="popup__heading-content">
+                Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị
+                ngay khi có thể.
+            </p>
+        </div>
+
+        <form class="popup__form" onsubmit="submitForm(event)">
+            <div class="popup__form-field">
+                <label class="popup__form-label">Họ và tên<sup>*</sup></label>
+                <input type="text" name="name" class="popup__form-input" placeholder="Tên của bạn"
+                    onblur="handleBlur(event)" required />
+                <span id="name-error" class="popup__form-error" style="display: none;">Please complete this
+                    required
+                    field.</span>
+            </div>
+
+            <div class="popup__form-field">
+                <label class="popup__form-label">Số điện thoại<sup>*</sup></label>
+                <input type="text" name="phone" class="popup__form-input" placeholder="Số điện thoại của bạn"
+                    onblur="handleBlur(event)" required />
+                <span id="phone-error" class="popup__form-error" style="display: none;">Please complete this
+                    required
+                    field.</span>
+            </div>
+
+            <div class="popup__form-field">
+                <label class="popup__form-label">Email</label>
+                <input type="email" name="email" class="popup__form-input" placeholder="Email của bạn" />
+            </div>
+
+            <div class="popup__form-field">
+                <label class="popup__form-label">Lời nhắn<sup>*</sup></label>
+                <textarea name="message" class="popup__form-textarea" placeholder="Nhập tin nhắn của bạn"
+                    onblur="handleBlur(event)" required></textarea>
+                <span id="message-error" class="popup__form-error" style="display: none;">Please complete
+                    this required
+                    field.</span>
+            </div>
+
+            <button type="submit" class="popup__form-submit"><img src="../../Images/send-chat.png">GỬI TIN
+                NHẮN</button>
+        </form>
+    </div>
     <script src="../../Animation/chat-form.js"></script>
+    <script src="../../Animation/load-effect.js"></script>
+    <script src="../../Animation/register-form.js"></script>
 </body>
 
 </html>

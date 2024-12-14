@@ -3,7 +3,6 @@ main{
     margin-top: 84px; 
  }
 
-
 /* image-slide */
 .image-slide {
     position: relative;
@@ -11,21 +10,21 @@ main{
     overflow: hidden;
 }
 
-.image-slide__list {
+.image-slide ul {
     display: flex;
     transition: transform 0.5s ease-in-out; 
 }
 
-.image-slide__item{
+.image-slide li {
     min-width: 100%;
     position: relative;
 }
 
-.image-slide__image{
+.image-slide img {
     width: 100%; 
     display: block;
 }
-.image-slide__content {
+.image-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -38,11 +37,10 @@ main{
     letter-spacing: 1px;
 }
 
-.image-slide__text {
+.image-content p {
     margin: 0; 
     padding: 10px; 
 }
-
 
 /* introduce */
 .introduce{
@@ -54,46 +52,37 @@ main{
     text-align: center;
     color:#353535;
 }   
-
-
-.introduce .content, .introduce__image{
+.introduce .content{
     flex: 1 1 100%; 
-    margin:24px 0;
+    margin:32px 0;
 }
-
-.introduce__text-widget{
+.textwidge{
     display: flex;
     justify-content: space-between;
     gap: 80px;
 }
-.introduce__panel-grid{
+.panel-grid{
     font-size: 15px;
     margin: 15px;
     text-wrap: nowrap;
+    max-width: 1150px;
+    margin: 12px auto;
 }
-
-.introduce__image {
-    transition: transform 0.5s;
+.panel-grid img{
     width: 100px;
     height: 100px;
 }
-
-.introduce__image:hover {
-    transform: translateY(-20px);
-}
-
-.introduce__headline-container{
+.sow-headline-container{
     margin: 12px;
 }
-.introduce__headline-container a{
+.sow-headline-container a{
     color: #1e4b75;
     font-weight: bold;
     font-size: 18px;
 }
-.introduce__headline-container>*{
+.sow-headline, .sow-sub-headline{
     margin: 12px;
 }
-
 /* courses */
 .courses img{
     transition: transform 0.3s ease;
@@ -168,40 +157,6 @@ main{
 .courses__content strong{
     font-weight: bold;
 }
-#custom-alert {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 48%;
-    transform: translate(-50%, -50%);
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    padding: 50px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-}
-
-#custom-alert .message {
-    font-size: 16px;
-    margin-bottom: 20px;
-    }
-
-#custom-alert .btn-close {
-        background-color: #721c24;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-        border-radius: 3px;
-        margin: 0 60px;
-    }
-
-#custom-alert .btn-close:hover {
-            background-color: #a71d2a;
-        }
-
 .btn-more{
     margin: 0px 8px;
     border-radius: 5px;

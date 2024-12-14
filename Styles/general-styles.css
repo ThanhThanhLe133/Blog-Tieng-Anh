@@ -1,11 +1,3 @@
-/* <!-- embed font --> */
-@font-face {
-    font-family: 'proximanova';
-    src: url('../fonts/proximanova_regular.ttf') format('truetype'); /* Chỉ định đường dẫn font */
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: -0.5px;
-}
 *{
     box-sizing: border-box;
 }
@@ -23,7 +15,7 @@ body{
 }
 a{
     text-decoration: none;
-    text-decoration-color: white;
+    color: white;
 }
 
 .btn  {
@@ -58,3 +50,37 @@ cursor: pointer;
     font-size: 15px;
     line-height: 1.5em;
 }
+#custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+#custom-alert .message {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#custom-alert .btn-close {
+    background-color: #721c24;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 60px;
+}
+
+#custom-alert .btn-close:hover {
+    background-color: #a71d2a;
+}
+

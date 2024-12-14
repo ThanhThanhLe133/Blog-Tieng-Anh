@@ -1,3 +1,23 @@
+
+.introduce img {
+    transition: transform 0.5s;
+}
+
+.introduce img:hover,.helpButton:hover {
+    transform: translateY(-20px);
+}
+.number-count:hover,.rectangle-1a:hover,.rectangle-1b:hover,.rectangle-1c:hover{
+    transform: scale(1.2);
+    color: #ee154b;
+}
+
+.grid-item .image:hover,.sow-headline-container:hover{
+    transform: scale(1.1);
+}
+.sow-headline:hover a{
+    color: #ee154b;
+}
+
 /* class wave-effect -> hiệu ứng chạy khi load trang*/
 @keyframes wave {
     0% {
@@ -11,10 +31,65 @@
 }
 
 .wave-effect {
-    opacity: 0; /* Bắt đầu ẩn */
+    opacity: 0; 
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .wave-effect.visible {
     animation: wave 0.8s ease-out forwards;
 }
+
+.lePopOut span {
+    display: inline-block;
+    animation: lePopOut 1s ease-in-out;
+}
+
+@keyframes lePopOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5); 
+    }
+}
+.lePushReleaseFromTop span {
+    display: inline-block;
+    animation: lePushReleaseFromTop 1s ease-in-out;
+}
+
+@keyframes lePushReleaseFromTop {
+    0% {
+        transform: translateY(-100%); 
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(100px); 
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.fadeIn-effect {
+    opacity: 0; 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fadeIn-effect.visible {
+    animation: fadeIn 2.5s ease-out forwards; 
+    opacity: 1;  
+}
+        

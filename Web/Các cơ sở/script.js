@@ -5,7 +5,7 @@ $(document).ready(() => {
         'images/base_13.jpg',
         'images/base_14.jpg',
         'images/base_15.jpg',
-    ]; // Replace with your images
+    ]; 
 
     let viewIndex = -1;
 
@@ -55,8 +55,8 @@ $(document).ready(() => {
         const $viewer = $(`
             <div class="interactive__item-viewer">
                 <img src="${imgs[viewIndex]}" class="interactive__item__viewer-image" alt="Image Viewer">
-                <button class="interactive__item__viewer-button">❮</button>
-                <button class="interactive__item__viewer-button">❯</button>
+                <button class="interactive__item__viewer-button"></button>
+                <button class="interactive__item__viewer-button"></button>
             </div>
         `);
         $('body').append($viewer);

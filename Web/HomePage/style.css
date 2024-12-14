@@ -4,24 +4,20 @@ main {
 }
 
 .image-slide {
+    overflow: hidden;
     position: relative;
-    margin: auto;
-    overflow: hidden
 }
 
 .image-slide ul {
     display: flex;
-    transition: transform .5s ease-in-out
 }
 
 .image-slide li {
     min-width: 100%;
-    position: relative
 }
 
 .image-slide.top img {
     width: 100%;
-    display: block
 }
 
 .btn-slide {
@@ -50,10 +46,6 @@ main {
     right: 10px
 }
 
-.method .next {
-    left: 460px
-}
-
 .introduce {
     display: flex;
     flex-wrap: wrap;
@@ -66,14 +58,13 @@ main {
 
 .introduce .content,
 .introduce .image {
-    flex: 1 1 100%;
+    width: 100%;
     margin: 24px 0
 }
 
 .textwidge {
     display: flex;
     justify-content: space-between;
-    gap: 80px
 }
 
 .student-number {
@@ -110,8 +101,6 @@ main {
 }
 
 .grid-item .content {
-    align-items: left;
-    justify-content: center;
     line-height: 1.5em
 }
 
@@ -127,9 +116,7 @@ main {
     margin: 10px 20px;
     border-radius: 5px;
     border: none;
-    line-height: 2.5em;
-    padding: 0 10px;
-    width: fit-content;
+    padding: 5px 10px;
     background-color: #fff
 }
 
@@ -187,11 +174,21 @@ main {
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     max-width: 1150px;
-    padding: 48px 0
+    padding: 48px 0;
+    grid-column-gap: 50px;
+
 }
 
-.method-panel .image-slide {
-    align-self: center
+.method {
+    position: relative;
+}
+
+.method .next {
+    right:9%;
+}
+
+.method .prev {
+    left: 0%;
 }
 
 .method-panel img {
@@ -214,6 +211,7 @@ main {
     font-weight: 700
 }
 
+
 #step1 h3 {
     color: #F6D367
 }
@@ -234,16 +232,6 @@ main {
     color: #2B2B2B
 }
 
-.image {
-    position: relative;
-    display: inline-block
-}
-
-.image img {
-    width: 100%;
-    height: auto
-}
-
 .English-activities .body {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -253,12 +241,14 @@ main {
     align-items: center
 }
 
-.English-activities .body .image {
-    margin: 0 auto 12px 24px
+.English-activities img {
+    border: 5px solid #d9d9d999;
+    width: 100%;
 }
 
-.English-activities img {
-    border: 5px solid #d9d9d999
+.English-activities .image {
+    margin: 0 auto 12px 24px;
+    position: relative;
 }
 
 .English-activities .btn-see-activities {
@@ -281,7 +271,7 @@ main {
 
 .arrow::after {
     margin-top: 10px;
-    content: url("images/arrow.png");
+    content: url("../../images/arrow.png");
     transform: scale(0.5);
     transform-origin: right
 }
@@ -333,6 +323,7 @@ main {
     font-size: 28px
 }
 
-.register__form,.register__grid-item{
+.register__form,
+.register__grid-item {
     background-color: #FFE4FC;
 }

@@ -11,20 +11,20 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="../../Styles/general-styles.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../Styles/header.css">
     <link rel="stylesheet" href="../../Styles/chat-form.css">
     <link rel="stylesheet" href="../../Styles/register-form.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
-    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../Styles/animation-general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Carattere&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <style>
-    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -38,100 +38,110 @@
                     <a class="phone-number__link" href="tel:18006175">1800 6175</a>
                 </div>
                 <div class="top-header__language">
-                    <div class="language__flag">
-                        <img src="../../Images/vn flag.png" alt="VN flag" />
+                    <div class="language vietnamese">
+                        <div class="language__flag">
+                            <img src="../../Images/vn flag.png" alt="VN flag" />
+                        </div>
+                        <span class="language__text">TIẾNG VIỆT</span>
+                        <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
                     </div>
-                    <span class="language__text">TIẾNG VIỆT</span>
-                    <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    <div class="language english">
+                        <div class="language__flag">
+                            <img src="../../Images/us flag.png" alt="US flag" />
+                        </div>
+                        <span class="language__text">ENGLISH</span>
+                        <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    </div>
                 </div>
             </div>
-            <div class="main-container__header--fixed">
-                <div class="header__body">
-                    <!-- logo -->
-                    <img src="../../Images/kids and us.png" alt="" class="logo" />
+        </div>
+        <div class="main-container__header--fixed">
+            <div class="header__body">
+                <!-- logo -->
+                <img src="../../Images/kids and us.png" alt="" class="logo" />
 
-                    <!-- nav -->
-                    <nav class="header__nav">
-                        <ul class="nav__list">
-                            <li class="nav__item nav__item--active">
-                                <a class="nav__link" href="../HomePage/index.html">
-                                    <p class="nav__text">TRANG CHỦ</p>
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">
-                                    <span class="course-list">
-                                        <p class="nav__text">CÁC KHOÁ HỌC &#x23F7</p>
-                                    </span>
-                                </a>
-                                <ul class="nav__submenu course-list">
-                                    <li class="submenu__item"><a class="submenu__link" href="../Demo day/index.html">Học
-                                            thử miễn phí</a>
-                                    </li>
-                                    <li class="submenu__item"><a class="submenu__link" href="../1-2/index.html">Khóa học
-                                            cho trẻ 1-2
-                                            tuổi</a></li>
-                                    <li class="submenu__item"><a class="submenu__link" href="../3-8/index.html">Khóa học
-                                            cho trẻ 3-8
-                                            tuổi</a></li>
-                                    <li class="submenu__item"><a class="submenu__link" href="../9-12/index.html">Khóa
-                                            học cho trẻ
-                                            9-12
-                                            tuổi</a></li>
-                                    <li class="submenu__item"><a class="submenu__link" href="../13-18/index.html">Khóa
-                                            học cho trẻ
-                                            13-18
-                                            tuổi</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="../PP của chúng tôi/index.html">
-                                    <p class="nav__text">PHƯƠNG PHÁP CỦA CHÚNG TÔI</p>
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="../Các cơ sở/index.html">
-                                    <p class="nav__text">CƠ SỞ</p>
-                                </a>
-                            </li>
-                            <li class="nav__item nav__item--active">
-                                <a class="nav__link" href="#">
-                                    <span class="activities">
-                                        <p class="nav__text">CÁC HOẠT ĐỘNG &#x23F7</p>
-                                    </span>
-                                </a>
-                                <ul class="nav__submenu activities">
-                                    <li class="submenu__item English-activities"><a class="submenu__link"
-                                            href="../Các hoạt động bằng TA/index.html">Các
-                                            hoạt động bằng Tiếng Anh</a></li>
-                                    <li class="submenu__item Fun-week"><a class="submenu__link"
-                                            href="../Hội hè Fun Weeks/index.html">Hội hè
-                                            Fun-week</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">
-                                    <span class="link-before">
-                                        <p class="nav__text">BLOG &#x23F7</p>
-                                    </span>
-                                </a>
-                                <ul class="nav__submenu blog">
-                                    <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
-                                            Anh trẻ em</a></li>
-                                    <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
-                                            con</a></li>
-                                    <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
-                                            kiện</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- btn action -->
-                    <div class="header__action">
-                        <a href="../Đăng ký/index.html" class="btn btn--register">ĐĂNG KÝ</a>
-                    </div>
+                <!-- nav -->
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item nav__item--active">
+                            <a class="nav__link" href="../HomePage/index.html">
+                                <p class="nav__text">TRANG CHỦ</p>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">
+                                <span class="course-list">
+                                    <p class="nav__text">CÁC KHOÁ HỌC &#x23F7</p>
+                                </span>
+                            </a>
+                            <ul class="nav__submenu course-list">
+                                <li class="submenu__item"><a class="submenu__link" href="../Demo day/index.html">Học
+                                        thử miễn phí</a>
+                                </li>
+                                <li class="submenu__item"><a class="submenu__link" href="../1-2/index.html">Khóa học
+                                        cho trẻ 1-2
+                                        tuổi</a></li>
+                                <li class="submenu__item"><a class="submenu__link" href="../3-8/index.html">Khóa học
+                                        cho trẻ 3-8
+                                        tuổi</a></li>
+                                <li class="submenu__item"><a class="submenu__link" href="../9-12/index.html">Khóa
+                                        học cho trẻ
+                                        9-12
+                                        tuổi</a></li>
+                                <li class="submenu__item"><a class="submenu__link" href="../13-18/index.html">Khóa
+                                        học cho trẻ
+                                        13-18
+                                        tuổi</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="../PP của chúng tôi/index.html">
+                                <p class="nav__text">PHƯƠNG PHÁP CỦA CHÚNG TÔI</p>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="../Các cơ sở/index.html">
+                                <p class="nav__text">CƠ SỞ</p>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">
+                                <span class="activities">
+                                    <p class="nav__text">CÁC HOẠT ĐỘNG &#x23F7</p>
+                                </span>
+                            </a>
+                            <ul class="nav__submenu activities">
+                                <li class="submenu__item English-activities"><a class="submenu__link"
+                                        href="../Các hoạt động bằng TA/index.html">Các
+                                        hoạt động bằng Tiếng Anh</a></li>
+                                <li class="submenu__item Fun-week"><a class="submenu__link"
+                                        href="../Hội hè Fun Weeks/index.html">Hội hè
+                                        Fun-week</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">
+                                <span class="link-before">
+                                    <p class="nav__text">BLOG &#x23F7</p>
+                                </span>
+                            </a>
+                            <ul class="nav__submenu blog">
+                                <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
+                                        Anh trẻ em</a></li>
+                                <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
+                                        con</a></li>
+                                <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
+                                        kiện</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- btn action -->
+                <div class="header__action">
+                    <a href="../Đăng ký/index.html" class="btn btn--register">ĐĂNG KÝ</a>
                 </div>
             </div>
+        </div>
         </div>
     </header>
 
@@ -161,8 +171,8 @@
             <!--introduce  -->
             <div class="introduce wave-effect">
                 <div class="content">
-                    <h2 class="title">Chúng tôi là Kids&amp;Us</h2>
-                    <p>Kids&amp;Us đã có mặt tại Tây Ban Nha, An-đô-ra, Italia, Pháp, Bỉ, Cộng hòa Séc, Mexico, Nhật
+                    <h2 class="title" data-aos="zoom-in-up">Chúng tôi là Kids&amp;Us</h2>
+                    <p class="lePopOut">Kids&amp;Us đã có mặt tại Tây Ban Nha, An-đô-ra, Italia, Pháp, Bỉ, Cộng hòa Séc, Mexico, Nhật
                         Bản,
                         Myanmar và
                         Việt Nam.</p>
@@ -203,7 +213,8 @@
                                 Cơ
                                 hội này được tận dụng tối đa tại Kids&Us nhằm thôi thúc bé học qua các giác quan của
                                 mình.</div>
-                            <div class="btn btn-more"><a href="../1-2/index.html">Tìm hiểu thêm!</a></div>
+                            <div class="btn btn-more" data-aos="fade-up" data-aos-duration="3000"><a
+                                    href="../1-2/index.html">Tìm hiểu thêm!</a></div>
                         </div>
 
                     </div>
@@ -220,7 +231,9 @@
                                 tập bài hát, đọc hiểu và nhiều hoạt động khác đã được thiết kế phù hợp với độ tuổi và
                                 động
                                 lực của các em.</div>
-                            <button class="btn btn-more"><a href="../3-8/index.html">Tìm hiểu thêm!</a></button>
+                            <button class="btn btn-more" data-aos="fade-up" data-aos-duration="3000"><a
+                                    href="../3-8/index.html">Tìm hiểu
+                                    thêm!</a></button>
                         </div>
 
                     </div>
@@ -234,7 +247,8 @@
                                 triển bản thân. Nền tảng kỹ năng nghe nói vững chắc có từ những khóa học trước cho phép
                                 trẻ
                                 dễ dàng phát triển thêm kỹ năng đọc viết.</div>
-                            <button class="btn btn-more"><a href="../9-12/index.html">Tìm hiểu thêm!</a></button>
+                            <button class="btn btn-more" data-aos="fade-up" data-aos-duration="3000"><a
+                                    href="../9-12/index.html">Tìm hiểu thêm!</a></button>
                         </div>
                         <div class="image">
                             <img src="images/home5.jpg" />
@@ -251,7 +265,8 @@
                                 em. Ngoài ra, tại Kids&Us, chúng tôi luôn khuyến khích tư duy phản biện, giúp các em tự
                                 tin
                                 bước vào tương lai.</div>
-                            <button class="btn btn-more"><a href="../13-18/index.html">Tìm hiểu thêm!</a></button>
+                            <button class="btn btn-more" data-aos="fade-up" data-aos-duration="3000"><a
+                                    href="../13-18/index.html">Tìm hiểu thêm!</a></button>
                         </div>
                         <div class="image">
                             <img src="images/home3.jpg" />
@@ -284,28 +299,25 @@
                         </div>
                         <div class="method-list wave-effect">
                             <div class="method-asset" id="step1">
-                                <h3>Nghe </h3>
+                                <h3 data-aos="fade-right">Nghe
+                                </h3>
                                 <p> Nghe là bước đầu tiên mà trẻ làm quen với tiếng mẹ đẻ </p>
                             </div>
                             <div class="method-asset" id="step2">
-                                <h3>Hiểu</h3>
+                                <h3 data-aos="fade-left">Hiểu</h3>
                                 <p> Thông qua nghe, trẻ dần hiểu được những từ đầu tiên</p>
                             </div>
                             <div class="method-asset" id="step3">
-                                <h3>Nói </h3>
+                                <h3 data-aos="fade-right">Nói </h3>
                                 <p> Sau khi nghe và hiểu tiếng mẹ đẻ, trẻ bắt đầu tập nói </p>
                             </div>
-                            <div class="method-list-info">
-                                <div class="method-asset" id="step4">
-                                    <h3>Đọc</h3>
-                                    <p> Đọc là giai đoạn tiếp theo trong quá trình học ngôn ngữ</p>
-                                </div>
+                            <div class="method-asset" id="step4">
+                                <h3 data-aos="fade-left">Đọc</h3>
+                                <p> Đọc là giai đoạn tiếp theo trong quá trình học ngôn ngữ</p>
                             </div>
-                            <div class="method-list-info">
-                                <div class="method-asset" id="step5">
-                                    <h3>Viết</h3>
-                                    <p>Cuối cùng, trẻ hoàn thiện kỹ năng ngôn ngữ bằng việc tập viết</p>
-                                </div>
+                            <div class="method-asset" id="step5">
+                                <h3 data-aos="fade-right">Viết</h3>
+                                <p>Cuối cùng, trẻ hoàn thiện kỹ năng ngôn ngữ bằng việc tập viết</p>
                             </div>
                         </div>
                     </div>
@@ -316,10 +328,12 @@
             <div class="English-activities wave-effect">
                 <div class="body">
                     <div class="content">
-                        <h2 class="title">Cách hoạt động bằng tiếng Anh</h2>
+                        <h2 class="title">Các hoạt động bằng tiếng Anh</h2>
                         <p>Tại Kids&Us, tiếng Anh không chỉ được dùng trong lớp học, chúng tôi xây dựng rất nhiều hoạt
                             động bằng tiếng Anh để củng cố trải nghiệm học tập của học viên.</p>
-                        <div class="btn btn-see-activities arrow"><a href="../Các hoạt động bằng TA/index.html">Xem các hoạt động</a></div>
+                        <div class="btn btn-see-activities arrow" data-aos="zoom-out-down"><a
+                                href="../Các hoạt động bằng TA/index.html">Xem các
+                                hoạt động</a></div>
                     </div>
 
                     <div class="image">
@@ -350,75 +364,68 @@
                                 <img src="../../Images/kids and us.png" alt="Kids and Us" />
                             </div>
                             <div class="register__announcement">Kid&Us đang tuyển sinh các bé từ 1-7 tuổi</div>
-                            <div class="register__grid">
-                                <div class="register__grid-item">
-                                    <div class="register__field register__field--first-name">
-                                        <div class="register__label">First name (Tên)<sup>*</sup></div>
-                                        <div class="register__example">Tên: ví dụ : Ngọc</div>
-                                        <input class="register__input" type="text" required />
-                                        <span class="register__error">Please complete this required field.</span>
-                                    </div>
-                                    <div class="register__field register__field--last-name">
-                                        <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
-                                        <div class="register__example">Tên: ví dụ : Ngọc</div>
-                                        <input class="register__input" type="text" required />
-                                        <span class="register__error">Please complete this required field.</span>
-                                    </div>
+                            <div class="register__flex">
+                                <div class="register__field register__field--first-name">
+                                    <div class="register__label">First name (Tên)<sup>*</sup></div>
+                                    <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                    <input class="register__input" type="text" required />
+                                    <span class="register__error">Please complete this required field.</span>
                                 </div>
-                                <div class="register__grid-item">
-                                    <div class="register__field register__field--phone-number">
-                                        <div class="register__label">Phone number (Sdt)<sup>*</sup></div>
-                                        <input class="register__input" type="register__example" placeholder="+84"
-                                            required />
-                                        <span class="register__error">Please complete this required field.</span>
-                                    </div>
-                                    <div class="register__field register__field--email">
-                                        <div class="register__label">Email<sup>*</sup></div>
-                                        <input class="register__input" type="email" required />
-                                        <span class="register__error">Please complete this required field.</span>
-                                    </div>
+                                <div class="register__field register__field--last-name">
+                                    <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
+                                    <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                    <input class="register__input" type="text" required />
+                                    <span class="register__error">Please complete this required field.</span>
                                 </div>
-                                <div class="register__grid-item">
-                                    <div class="register__field register__field--study-school">
-                                        <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng
-                                            ký<sup>*</sup></div>
-                                        <select class="register__select" title="Please Select">
-                                            <option value="" selected hidden>Please Select</option>
-                                            <option value="" disabled>Please Select</option>
-                                            <option value="ntt">Kid&Us Nguyen Thi Thap</option>
-                                            <option value="school2">Kid&Us City Land Park Hills</option>
-                                            <option value="school3">Kid&Us Cao Đức Lân</option>
-                                            <option value="school2">Kid&Us Sư Vạn Hạnh</option>
-                                            <option value="school3">Kid&Us Lê Văn Việt</option>
-                                            <option value="school3">Kid&Us Tên Lửa</option>
-                                        </select>
-                                        <span class="register__error">Please complete this required field.</span>
-                                    </div>
-                                    <div class="register__field register__field--birth-year">
-                                        <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
-                                        <select class="register__select">
-                                            <option class="please" value="" selected hidden>Please Select</option>
-                                            <option value="" disabled>Please Select</option>
-                                            <option value="2016">2016</option>
-                                            <option value="2017">2017</option>
-                                            <option value="2018">2018</option>
-                                            <option value="2019">2019</option>
-                                            <option value="2020">2020</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                        </select>
-                                        <span class="register__error">Please complete this required field.</span>
-                                    </div>
+                                <div class="register__field register__field--phone-number">
+                                    <div class="register__label">Phone number (Sdt)<sup>*</sup></div>
+                                    <input class="register__input" type="register__example" placeholder="+84"
+                                        required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--email">
+                                    <div class="register__label">Email<sup>*</sup></div>
+                                    <input class="register__input" type="email" required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--study-school">
+                                    <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng
+                                        ký<sup>*</sup></div>
+                                    <select class="register__select" title="Please Select">
+                                        <option value="" selected hidden>Please Select</option>
+                                        <option value="" disabled>Please Select</option>
+                                        <option value="ntt">Kid&Us Nguyen Thi Thap</option>
+                                        <option value="school2">Kid&Us City Land Park Hills</option>
+                                        <option value="school3">Kid&Us Cao Đức Lân</option>
+                                        <option value="school2">Kid&Us Sư Vạn Hạnh</option>
+                                        <option value="school3">Kid&Us Lê Văn Việt</option>
+                                        <option value="school3">Kid&Us Tên Lửa</option>
+                                    </select>
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--birth-year">
+                                    <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
+                                    <select class="register__select">
+                                        <option class="please" value="" selected hidden>Please Select</option>
+                                        <option value="" disabled>Please Select</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                    </select>
+                                    <span class="register__error">Please complete this required field.</span>
                                 </div>
                             </div>
-
                             <div class="register__privacy-policy">
                                 <span class="register__agreement">Bằng việc đăng ký thông tin, bạn đồng ý với </span>
-                                <a href="#" class="register__link register__link--privacy">Chính sách bảo mật</a>
+                                <a href="../Privacy Policy/index.html" class="register__link register__link--privacy">Chính sách bảo mật</a>
                                 <span class="register__agreement"> và </span>
-                                <a href="#" class="register__link register__link--terms">Điều khoản sử dụng</a>
+                                <a href="../General Terms Condition/index.html" class="register__link register__link--terms">Điều khoản sử dụng</a>
                                 <span class="register__agreement"> của chúng tôi. Cho phép Kids&Us sử dụng thông
                                     tin
                                     mà bạn đã cung cấp nhằm mục đích tư vấn, tiếp thị sản phẩm và nghiên cứu thị
@@ -435,7 +442,10 @@
             </div>
         </div>
     </main>
-
+    <div id="custom-alert">
+        <div class="message">Thông tin đã được lưu!</div>
+        <button class="btn-close" id="close-alert">Đóng</button>
+    </div>
     <!-- footer -->
     <footer>
         <div class="footer__body">
@@ -560,7 +570,8 @@
                 <h1>Kids&Us Vietnam</h1>
             </div>
             <p class="popup__heading-content">
-                Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị ngay khi có thể.
+                Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị ngay khi có
+                thể.
             </p>
         </div>
 
@@ -599,7 +610,7 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="../../Animation/header-fix.js"></script>
+    <script src="../../Animation/header.js"></script>
     <script src="../../Animation/chat-form.js"></script>
     <script src="../../Animation/register-form.js"></script>
     <script src="../../Animation/load-effect.js"></script>

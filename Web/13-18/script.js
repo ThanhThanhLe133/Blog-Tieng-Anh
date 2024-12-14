@@ -35,10 +35,10 @@ $(document).ready(() => {
         if ($(e.target).is('.gallery-image')) {
             $('.gallery-image').fadeOut();
         }
-    });
-    // Tự động chuyển ảnh sau 3000ms khi modal đang mở
+    }); 
+    // Tự động chuyển ảnh sau 
     setInterval(function () {
-        if ($('.gallery-image').is(':visible')) { // Kiểm tra nếu modal đang mở
+        if ($('.gallery-image').is(':visible')) {
             currentSlideIndex = (currentSlideIndex + 1) % images.length;
             $('#modalImage').attr('src', images[currentSlideIndex]);
         }

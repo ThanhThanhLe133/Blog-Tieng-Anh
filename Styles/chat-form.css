@@ -1,5 +1,6 @@
 /*Pre popup*/
 .prePopup {
+    display: none;
     position: fixed;
     bottom: 80px;
     right: 20px;
@@ -52,7 +53,17 @@
 
 .helpButton:hover {
     background-color: #ee154b;
-    color: var(--text-color);
+}
+
+.popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    width: 350px;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .popup__heading{
@@ -98,16 +109,6 @@
     color: #ee154b;
 }
 
-.popup {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    border-radius: 10px;
-    z-index: 1000;
-    width: 350px;
-    background-color: #fff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
 
 .popup__form {
     width: 300px;

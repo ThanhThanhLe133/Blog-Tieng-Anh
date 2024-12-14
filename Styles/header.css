@@ -1,6 +1,5 @@
 /* header */
 /* .top-header */
-
 .main-container__top-header {
     top: 0;
     background-color: #EE154B;
@@ -19,17 +18,38 @@
     font-size: 15px;
     color: white;
 }
-
 .top-header__language {
     margin-left: auto;
-    background-color: #FFFFFF;
-    color: #857f7f;
-    height: 30px;
-    min-width: 110px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.top-header__language>* {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 10px 0 10px;
+    min-width: 120px;
+    background-color: #FFFFFF;
+    padding: 0 10px;
+    color: #857f7f;
+    height: 30px;
+}
+
+.english {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.top-header__language:hover .english {
+    display: flex;
+}
+
+.top-header__language>*:hover {
+    color: #EE154B;
 }
 
 .language__text {
@@ -92,16 +112,15 @@
     color: #171100;
 }
 .nav__submenu {
-    display: none;
+    display: none;  
     position: absolute;
     background-color: white;
     padding: 0;
     z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    list-style-type: none;
 }
 
-.header__nav>*>*:hover .nav__submenu {
+.nav__item:hover .nav__submenu {
     display: block;
 }
 

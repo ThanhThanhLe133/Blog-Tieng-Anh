@@ -3,17 +3,15 @@ let data = {};
 let error = {};
 let isOpen = false;
 
-window.onload = function() {
-    setTimeout(function() {
-        const prePopup = document.querySelector('.prePopup');
-        
-        prePopup.style.display = 'block'; 
-        setTimeout(function() {
-            prePopup.style.opacity = 1;
-        }, 10);
-    }, 2000);
-};
-
+gsap.fromTo(".prePopup", {
+    x: 200, 
+    opacity: 0 
+}, {
+    duration: 2, 
+    x: 0,
+    opacity: 1,  
+    display: "block" 
+});
 function closePrePopUp(){
     const popup = document.getElementById('prePopup');
     popup.style.display = 'none';
@@ -47,6 +45,6 @@ function handleBlur(event) {
 // Handle form submission
 function submitForm(event) {
     event.preventDefault();
-    console.log(data);
+    alert("Cảm ơn bạn đã để lại thông tin. Chúng tôi sẽ sớm liên lạc!")
     popUp();
 }

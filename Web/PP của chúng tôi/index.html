@@ -17,15 +17,15 @@
     <link rel="stylesheet" href="../../Styles/register-form.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
     <link rel="stylesheet" href="../../Styles/questions.css">
-    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../Styles/animation-general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Carattere&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <style>
-    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -39,11 +39,20 @@
                     <a class="phone-number__link" href="tel:18006175">1800 6175</a>
                 </div>
                 <div class="top-header__language">
-                    <div class="language__flag">
-                        <img src="../../Images/vn flag.png" alt="VN flag" />
+                    <div class="language vietnamese">
+                        <div class="language__flag">
+                            <img src="../../Images/vn flag.png" alt="VN flag" />
+                        </div>
+                        <span class="language__text">TIẾNG VIỆT</span>
+                        <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
                     </div>
-                    <span class="language__text">TIẾNG VIỆT</span>
-                    <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    <div class="language english">
+                        <div class="language__flag">
+                            <img src="../../Images/us flag.png" alt="US flag" />
+                        </div>
+                        <span class="language__text">ENGLISH</span>
+                        <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    </div>
                 </div>
             </div>
             <div class="main-container__header--fixed">
@@ -145,16 +154,11 @@
                     <li>
                         <img src="images/home2.jpg" />
                         <div class="image-content">
-                            <p class="lePushReleaseFromTop">
-                                <span>P</span><span>h</span><span>ư</span><span>ơ</span><span>n</span><span>g</span>
-                                <span> </span><span>p</span><span>h</span><span>á</span><span>p</span>
+                            <p data-aos="zoom-in-down">
+                                Phương pháp
                             </p>
-
-                            <p class="lePushReleaseFromTop">
-                                <span>c</span><span>ủ</span><span>a</span><span> </span>
-                                <span>c</span><span>h</span><span>ú</span><span>n</span><span>g</span><span></span><span>
-                                </span>
-                                <span>t</span><span>ô</span><span>i</span>
+                            <p data-aos="zoom-in-down">
+                                của chúng tôi
                             </p>
                         </div>
                     </li>
@@ -164,7 +168,7 @@
             <!--introduce  -->
             <div class="introduce wave-effect">
                 <div class="content">
-                    <h1 class="title">
+                    <h1 class="title" data-aos="zoom-in-up">
                         <span>Phương</span>
                         <span>pháp </span>
                         <span>của</span>
@@ -402,75 +406,67 @@
                             <img src="../../Images/kids and us.png" alt="Kids and Us" />
                         </div>
                         <div class="register__announcement">Kid&Us đang tuyển sinh các bé từ 1-7 tuổi</div>
-                        <div class="register__grid">
-                            <div class="register__grid-item">
-                                <div class="register__field register__field--first-name">
-                                    <div class="register__label">First name (Tên)<sup>*</sup></div>
-                                    <div class="register__example">Tên: ví dụ : Ngọc</div>
-                                    <input class="register__input" type="text" required />
-                                    <span class="register__error">Please complete this required field.</span>
-                                </div>
-                                <div class="register__field register__field--last-name">
-                                    <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
-                                    <div class="register__example">Tên: ví dụ : Ngọc</div>
-                                    <input class="register__input" type="text" required />
-                                    <span class="register__error">Please complete this required field.</span>
-                                </div>
+                        <div class="register__flex">
+                            <div class="register__field register__field--first-name">
+                                <div class="register__label">First name (Tên)<sup>*</sup></div>
+                                <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                <input class="register__input" type="text" required />
+                                <span class="register__error">Please complete this required field.</span>
                             </div>
-                            <div class="register__grid-item">
-                                <div class="register__field register__field--phone-number">
-                                    <div class="register__label">Phone number (Sdt)<sup>*</sup></div>
-                                    <input class="register__input" type="register__example" placeholder="+84"
-                                        required />
-                                    <span class="register__error">Please complete this required field.</span>
-                                </div>
-                                <div class="register__field register__field--email">
-                                    <div class="register__label">Email<sup>*</sup></div>
-                                    <input class="register__input" type="email" required />
-                                    <span class="register__error">Please complete this required field.</span>
-                                </div>
+                            <div class="register__field register__field--last-name">
+                                <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
+                                <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                <input class="register__input" type="text" required />
+                                <span class="register__error">Please complete this required field.</span>
                             </div>
-                            <div class="register__grid-item">
-                                <div class="register__field register__field--study-school">
-                                    <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng
-                                        ký<sup>*</sup></div>
-                                    <select class="register__select" title="Please Select">
-                                        <option value="" selected hidden>Please Select</option>
-                                        <option value="" disabled>Please Select</option>
-                                        <option value="ntt">Kid&Us Nguyen Thi Thap</option>
-                                        <option value="school2">Kid&Us City Land Park Hills</option>
-                                        <option value="school3">Kid&Us Cao Đức Lân</option>
-                                        <option value="school2">Kid&Us Sư Vạn Hạnh</option>
-                                        <option value="school3">Kid&Us Lê Văn Việt</option>
-                                        <option value="school3">Kid&Us Tên Lửa</option>
-                                    </select>
-                                    <span class="register__error">Please complete this required field.</span>
-                                </div>
-                                <div class="register__field register__field--birth-year">
-                                    <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
-                                    <select class="register__select">
-                                        <option class="" value="" selected hidden>Please Select</option>
-                                        <option value="" disabled>Please Select</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2019">2019</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
-                                    </select>
-                                    <span class="register__error">Please complete this required field.</span>
-                                </div>
+                            <div class="register__field register__field--phone-number">
+                                <div class="register__label">Phone number (Sdt)<sup>*</sup></div>
+                                <input class="register__input" type="register__example" placeholder="+84" required />
+                                <span class="register__error">Please complete this required field.</span>
+                            </div>
+                            <div class="register__field register__field--email">
+                                <div class="register__label">Email<sup>*</sup></div>
+                                <input class="register__input" type="email" required />
+                                <span class="register__error">Please complete this required field.</span>
+                            </div>
+                            <div class="register__field register__field--study-school">
+                                <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng
+                                    ký<sup>*</sup></div>
+                                <select class="register__select" title="Please Select">
+                                    <option value="" selected hidden>Please Select</option>
+                                    <option value="" disabled>Please Select</option>
+                                    <option value="ntt">Kid&Us Nguyen Thi Thap</option>
+                                    <option value="school2">Kid&Us City Land Park Hills</option>
+                                    <option value="school3">Kid&Us Cao Đức Lân</option>
+                                    <option value="school2">Kid&Us Sư Vạn Hạnh</option>
+                                    <option value="school3">Kid&Us Lê Văn Việt</option>
+                                    <option value="school3">Kid&Us Tên Lửa</option>
+                                </select>
+                                <span class="register__error">Please complete this required field.</span>
+                            </div>
+                            <div class="register__field register__field--birth-year">
+                                <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
+                                <select class="register__select">
+                                    <option class="please" value="" selected hidden>Please Select</option>
+                                    <option value="" disabled>Please Select</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                </select>
+                                <span class="register__error">Please complete this required field.</span>
                             </div>
                         </div>
-
                         <div class="register__privacy-policy">
                             <span class="register__agreement">Bằng việc đăng ký thông tin, bạn đồng ý với </span>
-                            <a href="#" class="register__link register__link--privacy">Chính sách bảo mật</a>
+                            <a href="../Privacy Policy/index.html" class="register__link register__link--privacy">Chính sách bảo mật</a>
                             <span class="register__agreement"> và </span>
-                            <a href="#" class="register__link register__link--terms">Điều khoản sử dụng</a>
+                            <a href="../General Terms Condition/index.html" class="register__link register__link--terms">Điều khoản sử dụng</a>
                             <span class="register__agreement"> của chúng tôi. Cho phép Kids&Us sử dụng thông
                                 tin
                                 mà bạn đã cung cấp nhằm mục đích tư vấn, tiếp thị sản phẩm và nghiên cứu thị
@@ -489,7 +485,7 @@
         <!-- questions -->
         <div class="questions wave-effect">
             <div class="content">
-                <h2 class='title title--black'>Những câu hỏi thường gặp về <span>Kids&Us</span></h2>
+                <h2 class='title title--black' data-aos="zoom-out">Những câu hỏi thường gặp về <span>Kids&Us</span></h2>
             </div>
             <div class="questions__question" data-index="0">
                 <div class="question__header">
@@ -497,7 +493,12 @@
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Với khối lượng kiến thức vừa đủ và thú vị! Các lớp học của Kids&Us là sự kết hợp của kiến thức ngôn ngữ với các bài hát và trò chơi. Phương pháp Kids&Us được hiệu chỉnh tỉ mỉ để giúp việc học trở nên hiệu quả, năng động và đầy cảm hứng. Tất cả các hoạt động được thực hiện tại lớp học đều có mục đích giao tiếp và được thiết kế để củng cố nội dung và mục tiêu của mỗi khóa học. Trong phương pháp của chúng tôi, không có gì được thực hiện chỉ vì lợi ích riêng lẻ; mọi thứ đều có lý do!</div>
+                    <div class="answer__content">Với khối lượng kiến thức vừa đủ và thú vị! Các lớp học của Kids&Us là
+                        sự kết hợp của kiến thức ngôn ngữ với các bài hát và trò chơi. Phương pháp Kids&Us được hiệu
+                        chỉnh tỉ mỉ để giúp việc học trở nên hiệu quả, năng động và đầy cảm hứng. Tất cả các hoạt động
+                        được thực hiện tại lớp học đều có mục đích giao tiếp và được thiết kế để củng cố nội dung và mục
+                        tiêu của mỗi khóa học. Trong phương pháp của chúng tôi, không có gì được thực hiện chỉ vì lợi
+                        ích riêng lẻ; mọi thứ đều có lý do!</div>
                 </div>
             </div>
             <div class="questions__question" data-index="1">
@@ -506,34 +507,59 @@
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Tại Kids&Us, chúng tôi không phân biệt các cấp độ tiếng Anh, cũng như không có cấp độ nào khi tiếp thu tiếng mẹ đẻ. Chúng tôi sử dụng các câu chuyện và nhân vật phù hợp với từng lứa tuổi. Trong lớp học, các bé sẽ học được rằng môi trường xung quanh và những thứ chúng quen thuộc xung quanh đều có tên riêng bằng tiếng Anh. Với Linda, nhân vật dành cho bé 2 tuổi, trẻ sẽ thấy Linda ngừng mặc tã và bắt đầu tự đi vệ sinh. Tuy nhiên, đến Oliver (6 đến 7 tuổi) thì sẽ là câu chuyện khác về chiếc răng bị rụng. Điều này giúp dễ dàng khơi gợi sự quan tâm và tạo động lực cho trẻ.</div>
+                    <div class="answer__content">Tại Kids&Us, chúng tôi không phân biệt các cấp độ tiếng Anh, cũng như
+                        không có cấp độ nào khi tiếp thu tiếng mẹ đẻ. Chúng tôi sử dụng các câu chuyện và nhân vật phù
+                        hợp với từng lứa tuổi. Trong lớp học, các bé sẽ học được rằng môi trường xung quanh và những thứ
+                        chúng quen thuộc xung quanh đều có tên riêng bằng tiếng Anh. Với Linda, nhân vật dành cho bé 2
+                        tuổi, trẻ sẽ thấy Linda ngừng mặc tã và bắt đầu tự đi vệ sinh. Tuy nhiên, đến Oliver (6 đến 7
+                        tuổi) thì sẽ là câu chuyện khác về chiếc răng bị rụng. Điều này giúp dễ dàng khơi gợi sự quan
+                        tâm và tạo động lực cho trẻ.</div>
                 </div>
             </div>
             <div class="questions__question" data-index="2">
                 <div class="question__header">
-                    <div class="question__title">Một tuần có bao nhiêu lớp học?  </div>
+                    <div class="question__title">Một tuần có bao nhiêu lớp học? </div>
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Từ một đến hai tuổi, bé sẽ tham gia một lớp học 45 phút mỗi tuần. Từ khi 3 tuổi cho đến khi bắt đầu biết đọc và viết, trẻ học một giờ một tuần. Và từ 8 tuổi, số giờ lên lớp mỗi tuần sẽ tăng dần lên 3 giờ một tuần, trải đều trong hai ngày. Tóm lại, đó là một thời lượng phù hợp và bền vững theo thời gian, phù hợp với lứa tuổi học sinh. </div>
+                    <div class="answer__content">Từ một đến hai tuổi, bé sẽ tham gia một lớp học 45 phút mỗi tuần. Từ
+                        khi 3 tuổi cho đến khi bắt đầu biết đọc và viết, trẻ học một giờ một tuần. Và từ 8 tuổi, số giờ
+                        lên lớp mỗi tuần sẽ tăng dần lên 3 giờ một tuần, trải đều trong hai ngày. Tóm lại, đó là một
+                        thời lượng phù hợp và bền vững theo thời gian, phù hợp với lứa tuổi học sinh. </div>
                 </div>
             </div>
             <div class="questions__question" data-index="3">
                 <div class="question__header">
-                    <div class="question__title">Tại sao trẻ phải nghe một đoạn âm thanh mỗi ngày?  </div>
+                    <div class="question__title">Tại sao trẻ phải nghe một đoạn âm thanh mỗi ngày? </div>
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Chúng tôi tin rằng việc tiếp xúc liên tục với ngôn ngữ là điều cần thiết cho việc học. Bằng cách nghe liên tục một đoạn âm thanh cụ thể, trẻ sẽ lưu giữ một số lượng lớn các từ và cấu trúc trong não bộ, để khi trẻ nghe thấy hoặc làm việc với chúng, trẻ sẽ dễ dàng hiểu và vận dụng hơn. Có thể nói, tầm quan trọng của kỹ năng nghe là vô cùng lớn, nó giúp trẻ quen dần với việc hiểu và phát âm tiếng Anh. Các bản nhạc này sẽ kéo dài khoảng mười phút. Trẻ có thể được nghe bất cứ lúc nào và trong bất kỳ hoạt động nào, miễn là không xem Tivi hoặc bất kỳ loại kích thích nghe nhìn nào khác có thể làm các trẻ mất tập trung. Về vấn đề này, điều quan trọng là phải tìm thời gian để cho trẻ lắng nghe hàng ngày, tích hợp thói quen này như một một hoạt động quen thuộc trong ngày (vào bữa sáng, trước khi đi ngủ, v.v.). Nếu trẻ không nghe đoạn âm thanh thì phương pháp này trở nên kém hiệu quả hơn. Điều này là do các lớp học được lên kế hoạch xoay quanh các hoạt động sử dụng từ vựng mà trẻ đã quen thuộc, vì vậy nếu trẻ không nghe đoạn âm thanh thì có nhiều khả năng chúng sẽ gặp khó khăn khi đến lớp học, và hậu quả lâu dài là trẻ sẽ mất động lực</div>
+                    <div class="answer__content">Chúng tôi tin rằng việc tiếp xúc liên tục với ngôn ngữ là điều cần
+                        thiết cho việc học. Bằng cách nghe liên tục một đoạn âm thanh cụ thể, trẻ sẽ lưu giữ một số
+                        lượng lớn các từ và cấu trúc trong não bộ, để khi trẻ nghe thấy hoặc làm việc với chúng, trẻ sẽ
+                        dễ dàng hiểu và vận dụng hơn. Có thể nói, tầm quan trọng của kỹ năng nghe là vô cùng lớn, nó
+                        giúp trẻ quen dần với việc hiểu và phát âm tiếng Anh. Các bản nhạc này sẽ kéo dài khoảng mười
+                        phút. Trẻ có thể được nghe bất cứ lúc nào và trong bất kỳ hoạt động nào, miễn là không xem Tivi
+                        hoặc bất kỳ loại kích thích nghe nhìn nào khác có thể làm các trẻ mất tập trung. Về vấn đề này,
+                        điều quan trọng là phải tìm thời gian để cho trẻ lắng nghe hàng ngày, tích hợp thói quen này như
+                        một một hoạt động quen thuộc trong ngày (vào bữa sáng, trước khi đi ngủ, v.v.). Nếu trẻ không
+                        nghe đoạn âm thanh thì phương pháp này trở nên kém hiệu quả hơn. Điều này là do các lớp học được
+                        lên kế hoạch xoay quanh các hoạt động sử dụng từ vựng mà trẻ đã quen thuộc, vì vậy nếu trẻ không
+                        nghe đoạn âm thanh thì có nhiều khả năng chúng sẽ gặp khó khăn khi đến lớp học, và hậu quả lâu
+                        dài là trẻ sẽ mất động lực</div>
                 </div>
             </div>
             <div class="questions__question" data-index="4">
                 <div class="question__header">
-                    <div class="question__title">Điều gì sẽ xảy ra nếu một đứa trẻ không nghe đoạn âm thanh mỗi ngày? </div>
+                    <div class="question__title">Điều gì sẽ xảy ra nếu một đứa trẻ không nghe đoạn âm thanh mỗi ngày?
+                    </div>
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Nếu trẻ không nghe đoạn âm thanh thì phương pháp này trở nên kém hiệu quả hơn. Điều này là do các lớp học được lên kế hoạch xoay quanh các hoạt động sử dụng từ vựng mà trẻ đã quen thuộc, vì vậy nếu trẻ không nghe đoạn âm thanh thì có nhiều khả năng chúng sẽ gặp khó khăn khi đến lớp học, và hậu quả lâu dài là trẻ sẽ mất động lực</div>
+                    <div class="answer__content">Nếu trẻ không nghe đoạn âm thanh thì phương pháp này trở nên kém hiệu
+                        quả hơn. Điều này là do các lớp học được lên kế hoạch xoay quanh các hoạt động sử dụng từ vựng
+                        mà trẻ đã quen thuộc, vì vậy nếu trẻ không nghe đoạn âm thanh thì có nhiều khả năng chúng sẽ gặp
+                        khó khăn khi đến lớp học, và hậu quả lâu dài là trẻ sẽ mất động lực</div>
                 </div>
             </div>
             <div class="questions__question" data-index="5">
@@ -542,7 +568,10 @@
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Không. Điều này là không cần thiết! Gia đình luôn là sự hỗ trợ tốt nhất cho con học tiếng Anh, bằng cách thể hiện sự quan tâm và nhiệt tình với những gì con đang học. Với sự hỗ trợ tinh thần của bạn, ba mẹ đã đóng góp rất nhiều vào sự thành công của quá trình học tập.</div>
+                    <div class="answer__content">Không. Điều này là không cần thiết! Gia đình luôn là sự hỗ trợ tốt nhất
+                        cho con học tiếng Anh, bằng cách thể hiện sự quan tâm và nhiệt tình với những gì con đang học.
+                        Với sự hỗ trợ tinh thần của bạn, ba mẹ đã đóng góp rất nhiều vào sự thành công của quá trình học
+                        tập.</div>
                 </div>
             </div>
             <div class="questions__question" data-index="6">
@@ -551,16 +580,24 @@
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Điều này chỉ cần thiết trong những năm đầu tiên của phương pháp này (1 và 2 tuổi). Sự hiện diện của ba mẹ làm cho trẻ cảm thấy an toàn và thoải mái trong môi trường mới và từ đó, trẻ bắt đầu kết nối cảm xúc với ngôn ngữ, tạo ra một mối liên kết rất đặc biệt để học tập hiệu quả hơn Khi ba mẹ ngừng tham gia lớp học cùng con, ba mẹ nên đảm bảo rằng con sẽ nghe các file âm thanh của Kids&Us ở nhà hàng ngày và thực hiện các hoạt động bổ sung mà chúng tôi đề xuất.</div>
+                    <div class="answer__content">Điều này chỉ cần thiết trong những năm đầu tiên của phương pháp này (1
+                        và 2 tuổi). Sự hiện diện của ba mẹ làm cho trẻ cảm thấy an toàn và thoải mái trong môi trường
+                        mới và từ đó, trẻ bắt đầu kết nối cảm xúc với ngôn ngữ, tạo ra một mối liên kết rất đặc biệt để
+                        học tập hiệu quả hơn Khi ba mẹ ngừng tham gia lớp học cùng con, ba mẹ nên đảm bảo rằng con sẽ
+                        nghe các file âm thanh của Kids&Us ở nhà hàng ngày và thực hiện các hoạt động bổ sung mà chúng
+                        tôi đề xuất.</div>
                 </div>
             </div>
             <div class="questions__question" data-index="7">
                 <div class="question__header">
-                    <div class="question__title">Một tuần có bao nhiêu lớp học?  </div>
+                    <div class="question__title">Một tuần có bao nhiêu lớp học? </div>
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Từ một đến hai tuổi, bé sẽ tham gia một lớp học 45 phút mỗi tuần. Từ khi 3 tuổi cho đến khi bắt đầu biết đọc và viết, trẻ học một giờ một tuần. Và từ 8 tuổi, số giờ lên lớp mỗi tuần sẽ tăng dần lên 3 giờ một tuần, trải đều trong hai ngày. Tóm lại, đó là một thời lượng phù hợp và bền vững theo thời gian, phù hợp với lứa tuổi học sinh. </div>
+                    <div class="answer__content">Từ một đến hai tuổi, bé sẽ tham gia một lớp học 45 phút mỗi tuần. Từ
+                        khi 3 tuổi cho đến khi bắt đầu biết đọc và viết, trẻ học một giờ một tuần. Và từ 8 tuổi, số giờ
+                        lên lớp mỗi tuần sẽ tăng dần lên 3 giờ một tuần, trải đều trong hai ngày. Tóm lại, đó là một
+                        thời lượng phù hợp và bền vững theo thời gian, phù hợp với lứa tuổi học sinh. </div>
                 </div>
             </div>
             <div class="questions__question" data-index="8">
@@ -569,16 +606,25 @@
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Tại Kids&Us, chương trình học của chúng tôi không khác với những gì trẻ học ở trường. Phương pháp của chúng tôi dựa trên sự đắm chìm hoàn toàn vào ngôn ngữ và khả năng tiếp thu ngôn ngữ toàn diện. Cấu trúc ngữ pháp và từ vựng không thể được học một cách độc lập mà phải học trong ngữ cảnh thực tế. Hơn nữa, chúng tôi tận dụng lợi thế của các lớp học nhóm nhỏ để thúc đẩy và cung cấp nhiều cơ hội hơn giao tiếp hơn.</div>
+                    <div class="answer__content">Tại Kids&Us, chương trình học của chúng tôi không khác với những gì trẻ
+                        học ở trường. Phương pháp của chúng tôi dựa trên sự đắm chìm hoàn toàn vào ngôn ngữ và khả năng
+                        tiếp thu ngôn ngữ toàn diện. Cấu trúc ngữ pháp và từ vựng không thể được học một cách độc lập mà
+                        phải học trong ngữ cảnh thực tế. Hơn nữa, chúng tôi tận dụng lợi thế của các lớp học nhóm nhỏ để
+                        thúc đẩy và cung cấp nhiều cơ hội hơn giao tiếp hơn.</div>
                 </div>
             </div>
             <div class="questions__question" data-index="9">
                 <div class="question__header">
-                    <div class="question__title">Tại sao các em bắt đầu biết đọc và viết muộn hơn ở trường tiểu học? </div>
+                    <div class="question__title">Tại sao các em bắt đầu biết đọc và viết muộn hơn ở trường tiểu học?
+                    </div>
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Vấn đề không phải là bắt đầu muộn mà là bắt đầu khi trẻ đã thực sự sẵn sàng. Trong thực tế, với tiếng mẹ đẻ của chúng ta, chúng ta không bắt đầu nói, đọc và viết đồng thời, mà trước tiên chúng ta học nghe ngôn ngữ và sau đó mới học đọc và viết. Vì vậy, chúng tôi tin rằng việc thúc đẩy nghe và nói trong những năm đầu tiên học tiếng Anh và giới thiệu kỹ năng đọc và viết sau này sẽ trở nên tự nhiên và hiệu quả hơn.</div>
+                    <div class="answer__content">Vấn đề không phải là bắt đầu muộn mà là bắt đầu khi trẻ đã thực sự sẵn
+                        sàng. Trong thực tế, với tiếng mẹ đẻ của chúng ta, chúng ta không bắt đầu nói, đọc và viết đồng
+                        thời, mà trước tiên chúng ta học nghe ngôn ngữ và sau đó mới học đọc và viết. Vì vậy, chúng tôi
+                        tin rằng việc thúc đẩy nghe và nói trong những năm đầu tiên học tiếng Anh và giới thiệu kỹ năng
+                        đọc và viết sau này sẽ trở nên tự nhiên và hiệu quả hơn.</div>
                 </div>
             </div>
             <div class="questions__question" data-index="10">
@@ -587,13 +633,20 @@
                     <button class="question__button">+</button>
                 </div>
                 <div class="question__answer" style="display: none;">
-                    <div class="answer__content">Bởi vì phương pháp của chúng tôi hiệu quả nên con bạn sẽ học tiếng Anh với chúng tôi, giống như 150.000 học sinh khác theo học tại 500 trường ở 9 quốc gia khác nhau. Là người đi đầu trong việc dạy tiếng Anh cho trẻ em ở Tây Ban Nha, chúng tôi tin tưởng vào sự cải tiến và đổi mới liên tục. Chúng tôi là tổ chức hàng đầu trong lĩnh vực này nhờ vào phương pháp hiệu quả đã được kiểm chứng.</div>
+                    <div class="answer__content">Bởi vì phương pháp của chúng tôi hiệu quả nên con bạn sẽ học tiếng Anh
+                        với chúng tôi, giống như 150.000 học sinh khác theo học tại 500 trường ở 9 quốc gia khác nhau.
+                        Là người đi đầu trong việc dạy tiếng Anh cho trẻ em ở Tây Ban Nha, chúng tôi tin tưởng vào sự
+                        cải tiến và đổi mới liên tục. Chúng tôi là tổ chức hàng đầu trong lĩnh vực này nhờ vào phương
+                        pháp hiệu quả đã được kiểm chứng.</div>
                 </div>
             </div>
         </div>
         </div>
     </main>
-
+    <div id="custom-alert">
+        <div class="message">Thông tin đã được lưu!</div>
+        <button class="btn-close" id="close-alert">Đóng</button>
+    </div>
     <!-- footer -->
     <footer>
         <div class="footer__body">
@@ -718,7 +771,8 @@
                 <h1>Kids&Us Vietnam</h1>
             </div>
             <p class="popup__heading-content">
-                Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị ngay khi có thể.
+                Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị ngay khi có
+                thể.
             </p>
         </div>
 
@@ -755,7 +809,7 @@
             <button type="submit" class="popup__form-submit"><img src="../../Images/send-chat.png">GỬI TIN NHẮN</button>
         </form>
     </div>
-    <script src="../../Animation/header-fix.js"></script>
+    <script src="../../Animation/header.js"></script>
     <script src="../../Animation/chat-form.js"></script>
     <script src="../../Animation/register-form.js"></script>
     <script src="../../Animation/questions.js"></script>

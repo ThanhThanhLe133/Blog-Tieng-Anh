@@ -16,15 +16,15 @@
     <link rel="stylesheet" href="../../Styles/chat-form.css">
     <link rel="stylesheet" href="../../Styles/register-form.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
-    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../Styles/animation-general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Carattere&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <style>
-    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -38,11 +38,20 @@
                     <a class="phone-number__link" href="tel:18006175">1800 6175</a>
                 </div>
                 <div class="top-header__language">
-                    <div class="language__flag">
-                        <img src="../../Images/vn flag.png" alt="VN flag" />
+                    <div class="language vietnamese">
+                        <div class="language__flag">
+                            <img src="../../Images/vn flag.png" alt="VN flag" />
+                        </div>
+                        <span class="language__text">TIẾNG VIỆT</span>
+                        <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
                     </div>
-                    <span class="language__text">TIẾNG VIỆT</span>
-                    <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    <div class="language english">
+                        <div class="language__flag">
+                            <img src="../../Images/us flag.png" alt="US flag" />
+                        </div>
+                        <span class="language__text">ENGLISH</span>
+                        <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    </div>
                 </div>
             </div>
             <div class="main-container__header--fixed">
@@ -74,10 +83,12 @@
                                     <li class="submenu__item"><a class="submenu__link" href="../3-8/index.html">Khóa học
                                             cho trẻ 3-8
                                             tuổi</a></li>
-                                    <li class="submenu__item"><a class="submenu__link" href="../9-12/index.html">Khóa học cho trẻ
+                                    <li class="submenu__item"><a class="submenu__link" href="../9-12/index.html">Khóa
+                                            học cho trẻ
                                             9-12
                                             tuổi</a></li>
-                                    <li class="submenu__item"><a class="submenu__link" href="../13-18/index.html">Khóa học cho trẻ
+                                    <li class="submenu__item"><a class="submenu__link" href="../13-18/index.html">Khóa
+                                            học cho trẻ
                                             13-18
                                             tuổi</a></li>
                                 </ul>
@@ -284,7 +295,8 @@
                             <p><strong>Vai trò của gia đình:</strong> Để việc học tiếng Anh từ nhỏ diễn ra hiệu quả
                                 nhất, bé cần dành thời gian thực hành ở nhà thông qua việc nghe audio track mỗi ngày.
                             </p>
-                            <div class="btn btn-more"><a href="#register-form">Tư vấn miễn phí</a></div>
+                            <div class="btn btn-more" data-aos="zoom-in-up"><a href="#register-form">Tư vấn miễn phí</a>
+                            </div>
                         </div>
                         <div class="image">
                             <img src="images/DETALLKIDS_1.png" />
@@ -307,7 +319,8 @@
                             <p><strong>Vai trò của gia đình:</strong> Để việc học tiếng Anh từ nhỏ diễn ra hiệu quả
                                 nhất, bé cần dành thời gian thực hành ở nhà thông qua việc nghe audio track mỗi ngày.
                             </p>
-                            <div class="btn btn-more"><a href="#register-form">Tư vấn miễn phí</a></div>
+                            <div class="btn btn-more" data-aos="zoom-in-right"><a href="#register-form">Tư vấn miễn
+                                    phí</a></div>
                         </div>
                     </div>
                 </div>
@@ -325,7 +338,8 @@
                             <p><strong>Vai trò của gia đình:</strong> Để việc học tiếng Anh từ nhỏ diễn ra hiệu quả
                                 nhất, bé cần dành thời gian thực hành ở nhà thông qua việc nghe audio track mỗi ngày.
                             </p>
-                            <div class="btn btn-more"><a href="#register-form">Tư vấn miễn phí</a></div>
+                            <div class="btn btn-more" data-aos="zoom-in-left"><a href="#register-form">Tư vấn miễn
+                                    phí</a></div>
                         </div>
                         <div class="image">
                             <img src="images/DETALLKIDS_3-1.png" />
@@ -350,7 +364,8 @@
                             <p><strong>Vai trò của gia đình:</strong> Để việc học tiếng Anh từ nhỏ diễn ra hiệu quả
                                 nhất, bé cần dành thời gian thực hành ở nhà thông qua việc nghe audio track mỗi ngày.
                             </p>
-                            <div class="btn btn-more"><a href="#register-form">Tư vấn miễn phí</a></div>
+                            <div class="btn btn-more" data-aos="zoom-in-down"><a href="#register-form">Tư vấn miễn
+                                    phí</a></div>
                         </div>
                     </div>
                 </div>
@@ -370,7 +385,8 @@
                             <p><strong>Vai trò của gia đình:</strong> Để việc học tiếng Anh từ nhỏ diễn ra hiệu quả
                                 nhất, bé cần dành thời gian thực hành ở nhà thông qua việc nghe audio track mỗi ngày.
                             </p>
-                            <div class="btn btn-more"><a href="#register-form">Tư vấn miễn phí</a></div>
+                            <div class="btn btn-more" data-aos="zoom-in-down"><a href="#register-form">Tư vấn miễn
+                                    phí</a></div>
                         </div>
                         <div class="image">
                             <img src="images/DETALLKIDS_5-1.png" />
@@ -395,7 +411,8 @@
                             <p><strong>Vai trò của gia đình:</strong> ĐĐể việc học tiếng Anh từ nhỏ diễn ra hiệu quả
                                 nhất, bé cần dành thời gian thực hành ở nhà thông qua việc nghe audio track mỗi ngày.
                             </p>
-                            <div class="btn btn-more"><a href="#register-form">Tư vấn miễn phí</a></div>
+                            <div class="btn btn-more" data-aos="zoom-in-down"><a href="#register-form">Tư vấn miễn
+                                    phí</a></div>
                         </div>
                     </div>
                 </div>
@@ -404,7 +421,8 @@
             <div class="English-activities wave-effect">
                 <div class="body">
                     <div class="content">
-                        <h2 class="title">Trường Anh ngữ Kids&Us Vietnam - Tiếng Anh cho trẻ từ 1 tuổi</h2>
+                        <h2 class="title" data-aos="zoom-in-up">Trường Anh ngữ Kids&Us Vietnam - Tiếng Anh cho trẻ từ 1
+                            tuổi</h2>
                     </div>
                     <div class="youtube-link">
                         <iframe width="560" height="315"
@@ -422,136 +440,97 @@
             </div>
             <!-- register -->
             <div class="register wave-effect" id="register-form">
-                <form id="register-form">
-                    <div class="register__body">
-                        <div class="register__form">
-                            <fieldset class="register__fieldset">
-                                <div class="register__logo">
-                                    <img src="../../Images/kids and us.png" alt="Kids and Us" />
-                                </div>
+                <div class="register__body">
+                    <div class="register__form">
+                        <fieldset class="register__fieldset">
+                            <div class="register__logo">
+                                <img src="../../Images/kids and us.png" alt="Kids and Us" />
+                            </div>
                             <div class="register__announcement">Kid&Us đang tuyển sinh các bé từ 1-7 tuổi</div>
-                                <div class="register__grid">
-                                    <div class="register__grid-item">
-                                        <div class="register__field register__field--first-name">
-                                            <div class="register__label">First name (Tên)<sup>*</sup></div>
-                                            <div class="register__example">Tên: ví dụ : Ngọc</div>
-                                            <input class="register__input" type="text" id="first_name" required />
-                                            <span class="register__error">Please complete this required field.</span>
-                                        </div>
-                                        <div class="register__field register__field--last-name">
-                                            <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
-                                            <div class="register__example">Tên: ví dụ : Nguyễn Thị</div>
-                                            <input class="register__input" type="text" id="last_name" required />
-                                            <span class="register__error">Please complete this required field.</span>
-                                        </div>
-                                    </div>
-                                    <div class="register__grid-item">
-                                        <div class="register__field register__field--phone-number">
-                                            <div class="register__label">Phone number (Sdt)<sup>*</sup></div>
-                                            <input class="register__input" type="text" id="phone" placeholder="+84" required />
-                                            <span class="register__error">Please complete this required field.</span>
-                                        </div>
-                                        <div class="register__field register__field--email">
-                                            <div class="register__label">Email<sup>*</sup></div>
-                                            <input class="register__input" type="email" id="email" required />
-                                            <span class="register__error">Please complete this required field.</span>
-                                        </div>
-                                    </div>
-                                    <div class="register__grid-item">
-                                        <div class="register__field register__field--study-school">
-                                            <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng ký<sup>*</sup></div>
-                                            <select class="register__select" id="study_school" required>
-                                                <option value="" selected hidden>Please Select</option>
-                                                <option value="ntt">Kid&Us Nguyen Thi Thap</option>
-                                                <option value="school2">Kid&Us City Land Park Hills</option>
-                                                <option value="school3">Kid&Us Cao Đức Lân</option>
-                                                <option value="school2">Kid&Us Sư Vạn Hạnh</option>
-                                                <option value="school3">Kid&Us Lê Văn Việt</option>
-                                                <option value="school3">Kid&Us Tên Lửa</option>
-                                            </select>
-                                            <span class="register__error">Please complete this required field.</span>
-                                        </div>
-                                        <div class="register__field register__field--birth-year">
-                                            <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
-                                            <select class="register__select" id="birth_year" required>
-                                                <option value="" selected hidden>Please Select</option>
-                                                <option value="2016">2016</option>
-                                                <option value="2017">2017</option>
-                                                <option value="2018">2018</option>
-                                                <option value="2019">2019</option>
-                                                <option value="2020">2020</option>
-                                                <option value="2021">2021</option>
-                                                <option value="2022">2022</option>
-                                                <option value="2023">2023</option>
-                                                <option value="2024">2024</option>
-                                            </select>
-                                            <span class="register__error">Please complete this required field.</span>
-                                        </div>
-                                    </div>
+                            <div class="register__flex">
+                                <div class="register__field register__field--first-name">
+                                    <div class="register__label">First name (Tên)<sup>*</sup></div>
+                                    <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                    <input class="register__input" type="text" required />
+                                    <span class="register__error">Please complete this required field.</span>
                                 </div>
-
+                                <div class="register__field register__field--last-name">
+                                    <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
+                                    <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                    <input class="register__input" type="text" required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--phone-number">
+                                    <div class="register__label">Phone number (Sdt)<sup>*</sup></div>
+                                    <input class="register__input" type="register__example" placeholder="+84"
+                                        required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--email">
+                                    <div class="register__label">Email<sup>*</sup></div>
+                                    <input class="register__input" type="email" required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--study-school">
+                                    <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng
+                                        ký<sup>*</sup></div>
+                                    <select class="register__select" title="Please Select">
+                                        <option value="" selected hidden>Please Select</option>
+                                        <option value="" disabled>Please Select</option>
+                                        <option value="ntt">Kid&Us Nguyen Thi Thap</option>
+                                        <option value="school2">Kid&Us City Land Park Hills</option>
+                                        <option value="school3">Kid&Us Cao Đức Lân</option>
+                                        <option value="school2">Kid&Us Sư Vạn Hạnh</option>
+                                        <option value="school3">Kid&Us Lê Văn Việt</option>
+                                        <option value="school3">Kid&Us Tên Lửa</option>
+                                    </select>
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--birth-year">
+                                    <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
+                                    <select class="register__select">
+                                        <option class="please" value="" selected hidden>Please Select</option>
+                                        <option value="" disabled>Please Select</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                    </select>
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                            </div>
                             <div class="register__privacy-policy">
                                 <span class="register__agreement">Bằng việc đăng ký thông tin, bạn đồng ý với </span>
-                                <a href="#" class="register__link register__link--privacy">Chính sách bảo mật</a>
+                                <a href="../Privacy Policy/index.html" class="register__link register__link--privacy">Chính sách bảo mật</a>
                                 <span class="register__agreement"> và </span>
-                                <a href="#" class="register__link register__link--terms">Điều khoản sử dụng</a>
+                                <a href="../General Terms Condition/index.html" class="register__link register__link--terms">Điều khoản sử dụng</a>
                                 <span class="register__agreement"> của chúng tôi. Cho phép Kids&Us sử dụng thông
                                     tin
                                     mà bạn đã cung cấp nhằm mục đích tư vấn, tiếp thị sản phẩm và nghiên cứu thị
                                     trường.</span>
                             </div>
 
-                                <div class="register__submit">
-                                    <button type="submit" class="btn register__button">Submit</button>
-                                </div>
-                            </fieldset>
-                        </div>
+                            <div class="register__submit">
+                                <button type="submit" class="btn register__button">Submit</button>
+                            </div>
+                        </fieldset>
+
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </main>
-
-<div id="custom-alert">
-    <div class="message">Thông tin đã được lưu!</div>
-    <button class="btn-close" id="close-alert">Đóng</button>
-</div>
-
-<script>
-document.getElementById('register-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent form submission
-
-    // Get form values
-    const firstName = document.getElementById('first_name').value;
-    const lastName = document.getElementById('last_name').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const studySchool = document.getElementById('study_school').value;
-    const birthYear = document.getElementById('birth_year').value;
-
-    // Process the form data (e.g., save to localStorage)
-    let studentData = JSON.parse(localStorage.getItem('studentData')) || [];
-    studentData.push({
-        firstName, lastName, phone, email, studySchool, birthYear
-    });
-    localStorage.setItem('studentData', JSON.stringify(studentData));
-
-    // Show custom alert
-    const customAlert = document.getElementById('custom-alert');
-    customAlert.style.display = 'block';
-
-    // Close custom alert on button click
-    document.getElementById('close-alert').addEventListener('click', function () {
-        customAlert.style.display = 'none';
-    });
-
-    // Optionally reset the form
-    document.getElementById('register-form').reset();
-});
-    </script>
-
-     <!-- footer -->
-     <footer>
+    <div id="custom-alert">
+        <div class="message">Thông tin đã được lưu!</div>
+        <button class="btn-close" id="close-alert">Đóng</button>
+    </div>
+    <!-- footer -->
+    <footer>
         <div class="footer__body">
             <div class="footer__grid">
                 <div class="footer__item">
@@ -593,12 +572,18 @@ document.getElementById('register-form').addEventListener('submit', function (ev
                     <h4 class="footer__title">CƠ SỞ</h4>
                     <div class="footer__content">
                         <ul class="footer-links">
-                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Nguyễn Thị Thập</a></li>
-                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Cityland Park Hills</a></li>
-                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Cao Đức Lân</a></li>
-                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Sư Vạn Hạnh</a></li>
-                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Lê Văn Việt</a></li>
-                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Tên Lửa</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Nguyễn
+                                    Thị Thập</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html"
+                                    class="footer__link">Cityland Park Hills</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Cao Đức
+                                    Lân</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Sư Vạn
+                                    Hạnh</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Lê Văn
+                                    Việt</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Tên
+                                    Lửa</a></li>
                         </ul>
                     </div>
                 </div>
@@ -668,7 +653,8 @@ document.getElementById('register-form').addEventListener('submit', function (ev
                 <h1>Kids&Us Vietnam</h1>
             </div>
             <p class="popup__heading-content">
-                Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị ngay khi có thể.
+                Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị ngay khi có
+                thể.
             </p>
         </div>
 
@@ -708,7 +694,7 @@ document.getElementById('register-form').addEventListener('submit', function (ev
 
     <script src="script.js"></script>
     <script src="../../Animation/chat-form.js"></script>
-    <script src="../../Animation/header-fix.js"></script>
+    <script src="../../Animation/header.js"></script>
     <script src="../../Animation/register-form.js"></script>
     <script src="../../Animation/load-effect.js"></script>
 </body>

@@ -12,8 +12,8 @@
 }
 
 .register__fieldset{
-    padding:24px;
-    height: 660px;
+    padding:16px;
+    height: 680px;
     overflow-y: auto;
 }
 .register__logo {
@@ -25,6 +25,9 @@
 .register__logo img {
     width: 25%;
 }
+.register img:hover{
+    transform: scale(1.1);
+}
 
 .register__announcement{
     text-align: center;
@@ -34,22 +37,18 @@
     margin:8px;
     margin-bottom: 0px;
 }
-.register__grid{
-    display: block; 
-    row-gap: 30px;
-    margin-top:0px;
-    margin-bottom: 24px;
+.register__flex{
+    display: flex; 
+    gap:30px;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin:24px 0;
 }
-.register__grid-item{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #58D2DD;
-    flex-direction: column;
-    column-gap: 32px;
-}
+
 .register__field{
-    margin: 24px 10px;
+    margin: 10px;
     margin-bottom: 10px;
+    flex: 1 1 45%;
 }
 .register sup{
     color: red;

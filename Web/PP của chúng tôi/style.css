@@ -2,6 +2,7 @@
  /* main */
  main{
     margin-top: 84px; 
+    overflow-x: hidden;
  }
 
 /* image-slide */
@@ -67,7 +68,7 @@
 }
 
 .textwidge--method {
-    gap: 40px;
+    gap: 10px;
 }
 .panel-grid{
     font-size: 15px;
@@ -84,6 +85,46 @@
 .courses{
     margin: 0 auto;
     margin-top:48px;
+}
+
+.one img{
+    transition: transform 0.3s ease;
+}
+
+.two img{
+    transition: transform 0.3s ease;
+}
+
+.three img{
+    transition: transform 0.3s ease;
+}
+
+.four img{
+    transition: transform 0.3s ease;
+}
+
+.five img{
+    transition: transform 0.3s ease;
+}
+
+.one:hover img{
+    transform: scale(1.1);
+}
+
+.two:hover img{
+    transform: scale(1.1);
+}
+
+.three:hover img{
+    transform: scale(1.1);
+}
+
+.four:hover img{
+    transform: scale(1.1);
+}
+
+.five:hover img{
+    transform: scale(1.1);
 }
 
 .grid-container {
@@ -115,7 +156,7 @@
 }
 
 .grid-item{
-    max-width: 1150px;
+    max-width: 1000px;
     margin:0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -180,6 +221,7 @@ strong{
 }
 .sow-headline, .sow-sub-headline{
     margin: 12px;
+
 }
 
 .method__grid-detail-title{
@@ -231,7 +273,8 @@ strong{
 }
 
 .base-method .textwidge {
-    width: 1500px;
+    width: 100%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     flex-wrap: wrap;
