@@ -91,8 +91,8 @@ $(document).ready(function () {
         if (sortKey) {
             var rows = $('#guest-table tr').get();
             rows.sort(function (a, b) {
-                var keyA = $(a).children(`.${sortKey}`).text().toLowerCase(); 
-                var keyB = $(b).children(`.${sortKey}`).text().toLowerCase(); 
+                var keyA = $(a).children(`.${sortKey}`).text().toLowerCase();
+                var keyB = $(b).children(`.${sortKey}`).text().toLowerCase();
 
                 if (keyA < keyB) return -1;
                 if (keyA > keyB) return 1;
@@ -113,8 +113,8 @@ $(document).ready(function () {
         if (sortKey) {
             var rows = $('#guest-table tr').get();
             rows.sort(function (a, b) {
-                var keyA = $(a).children(`.${sortKey}`).text().toLowerCase(); 
-                var keyB = $(b).children(`.${sortKey}`).text().toLowerCase(); 
+                var keyA = $(a).children(`.${sortKey}`).text().toLowerCase();
+                var keyB = $(b).children(`.${sortKey}`).text().toLowerCase();
 
                 if (keyA < keyB) return 1;
                 if (keyA > keyB) return -1;
@@ -126,6 +126,48 @@ $(document).ready(function () {
         }
         else {
             alert("Vui lòng chọn một cột để sắp xếp!");
+        }
+    });
+    //xử lý xoá
+    $('#guest-table').on('click', '.deleteBtn', function () {
+        var row = $(this).closest('tr');
+        var guestId = row.data('id');
+        $("#custom-close .message").html("Bạn có chắc chắn muốn xoá thông tin này?");
+        $("#custom-close").show();
+        $(".btn-ok").on('click', function (e) {
+            e.preventDefault();
+            $("#custom-close").hide()
+            $.post('deleteGuest.php', { id: guestId }, function (response) {
+                if (response === 'success') {
+                    row.remove();
+                    $("#custom-alert").show();
+                } else {
+                    $("#custom-alert .message").text('Xóa thất bại. Vui lòng thử lại.');
+                    $("#custom-alert").show();
+                }
+            });
+        });
+    });
+
+    $(".btn-close").on("click", function (e) {
+        e.preventDefault();
+        $("#custom-alert").hide();
+        $("#custom-close").hide();
+    });
+
+    //đăng xuất
+    $('.header__action').on('click', function (e) {
+        if ($(this).children().first().hasClass('btn--logout')) {
+            e.preventDefault();
+            $("#custom-close .message").html("");
+            $("#custom-close .message").html("Bạn có chắc chắn muốn đăng xuất");
+            $("#custom-close").show();
+            $(".btn-ok").on('click', function (e) {
+                e.preventDefault();
+                setTimeout(function () {
+                    window.location.href = "../Login/index.php";
+                }, 500);
+            });
         }
     });
 

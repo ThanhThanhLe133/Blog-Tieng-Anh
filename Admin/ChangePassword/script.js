@@ -98,13 +98,7 @@ $(document).ready(function () {
         }
     })
 
-    $('.header__action').on('click', function (e) {
-        if ($(this).children().first().hasClass('btn--logout')) {
-            e.preventDefault();
-            $("#custom-close").show();
-        }
-
-    });
+  
 
     //nếu chưa đăng nhập -> ngăn chặn mở menu
     var targetLink = "";
@@ -132,5 +126,13 @@ $(document).ready(function () {
         e.preventDefault();
         $("#custom-alert").hide();
         $("#custom-close").hide();
+    });
+
+    //đăng xuất
+    $('.header__action').on('click', function (e) {
+        if ($(this).children().first().hasClass('btn--logout')) {
+            e.preventDefault();
+            $("#custom-close").show();
+        }
     });
 });

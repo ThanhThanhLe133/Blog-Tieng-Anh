@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../../Styles/header.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../Styles/animation-general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -208,6 +207,21 @@
                 </tbody>
             </table>
         </div>
+        <div id="custom-alert">
+            <div class="message">
+                Đã xoá thành công!
+            </div>
+            <button class="btn-close">Đóng</button>
+        </div>
+        <div class="kq"></div>
+        <div id="custom-close">
+            <div class="message">
+            </div>
+            <div> 
+                <button class="btn-ok">Ok</button>
+                <button class="btn-close">Đóng</button>
+            </div>
+        </div>
     </main>
 
     <!-- footer -->
@@ -316,7 +330,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="../../Animation/load-effect.js"></script>
 
 </body>
 

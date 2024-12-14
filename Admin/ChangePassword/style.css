@@ -2,6 +2,7 @@
     position: relative;
     top: 0px;
 }
+
 .kq {
     margin-top: 20px;
     padding: 10px;
@@ -22,18 +23,24 @@
     border: 1px solid #f5c6cb;
     text-align: center;
 }
-#new-password,#confirm-password{
+
+#new-password,
+#confirm-password {
     border: none;
     width: 100%;
     outline: none;
 }
-.input_pass{
+
+.input_pass {
     display: flex;
 }
-.eye{
+
+.eye {
     width: 15px;
 }
-#custom-alert,#custom-close {
+
+#custom-alert,
+#custom-close {
     display: none;
     position: fixed;
     top: 50%;
@@ -48,40 +55,44 @@
     z-index: 9999;
 }
 
+#custom-close>* {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 .message {
     font-size: 16px;
     margin-bottom: 20px;
+    text-wrap: wrap;
+    text-align: center;
 }
 
-.btn-close  {
-    background-color:#c9aec2 ;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 3px;
-    margin: 0 60px;
-}
-.btn-ok {
+.btn-close,.btn-ok {
     background-color: #721c24;
     color: white;
     border: none;
-    padding: 5px 10px;
     cursor: pointer;
     border-radius: 3px;
-    margin: 0 60px;
+    padding: 5px 10px;
 }
-.btn-close:hover,.btn-ok:hover {
+
+.btn-ok{
+    background-color: #721c24;
+}
+.btn-close:hover,
+.btn-ok:hover {
     background-color: #EE154B;
 }
 
+
 form {
-    max-width: 60%; 
+    max-width: 60%;
     margin: 20px auto;
     margin-left: 25%;
 }
 
-.text-2xl,.text-gray-600 {
+.text-2xl,
+.text-gray-600 {
     text-align: center;
 }
 
@@ -91,6 +102,7 @@ form {
     text-align: center;
     margin-bottom: 5px;
 }
+
 *,
 ::before,
 ::after {
@@ -618,7 +630,7 @@ video {
 
 .font-bold {
     font-weight: 700;
-    color:#EE154B
+    color: #EE154B
 }
 
 .font-semibold {
