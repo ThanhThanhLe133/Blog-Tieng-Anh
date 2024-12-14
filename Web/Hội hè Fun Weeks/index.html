@@ -11,6 +11,7 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="../../Styles/chat-form.css">
+    <link rel="stylesheet" href="../../Styles/register-form.css">
     <link rel="stylesheet" href="../../Styles/general-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
@@ -141,31 +142,50 @@
                                     <div class="first-name">
                                         <div class="label">First name (Tên)<sup>*</sup></div>
                                         <div class="example">Tên: ví dụ : Ngọc</div>
-                                        <input type="text" class="first-name-input" required />
+                                        <input type="text" class="first-name-input firstName" required />
+                                        <span class="register__error">Please complete this required field.</span>
                                     </div>
                                     <div class="phone-number">
                                         <div class="label">Phone number (Sdt)<sup>*</sup></div>
-                                        <input type="tel" class="phone-number-input" placeholder="+84" required />
+                                        <input type="tel" class="phone-number-input phone" placeholder="+84" required />
+                                        <span class="register__error">Please complete this required field.</span>
                                     </div>
                                     <div class="date-birth">
-                                        <div class="label">Kid: Date of birth (Ngày sinh)<sup>*</sup></div>
-                                        <input type="date" class="date-input" required />
+                                        <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
+                                        <select class="register__select birthYear">
+                                            <option class="please" value="" selected hidden>Please Select</option>
+                                            <option value="" disabled>Please Select</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <span class="register__error">Please complete this required field.</span>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="grid-item">
-                                    <div class="last-name">
-                                        <div class="label">Last name (Họ và tên đệm)<sup>*</sup></div>
-                                        <div class="example">Họ và tên đệm. Ví dụ : Nguyễn Thị</div>
-                                        <input type="text" class="last-name-input" required />
+                                    <div class="register__field register__field--last-name">
+                                        <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
+                                        <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                        <input class="register__input lastName" type="text" required />
+                                        <span class="register__error">Please complete this required field.</span>
                                     </div>
                                     <div class="email">
                                         <div class="label">Email<sup>*</sup></div>
-                                        <input type="email" class="email-input" required />
+                                        <input type="email" class="email-input email" required />
+                                        <span class="register__error">Please complete this required field.</span>
                                     </div>
-                                    <div class="study-school">
-                                        <div class="label">Study school (KUVN) - Cơ sở muốn đăng ký<sup>*</sup></div>
-                                        <select class="study-school-select" required>
-                                            <option class="Select" value="" disabled selected>Please Select</option>
+                                    <div class="register__field register__field--study-school">
+                                        <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng
+                                            ký<sup>*</sup></div>
+                                        <select class="register__select studySchool" title="Please Select">
+                                            <option value="" selected hidden>Please Select</option>
+                                            <option value="" disabled>Please Select</option>
                                             <option value="ntt">Kid&Us Nguyen Thi Thap</option>
                                             <option value="school2">Kid&Us City Land Park Hills</option>
                                             <option value="school3">Kid&Us Cao Đức Lân</option>
@@ -173,6 +193,7 @@
                                             <option value="school3">Kid&Us Lê Văn Việt</option>
                                             <option value="school3">Kid&Us Tên Lửa</option>
                                         </select>
+                                        <span class="register__error">Please complete this required field.</span>
                                     </div>
                                 </div>
                             </div>

@@ -203,88 +203,93 @@
                 <hr>
                 <img src="images/Calendar-T11-01-HimLam-1536x1086.jpg">
             </div>
-
             <!-- register -->
-            <form class="wave-effect">
-                <div class="register">
-                    <div class="register-form">
-                        <fieldset class="form">
-                            <div class="kids-and-us-enrollment">Book Your Seat Now. Register Here!</div>
-                            <div class="grid-container">
-                                <div class="grid-item">
-                                    <div class="first-name">
-                                        <div class="label">First name (Tên)<sup>*</sup></div>
-                                        <div class="example">Tên: ví dụ : Ngọc</div>
-                                        <input type="text" class="first-name-input" required />
-                                    </div>
-                                    <div class="phone-number">
-                                        <div class="label">Phone number (Sdt)<sup>*</sup></div>
-                                        <input type="tel" class="phone-number-input" placeholder="+84" required />
-                                    </div>
-                                    <div class="study-school">
-                                        <div class="label">Choose Events & Activities (Sự kiện muốn tham
-                                            gia)<sup>*</sup></div>
-                                        <select class="event-select" required>
-                                            <option class="Select" value="" disabled selected>Please Select</option>
-                                            <option value="event1">Arts & Crafts</option>
-                                            <option value="event2">Babies & Kids Experience</option>
-                                            <option value="event3">Cool Off</option>
-                                            <option value="event4">Demo Day</option>
-                                            <option value="event5">Fun Day</option>
-                                            <option value="event6">Fun Weeks</option>
-                                            <option value="event7">Kidss & Theatre</option>
-                                            <option value="event8">Kids Experience</option>
-                                            <option value="event9">Little Chef</option>
-                                            <option value="event10">Mad Scientist</option>
-                                            <option value="event11">Open Day</option>
-                                            <option value="event12">Storytime</option>
-                                            <option value="event13">Summer Fun</option>
-                                        </select>
-                                    </div>
+            <div class="register wave-effect" id="register-form">
+                <div class="register__body">
+                    <div class="register__form">
+                        <fieldset class="register__fieldset">
+                            <div class="register__logo">
+                                <img src="../../Images/kids and us.png" alt="Kids and Us" />
+                            </div>
+                            <div class="register__announcement">Kid&Us đang tuyển sinh các bé từ 1-7 tuổi</div>
+                            <div class="register__flex">
+                                <div class="register__field register__field--first-name">
+                                    <div class="register__label">First name (Tên)<sup>*</sup></div>
+                                    <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                    <input class="register__input firstName" type="text" required />
+                                    <span class="register__error">Please complete this required field.</span>
                                 </div>
-                                <div class="grid-item">
-                                    <div class="last-name">
-                                        <div class="label">Last name (Họ và tên đệm)<sup>*</sup></div>
-                                        <div class="example">Họ và tên đệm. Ví dụ : Nguyễn Thị</div>
-                                        <input type="text" class="last-name-input" required />
-                                    </div>
-                                    <div class="email">
-                                        <div class="label">Email<sup>*</sup></div>
-                                        <input type="email" class="email-input" required />
-                                    </div>
-                                    <div class="study-school">
-                                        <div class="label">Study school (KUVN) - Cơ sở muốn đăng
-                                            ký<sup>*</sup></div><br>
-                                        <select class="study-school-select" required>
-                                            <option class="Select" value="" disabled selected>Please Select</option>
-                                            <option value="ntt">Kid&Us Nguyen Thi Thap</option>
-                                            <option value="school2">Kid&Us City Land Park Hills</option>
-                                            <option value="school3">Kid&Us Cao Đức Lân</option>
-                                            <option value="school2">Kid&Us Sư Vạn Hạnh</option>
-                                            <option value="school3">Kid&Us Lê Văn Việt</option>
-                                            <option value="school3">Kid&Us Tên Lửa</option>
-                                        </select>
-                                    </div>
+                                <div class="register__field register__field--last-name">
+                                    <div class="register__label">Last name (Họ và tên đệm)<sup>*</sup></div>
+                                    <div class="register__example">Tên: ví dụ : Ngọc</div>
+                                    <input class="register__input lastName" type="text" required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--phone-number">
+                                    <div class="register__label">Phone number (Sdt)<sup>*</sup></div>
+                                    <input class="register__input phone" type="register__example" placeholder="+84"
+                                        required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--email">
+                                    <div class="register__label">Email<sup>*</sup></div>
+                                    <input class="register__input email" type="email" required />
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--study-school">
+                                    <div class="register__label">Study school (KUVN) - Cơ sở muốn đăng
+                                        ký<sup>*</sup></div>
+                                    <select class="register__select studySchool" title="Please Select">
+                                        <option value="" selected hidden>Please Select</option>
+                                        <option value="" disabled>Please Select</option>
+                                        <option value="ntt">Kid&Us Nguyen Thi Thap</option>
+                                        <option value="school2">Kid&Us City Land Park Hills</option>
+                                        <option value="school3">Kid&Us Cao Đức Lân</option>
+                                        <option value="school2">Kid&Us Sư Vạn Hạnh</option>
+                                        <option value="school3">Kid&Us Lê Văn Việt</option>
+                                        <option value="school3">Kid&Us Tên Lửa</option>
+                                    </select>
+                                    <span class="register__error">Please complete this required field.</span>
+                                </div>
+                                <div class="register__field register__field--birth-year">
+                                    <div class="register__label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
+                                    <select class="register__select birthYear">
+                                        <option class="please" value="" selected hidden>Please Select</option>
+                                        <option value="" disabled>Please Select</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                    </select>
+                                    <span class="register__error">Please complete this required field.</span>
                                 </div>
                             </div>
                             <div class="register__privacy-policy">
                                 <span class="register__agreement">Bằng việc đăng ký thông tin, bạn đồng ý với </span>
-                                <a href="../Privacy Policy/index.html" class="register__link register__link--privacy">Chính sách bảo mật</a>
+                                <a href="../Privacy Policy/index.html"
+                                    class="register__link register__link--privacy">Chính sách bảo mật</a>
                                 <span class="register__agreement"> và </span>
-                                <a href="../General Terms Condition/index.html" class="register__link register__link--terms">Điều khoản sử dụng</a>
+                                <a href="../General Terms Condition/index.html"
+                                    class="register__link register__link--terms">Điều khoản sử dụng</a>
                                 <span class="register__agreement"> của chúng tôi. Cho phép Kids&Us sử dụng thông
                                     tin
                                     mà bạn đã cung cấp nhằm mục đích tư vấn, tiếp thị sản phẩm và nghiên cứu thị
                                     trường.</span>
                             </div>
 
-                            <div class="submit">
-                                <button type="submit" class="btn btn-submit">Submit</button>
+                            <div class="register__submit">
+                                <button type="submit" class="btn register__button">Submit</button>
                             </div>
                         </fieldset>
+
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
     </main>
     <div id="custom-alert">
