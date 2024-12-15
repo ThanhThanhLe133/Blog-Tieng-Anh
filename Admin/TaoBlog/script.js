@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var blog_id = urlParams.get('blog_id');
+    if(blog_id!==null){
+        displayBlog(blog_id);
+    }
     var quill = new Quill('#editor', {
         theme: 'snow',
         modules: {
@@ -23,13 +28,13 @@ $(document).ready(function () {
         e.preventDefault();
         var content = $(".ql-editor").html();
         var title = $("#title").val();
-        var category = $("#category").val();
+        var category_id = $("#category").val();
         if (!title.trim() || content.trim() === "<p><br></p>") {
             $("#custom-alert .message").text("Vui lòng nhập tiêu đề và nội dung.");
             $("#custom-alert").show();
             return;
         }
-        $.post('post_blog.php', { title: title, category: category }, function (response) {
+        $.post('post_blog.php', { title: title, category_id: category_id }, function (response) {
             if (response.includes('Error') || response.includes('Category không tồn tại')) {
                 alert(response);
             } else {
@@ -71,4 +76,11 @@ $(document).ready(function () {
         window.scrollTo(0, 0);
         location.reload();
     });
+    function displayBlog(blog_id) {
+        $.post("load_blog.php", { blog_id: blog_id }, function (response) {
+            $('#blog_editor').empty().append(response); 
+        }).fail(function () {
+            alert("Có lỗi xảy ra, vui lòng thử lại.");
+        });
+    }
 })

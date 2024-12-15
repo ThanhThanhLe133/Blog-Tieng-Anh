@@ -5,7 +5,7 @@ session_start();
 if (!isset($_SESSION['user_id'])) {
     echo "<script>
         alert('Vui lòng đăng nhập!');
-        window.location.href = '../ login/index.php';
+        window.location.href = '../login/index.php';
     </script>";
     exit;
 }
@@ -29,14 +29,14 @@ if ($result->num_rows > 0) {
         $category = ($result_category && $result_category->num_rows > 0) ? $result_category->fetch_assoc()['category_name'] : 'Unknown';
         $html .= "
 
-        <tr data-id='{$row['blog_id']}'>
+        <tr data-blog_id='{$row['blog_id']}'>
             <td class='py-2 px-4 border-b border-gray-200 title_blog'>{$row['title']}</td>
             <td class='py-2 px-4 border-b border-gray-200 author'>{$author}</td>
             <td class='py-2 px-4 border-b border-gray-200 created_at'>{$row['created_at']}</td>
             <td class='py-2 px-4 border-b border-gray-200 updated_at'>{$row['updated_at']}</td>
             <td class='py-2 px-4 border-b border-gray-200 category'>{$category}</td>
             <td class='py-2 px-4 border-b border-gray-200'>
-             <button class='text-blue-500 hover:text-red-700 deleteBtn'>
+             <button class='text-blue-500 hover:text-red-700 editBtn'>
                     <i class='fas fa-edit'></i>
                 </button>
                 <button class='text-red-500 hover:text-red-700 deleteBtn'>

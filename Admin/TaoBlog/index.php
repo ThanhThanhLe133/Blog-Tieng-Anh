@@ -104,14 +104,14 @@
     <main>
         <div class="container mx-auto mt-8">
             <div class="flex">
-                <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
+                <div class="w-3/4 bg-white p-8 ml-8 shadow-lg" id="blog_editor">
                     <h1 class="text-2xl font-bold mb-4">Thêm mới blog</h1>
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="category">Loại blog</label>
                         <select id="category" name="category">
-                            <option value="Tiếng anh trẻ em">Tiếng anh trẻ em</option>
-                            <option value="Tin tức - Sự kiện">Tin tức - Sự kiện</option>
-                            <option value="Nuôi dạy con">Nuôi dạy con</option>
+                            <option value="1">Tiếng anh trẻ em</option>
+                            <option value="2">Tin tức - Sự kiện</option>
+                            <option value="3">Nuôi dạy con</option>
                         </select>
                     </div>
                     <div class="mb-4">

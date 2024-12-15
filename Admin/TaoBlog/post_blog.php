@@ -11,17 +11,12 @@ $user_id = $_SESSION['user_id'];
 
 include('../conn.php');
 
-$category = $_POST['category'];
+$category_id = $_POST['category_id'];
 $title = $_POST['title'];
-$strSQL = "SELECT category_id FROM categories WHERE category_name = '$category'";
-$result = $conn->query($strSQL);
+$strSQL_admin = "SELECT admin_id FROM admin WHERE username = '$user_id'";
+$result_admin = $conn->query($strSQL_admin);
 
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $category_id = $row['category_id'];
-
-    $strSQL_admin = "SELECT admin_id FROM admin WHERE username = '$user_id'";
-    $result_admin = $conn->query($strSQL_admin);
+if ($result_admin->num_rows > 0) {
     $author_id = $result_admin->fetch_assoc()['admin_id'];
 
     $sql = "INSERT INTO blogs (category_id, title, author_id) 
@@ -30,7 +25,7 @@ if ($result->num_rows > 0) {
         $blog_id = $conn->insert_id;
         echo $blog_id;
     } else {
-        echo "Error inserting blog";
+        echo "Lỗi khi tạo blog";
     }
 } else {
     echo "Category không tồn tại trong cơ sở dữ liệu.";

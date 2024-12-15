@@ -93,7 +93,7 @@
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                        <a href="../../Đăng ký/index.html" class="btn btn--logout">ĐĂNG XUẤT</a>
+                      
                     </div>
                 </div>
             </div>
@@ -102,6 +102,61 @@
 
     <!-- main -->
     <main>
+        <div class="mb-4 functionBtn">
+            <input type="text" id="search-input" class="w-full px-4 py-2 border rounded-lg"
+                placeholder="Tìm kiếm theo tên, số điện thoại, email..." />
+            <div class="filterButton">
+                <button id="filterButton" class="text-green-500 hover:text-green-700">
+                    <i class="fas fa-filter"></i> Lọc
+                </button>
+                <div id="filterBox">
+                    <div>
+                        <label for="filterAuthor">Author:</label>
+                        <div id="authorCheckboxes"></div>
+                    </div>
+                    <div>
+                        <label for="filterCreatedDate">Created Date:</label>
+                        <div id="CreatedDateCheckboxes"></div>
+                    </div>
+                    <div>
+                        <label for="filterUpdatedDate">Updated Date:</label>
+                        <div id="UpdatedDateCheckboxes"></div>
+                    </div>
+                    <div>
+                        <label for="filterCategory">Category:</label>
+                        <div id="CategoryCheckboxes">
+                            <label><input type="checkbox" value="1"> Tiếng anh trẻ em</label><br>
+                            <label><input type="checkbox" value="2"> Tin tức - Sự kiện</label><br>
+                            <label><input type="checkbox" value="3"> Nuôi dạy con</label><br>
+                        </div>
+                    </div>
+                    <div>
+                        <button id="applyFilter" class="text-blue-500">Áp dụng</button>
+                        <button id="close" class="text-red-500">Đóng</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sort-container">
+                <button id="sortButton" class="text-blue-500 hover:text-blue-700">
+                    <i class="fas fa-sort"></i> Sắp xếp
+                </button>
+                <div id="sortBox" class="mt-2">
+                    <select id="sortSelect" class="border rounded py-1 px-2">
+                        <option value="">-- Chọn cách sắp xếp --</option>
+                        <option value="Author">Author</option>
+                        <option value="Created">Created Date</option>
+                        <option value="Updated">Updated Date</option>
+                        <option value="Category">Category</option>
+                        <option value="Title">Title</option>
+                    </select>
+                    <div>
+                        <button id="applySortAZ" class="text-blue-500">A-Z</button>
+                        <button id="applySortZA" class="text-blue-500">Z-A</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="mx-auto p-6 bg-white shadow-md rounded-lg mt-10 blogForm">
             <div class=" mb-6">
                 <h1 class="text-2xl font-semibold">Quản lý Blog</h1>
@@ -134,6 +189,12 @@
 
                 </tbody>
             </table>
+        </div>
+        <div id="custom-alert">
+            <div class="message">
+                Đã xoá thành công!
+            </div>
+            <button class="btn-close">Đóng</button>
         </div>
     </main>
 
