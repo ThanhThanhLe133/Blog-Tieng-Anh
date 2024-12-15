@@ -4,7 +4,7 @@ session_start();
 include "../conn.php";
 $username = $_POST["name"];
 $password = $_POST["pass"];
-$strSQL = "Select * from admin where username='$username' && password='$password'";
+$strSQL = "Select * from users where username='$username' && password='$password'";
 $result = $conn->query($strSQL);
 
 if ($result->num_rows > 0) {

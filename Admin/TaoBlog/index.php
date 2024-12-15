@@ -63,34 +63,24 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a class="nav__link" href="../../HomePage/index.html">
+                                <a class="nav__link" href="../QuanLyInputForm/index.php">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="../../PP của chúng tôi/index.html">
+                                <a class="nav__link" href="../TaoBlog/index.php">
                                     <p class="nav__text">THÊM MỚI BLOG</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="#">
-                                    <span class="link-before">
-                                        <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
-                                    </span>
+                                <a class="nav__link" href="../QuanLyBlog/index.php">
+                                    <p class="nav__text">QUẢN LÝ BLOG</p>
                                 </a>
-                                <ul class="nav__submenu blog">
-                                    <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
-                                            Anh trẻ em</a></li>
-                                    <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
-                                            con</a></li>
-                                    <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
-                                            kiện</a></li>
-                                </ul>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../QuanLyTaiKhoan/index.html">
+                                <a class="nav__link" href="../QuanLyTaiKhoan/index.php">
                                     <p class="nav__text">QUẢN LÝ TÀI KHOẢN</p>
                                 </a>
                             </li>
@@ -146,8 +136,7 @@
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="image_title" name="image" type="file">
                     </div>
-                    <button 
-                        class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 btnSaveBlog">Lưu</button>
+                    <button class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 btnSaveBlog">Lưu</button>
                 </div>
             </div>
         </div>

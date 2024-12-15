@@ -32,11 +32,6 @@ $(document).ready(function () {
         handleLogin();
     });
 
-    //chưa login -> ko vào đc menu
-    $(".nav__item").on("click", function (e) {
-        e.preventDefault();
-        $("#custom-alert").show();
-    });
 
     $(".btn-close").on("click", function (e) {
         e.preventDefault();
@@ -80,7 +75,7 @@ $(document).ready(function () {
                     .addClass("success")
                     .html(response);
                 setTimeout(function () {
-                    window.location.href = "../CaiDatTaiKhoan/index.php";
+                    window.location.href = "../../web/blogtintucsukien/index.html";
                 }, 500);
             } else {
                 $(".kq")
@@ -95,10 +90,6 @@ $(document).ready(function () {
                 .html("Có lỗi xảy ra, vui lòng thử lại.");
         });
     }
-    function preventEnter(event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-        }
-    }
+
 })
 

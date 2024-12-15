@@ -8,7 +8,7 @@ session_destroy();
 <html>
 
 <head>
-    <title>Login</title>
+    <title>Đăng nhập</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -75,30 +75,82 @@ session_destroy();
                     <!-- nav -->
                     <nav class="header__nav">
                         <ul class="nav__list">
-
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.php">
-                                    <p class="nav__text">THÊM MỚI BLOG</p>
+                                <a class="nav__link" href="../HomePage/index.html">
+                                    <p class="nav__text">TRANG CHỦ</p>
                                 </a>
                             </li>
-
-                            <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.php">
-                                    <span class="link-before">
-                                        <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
+                            <li class="nav__item nav__item--active">
+                                <a class="nav__link" href="#">
+                                    <span class="course-list">
+                                        <p class="nav__text">CÁC KHOÁ HỌC &#x23F7</p>
                                     </span>
                                 </a>
+                                <ul class="nav__submenu course-list">
+                                    <li class="submenu__item"><a class="submenu__link" href="../Demo day/index.html">Học
+                                            thử miễn phí</a>
+                                    </li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../1-2/index.html">Khóa học
+                                            cho trẻ 1-2
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../3-8/index.html">Khóa học
+                                            cho trẻ 3-8
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../9-12/index.html">Khóa
+                                            học cho trẻ
+                                            9-12
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../13-18/index.html">Khóa
+                                            học cho trẻ
+                                            13-18
+                                            tuổi</a></li>
+                                </ul>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../Login/index.php">
-                                    <p class="nav__text">CÀI ĐẶT</p>
+                                <a class="nav__link" href="../PP của chúng tôi/index.html">
+                                    <p class="nav__text">PHƯƠNG PHÁP CỦA CHÚNG TÔI</p>
                                 </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../Các cơ sở/index.html">
+                                    <p class="nav__text">CƠ SỞ</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="activities">
+                                        <p class="nav__text">CÁC HOẠT ĐỘNG &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu activities">
+                                    <li class="submenu__item English-activities"><a class="submenu__link"
+                                            href="../Các hoạt động bằng TA/index.html">Các
+                                            hoạt động bằng Tiếng Anh</a></li>
+                                    <li class="submenu__item Fun-week"><a class="submenu__link"
+                                            href="../Hội hè Fun Weeks/index.html">Hội hè
+                                            Fun-week</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="link-before">
+                                        <p class="nav__text">BLOG &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu blog">
+                                    <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
+                                            Anh trẻ em</a></li>
+                                    <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
+                                            con</a></li>
+                                    <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
+                                            kiện</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                        <a href="../Login/index.php" class="btn btn--logout">ĐĂNG NHẬP</a>
+                        <a href="../DangKy/index.php" class="btn btn--register">ĐĂNG KÝ</a>
                     </div>
                 </div>
             </div>
@@ -127,17 +179,19 @@ session_destroy();
                 <div class="items-center">
                     <button type="button" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700"
                         id="btnLogin" value="Login">Đăng nhập</button>
-                    <a href="../XacThucTaiKhoan/index.php" class="text-blue-500 hover:underline">Quên mật khẩu?</a>
-                </div>
-                <div class="mt-4">
-                    <a href="../DangKy/register.php" class="text-blue-500 hover:underline">Chưa có tài khoản? Đăng ký ngay!</a>
+                    <a href="../XacThucTaiKhoan/index.php" class="text-blue-500 hover:underline" style="font-style:italic">Quên mật khẩu?</a>
+                    <p>
+                        Chưa có tài khoản? <a href="../DangKy/register.php" class="text-blue-500 hover:underline">
+                            <strong>Đăng ký
+                                ngay!</strong></a>
+                    </p>
                 </div>
             </div>
         </form>
         <div class="kq"></div>
         <div id="custom-alert">
             <div class="message">
-                Vui lòng đăng nhập trước!
+              Thông tin của bạn đã được gửi. Chúng tôi sẽ gửi thông báo tới email của bạn!
             </div>
             <button class="btn-close">Đóng</button>
         </div>

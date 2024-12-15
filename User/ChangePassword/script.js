@@ -41,9 +41,7 @@ $(document).ready(function () {
     function handleUpdatePass() {
         let newPassword = $("#new-password").val();
         let confirmPassword = $("#confirm-password").val();
-        console.log(newPassword);
-        console.log(confirmPassword);
-
+        
         if (newPassword === "" || confirmPassword === "") {
             $(".kq")
                 .removeClass("success")

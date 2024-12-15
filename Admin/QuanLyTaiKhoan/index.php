@@ -2,9 +2,10 @@
 <html>
 
 <head>
-    <title>Quản lý blog</title>
+    <title>Quản lý tài khoản</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- reset css -->
     <link rel="stylesheet" href="../../Styles/reset.css">
     <!-- styles -->
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="../../Styles/header.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../Styles/animation-general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -21,9 +23,9 @@
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Carattere&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -52,75 +54,182 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="main-container__header--fixed">
-            <div class="header__body">
-                <!-- logo -->
-                <img src="../../Images/kids and us.png" alt="" class="logo" />
+            <div class="main-container__header--fixed">
+                <div class="header__body">
+                    <!-- logo -->
+                    <img src="../../Images/kids and us.png" alt="" class="logo" />
 
-                <!-- nav -->
-                <nav class="header__nav">
-                    <ul class="nav__list">
+                    <!-- nav -->
+                    <nav class="header__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="../QuanLyInputForm/index.php">
+                                    <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
+                                </a>
+                            </li>
 
-                        <li class="nav__item">
-                            <a class="nav__link" href="../TaoBlog/index.php">
-                                <p class="nav__text">THÊM MỚI BLOG</p>
-                            </a>
-                        </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../TaoBlog/index.php">
+                                    <p class="nav__text">THÊM MỚI BLOG</p>
+                                </a>
+                            </li>
 
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">
-                                <span class="link-before">
-                                    <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
-                                </span>
-                            </a>
-                            <ul class="nav__submenu blog">
-                                <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
-                                        Anh trẻ em</a></li>
-                                <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
-                                        con</a></li>
-                                <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
-                                        kiện</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="../CaiDatTaiKhoan/index.php">
-                                <p class="nav__text">CÀI ĐẶT</p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- btn action -->
-                <div class="header__action">
+                            <li class="nav__item">
+                                <a class="nav__link" href="../QuanLyBlog/index.php">
+                                    <p class="nav__text">QUẢN LÝ BLOG</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../QuanLyTaiKhoan/index.php">
+                                    <p class="nav__text">QUẢN LÝ TÀI KHOẢN</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../CaiDatTaiKhoan/index.php">
+                                    <p class="nav__text">CÀI ĐẶT</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- btn action -->
+                    <div class="header__action">
 
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </header>
 
     <!-- main -->
     <main>
-        <form method="post" id="settingForm">
-            <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
-                <h2 class="text-2xl font-bold mb-4">Cài đặt tài khoản User</h2>
-                <div id="user-info"></div>
-                <div id="error"></div>
-                <div class="flex items-center justify-between">
-                    <button type="button" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700"
-                        id="btnSave" value="Save">Lưu</button>
-                    <a href="../ChangePassword/index.php" class="text-blue-500 changePass hover:underline">Đổi mật
-                        khẩu</a>
+        <div class="mb-4 functionBtn">
+            <input type="text" id="search-input" class="w-full px-4 py-2 border rounded-lg"
+                placeholder="Tìm kiếm theo tên, số điện thoại, email..." />
+            <div class="filterButton">
+                <button id="filterButton" class="text-green-500 hover:text-green-700">
+                    <i class="fas fa-filter"></i> Lọc
+                </button>
+                <div id="filterBox">
+                    <div>
+                        <label for="filterFirstName">First Name:</label>
+                        <div id="firstNameCheckboxes"></div>
+                    </div>
+
+                    <div>
+                        <label for="filterLastName">Last Name:</label>
+                        <div id="lastNameCheckboxes"></div>
+                    </div>
+                    <div>
+                        <label for="filterSchool">Study School:</label>
+                        <div id="SchoolCheckboxes"></div>
+                    </div>
+                    <div>
+                        <label for="filterDate">Submission Date:</label>
+                        <div id="SubDateCheckboxes"></div>
+                    </div>
+                    <div>
+                        <label for="filterBirthYear">Birth Year:</label>
+                        <div id="birthYearCheckboxes"></div>
+                    </div>
+                    <div>
+                        <label for="filterStatus">Status:</label>
+                        <div id="StatusCheckboxes">
+                            <label><input type="checkbox" value="1"> approved</label><br>
+                            <label><input type="checkbox" value="0"> pending</label><br>
+                        </div>
+                    </div>
+                    <div>
+                        <button id="applyFilter" class="text-blue-500">Áp dụng</button>
+                        <button id="close" class="text-red-500">Đóng</button>
+                    </div>
+
                 </div>
             </div>
-        </form>
+            <div class="sort-container">
+                <button id="sortButton" class="text-blue-500 hover:text-blue-700">
+                    <i class="fas fa-sort"></i> Sắp xếp
+                </button>
+                <div id="sortBox" class="mt-2">
+                    <select id="sortSelect" class="border rounded py-1 px-2">
+                        <option value="">-- Chọn cách sắp xếp --</option>
+                        <option value="firstName">Fist Name </option>
+                        <option value="lastName">Last Name</option>
+                        <option value="birthYear">Birth Year</option>
+                        <option value="school">Study School</option>
+                        <option value="currentDate">Submission Date</option>
+                        <option value="currentDate">Username</option>
+                        <option value="currentDate">Password</option>
+                    </select>
+                    <div>
+                        <button id="applySortAZ" class="text-blue-500">A-Z</button>
+                        <button id="applySortZA" class="text-blue-500">Z-A</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-auto p-6 bg-white shadow-md rounded-lg mt-10 inputForm">
+            <div class=" mb-6">
+                <h1 class="text-2xl font-semibold">Quản lý Tài Khoản</h1>
+            </div>
+            <table class="min-w-full bg-white ">
+                <thead>
+                    <tr>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            First Name</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Last Name</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Phone Number</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Email</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Study School</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Birth Year</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Username</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Password</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Submission Date</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Status</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Actions</th>
+
+                    </tr>
+                </thead>
+                <tbody id="user-table">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="custom-alert">
+            <div class="message">
+                Đã xoá thành công!
+            </div>
+            <button class="btn-close">Đóng</button>
+        </div>
         <div class="kq"></div>
         <div id="custom-close">
             <div class="message">
-                Bạn có chắc chắn muốn thoát?
             </div>
-            <button class="btn-ok">Ok</button>
-            <button class="btn-close">Đóng</button>
+            <div>
+                <button class="btn-ok">Ok</button>
+                <button class="btn-close">Đóng</button>
+            </div>
         </div>
     </main>
 
@@ -228,7 +337,9 @@
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>

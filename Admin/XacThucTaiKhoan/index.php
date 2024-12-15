@@ -76,9 +76,7 @@
 
                             <li class="nav__item">
                                 <a class="nav__link" href="">
-                                    <span class="link-before">
-                                        <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
-                                    </span>
+                                        <p class="nav__text">QUẢN LÝ BLOG</p>
                                 </a>
                             </li>
                             <li class="nav__item">

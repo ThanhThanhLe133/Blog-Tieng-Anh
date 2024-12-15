@@ -147,15 +147,6 @@
     <!-- main -->
     <main>
         <div class="main-container">
-            <!-- cs-slide -->
-            <div class="image-slide fadeIn-effect">
-                <ul>
-                    <li>
-                        <img src="images/train to future.jpg" />
-                    </li>
-                </ul>
-            </div>
-
             <!-- contact -->
             <div class="contact fadeIn-effect">
                 <h1>Thông tin liên hệ</h1>
@@ -186,90 +177,99 @@
 
             <!-- register -->
             <div class="register fadeIn-effect">
-                <div class="body">
+                <div class="body"">
                     <form>
-                        <div class="register-form">
-                            <fieldset class="form">
-                                <div class="kids-and-us">
-                                    <img src="../../Images/kids and us.png" alt="Kids and Us" />
-                                </div>
-                                <div class="kids-and-us-enrollment">Kid&Us đang tuyển sinh các bé từ 1-7 tuổi</div>
-                                <div class="grid-container">
-                                    <div class="grid-item">
-                                        <div class="first-name">
-                                            <div class="label">First name (Tên)<sup>*</sup></div>
-                                            <div class="example">Tên: ví dụ : Ngọc</div>
-                                            <input type="text" class="first-name-input" required />
-                                        </div>
-                                        <div class="phone-number">
-                                            <div class="label">Phone number (Sdt)<sup>*</sup></div>
-                                            <input type="tel" class="phone-number-input" placeholder="+84" required />
-                                        </div>
-                                        <div class="study-school">
-                                            <div class="label">Study school (KUVN) - Cơ sở muốn đăng
-                                                ký<sup>*</sup></div>
-                                            <select class="study-school-select" required>
-                                                <option class="Select" value="" disabled selected>Please Select</option>
-                                                <option value="ntt">Kid&Us Nguyen Thi Thap</option>
-                                                <option value="school2">Kid&Us City Land Park Hills</option>
-                                                <option value="school3">Kid&Us Cao Đức Lân</option>
-                                                <option value="school2">Kid&Us Sư Vạn Hạnh</option>
-                                                <option value="school3">Kid&Us Lê Văn Việt</option>
-                                                <option value="school3">Kid&Us Tên Lửa</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="grid-item">
-                                        <div class="last-name">
-                                            <div class="label">Last name (Họ và tên đệm)<sup>*</sup></div>
-                                            <div class="example">Họ và tên đệm. Ví dụ : Nguyễn Thị</div>
-                                            <input type="text" class="last-name-input" required />
-                                        </div>
-                                        <div class="email">
-                                            <div class="label">Email<sup>*</sup></div>
-                                            <input type="email" class="email-input" required />
-                                        </div>
-                                        <div class="birth-year">
-                                            <div class="label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
-                                            <select class="birth-year-select" required>
-                                                <option class="Select" value="" disabled selected>Please Select</option>
-                                                <option value="2016">2016</option>
-                                                <option value="2017">2017</option>
-                                                <option value="2018">2018</option>
-                                                <option value="2019">2019</option>
-                                                <option value="2020">2020</option>
-                                                <option value="2021">2021</option>
-                                                <option value="2022">2022</option>
-                                                <option value="2023">2023</option>
-                                                <option value="2024">2024</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="privacy-policy">
-                                    <span class="register-agreement">Bằng việc đăng ký thông tin, bạn đồng ý với </span>
-                                    <a href="#" class="privacy-policy-link">Chính sách bảo mật</a>
-                                    <span class="register-agreement-26"> và </span>
-                                    <a href="#" class="terms-of-use-link">Điều khoản sử dụng</a>
-                                    <span class="register-agreement-27"> của chúng tôi. Cho phép Kids&Us sử dụng thông
-                                        tin
-                                        mà bạn đã cung cấp nhằm mục đích tư vấn, tiếp thị sản phẩm và nghiên cứu thị
-                                        trường.</span>
-                                </div>
-
-                                <div class="submit">
-                                    <button type="submit" class="btn btn-submit">Submit</button>
-                                </div>
-                            </fieldset>
+                        <div class=" register-form">
+                    <fieldset class="form">
+                        <div class="kids-and-us">
+                            <img src="../../Images/kids and us.png" alt="Kids and Us" />
                         </div>
-                    </form>
+                        <div class="title" style="text-align: center;">Đăng ký để xem blog và tương tác với chúng tôi</div>
+                        <p class="kids-and-us-enrollment">Đã có tài khoản.<a href="../../User/Login/index.php"
+                            class="hover:underline">
+                            <strong>ĐĂNG NHẬP</strong></a></p>
+                        <div class="grid-container">
+                            <div class="grid-item">
+                                <div class="first-name">
+                                    <div class="label">First name (Tên)<sup>*</sup></div>
+                                    <div class="example">Tên: ví dụ : Ngọc</div>
+                                    <input type="text" class="first-name-input firstName" required />
+                                </div>
+                                <div class="phone-number">
+                                    <div class="label">Phone number (Sdt)<sup>*</sup></div>
+                                    <input type="tel" class="phone-number-input phone" placeholder="+84" required />
+                                </div>
+                                <div class="study-school">
+                                    <div class="label"">Study school - Cơ sở muốn đăng
+                                                ký<sup>*</sup></div>
+                                            <select class=" study-school-select studySchool" required>
+                                        <option class="Select" value="" disabled selected>Please Select</option>
+                                        <option value="ntt">Kid&Us Nguyen Thi Thap</option>
+                                        <option value="school2">Kid&Us City Land Park Hills</option>
+                                        <option value="school3">Kid&Us Cao Đức Lân</option>
+                                        <option value="school2">Kid&Us Sư Vạn Hạnh</option>
+                                        <option value="school3">Kid&Us Lê Văn Việt</option>
+                                        <option value="school3">Kid&Us Tên Lửa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="grid-item">
+                                    <div class="last-name">
+                                        <div class="label">Last name (Họ và tên đệm)<sup>*</sup></div>
+                                        <div class="example">Họ và tên đệm. Ví dụ : Nguyễn Thị</div>
+                                        <input type="text" class="last-name-input lastName" required />
+                                    </div>
+                                    <div class="email">
+                                        <div class="label">Email<sup>*</sup></div>
+                                        <input type="email" class="email-input email" required />
+                                    </div>
+                                    <div class="birth-year">
+                                        <div class="label">Birth Year (Năm sinh của bé)<sup>*</sup></div>
+                                        <select class="birth-year-select birthYear" required>
+                                            <option class="Select" value="" disabled selected>Please Select</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="submit">
+                                <button type="submit" class="btn register__button">Submit</button>
+                            </div>
+                    </fieldset>
                 </div>
+                </form>
             </div>
+        </div>
         </div>
     </main>
 
     <div class="clear"></div>
+    <div id="custom-close">
+        <div class="message">
+            <div class="privacy-policy">
+                <span class="register-agreement">Bằng việc đăng ký thông tin, bạn đồng ý với </span>
+                <a href="#" class="privacy-policy-link">Chính sách bảo mật</a>
+                <span class="register-agreement-26"> và </span>
+                <a href="#" class="terms-of-use-link">Điều khoản sử dụng</a>
+                <span class="register-agreement-27"> của chúng tôi. Cho phép Kids&Us sử dụng thông
+                    tin
+                    mà bạn đã cung cấp nhằm mục đích tư vấn, tiếp thị sản phẩm và nghiên cứu thị
+                    trường.</span>
+            </div>
+        </div>
+        <div> <button class="btn-ok">Ok</button>
+            <button class="btn-close">Đóng</button>
+        </div>
 
+    </div>
     <!-- footer -->
     <footer>
         <div class="footer__body">
@@ -435,7 +435,6 @@
     <script src="script.js"></script>
     <script src="../../Animation/header.js"></script>
     <script src="../../Animation/chat-form.js"></script>
-    <script src="../../Animation/register-form.js"></script>
     <script src="../../Animation/load-effect.js"></script>
 </body>
 

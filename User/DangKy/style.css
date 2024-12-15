@@ -2,10 +2,12 @@
     position: relative;
     top: 0px;
 }
+
 .kq {
     margin-top: 20px;
     padding: 10px;
     font-size: 16px;
+    text-align: center;
 }
 
 .success {
@@ -21,19 +23,24 @@
     border: 1px solid #f5c6cb;
     text-align: center;
 }
-#password{
+
+#new-password,
+#confirm-password {
     border: none;
     width: 100%;
     outline: none;
 }
-.password{
+
+.input_pass {
     display: flex;
 }
-.showpass{
+
+.eye {
     width: 15px;
 }
 
-#custom-alert {
+#custom-alert,
+#custom-close {
     display: none;
     position: fixed;
     top: 50%;
@@ -48,31 +55,44 @@
     z-index: 9999;
 }
 
-#custom-alert .message {
+#custom-close>* {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.message {
     font-size: 16px;
     margin-bottom: 20px;
+    text-wrap: wrap;
+    text-align: center;
 }
 
-#custom-alert .btn-close {
+.btn-close,.btn-ok {
     background-color: #721c24;
     color: white;
     border: none;
-    padding: 5px 10px;
     cursor: pointer;
     border-radius: 3px;
-    margin: 0 60px;
+    padding: 5px 10px;
 }
 
-#custom-alert .btn-close:hover {
-    background-color: #a71d2a;
+.btn-ok{
+    background-color: #721c24;
 }
+.btn-close:hover,
+.btn-ok:hover {
+    background-color: #EE154B;
+}
+
 
 form {
-    max-width: 500px;
+    max-width: 50%;
     margin: 20px auto;
+    margin-left: 30%;
 }
 
-.text-2xl {
+.text-2xl,
+.text-gray-600 {
     text-align: center;
 }
 
@@ -82,6 +102,118 @@ form {
     text-align: center;
     margin-bottom: 5px;
 }
+
+*,
+::before,
+::after {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x: ;
+    --tw-pan-y: ;
+    --tw-pinch-zoom: ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position: ;
+    --tw-gradient-via-position: ;
+    --tw-gradient-to-position: ;
+    --tw-ordinal: ;
+    --tw-slashed-zero: ;
+    --tw-numeric-figure: ;
+    --tw-numeric-spacing: ;
+    --tw-numeric-fraction: ;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur: ;
+    --tw-brightness: ;
+    --tw-contrast: ;
+    --tw-grayscale: ;
+    --tw-hue-rotate: ;
+    --tw-invert: ;
+    --tw-saturate: ;
+    --tw-sepia: ;
+    --tw-drop-shadow: ;
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia: ;
+    --tw-contain-size: ;
+    --tw-contain-layout: ;
+    --tw-contain-paint: ;
+    --tw-contain-style:
+}
+
+::backdrop {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x: ;
+    --tw-pan-y: ;
+    --tw-pinch-zoom: ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position: ;
+    --tw-gradient-via-position: ;
+    --tw-gradient-to-position: ;
+    --tw-ordinal: ;
+    --tw-slashed-zero: ;
+    --tw-numeric-figure: ;
+    --tw-numeric-spacing: ;
+    --tw-numeric-fraction: ;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur: ;
+    --tw-brightness: ;
+    --tw-contrast: ;
+    --tw-grayscale: ;
+    --tw-hue-rotate: ;
+    --tw-invert: ;
+    --tw-saturate: ;
+    --tw-sepia: ;
+    --tw-drop-shadow: ;
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia: ;
+    --tw-contain-size: ;
+    --tw-contain-layout: ;
+    --tw-contain-paint: ;
+    --tw-contain-style:
+}
+
+/* ! tailwindcss v3.4.15 | MIT License | https://tailwindcss.com */
 *,
 ::after,
 ::before {
@@ -498,7 +630,7 @@ video {
 
 .font-bold {
     font-weight: 700;
-    color:#EE154B
+    color: #EE154B
 }
 
 .font-semibold {

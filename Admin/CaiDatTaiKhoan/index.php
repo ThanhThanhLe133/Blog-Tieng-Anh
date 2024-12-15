@@ -74,22 +74,12 @@
                         </li>
 
                         <li class="nav__item">
-                            <a class="nav__link" href="#">
-                                <span class="link-before">
-                                    <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
-                                </span>
+                            <a class="nav__link" href="../QuanLyBlog/index.php">
+                                <p class="nav__text">QUẢN LÝ BLOG</p>
                             </a>
-                            <ul class="nav__submenu blog">
-                                <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
-                                        Anh trẻ em</a></li>
-                                <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
-                                        con</a></li>
-                                <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
-                                        kiện</a></li>
-                            </ul>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="../QuanLyTaiKhoan/index.html">
+                            <a class="nav__link" href="../QuanLyTaiKhoan/index.php">
                                 <p class="nav__text">QUẢN LÝ TÀI KHOẢN</p>
                             </a>
                         </li>

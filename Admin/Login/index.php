@@ -33,12 +33,6 @@ session_destroy();
     <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>
-        $(document).ready(function (e) {
-            e.preventDefault();
-
-        });
-    </script>
 </head>
 
 <body>

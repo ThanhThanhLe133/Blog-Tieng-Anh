@@ -67,8 +67,10 @@ CREATE TABLE `users` (
   `password` VARCHAR(255) NOT NULL,                    -- Mật khẩu
   `phone_number` VARCHAR(15) NOT NULL,                 -- Số điện thoại
   `email` VARCHAR(255) NOT NULL,                       -- Email
-  `birth_year` INT(4) NOT NULL,                        -- Năm sinh
-  `branch_name` VARCHAR(255) NOT NULL,                 -- Tên trường học
+  `birth_year` INT(4) NOT NULL,         
+  `approval_status` TINYINT(1) DEFAULT 0 NOT NULL,                 -- Năm sinh
+  `branch_name` VARCHAR(255) NOT NULL,        
+  `is`         -- Tên trường học
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,    -- Thời gian tạo
   PRIMARY KEY (`users_id`),
   UNIQUE KEY `username` (`username`),

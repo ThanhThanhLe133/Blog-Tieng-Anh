@@ -9,10 +9,11 @@ $(document).ready(function () {
 
     //click vào ô input -> xoá nội dung
     $("input").on('click', function () {
-        if ($("#username").val() !== "" && $("#password").val() !== "") {
+        if ($("#username").val() !== "" && $("#new-password").val() !== "") {
             $(".kq").html("");
             $("#username").val("");
-            $("#password").val("");
+            $("#new-password").val("");
+            $("#confirm-password").val("");
             $(".kq")
                 .removeClass("success")
                 .removeClass("error")
@@ -20,27 +21,23 @@ $(document).ready(function () {
     });
 
     //xử lý enter form -> handleLogin
-    $("#loginForm").on('keydown', function (e) {
+    $("#registerForm").on('keydown', function (e) {
         if (e.keyCode === 13) {
             e.preventDefault();
-            handleLogin();
+            handleRegister();
         }
     });
     //xử lý nút login-> handleLogin
-    $("#btnLogin").on('click', function (e) {
+    $("#btnRegister").on('click', function (e) {
         e.preventDefault();
         handleLogin();
     });
 
-    //chưa login -> ko vào đc menu
-    $(".nav__item").on("click", function (e) {
-        e.preventDefault();
-        $("#custom-alert").show();
-    });
-
-    $(".btn-close").on("click", function (e) {
-        e.preventDefault();
-        $("#custom-alert").hide();
+    //bỏ qua enter với input
+    $("input").keydown(function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+        }
     });
 
     //hiển thị pass
@@ -57,31 +54,37 @@ $(document).ready(function () {
             icon.attr("src", "../../Images/eye_close.png");
         }
     });
+    
+    $(".btn-close").on("click", function (e) {
+        e.preventDefault();
+        $("#custom-alert").hide();
+    });
 
-    function handleLogin() {
+    function handleRegister() {
         let username = $("#username").val();
-        let password = $("#password").val();
+        let newPassword = $("#new-password").val();
+        let confirmPassword = $("#confirm-password").val();
 
-        if (username === "" || password === "") {
+        if (username === "" || password === "" || confirmPassword === "") {
             $(".kq")
                 .removeClass("success")
                 .addClass("error")
                 .html("<p>Vui lòng nhập đầy đủ thông tin.</p>");
             return;
         }
-
-        $.post("login.php", {
-            name: username,
-            pass: password
+        else if (newPassword !== confirmPassword) {
+            $(".kq")
+                .removeClass("success")
+                .addClass("error")
+                .html("Xác nhận mật khẩu không khớp!");
+            return;
+        }
+        $.post("themtaikhoan.php", {
+            username: username,
+            password: newPassword
         }, function (response) {
-            if (response.includes("Chúc mừng")) {
-                $(".kq")
-                    .removeClass("error")
-                    .addClass("success")
-                    .html(response);
-                setTimeout(function () {
-                    window.location.href = "../CaiDatTaiKhoan/index.php";
-                }, 500);
+            if (response.includes("success")) {
+                $("#custom-alert").show();
             } else {
                 $(".kq")
                     .removeClass("success")
@@ -94,11 +97,6 @@ $(document).ready(function () {
                 .addClass("error")
                 .html("Có lỗi xảy ra, vui lòng thử lại.");
         });
-    }
-    function preventEnter(event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-        }
     }
 })
 

@@ -1,19 +1,18 @@
 <?php
+session_start();
 include "conn.php";
-$firstName = $_POST['firstName'];
-$lastName = $_POST['lastName'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-$studySchool = $_POST['studySchool'];
-$birthYear = $_POST['birthYear'];
-$currentDate = $_POST['currentDate'];
-$strSQL = "INSERT INTO guest (firstName, lastName, phone, email, studySchool, birthYear, currentDate) 
-               VALUES ('$firstName', '$lastName', '$phone', '$email', '$studySchool', '$birthYear', '$currentDate')";
+$firstName = $_SESSION['firstName'];
+$lastName = $_SESSION['lastName'];
+$phone =$_SESSION['phone'];
+$email = $_SESSION['email'];
+$studySchool = $_SESSION['studySchool'];
+$birthYear = $_SESSION['birthYear'];
+$currentDate = $_SESSION['currentDate'];
+$username = $_POST["username"];
+$password = $_POST["password"];
 
-if ($conn->query($strSQL) === TRUE) {
-    echo "Thông tin của bạn đã được gửi tới chúng tôi!";
-} else {
-    echo "Không thể gửi thông tin. Vui lòng thử lại.";
-}
+$strSQL = "INSERT INTO users (f_name, l_name, phone_number , email, branch_name, birth_year, currentDate,username,password ) 
+               VALUES ('$firstName', '$lastName', '$phone', '$email', '$studySchool', '$birthYear', '$username','$password')";
+echo "success";
 $conn->close();
 ?>
