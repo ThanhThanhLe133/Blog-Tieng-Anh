@@ -6,6 +6,7 @@ session_destroy();
 
 <!DOCTYPE html>
 <html>
+<html>
 
 <head>
     <title>Đăng ký tài khoản</title>
@@ -19,9 +20,9 @@ session_destroy();
     <link rel="stylesheet" href="../../Styles/general-styles.css">
     <link rel="stylesheet" href="../../Styles/header.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../Styles/animation-general.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -59,6 +60,13 @@ session_destroy();
                         </div>
                         <span class="language__text">ENGLISH</span>
                         <div class="language__icon"><img src="../../Images/chevron-down.png" alt="" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-container__header--fixed">
+                <div class="header__body">
+                    <!-- logo -->
+                    <img src="../../Images/kids and us.png" alt="" class="logo" />
                     </div>
                 </div>
             </div>
@@ -241,19 +249,15 @@ session_destroy();
                     <h4 class="footer__title">CƠ SỞ</h4>
                     <div class="footer__content">
                         <ul class="footer-links">
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html"
-                                    class="footer__link">Nguyễn
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Nguyễn
                                     Thị Thập</a></li>
                             <li class="footer__link-item"><a href="../../Các cơ sở/index.html"
                                     class="footer__link">Cityland Park Hills</a></li>
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Cao
-                                    Đức
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Cao Đức
                                     Lân</a></li>
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Sư
-                                    Vạn
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Sư Vạn
                                     Hạnh</a></li>
-                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Lê
-                                    Văn
+                            <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Lê Văn
                                     Việt</a></li>
                             <li class="footer__link-item"><a href="../../Các cơ sở/index.html" class="footer__link">Tên
                                     Lửa</a></li>
@@ -303,7 +307,8 @@ session_destroy();
         </div>
     </footer>
 
-    <script src="script.js"> </script>
+    <script src="script.js"></script>
+    <script src="../../Animation/load-effect.js"></script>
 
 </body>
 
