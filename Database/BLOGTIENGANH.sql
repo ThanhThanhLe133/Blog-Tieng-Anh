@@ -8,8 +8,8 @@ CREATE TABLE guest (
     phone VARCHAR(20),
     email VARCHAR(100),
     studySchool VARCHAR(100),
-    birthYear INT;
-    currentDate DATE;
+    birthYear INT,
+    currentDate DATE
 );
 
 -- --------------------------------------------------------
@@ -120,6 +120,9 @@ CREATE TABLE `blogs` (
   FOREIGN KEY (`category_id`) REFERENCES categories(category_id),
   FOREIGN KEY (`author_id`) REFERENCES admin(admin_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+ALTER TABLE `blogs`
+MODIFY COLUMN `author_id` INT(11) NULL;
 
 -- Dumping data for table `blogs`
 INSERT INTO `blogs` (`category_id`, `title`, `content`) VALUES
