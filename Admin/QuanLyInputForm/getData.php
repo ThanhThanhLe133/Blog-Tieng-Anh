@@ -1,14 +1,14 @@
 <?php
 
-// session_start();
+session_start();
 
-// if (!isset($_SESSION['user_id'])) {
-//     echo "<script>
-//         alert('Vui lòng đăng nhập!');
-//         window.location.href = '../ login/index.php';
-//     </script>";
-//     exit;
-// }
+if (!isset($_SESSION['user_id'])) {
+    echo "<script>
+        alert('Vui lòng đăng nhập!');
+        window.location.href = '../ login/index.php';
+    </script>";
+    exit;
+}
 include "../conn.php";
 $sql = "SELECT id,firstName, lastName, phone, email, studySchool, birthYear,
               DATE_FORMAT(currentDate, '%d/%m/%Y') AS formattedDate

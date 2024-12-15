@@ -112,8 +112,7 @@ CREATE TABLE `blogs` (
   `blog_id` INT(11) NOT NULL AUTO_INCREMENT,   -- Unique identifier for each blog
   `category_id` INT(11) NOT NULL,              -- Category ID (Foreign Key from `categories`)
   `title` VARCHAR(255) NOT NULL,               -- Title of the blog post
-  `content` TEXT NOT NULL,                     -- Content of the blog post
-  `images` BLOB DEFAULT NULL,            -- Optional image path or URL associated with the blog
+  `content` TEXT,               
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Creation timestamp
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- Last update timestamp
   PRIMARY KEY (`blog_id`)
@@ -124,3 +123,15 @@ INSERT INTO `blogs` (`category_id`, `title`, `content`) VALUES
 (1, 'Blog 1 về Tiếng Anh cho trẻ em', 'Đây là nội dung của blog Tiếng Anh cho trẻ em.'),
 (2, 'Tin tức về sự kiện A', 'Nội dung tin tức về sự kiện A.'),
 (3, 'Blog về Nuôi dạy con', 'Đây là nội dung về nuôi dạy con.');
+
+-- --------------------------------------------------------
+-- Table structure for images in `blogs`
+--
+CREATE TABLE `blog_images` (
+  `image_id` INT(11) NOT NULL AUTO_INCREMENT,    -- Unique identifier for each image
+  `blog_id` INT(11) NOT NULL,                     -- Blog ID (Foreign Key from `blogs`)
+  `image` LONGBLOB NOT NULL,                      -- The image data (binary)
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Creation timestamp
+  PRIMARY KEY (`image_id`),
+  FOREIGN KEY (`blog_id`) REFERENCES `blogs`(`blog_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

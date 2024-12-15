@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Khoá học tiếng Anh cho trẻ 1-2 tuổi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="../../../Styles/reset.css">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../../../Styles/general-styles.css">
+
+    <link rel="stylesheet" href="../../../Styles/header.css">
+    <link rel="stylesheet" href="../../../Styles/register-form.css">
+    <link rel="stylesheet" href="../../../Styles/footer.css">
+    <link rel="stylesheet" href="../../../Styles/chat-form.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="../../../Styles/animation-general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Carattere&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="main-container">
+            <div class="main-container__top-header">
+                <div class="top-header__phone-number">
+                    <a class="phone-number__link" href="tel:18006175">1800 6175</a>
+                </div>
+                <div class="top-header__language">
+                    <div class="language__flag">
+                        <img src="../../../Images/vn flag.png" alt="VN flag" />
+                    </div>
+                    <span class="language__text">TIẾNG VIỆT</span>
+                    <div class="language__icon"><img src="../../../Images/chevron-down.png" alt="" /></div>
+                </div>
+            </div>
+            <div class="main-container__header--fixed">
+                <div class="header__body">
+                    <!-- logo -->
+                    <img src="../../../Images/kids and us.png" alt="" class="logo" />
+
+                    <!-- nav -->
+                    <nav class="header__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="../HomePage/index.html">
+                                    <p class="nav__text">TRANG CHỦ</p>
+                                </a>
+                            </li>
+                            <li class="nav__item nav__item--active">
+                                <a class="nav__link" href="#">
+                                    <span class="course-list">
+                                        <p class="nav__text">CÁC KHOÁ HỌC &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu course-list">
+                                    <li class="submenu__item"><a class="submenu__link" href="../Demo day/index.html">Học
+                                            thử miễn phí</a>
+                                    </li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../1-2/index.html">Khóa học
+                                            cho trẻ 1-2
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../3-8/index.html">Khóa học
+                                            cho trẻ 3-8
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../9-12/index.html">Khóa
+                                            học cho trẻ
+                                            9-12
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../13-18/index.html">Khóa
+                                            học cho trẻ
+                                            13-18
+                                            tuổi</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../PP của chúng tôi/index.html">
+                                    <p class="nav__text">PHƯƠNG PHÁP CỦA CHÚNG TÔI</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../Các cơ sở/index.html">
+                                    <p class="nav__text">CƠ SỞ</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="activities">
+                                        <p class="nav__text">CÁC HOẠT ĐỘNG &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu activities">
+                                    <li class="submenu__item English-activities"><a class="submenu__link"
+                                            href="../Các hoạt động bằng TA/index.html">Các
+                                            hoạt động bằng Tiếng Anh</a></li>
+                                    <li class="submenu__item Fun-week"><a class="submenu__link"
+                                            href="../Hội hè Fun Weeks/index.html">Hội hè
+                                            Fun-week</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="link-before">
+                                        <p class="nav__text">BLOG &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu blog">
+                                    <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
+                                            Anh trẻ em</a></li>
+                                    <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
+                                            con</a></li>
+                                    <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
+                                            kiện</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- btn action -->
+                    <div class="header__action">
+                        <a href="../Đăng ký/index.html" class="btn btn--register">ĐĂNG KÝ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+    <!-- main -->
+    <main>
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col lg:flex-row">
+                <!-- Main Content -->
+                <div class="w-full lg:w-2/3">
+                    <h1 class="text-2xl font-bold mb-2">Danh mục: Tin tức sự kiện</h1>
+                    <p class="text-gray-600 mb-6">Tổng hợp tin tức, sự kiện và hoạt động từ Kids&Us Vietnam</p>
+
+                    <!-- Articles -->
+                    <div id="articles">
+                        <!-- Article 1 -->
+                        <div class="bg-white rounded-lg shadow-md mb-6">
+                            <div class="flex">
+                                <img alt="Teacher showing something to children" class="w-1/3 h-auto rounded-l-lg"
+                                    height="200"
+                                    src="https://kidsandus.net.vn/wp-content/uploads/2023/12/hoat-dong-ngoai-khoa-tieng-anh-racing-on-chimmey-anh-ngu-kidsus-nguyen-thi-thap-6-768x768.jpg"
+                                    width="300">
+                                <div class="p-4 w-2/3">
+                                    <h2 class="text-xl font-bold mb-2">Hoạt động ngoại khóa tiếng Anh hấp dẫn nhất tháng 12
+                                     </h2>
+                                    <p class="text-gray-500 text-sm mb-2">
+                                        <i class="far fa-calendar-alt"></i> Tháng Mười 17, 2024
+                                        <span class="mx-1">|</span>
+                                        <i class="fas fa-user"></i> Tin tức sự kiện
+                                    </p>
+                                    <p class="text-gray-700 mb-4">Trẻ em có tính hiếu động và ham học hỏi cao, tuy nhiên, việc học tiếng Anh đối với trẻ lại thường gặp nhiều khó…</p>
+                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="bg-white rounded-lg shadow-md mb-6">
+                            <div class="flex">
+                                <img alt="Teacher playing with children" class="w-1/3 h-auto rounded-l-lg" height="200"
+                                    src="https://kidsandus.net.vn/wp-content/uploads/2023/11/gift-of-gratitude-mon-qua-tri-an-truong-anh-ngu-cho-be-kidsnandus-6-768x768.jpg"
+                                    width="300">
+                                <div class="p-4 w-2/3">
+                                    <h2 class="text-xl font-bold mb-2">“Gift of Gratitude” – Món quà đặc biệt của sự tri ân
+                                     </h2>
+                                    <p class="text-gray-500 text-sm mb-2">
+                                        <i class="far fa-calendar-alt"></i> Tháng Mười 17, 2024
+                                        <span class="mx-1">|</span>
+                                        <i class="fas fa-user"></i> Tin tức sự kiện
+                                    </p>
+                                    <p class="text-gray-700 mb-4">“Gift of gratitude – Món quà đặc biệt của sự tri ân” là một sự kiện đặc biệt của Trường anh ngữ cho trẻ Kids&Us…</p>
+                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 3 -->
+                        <div class="bg-white rounded-lg shadow-md mb-6">
+                            <div class="flex">
+                                <img alt="Children playing with toys" class="w-1/3 h-auto rounded-l-lg" height="200"
+                                    src="https://kidsandus.net.vn/wp-content/uploads/2023/12/kidsus-hop-tac-voi-oxford-va-trinity-2-1024x683.jpg"
+                                    width="300">
+                                <div class="p-4 w-2/3">
+                                    <h2 class="text-xl font-bold mb-2">Kids&Us chính thức hợp tác với OXFORD và TRINITY</h2>
+                                    <p class="text-gray-500 text-sm mb-2">
+                                        <i class="far fa-calendar-alt"></i> Tháng Mười 7, 2024
+                                        <span class="mx-1">|</span>
+                                        <i class="fas fa-user"></i> Tin tức sự kiện
+                                    </p>
+                                    <p class="text-gray-700 mb-4">Hệ thống Anh ngữ Kids&Us chính thức ký thỏa thuận hợp tác với hai tổ chức giáo dục hàng đầu thế giới là Oxford và…</p>
+                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 4 -->
+                        <div class="bg-white rounded-lg shadow-md mb-6">
+                            <div class="flex">
+                                <img alt="Parent and child playing together" class="w-1/3 h-auto rounded-l-lg"
+                                    height="200"
+                                    src="https://kidsandus.net.vn/wp-content/uploads/2024/03/hoi-nghi-quoc-te-thuong-nien-kidsus-tay-ban-nha-2-1024x768.jpg"
+                                    width="300">
+                                <div class="p-4 w-2/3">
+                                    <h2 class="text-xl font-bold mb-2">Hội nghị quốc tế thường niên của Kids&Us tại Tây 
+					Ban Nha</h2>
+                                    <p class="text-gray-500 text-sm mb-2">
+                                        <i class="far fa-calendar-alt"></i> Tháng Năm 21, 2024
+                                        <span class="mx-1">|</span>
+                                        <i class="fas fa-user"></i> Tin tức sự kiện
+                                    </p>
+                                    <p class="text-gray-700 mb-4">Hòa chung với nhịp đập sôi động của đại gia đình Kids&Us toàn cầu, Kids&Us Việt Nam vô cùng tự hào khi được đồng hành…</p>
+                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="flex justify-center mt-8">
+                        <nav aria-label="Page navigation">
+                            <ul class="inline-flex items-center -space-x-px">
+                                <li>
+                                    <a class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                                        href="#">
+                                        <span class="sr-only">Previous</span>
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                                        href="#">1</a>
+                                </li>
+                                <li>
+                                    <a class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                                        href="#">2</a>
+                                </li>
+                                <li>
+                                    <a class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                                        href="#">3</a>
+                                </li>
+                                <li>
+                                    <a class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                                        href="#">
+                                        <span class="sr-only">Next</span>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="w-full lg:w-1/3 lg:pl-8">
+                    <h2 class="text-xl font-bold mb-4">Bài viết mới</h2>
+                    <ul class="list-disc list-inside text-blue-500">
+                        <li class="mb-2">
+                            <a class="hover:underline" href="#">8 Cách Phát Triển Ngôn Ngữ Cho Trẻ Mầm Non Hiệu Quả</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="hover:underline" href="#">Dạy Bé Tập Nói: Hành Trình và Phương Pháp Hiệu Quả</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="hover:underline" href="#">15+ Truyện tiếng Anh cho bé hay nhất, bố mẹ nên tham
+                                khảo</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="hover:underline" href="#">Những tính cách và khả năng của trẻ 3 tuổi ba mẹ nên
+                                biết</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="hover:underline" href="#">10+ bài hát tiếng Anh cho bé vui nhộn, hay, dễ nhớ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <!-- footer -->
+    <footer>
+        <div class="footer__body">
+            <div class="footer__grid">
+                <div class="footer__item">
+                    <h4 class="footer__title">KIDS&amp;US VIETNAM</h4>
+                    <div class="footer__content">
+                        <ul class="footer__links">
+                            <li class="footer__link-item"><a href="../General Terms Condition/index.html"
+                                    class="footer__link">General Terms &amp;
+                                    Condition</a></li>
+                            <li class="footer__link-item"><a href="../Rules Regulations/index.html"
+                                    class="footer__link">Rules &amp; Regulations</a>
+                            </li>
+                            <li class="footer__link-item"><a href="../Privacy Policy/index.html"
+                                    class="footer__link">Privacy Policy</a></li>
+                            <li class="footer__link-item"><a href="#" class="footer__link">Licenses</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <h4 class="footer__title">CÁC KHOÁ HỌC</h4>
+                    <div class="footer__content">
+                        <ul class="footer__links">
+                            <li class="footer__link-item"><a href="../1-2/index.html" class="footer__link">Khoá học
+                                    tiếng Anh cho trẻ
+                                    1-2 tuổi</a></li>
+                            <li class="footer__link-item"><a href="../3-8/index.html" class="footer__link">Khoá học
+                                    tiếng Anh cho trẻ
+                                    3-8 tuổi</a></li>
+                            <li class="footer__link-item"><a href="../9-12/index.html" class="footer__link">Khoá học
+                                    tiếng Anh cho trẻ
+                                    9-12 tuổi</a></li>
+                            <li class="footer__link-item"><a href="../13-18/index.html" class="footer__link">Khoá học
+                                    tiếng Anh cho trẻ
+                                    13-18 tuổi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <h4 class="footer__title">CƠ SỞ</h4>
+                    <div class="footer__content">
+                        <ul class="footer-links">
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Nguyễn
+                                    Thị Thập</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html"
+                                    class="footer__link">Cityland Park Hills</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Cao Đức
+                                    Lân</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Sư Vạn
+                                    Hạnh</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Lê Văn
+                                    Việt</a></li>
+                            <li class="footer__link-item"><a href="../Các cơ sở/index.html" class="footer__link">Tên
+                                    Lửa</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <h4 class="footer__title">LIÊN HỆ VỚI CHÚNG TÔI</h4>
+                    <div class="footer__content">
+                        <ul class="footer__contacts">
+                            <li class="footer__contact footer__contact--location"> 47-49 Nguyễn Thị Thập, Khu dân cư Him
+                                Lam, Quận 7,
+                                TP.HCM</li>
+                            <li class="footer__contact footer__contact--email"> info@kidsandus.net.vn</li>
+                            <li class="footer__contact footer__contact--phone">1800 6175</li>
+                        </ul>
+                    </div>
+                    <div class="footer__social">
+                        <ul class="footer__social-icons">
+                            <li class="footer__social-item">
+                                <a class="footer__social-link--facebook" target="_blank"
+                                    href="https://www.facebook.com/kidsandus.vn">
+                                    <img src="../../../Images/facebook.png">
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link--youtube" target="_blank"
+                                    href="https://www.youtube.com/channel/UCP7ErLtSVIywSh5Qdgm2AMw">
+                                    <img src="../../../Images/youtube.png">
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link--instagram" target="_blank"
+                                    href="https://www.instagram.com/kidsandus.vn/">
+                                    <img src="../../../Images/insta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="footer__copyright">
+                <p class="footer__text">Copyright © 2024 Kids&amp;Us Vietnam</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="prePopup" class="prePopup" style="display: none;">
+        <div class="prePopup__content">
+            <button class="prePopup__close" onclick="closePrePopUp()">X</button>
+            <p>Chào mừng anh/chị đến với Kid&Us Vietnam. Em là Tư vấn viên, rất vui được hỗ trợ ạ!</p>
+        </div>
+    </div>
+
+    <!-- Help Button -->
+    <button class="helpButton" onclick="popUp()">
+        <img src="../../../Images/chat.png" class="helpButton__icon" alt="Help Icon" />
+    </button>
+
+    <!-- Popup Form -->
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup__heading">
+            <div class="popup__heading-image">
+                <img src="../../../Images/logo-chat.png">
+                <button class="popup__close" onclick="popUp()">-</button>
+            </div>
+            <div class="popup__heading-title">
+                <h1>Kids&Us Vietnam</h1>
+            </div>
+            <p class="popup__heading-content">
+                Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị ngay khi có
+                thể.
+            </p>
+        </div>
+
+        <form class="popup__form" onsubmit="submitForm(event)">
+            <div class="popup__form-field">
+                <label class="popup__form-label">Họ và tên<sup>*</sup></label>
+                <input type="text" name="name" class="popup__form-input" placeholder="Tên của bạn"
+                    onblur="handleBlur(event)" required />
+                <span id="name-error" class="popup__form-error" style="display: none;">Please complete this required
+                    field.</span>
+            </div>
+
+            <div class="popup__form-field">
+                <label class="popup__form-label">Số điện thoại<sup>*</sup></label>
+                <input type="text" name="phone" class="popup__form-input" placeholder="Số điện thoại của bạn"
+                    onblur="handleBlur(event)" required />
+                <span id="phone-error" class="popup__form-error" style="display: none;">Please complete this required
+                    field.</span>
+            </div>
+
+            <div class="popup__form-field">
+                <label class="popup__form-label">Email</label>
+                <input type="email" name="email" class="popup__form-input" placeholder="Email của bạn" />
+            </div>
+
+            <div class="popup__form-field">
+                <label class="popup__form-label">Lời nhắn<sup>*</sup></label>
+                <textarea name="message" class="popup__form-textarea" placeholder="Nhập tin nhắn của bạn"
+                    onblur="handleBlur(event)" required></textarea>
+                <span id="message-error" class="popup__form-error" style="display: none;">Please complete this required
+                    field.</span>
+            </div>
+
+            <button type="submit" class="popup__form-submit"><img src="../../../Images/send-chat.png">GỬI TIN
+                NHẮN</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../../../Animation/chat-form.js"></script>
+    <script src="../../../Animation/register-form.js"></script>
+    <script src="../../../Animation/load-effect.js"></script>
+</body>
+
+</html>
+    

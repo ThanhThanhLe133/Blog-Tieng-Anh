@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Khoá học tiếng Anh cho trẻ 1-2 tuổi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="../../../Styles/reset.css">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../../../Styles/general-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../Styles/header.css">
+    <link rel="stylesheet" href="../../../Styles/register-form.css">
+    <link rel="stylesheet" href="../../../Styles/footer.css">
+    <link rel="stylesheet" href="../../../Styles/chat-form.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="../../../Styles/animation-general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Carattere&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"> </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="main-container">
+            <div class="main-container__top-header">
+                <div class="top-header__phone-number">
+                    <a class="phone-number__link" href="tel:18006175">1800 6175</a>
+                </div>
+                <div class="top-header__language">
+                    <div class="language__flag">
+                        <img src="../../../Images/vn flag.png" alt="VN flag" />
+                    </div>
+                    <span class="language__text">TIẾNG VIỆT</span>
+                    <div class="language__icon"><img src="../../../Images/chevron-down.png" alt="" /></div>
+                </div>
+            </div>
+            <div class="main-container__header--fixed">
+                <div class="header__body">
+                    <!-- logo -->
+                    <img src="../../../Images/kids and us.png" alt="" class="logo" />
+
+                    <!-- nav -->
+                    <nav class="header__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="../HomePage/index.html">
+                                    <p class="nav__text">TRANG CHỦ</p>
+                                </a>
+                            </li>
+                            <li class="nav__item nav__item--active">
+                                <a class="nav__link" href="#">
+                                    <span class="course-list">
+                                        <p class="nav__text">CÁC KHOÁ HỌC &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu course-list">
+                                    <li class="submenu__item"><a class="submenu__link" href="../Demo day/index.html">Học
+                                            thử miễn phí</a>
+                                    </li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../1-2/index.html">Khóa học
+                                            cho trẻ 1-2
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../3-8/index.html">Khóa học
+                                            cho trẻ 3-8
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../9-12/index.html">Khóa
+                                            học cho trẻ
+                                            9-12
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../13-18/index.html">Khóa
+                                            học cho trẻ
+                                            13-18
+                                            tuổi</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../PP của chúng tôi/index.html">
+                                    <p class="nav__text">PHƯƠNG PHÁP CỦA CHÚNG TÔI</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../Các cơ sở/index.html">
+                                    <p class="nav__text">CƠ SỞ</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="activities">
+                                        <p class="nav__text">CÁC HOẠT ĐỘNG &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu activities">
+                                    <li class="submenu__item English-activities"><a class="submenu__link"
+                                            href="../Các hoạt động bằng TA/index.html">Các
+                                            hoạt động bằng Tiếng Anh</a></li>
+                                    <li class="submenu__item Fun-week"><a class="submenu__link"
+                                            href="../Hội hè Fun Weeks/index.html">Hội hè
+                                            Fun-week</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="link-before">
+                                        <p class="nav__text">BLOG &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu blog">
+                                    <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
+                                            Anh trẻ em</a></li>
+                                    <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
+                                            con</a></li>
+                                    <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
+                                            kiện</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- btn action -->
+                    <div class="header__action">
+                        <a href="../Đăng ký/index.html" class="btn btn--register">ĐĂNG KÝ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main>
+        <div class="container">
+            <div class="blog-post">
+                <div class="lg p-4">
+                    <h1 class="text-2xl font-bold mb-4">
+                        Hoạt động ngoại khóa tiếng Anh hấp dẫn nhất tháng 12
+                    </h1>
+                    <div class="flex items-center text-gray-500 text-sm mb-4">
+                        <span>
+                            Tháng Mười 17, 2024
+                        </span>
+                        <span class="mx-2">
+                            |
+                        </span>
+                        <span>
+                            Tin tức sự kiện
+                        </span>
+                    </div>
+                    <img alt="A teacher interacting with two young children in a classroom setting" class="w-full mb-4"
+                        height="400"
+                        src="https://kidsandus.net.vn/wp-content/uploads/2023/12/hoat-dong-ngoai-khoa-tieng-anh-racing-on-chimmey-anh-ngu-kidsus-nguyen-thi-thap-4-768x768.jpg"
+                        width="800">
+                    <p class="text-gray-700 mb-4">
+    Để lớp học thêm phần sinh động, giáo viên đã trang trí và chuẩn bị thật nhiều phụ kiện đáng yêu xoay quanh chủ đề về Giáng Sinh. Những chiếc mũ ông già Noel, những cây thông Noel, những món quà Giáng Sinh… đã tạo nên một không khí mùa lễ hội vô cùng ấm áp và vui tươi.<br><br>
+
+    Không khí mùa lễ hội góp phần không nhỏ vào hành trình ươm mầm cho sự thẩm thấu tiếng Anh vượt trội cho trẻ. Khi được học trong một môi trường vui vẻ và thoải mái, trẻ sẽ dễ dàng tiếp thu kiến thức hơn.<br><br>
+
+    Xuyên suốt lớp học, các thầy cô sẽ chủ động tạo ra những tình huống giao tiếp, tương tác với bé bằng tiếng Anh. Các thầy cô sẽ khuyến khích trẻ trả lời câu hỏi, nói chuyện với bạn bè, tham gia các trò chơi… bằng tiếng Anh.<br><br>
+
+    Với cách tiếp cận này, Kids&Us giúp trẻ dần có được sự tự tin qua từng buổi học. Trẻ sẽ không còn cảm thấy sợ hãi khi phải giao tiếp bằng tiếng Anh.<br><br>
+
+    Bằng cách hóa thân thành ông già Noel, trang trí lớp học theo chủ đề Giáng Sinh và tạo ra nhiều tình huống giao tiếp, tương tác với trẻ, Kids&Us đã thành công trong việc kích thích hứng thú học tiếng Anh cho trẻ.
+</p>
+
+                </div>
+                <div class="comments-section">
+                    <h2>
+                        Comments
+                    </h2>
+                    <div class="comment">
+                        <div><span class="username">Yến Nhi</span></div>
+                        <div class="datetime">21:56 Thứ 5 ngày 09/09/2021</div>
+                        <div class="review"> Thật ý nghĩa</div>
+                    </div>
+
+                </div>
+                <div class="comment-form">
+                    <h2>
+                        Leave a Comment
+                    </h2>
+                    <form>
+                        <p class="current-user"></p>
+                        <textarea class="content-review" placeholder="Nhập đánh giá"></textarea>
+                        <button class="send">Gửi</button>
+                    </form>
+                </div>
+                <div class="max-w-4xl mx-auto p-4">
+                    <div class="mb-6">
+                        <h2 class="text-lg font-semibold mb-2">
+                            Tham khảo:
+                        </h2>
+                        <ul class="list-disc list-inside text-blue-600">
+                            <li>
+                                <a href="#">
+                                    Buổi học Trải nghiệm – DemoDay – Kids&amp;Us Vietnam
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Khóa học tiếng Anh cho trẻ 1-2 tuổi – Kids&amp;Us Vietnam
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Khóa học tiếng Anh cho trẻ 3-8 tuổi – Kids&amp;Us Vietnam
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <p class="text-gray-600">
+                            <i class="fas fa-folder-open">
+                            </i>
+                            Posted in
+                            <a class="text-blue-600" href="#">
+                                Nuôi dạy con
+                            </a>
+                        </p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-tags">
+                            </i>
+                            Tagged
+                            <a class="text-blue-600" href="#">
+                                bé tập nói
+                            </a>
+                            ,
+                            <a class="text-blue-600" href="#">
+                                dạy bé tập nói
+                            </a>
+                            ,
+                            <a class="text-blue-600" href="#">
+                                nuôi dạy con
+                            </a>
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <a class="text-blue-600" href="#">
+                            PREVIOUS
+                        </a>
+                        <h3 class="text-xl font-semibold">
+                            Dạy Bé Tập Nói: Hành Trình và Phương Pháp Hiệu Quả
+                        </h3>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4">
+                            Related Posts
+                        </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                                <img alt="A teacher interacting with two young children in a classroom setting" class="w-full h-40 object-cover"
+                                    height="400"
+                                    src="https://storage.googleapis.com/a1aa/image/VUOeCyS5n1WSWagf39WiPCqFipeOvhJLDfqLBSnjOGWkVnfeE.jpg"
+                        width="800"
+                                    width="600">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">
+                                        8 Cách Phát Triển Ngôn Ngữ Cho Trẻ Mầm Non Hiệu Quả
+                                    </h3>
+                                    <p class="text-gray-600 text-sm mb-2">
+                                        <i class="fas fa-calendar-alt">
+                                        </i>
+                                        Tháng Mười 17, 2024
+                                    </p>
+                                    <p class="text-gray-600 text-sm">
+                                        <i class="fas fa-folder-open">
+                                        </i>
+                                        Nuôi Dạy Con
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                                <img alt="Teacher playing with children" class="w-full h-40 object-cover"
+                                    height="400"
+                                    src="https://kidsandus.net.vn/wp-content/uploads/2023/11/gift-of-gratitude-mon-qua-tri-an-truong-anh-ngu-cho-be-kidsnandus-6-768x768.jpg"
+                                    width="600">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">
+                                        “Gift of Gratitude” – Món quà đặc biệt của sự tri ân
+                                    </h3>
+                                    <p class="text-gray-600 text-sm mb-2">
+                                        <i class="fas fa-calendar-alt">
+                                        </i>
+                                        Tháng Mười 7, 2024
+                                    </p>
+                                    <p class="text-gray-600 text-sm">
+                                        <i class="fas fa-folder-open">
+                                        </i>
+                                        Tin tức sự kiện
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                                <img alt="Parent and child playing together" class="w-full h-40 object-cover"
+                                    height="600"
+                                    src="https://kidsandus.net.vn/wp-content/uploads/2023/12/kidsus-hop-tac-voi-oxford-va-trinity-2-1024x683.jpg"
+                                    width="600">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">
+                                        Kids&Us chính thức hợp tác với OXFORD và TRINITY
+                                    </h3>
+                                    <p class="text-gray-600 text-sm mb-2">
+                                        <i class="fas fa-calendar-alt">
+                                        </i>
+                                        Tháng Năm 21, 2024
+                                    </p>
+                                    <p class="text-gray-600 text-sm">
+                                        <i class="fas fa-folder-open">
+                                        </i>
+                                        Tin tức sự kiện
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                                <img alt="A child learning English" class="w-full h-40 object-cover" height="400"
+                                    src="https://kidsandus.net.vn/wp-content/uploads/2024/03/hoi-nghi-quoc-te-thuong-nien-kidsus-tay-ban-nha-2-1024x768.jpg"
+                                    width="600">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">
+                                        Hội nghị quốc tế thường niên của Kids&Us tại Tây 
+					Ban Nha
+                                    </h3>
+                                    <p class="text-gray-600 text-sm mb-2">
+                                        <i class="fas fa-calendar-alt">
+                                        </i>
+                                        Tháng Năm 17, 2024
+                                    </p>
+                                    <p class="text-gray-600 text-sm">
+                                        <i class="fas fa-folder-open">
+                                        </i>
+                                        Tin tức sự kiện
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="new-article">
+                <h2 class="">
+                    Bài viết mới
+                </h2>
+                <ul class="list-inside text-blue-500">
+                    <li class="mb-2">
+                        <a class="hover:underline" href="#">
+                            8 Cách Phát Triển Ngôn Ngữ Cho Trẻ Mầm Non Hiệu Quả
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="hover:underline" href="#">
+                            Dạy Bé Tập Nói: Hành Trình và Phương Pháp Hiệu Quả
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="hover:underline" href="#">
+                            15+ Truyện tiếng Anh cho bé hay nhất, bố mẹ nên tham khảo
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="hover:underline" href="#">
+                            Những tính cách và khả năng của trẻ 3 tuổi ba mẹ nên biết
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="hover:underline" href="#">
+                            10+ bài hát tiếng Anh cho bé vui nhộn, hay, dễ nhớ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </main>
+

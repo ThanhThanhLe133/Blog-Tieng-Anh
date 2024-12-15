@@ -30,15 +30,6 @@ $(document).ready(() => {
         const birthYear = $('.birthYear').val();
         const currentDate = new Date().toISOString().split('T')[0];  
 
-        const guest = {
-            firstName: firstName,
-            lastName: lastName,
-            phone: phone,
-            email: email,
-            studySchool: studySchool,
-            birthYear: birthYear,
-            currenDate: new Date()
-        };
         console.log(firstName);
         $.post("../../Admin/send-form.php", {
             firstName: firstName,
