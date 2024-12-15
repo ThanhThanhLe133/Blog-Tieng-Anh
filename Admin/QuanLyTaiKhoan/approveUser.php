@@ -9,16 +9,16 @@ require '../PHPMailer/src/Exception.php';
 session_start();
 
 include "../conn.php";
-
-$sql = "SELECT * FROM users WHERE usera_id =  '$users_id'";
+$users_id = $_POST['users_id'];
+$sql = "SELECT * FROM users WHERE users_id =  '$users_id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows <= 0) {
     echo "Email không tồn tại trong hệ thống.";
     return;
 }
-$row=$result->fetch_assoc();
-$email=$row['email'];
+$row = $result->fetch_assoc();
+$email = $row['email'];
 $mail = new PHPMailer(true);
 
 try {
@@ -38,8 +38,15 @@ try {
     $mail->Body = "Tài khoản của bạn đã được phê duyệt. Vui lòng truy cập <a href='http://localhost/BlogTiengAnh/User/Login/index.php'>website của chúng tôi</a> để đăng nhập.";
 
     $mail->send();
-    echo "success";
-    return;
+
+    $strSql = "UPDATE users SET approval_status = 1 WHERE users_id =  '$users_id'";
+    $resultUpdate = $conn->query($strSql);
+    if ($resultUpdate === TRUE) {
+        echo "success";
+        return;
+    } else {
+        echo "Không thể cập nhật thông tin. Vui lòng thử lại.";
+    }
 } catch (Exception $e) {
     echo "Lỗi khi gửi email: {$mail->ErrorInfo}";
 }

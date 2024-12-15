@@ -1,6 +1,6 @@
 <?php
 include "../conn.php";
-$sql = "SELECT DISTINCT DATE_FORMAT(created_at, '%d/%m/%Y') AS formattedDate FROM guest";
+$sql = "SELECT DISTINCT DATE_FORMAT(created_at, '%d/%m/%Y') AS formattedDate FROM users";
 $result = $conn->query($sql);
 $formattedDate="";
 if ($result->num_rows > 0) {

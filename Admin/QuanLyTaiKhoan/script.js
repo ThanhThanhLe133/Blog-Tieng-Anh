@@ -133,14 +133,15 @@ $(document).ready(function () {
     //xử lý xoá
     $('#user-table').on('click', '.deleteBtn', function () {
         var row = $(this).closest('tr');
-        var userId = row.data('users_id ');
+        var users_id = row.data('users_id');
+
         $("#custom-close .message").html("Bạn có chắc chắn muốn xoá người dùng này?");
         $("#custom-close").show();
         $(".btn-ok").on('click', function (e) {
             e.preventDefault();
             $("#custom-close").hide()
-            $.post('deleteGuest.php', { users_id : userId  }, function (response) {
-                if (response === 'success') {
+            $.post('deleteUser.php', { users_id: users_id }, function (response) {
+                if (response.includes('success')) {
                     row.remove();
                     $("#custom-alert").show();
                 } else {
@@ -151,33 +152,41 @@ $(document).ready(function () {
         });
     });
 
- //xử lý approve
- $('#user-table').on('click', '.approveBtn', function () {
-    var row = $(this).closest('tr');
-    var userId = row.data('users_id');
-    $("#custom-close .message").html("Bạn có chắc chắn muốn duyệt người dùng này?");
-    $("#custom-close").show();
-    $(".btn-ok").on('click', function (e) {
-        e.preventDefault();
-        $("#custom-close").hide()
-        $.post('approveUser.php', { users_id: userId }, function (response) {
-            if (response === 'success') {
-                row.remove();
-                $("#custom-alert .message").text('Đã gửi yêu cầu phê duyệt thành công!');
-                $("#custom-alert").show();
-            } else {
-                $("#custom-alert .message").text('Gửi yêu cầu phê duyệt thất bại. Vui lòng thử lại.');
-                $("#custom-alert").show();
-            }
+    //xử lý approve
+    $('#user-table').on('click', '.approveBtn', function () {
+        var row = $(this).closest('tr');
+        var users_id = row.data('users_id');
+
+        $("#custom-close .message").html("Bạn có chắc chắn muốn duyệt người dùng này?");
+        $("#custom-close").show();
+        $(".btn-ok").on('click', function (e) {
+            e.preventDefault();
+            $("#custom-close").hide();
+
+            $("#custom-alert .message").text('Đang gửi xác nhận. Vui lòng chờ...');
+            $(".btn-close").hide();
+            $("#custom-alert").show();
+            $.post('approveUser.php', { users_id: users_id }, function (response) {
+                if (response.includes('success')) {
+                    row.remove();
+                    $("#custom-alert").hide();
+                    $("#custom-alert .message").text('Đã gửi yêu cầu phê duyệt thành công!');
+                    $(".btn-close").show();
+                    $("#custom-alert").show();
+                } else {
+                    $("#custom-alert .message").text(response);
+                    $("#custom-alert").show();
+                }
+            });
         });
     });
-});
 
 
     $(".btn-close").on("click", function (e) {
         e.preventDefault();
         $("#custom-alert").hide();
         $("#custom-close").hide();
+        location.reload();
     });
 
     //đăng xuất

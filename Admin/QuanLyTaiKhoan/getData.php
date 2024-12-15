@@ -5,7 +5,7 @@ session_start();
 if (!isset($_SESSION['user_id'])) {
     echo "<script>
         alert('Vui lòng đăng nhập!');
-        window.location.href = '../ login/index.php';
+        window.location.href = '../login/index.php';
     </script>";
     exit;
 }
@@ -15,10 +15,11 @@ $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    $html = "";
     while ($row = $result->fetch_assoc()) {
         $approval_status = $row['approval_status'] == 1 ? 'Approved' : 'Pending';
         $html .= "
-        <tr data-id='{$row['users_id']}'>
+        <tr data-users_id='{$row['users_id']}'>
             <td class='py-2 px-4 border-b border-gray-200 firstName'>{$row['f_name']}</td>
             <td class='py-2 px-4 border-b border-gray-200 lastName'>{$row['l_name']}</td>
             <td class='py-2 px-4 border-b border-gray-200 phone'>{$row['phone_number']}</td>
@@ -30,14 +31,19 @@ if ($result->num_rows > 0) {
             <td class='py-2 px-4 border-b border-gray-200 created_at'>{$row['created_at']}</td>
            <td class='py-2 px-4 border-b border-gray-200 approval_status'>{$approval_status}</td>
             <td class='py-2 px-4 border-b border-gray-200'>
-                <button class='bg-red-500 text-white py-1 px-2 rounded hover:bg-red-700 deleteBtn'>Delete</button>";
+                <button class='text-red-500 hover:text-red-700 deleteBtn'>
+                    <i class='fas fa-trash'></i>
+                </button>";
 
         if ($row['approval_status'] == 0) {
             $html .= "
-                <button class='bg-green-500 text-white py-1 px-2 rounded hover:bg-green-700 approveBtn'>Approve</button>";
+                <button class='text-yellow-500 hover:text-yellow-700 approveBtn relative group'>
+                <i class='fas fa-paper-plane'></i>
+            </button>";
         }
         $html .= "</td></tr>";
     }
 }
+echo $html;
 $conn->close();
 ?>
