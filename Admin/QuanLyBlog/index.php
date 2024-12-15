@@ -196,6 +196,14 @@
             </div>
             <button class="btn-close">Đóng</button>
         </div>
+        <div id="custom-close">
+            <div class="message">
+            </div>
+            <div>
+                <button class="btn-ok">Ok</button>
+                <button class="btn-close">Đóng</button>
+            </div>
+        </div>
     </main>
 
     <!-- footer -->

@@ -4,32 +4,21 @@ include "../conn.php";
 $blog_id = $_POST['blog_id'];
 $content = $_POST['content'];
 
-// preg_match_all('/<img[^>]+src="([^">]+)"/', $image_title, $matches);
-// $image_ids = [];
+$sql_check = "SELECT * FROM blog_images_title WHERE blog_id = '$blog_id'";
+$result = $conn->query($sql_check);
+if ($result->num_rows > 0) {
+    $sql_delete_images = "DELETE FROM blog_images WHERE blog_id = '$blog_id'";
+    $sql_delete_content = "DELETE content FROM blogs WHERE blog_id = '$blog_id'";
+    if ($conn->query($sql_delete_images) !== TRUE) {
+        echo "Lỗi khi cập nhập blog";
+        exit;
+    }
+    if ($conn->query($sql_delete_content) !== TRUE) {
+        echo "Lỗi khi cập nhập blog";
+        exit;
+    }
+}
 
-// if (!empty($matches[1])) {
-//     foreach ($matches[1] as $image_url) {
-//         $blob_title = dataURItoBlob($image_url);
-//         if ($blob_title === false) {
-//             echo "Error: Invalid image data";
-//             exit;
-//         }
-//         $sql = "INSERT INTO blog_images_title (blog_id, image) VALUES (?, ?)";
-//         $stmt = $conn->prepare($sql);
-//         if ($stmt === false) {
-//             echo "Error: Could not prepare SQL statement.";
-//             exit;
-//         }
-//         $stmt->bind_param("ib", $blog_id, $null);
-//         $stmt->send_long_data(1, $blob_title);
-//         if ($stmt->execute()) {
-//         } else {
-//             echo "Error: Could not save image title";
-//             exit;
-//         }
-//         $stmt->close();
-//     }
-// }
 
 preg_match_all('/<img[^>]+src="([^">]+)"/', $content, $matches);
 $image_ids = [];

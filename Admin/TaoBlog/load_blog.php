@@ -48,7 +48,7 @@ if ($result->num_rows > 0) {
             if (!empty($img_id_match[1])) {
                 $img_id = $img_id_match[1];
 
-                $sql_image_title = "SELECT * FROM blog_images_title WHERE id = $img_id";
+                $sql_image_title = "SELECT * FROM blog_images WHERE image_id = $img_id";
                 $result_image_title = $conn->query($sql_image_title);
                 $image_title_url = '';
 
@@ -69,8 +69,8 @@ if ($result->num_rows > 0) {
          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ql-container ql-snow"
          style="height: 300px;">
         <div class="ql-editor ql-blank" data-gramm="false" contenteditable="true">
+         ' . $content. '
             <p><br></p>
-            ' . $content . '
         </div>
     </div>
     </div>';
@@ -78,8 +78,7 @@ if ($result->num_rows > 0) {
     if ($image_title_url) {
         $html .= "<div class='mb-4'>
                 <label class='block text-gray-700 text-sm font-bold mb-2' for='image_title_display'>Hình ảnh tiêu đề hiện tại</label>
-                <input type='text' readonly value='{$image_title_url}' class='w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none'>
-                <a href='{$image_title_url}' target='_blank' class='text-blue-500 mt-2 block'>Xem hình ảnh tiêu đề</a>
+              <img alt='{$row['title']}' class='w-full mb-4' src='{$image_title_url}' style='height:100px; width:100px;'>
               </div>";
     }
 

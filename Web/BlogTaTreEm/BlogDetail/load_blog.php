@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
                       </div>";
 
     if ($image_title_url) {
-        $html .= "<img alt='{$row['title']}' class='w-full mb-4' height='400' src='{$image_title_url}' width='800'>";
+        $html .= "<img alt='{$row['title']}' class='w-full mb-4'  src='{$image_title_url}' style='height:400px; width:800px;>";
     }
     $content = $row['content'];
     preg_match_all('/<img src="([^"]+)"/', $content, $matches);
@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
             if (!empty($img_id_match[1])) {
                 $img_id = $img_id_match[1];
 
-                $sql_image_title = "SELECT * FROM blog_images_title WHERE id = $img_id";
+                $sql_image_title = "SELECT * FROM blog_images WHERE image_id = $img_id";
                 $result_image_title = $conn->query($sql_image_title);
                 $image_title_url = '';
 

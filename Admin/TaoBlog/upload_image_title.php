@@ -11,7 +11,6 @@ if (isset($_FILES['image_title']) && $_FILES['image_title']['error'] === UPLOAD_
         include('../conn.php');
         $blog_id = $_POST['blog_id'];
 
-
         $sql_check = "SELECT * FROM blog_images_title WHERE blog_id = '$blog_id'";
         $result = $conn->query($sql_check);
         if ($result->num_rows > 0) {

@@ -34,7 +34,7 @@ $(document).ready(function () {
             $("#custom-alert").show();
             return;
         }
-        $.post('post_blog.php', { title: title, category_id: category_id }, function (response) {
+        $.post('post_blog.php', { title: title, category_id: category_id,blog_id:blog_id }, function (response) {
             if (response.includes('Error') || response.includes('Category không tồn tại')) {
                 alert(response);
             } else {

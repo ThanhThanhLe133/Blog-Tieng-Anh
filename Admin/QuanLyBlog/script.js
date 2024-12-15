@@ -41,12 +41,20 @@ $(document).ready(function () {
             });
         });
     });
-
+    $("#custom-alert .btn-close").on("click", function (e) {
+        e.preventDefault();
+        $("#custom-alert").hide();
+        location.reload();
+    });
+    $("#custom-close .btn-close").on("click", function (e) {
+        e.preventDefault();
+        $("#custom-close").hide();
+    });
     //xử lý edit
-    $('#blog-table').on('click', '.deleteBtn', function () {
+    $('#blog-table').on('click', '.editBtn', function () {
         var row = $(this).closest('tr');
         var blog_id = row.data('blog_id');
-        window.location.href = "../TaoBlog/index.php?blog_id={$row['blog_id']}'";
+        window.open("../TaoBlog/index.php?blog_id=" + blog_id, '_blank');
     });
 
     //nút tìm kiếm

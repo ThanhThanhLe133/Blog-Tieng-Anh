@@ -182,11 +182,14 @@ $(document).ready(function () {
     });
 
 
-    $(".btn-close").on("click", function (e) {
+    $("#custom-alert .btn-close").on("click", function (e) {
         e.preventDefault();
         $("#custom-alert").hide();
-        $("#custom-close").hide();
         location.reload();
+    });
+    $("#custom-close .btn-close").on("click", function (e) {
+        e.preventDefault();
+        $("#custom-close").hide();
     });
 
     //đăng xuất
