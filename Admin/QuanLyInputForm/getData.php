@@ -18,7 +18,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $html = "
+        $html .= "
         <tr data-id='{$row['id']}'>
             <td class='py-2 px-4 border-b border-gray-200 firstName'>{$row['firstName']}</td>
             <td class='py-2 px-4 border-b border-gray-200 lastName'>{$row['lastName']}</td>
@@ -33,8 +33,9 @@ if ($result->num_rows > 0) {
                 </button>
             </td>
         </tr>";
-        echo $html;
+
     }
+    echo $html;
 }
 $conn->close();
 ?>
