@@ -49,4 +49,39 @@ $(document).ready(function () {
         $(".content-review").val("");
     });
 
+    var urlParams = new URLSearchParams(window.location.search);
+    var blog_id = urlParams.get('blog_id');
+
+    displayBlog(blog_id);
+    displayLatestBlog();
+    displayRelatedBlog(blog_id);
+    displayPrevNext(blog_id);
+    function displayBlog(blog_id) {
+        $.post("load_blog.php", { blog_id: blog_id }, function (response) {
+            $('#blogPost').empty().append(response); 
+        }).fail(function () {
+            alert("Có lỗi xảy ra, vui lòng thử lại.");
+        });
+    }
+    function displayLatestBlog() {
+        $.post("../load_latest_blog.php", {}, function (response) {
+            $('#latestBlog').append(response);
+        }).fail(function () {
+            alert("Có lỗi xảy ra, vui lòng thử lại.");
+        });
+    }
+    function displayRelatedBlog() {
+        $.post("../load_related_blog.php", {blog_id: blog_id }, function (response) {
+            $('#relatedBlog').append(response);
+        }).fail(function () {
+            alert("Có lỗi xảy ra, vui lòng thử lại.");
+        });
+    }
+    function displayPrevNext() {
+        $.post("load_prev_next.php", { blog_id: blog_id }, function (response) {
+            $('#prev_next').empty().append(response); 
+        }).fail(function () {
+            alert("Có lỗi xảy ra, vui lòng thử lại.");
+        });
+    }
 })

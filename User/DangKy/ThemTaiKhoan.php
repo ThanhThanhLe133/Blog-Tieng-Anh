@@ -1,5 +1,4 @@
 <?php
-// Include file kết nối cơ sở dữ liệu
 include 'conn.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Lấy thông tin từ form

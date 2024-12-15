@@ -99,10 +99,10 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table `categories`
-INSERT INTO `categories` (`category_name`, `description`) VALUES
-('Tiếng anh trẻ em', 'Chia sẻ kiến thức và phương pháp học Tiếng Anh cho trẻ em.'),
-('Tin tức - Sự kiện', 'Cập nhật các tin tức và sự kiện mới nhất.'),
-('Nuôi dạy con', 'Chia sẻ kinh nghiệm về việc nuôi dạy con cái.');
+INSERT INTO `categories` (  `category_id`,`category_name`, `description`) VALUES
+(1,'Tiếng anh trẻ em', 'Chia sẻ kiến thức và phương pháp học Tiếng Anh cho trẻ em.'),
+(2,'Tin tức - Sự kiện', 'Cập nhật các tin tức và sự kiện mới nhất.'),
+(3, 'Nuôi dạy con', 'Chia sẻ kinh nghiệm về việc nuôi dạy con cái.');
 
 -- --------------------------------------------------------
 -- Table structure for table `blogs`

@@ -114,7 +114,7 @@
     <main>
         <div class="mx-auto p-6 bg-white shadow-md rounded-lg mt-10 blogForm">
             <div class=" mb-6">
-                <h1 class="text-2xl font-semibold">Quản lý Thông tin Form</h1>
+                <h1 class="text-2xl font-semibold">Quản lý Blog</h1>
             </div>
             <button class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 addBlog">Thêm Blog</button>
             <table class="min-w-full bg-white ">

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Khoá học tiếng Anh cho trẻ 1-2 tuổi</title>
+    <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,22 +10,20 @@
     <link rel="stylesheet" href="../../../Styles/reset.css">
 
     <!-- styles -->
-    <link rel="stylesheet" href="../../../Styles/general-styles.css">
-
     <link rel="stylesheet" href="../../../Styles/header.css">
-    <link rel="stylesheet" href="../../../Styles/register-form.css">
     <link rel="stylesheet" href="../../../Styles/footer.css">
     <link rel="stylesheet" href="../../../Styles/chat-form.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../../Styles/animation-general.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Carattere&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <style>
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -39,11 +37,20 @@
                     <a class="phone-number__link" href="tel:18006175">1800 6175</a>
                 </div>
                 <div class="top-header__language">
-                    <div class="language__flag">
-                        <img src="../../../Images/vn flag.png" alt="VN flag" />
+                    <div class="language vietnamese">
+                        <div class="language__flag">
+                            <img src="../../../Images/vn flag.png" alt="VN flag" />
+                        </div>
+                        <span class="language__text">TIẾNG VIỆT</span>
+                        <div class="language__icon"><img src="../../../Images/chevron-down.png" alt="" /></div>
                     </div>
-                    <span class="language__text">TIẾNG VIỆT</span>
-                    <div class="language__icon"><img src="../../../Images/chevron-down.png" alt="" /></div>
+                    <div class="language english">
+                        <div class="language__flag">
+                            <img src="../../../Images/us flag.png" alt="US flag" />
+                        </div>
+                        <span class="language__text">ENGLISH</span>
+                        <div class="language__icon"><img src="../../../Images/chevron-down.png" alt="" /></div>
+                    </div>
                 </div>
             </div>
             <div class="main-container__header--fixed">
@@ -135,163 +142,68 @@
             </div>
         </div>
     </header>
-	
     <!-- main -->
     <main>
-        <div class="container mx-auto px-4 py-8">
-            <div class="flex flex-col lg:flex-row">
-                <!-- Main Content -->
-                <div class="w-full lg:w-2/3">
-                    <h1 class="text-2xl font-bold mb-2">Danh mục: Tin tức sự kiện</h1>
-                    <p class="text-gray-600 mb-6">Tổng hợp tin tức, sự kiện và hoạt động từ Kids&Us Vietnam</p>
-
-                    <!-- Articles -->
-                    <div id="articles">
-                        <!-- Article 1 -->
-                        <div class="bg-white rounded-lg shadow-md mb-6">
-                            <div class="flex">
-                                <img alt="Teacher showing something to children" class="w-1/3 h-auto rounded-l-lg"
-                                    height="200"
-                                    src="https://kidsandus.net.vn/wp-content/uploads/2023/12/hoat-dong-ngoai-khoa-tieng-anh-racing-on-chimmey-anh-ngu-kidsus-nguyen-thi-thap-6-768x768.jpg"
-                                    width="300">
-                                <div class="p-4 w-2/3">
-                                    <h2 class="text-xl font-bold mb-2">Hoạt động ngoại khóa tiếng Anh hấp dẫn nhất tháng 12
-                                     </h2>
-                                    <p class="text-gray-500 text-sm mb-2">
-                                        <i class="far fa-calendar-alt"></i> Tháng Mười 17, 2024
-                                        <span class="mx-1">|</span>
-                                        <i class="fas fa-user"></i> Tin tức sự kiện
-                                    </p>
-                                    <p class="text-gray-700 mb-4">Trẻ em có tính hiếu động và ham học hỏi cao, tuy nhiên, việc học tiếng Anh đối với trẻ lại thường gặp nhiều khó…</p>
-                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Article 2 -->
-                        <div class="bg-white rounded-lg shadow-md mb-6">
-                            <div class="flex">
-                                <img alt="Teacher playing with children" class="w-1/3 h-auto rounded-l-lg" height="200"
-                                    src="https://kidsandus.net.vn/wp-content/uploads/2023/11/gift-of-gratitude-mon-qua-tri-an-truong-anh-ngu-cho-be-kidsnandus-6-768x768.jpg"
-                                    width="300">
-                                <div class="p-4 w-2/3">
-                                    <h2 class="text-xl font-bold mb-2">“Gift of Gratitude” – Món quà đặc biệt của sự tri ân
-                                     </h2>
-                                    <p class="text-gray-500 text-sm mb-2">
-                                        <i class="far fa-calendar-alt"></i> Tháng Mười 17, 2024
-                                        <span class="mx-1">|</span>
-                                        <i class="fas fa-user"></i> Tin tức sự kiện
-                                    </p>
-                                    <p class="text-gray-700 mb-4">“Gift of gratitude – Món quà đặc biệt của sự tri ân” là một sự kiện đặc biệt của Trường anh ngữ cho trẻ Kids&Us…</p>
-                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Article 3 -->
-                        <div class="bg-white rounded-lg shadow-md mb-6">
-                            <div class="flex">
-                                <img alt="Children playing with toys" class="w-1/3 h-auto rounded-l-lg" height="200"
-                                    src="https://kidsandus.net.vn/wp-content/uploads/2023/12/kidsus-hop-tac-voi-oxford-va-trinity-2-1024x683.jpg"
-                                    width="300">
-                                <div class="p-4 w-2/3">
-                                    <h2 class="text-xl font-bold mb-2">Kids&Us chính thức hợp tác với OXFORD và TRINITY</h2>
-                                    <p class="text-gray-500 text-sm mb-2">
-                                        <i class="far fa-calendar-alt"></i> Tháng Mười 7, 2024
-                                        <span class="mx-1">|</span>
-                                        <i class="fas fa-user"></i> Tin tức sự kiện
-                                    </p>
-                                    <p class="text-gray-700 mb-4">Hệ thống Anh ngữ Kids&Us chính thức ký thỏa thuận hợp tác với hai tổ chức giáo dục hàng đầu thế giới là Oxford và…</p>
-                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Article 4 -->
-                        <div class="bg-white rounded-lg shadow-md mb-6">
-                            <div class="flex">
-                                <img alt="Parent and child playing together" class="w-1/3 h-auto rounded-l-lg"
-                                    height="200"
-                                    src="https://kidsandus.net.vn/wp-content/uploads/2024/03/hoi-nghi-quoc-te-thuong-nien-kidsus-tay-ban-nha-2-1024x768.jpg"
-                                    width="300">
-                                <div class="p-4 w-2/3">
-                                    <h2 class="text-xl font-bold mb-2">Hội nghị quốc tế thường niên của Kids&Us tại Tây 
-					Ban Nha</h2>
-                                    <p class="text-gray-500 text-sm mb-2">
-                                        <i class="far fa-calendar-alt"></i> Tháng Năm 21, 2024
-                                        <span class="mx-1">|</span>
-                                        <i class="fas fa-user"></i> Tin tức sự kiện
-                                    </p>
-                                    <p class="text-gray-700 mb-4">Hòa chung với nhịp đập sôi động của đại gia đình Kids&Us toàn cầu, Kids&Us Việt Nam vô cùng tự hào khi được đồng hành…</p>
-                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pagination -->
-                    <div class="flex justify-center mt-8">
-                        <nav aria-label="Page navigation">
-                            <ul class="inline-flex items-center -space-x-px">
-                                <li>
-                                    <a class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
-                                        href="#">
-                                        <span class="sr-only">Previous</span>
-                                        <i class="fas fa-chevron-left"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
-                                        href="#">1</a>
-                                </li>
-                                <li>
-                                    <a class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
-                                        href="#">2</a>
-                                </li>
-                                <li>
-                                    <a class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
-                                        href="#">3</a>
-                                </li>
-                                <li>
-                                    <a class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
-                                        href="#">
-                                        <span class="sr-only">Next</span>
-                                        <i class="fas fa-chevron-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+        <div class="container">
+            <div class="blog-post">
+                <div class="lg p-4" id="blogPost">
+                    <!-- load blog -->
+                </div>
+                <div class="comments-section">
+                    <h2>
+                        Comments
+                    </h2>
+                    <div class="comment">
+                        <!-- <div><span class="username">Yến Nhi</span></div>
+                        <div class="datetime">21:56 Thứ 5 ngày 09/09/2021</div>
+                        <div class="review"> Đã mua, đã sử dụng, máy chạy êm...</div> -->
                     </div>
                 </div>
-
-                <!-- Sidebar -->
-                <div class="w-full lg:w-1/3 lg:pl-8">
-                    <h2 class="text-xl font-bold mb-4">Bài viết mới</h2>
-                    <ul class="list-disc list-inside text-blue-500">
-                        <li class="mb-2">
-                            <a class="hover:underline" href="#">8 Cách Phát Triển Ngôn Ngữ Cho Trẻ Mầm Non Hiệu Quả</a>
-                        </li>
-                        <li class="mb-2">
-                            <a class="hover:underline" href="#">Dạy Bé Tập Nói: Hành Trình và Phương Pháp Hiệu Quả</a>
-                        </li>
-                        <li class="mb-2">
-                            <a class="hover:underline" href="#">15+ Truyện tiếng Anh cho bé hay nhất, bố mẹ nên tham
-                                khảo</a>
-                        </li>
-                        <li class="mb-2">
-                            <a class="hover:underline" href="#">Những tính cách và khả năng của trẻ 3 tuổi ba mẹ nên
-                                biết</a>
-                        </li>
-                        <li class="mb-2">
-                            <a class="hover:underline" href="#">10+ bài hát tiếng Anh cho bé vui nhộn, hay, dễ nhớ</a>
-                        </li>
-                    </ul>
+                <div class="comment-form">
+                    <h2>
+                        Leave a Comment
+                    </h2>
+                    <form>
+                        <p class="current-user"></p>
+                        <textarea class="content-review" placeholder="Nhập đánh giá"></textarea>
+                        <button class="send">Gửi</button>
+                    </form>
+                </div>
+                <div class="max-w-4xl mx-auto p-4">
+                    <div class="mb-6">
+                        <p class="text-gray-600">
+                            <i class="fas fa-folder-open">
+                            </i>
+                            Posted in
+                            <a class="text-blue-600" href="../BlogDetail/index.html">
+                                Nuôi dạy con
+                            </a>
+                        </p>
+                    </div>
+                    <div class="mb-6" id="prev_next">
+                        <!-- load prev next -->
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4">
+                            Related Posts
+                        </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="relatedBlog">
+                           
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="new-article">
+                <h2 class="">
+                    Bài viết mới
+                </h2>
+                <ul class="list-inside text-blue-500" id="latestBlog">
+                    <!-- load latest blog -->
+                </ul>
+            </div>
     </main>
 
-     <!-- footer -->
+    <!-- footer -->
     <footer>
         <div class="footer__body">
             <div class="footer__grid">
@@ -462,4 +374,3 @@
 </body>
 
 </html>
-    

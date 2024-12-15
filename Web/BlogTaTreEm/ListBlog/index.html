@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Khoá học tiếng Anh cho trẻ 1-2 tuổi</title>
+    <title>Blog Tiếng Anh trẻ em</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,19 +13,19 @@
     <link rel="stylesheet" href="../../../Styles/general-styles.css">
 
     <link rel="stylesheet" href="../../../Styles/header.css">
-    <link rel="stylesheet" href="../../../Styles/register-form.css">
     <link rel="stylesheet" href="../../../Styles/footer.css">
     <link rel="stylesheet" href="../../../Styles/chat-form.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../../Styles/animation-general.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Carattere&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <style>
-    </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -39,11 +39,20 @@
                     <a class="phone-number__link" href="tel:18006175">1800 6175</a>
                 </div>
                 <div class="top-header__language">
-                    <div class="language__flag">
-                        <img src="../../../Images/vn flag.png" alt="VN flag" />
+                    <div class="language vietnamese">
+                        <div class="language__flag">
+                            <img src="../../../Images/vn flag.png" alt="VN flag" />
+                        </div>
+                        <span class="language__text">TIẾNG VIỆT</span>
+                        <div class="language__icon"><img src="../../../Images/chevron-down.png" alt="" /></div>
                     </div>
-                    <span class="language__text">TIẾNG VIỆT</span>
-                    <div class="language__icon"><img src="../../../Images/chevron-down.png" alt="" /></div>
+                    <div class="language english">
+                        <div class="language__flag">
+                            <img src="../../../Images/us flag.png" alt="US flag" />
+                        </div>
+                        <span class="language__text">ENGLISH</span>
+                        <div class="language__icon"><img src="../../../Images/chevron-down.png" alt="" /></div>
+                    </div>
                 </div>
             </div>
             <div class="main-container__header--fixed">
@@ -148,98 +157,14 @@
 
                     <!-- Articles -->
                     <div id="articles">
-                        <!-- Article 1 -->
-                        <div class="bg-white rounded-lg shadow-md mb-6">
-                            <div class="flex">
-                                <img alt="Teacher showing something to children" class="w-1/3 h-auto rounded-l-lg"
-                                    height="200"
-                                    src="https://storage.googleapis.com/a1aa/image/L1HUW2Mp6WbfPyfbujZehZTxQe1yfViKlBjY9zzxfXH9zYe7JA.jpg"
-                                    width="300">
-                                <div class="p-4 w-2/3">
-                                    <h2 class="text-xl font-bold mb-2">8 Cách Phát Triển Ngôn Ngữ Cho Trẻ Mầm Non Hiệu
-                                        Quả</h2>
-                                    <p class="text-gray-500 text-sm mb-2">
-                                        <i class="far fa-calendar-alt"></i> Tháng Mười 17, 2024
-                                        <span class="mx-1">|</span>
-                                        <i class="fas fa-user"></i> Nuôi Dạy Con
-                                    </p>
-                                    <p class="text-gray-700 mb-4">Hành trình khám phá ngôn ngữ của trẻ thơ luôn là một
-                                        điều kỳ diệu, và những năm tháng mầm non chính là nền tảng...</p>
-                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Article 2 -->
-                        <div class="bg-white rounded-lg shadow-md mb-6">
-                            <div class="flex">
-                                <img alt="Teacher playing with children" class="w-1/3 h-auto rounded-l-lg" height="200"
-                                    src="https://storage.googleapis.com/a1aa/image/qLxUGxetGp2mYigBIGGnwh26rzrksxGJmoE2V5LzgX6ox87JA.jpg"
-                                    width="300">
-                                <div class="p-4 w-2/3">
-                                    <h2 class="text-xl font-bold mb-2">Dạy Bé Tập Nói: Hành Trình và Phương Pháp Hiệu
-                                        Quả</h2>
-                                    <p class="text-gray-500 text-sm mb-2">
-                                        <i class="far fa-calendar-alt"></i> Tháng Mười 17, 2024
-                                        <span class="mx-1">|</span>
-                                        <i class="fas fa-user"></i> Nuôi Dạy Con
-                                    </p>
-                                    <p class="text-gray-700 mb-4">Giai đoạn học nói đầu đời của trẻ là một hành trình kỳ
-                                        diệu, đánh dấu bước phát triển vượt bậc về nhận thức và...</p>
-                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Article 3 -->
-                        <div class="bg-white rounded-lg shadow-md mb-6">
-                            <div class="flex">
-                                <img alt="Children playing with toys" class="w-1/3 h-auto rounded-l-lg" height="200"
-                                    src="https://storage.googleapis.com/a1aa/image/SvfLM54Rgp1WGaIe2xjQxFEiwE6Nsz96IahVAyFvfhicGzvnA.jpg"
-                                    width="300">
-                                <div class="p-4 w-2/3">
-                                    <h2 class="text-xl font-bold mb-2">Những tính cách và khả năng của trẻ 3 tuổi ba mẹ
-                                        nên biết</h2>
-                                    <p class="text-gray-500 text-sm mb-2">
-                                        <i class="far fa-calendar-alt"></i> Tháng Mười 7, 2024
-                                        <span class="mx-1">|</span>
-                                        <i class="fas fa-user"></i> Nuôi Dạy Con
-                                    </p>
-                                    <p class="text-gray-700 mb-4">Giai đoạn 3 tuổi là thời kỳ quan trọng trong sự phát
-                                        triển của trẻ, khi các kỹ năng về ngôn ngữ, tư duy và...</p>
-                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Article 4 -->
-                        <div class="bg-white rounded-lg shadow-md mb-6">
-                            <div class="flex">
-                                <img alt="Parent and child playing together" class="w-1/3 h-auto rounded-l-lg"
-                                    height="200"
-                                    src="https://storage.googleapis.com/a1aa/image/ibP43SpKuPatARujrm1BIajiMTKdzmQGcQpipQvOIKUzYe7JA.jpg"
-                                    width="300">
-                                <div class="p-4 w-2/3">
-                                    <h2 class="text-xl font-bold mb-2">Ikigai là gì? Lợi ích và các bước giúp trẻ xác
-                                        định Ikigai</h2>
-                                    <p class="text-gray-500 text-sm mb-2">
-                                        <i class="far fa-calendar-alt"></i> Tháng Năm 21, 2024
-                                        <span class="mx-1">|</span>
-                                        <i class="fas fa-user"></i> Nuôi Dạy Con
-                                    </p>
-                                    <p class="text-gray-700 mb-4">Bạn đã từng nghe đến khái niệm "Ikigai" chưa? Đây
-                                        không chỉ là một danh từ mà còn là chìa khóa giúp chúng ta tìm...</p>
-                                    <a class="text-blue-500 font-semibold" href="#">Đọc Thêm</a>
-                                </div>
-                            </div>
-                        </div>
+                           <!-- load Articles -->
                     </div>
 
                     <!-- Pagination -->
                     <div class="flex justify-center mt-8">
                         <nav aria-label="Page navigation">
-                            <ul class="inline-flex items-center -space-x-px">
-                                <li>
+                            <ul class="inline-flex items-center -space-x-px" id="navigationPage">
+                                <!-- <li>
                                     <a class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
                                         href="#">
                                         <span class="sr-only">Previous</span>
@@ -264,7 +189,7 @@
                                         <span class="sr-only">Next</span>
                                         <i class="fas fa-chevron-right"></i>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </nav>
                     </div>
@@ -273,24 +198,8 @@
                 <!-- Sidebar -->
                 <div class="w-full lg:w-1/3 lg:pl-8">
                     <h2 class="text-xl font-bold mb-4">Bài viết mới</h2>
-                    <ul class="list-disc list-inside text-blue-500">
-                        <li class="mb-2">
-                            <a class="hover:underline" href="#">8 Cách Phát Triển Ngôn Ngữ Cho Trẻ Mầm Non Hiệu Quả</a>
-                        </li>
-                        <li class="mb-2">
-                            <a class="hover:underline" href="#">Dạy Bé Tập Nói: Hành Trình và Phương Pháp Hiệu Quả</a>
-                        </li>
-                        <li class="mb-2">
-                            <a class="hover:underline" href="#">15+ Truyện tiếng Anh cho bé hay nhất, bố mẹ nên tham
-                                khảo</a>
-                        </li>
-                        <li class="mb-2">
-                            <a class="hover:underline" href="#">Những tính cách và khả năng của trẻ 3 tuổi ba mẹ nên
-                                biết</a>
-                        </li>
-                        <li class="mb-2">
-                            <a class="hover:underline" href="#">10+ bài hát tiếng Anh cho bé vui nhộn, hay, dễ nhớ</a>
-                        </li>
+                    <ul class="list-disc list-inside text-blue-500" id="latestBlog">
+                       <!-- load latest blog -->
                     </ul>
                 </div>
             </div>
@@ -463,7 +372,7 @@
 
     <script src="script.js"></script>
     <script src="../../../Animation/chat-form.js"></script>
-    <script src="../../../Animation/register-form.js"></script>
+    <script src="../../../Animation/header.js"></script>
     <script src="../../../Animation/load-effect.js"></script>
 </body>
 
