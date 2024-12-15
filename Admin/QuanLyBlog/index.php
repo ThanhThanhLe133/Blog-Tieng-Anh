@@ -128,7 +128,13 @@
                             Author</th>
                         <th
                             class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
-                            Date</th>
+                            Created At</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Updated At</th>
+                        <th
+                            class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+                            Category</th>
                         <th
                             class="py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600">
                             Actions</th>

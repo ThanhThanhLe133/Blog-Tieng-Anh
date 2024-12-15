@@ -29,17 +29,36 @@ $(document).ready(function () {
             $("#custom-alert").show();
             return;
         }
-        $.post('post_blog.php', { title: title,category:category}, function (response) {
+        $.post('post_blog.php', { title: title, category: category }, function (response) {
             if (response.includes('Error') || response.includes('Category không tồn tại')) {
                 alert(response);
             } else {
                 var blog_id = response;
-                
-                $.post('upload_content.php', {blog_id:blog_id,content:content}, function (response) {
+                var formData = new FormData();
+                formData.append('image_title', $('#image_title')[0].files[0]);  // Thêm ảnh vào form data
+                formData.append('blog_id', blog_id);
+                $.ajax({
+                    url: 'upload_image_title.php',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                    },
+                    error: function (xhr, status, error) {
+                        $("#custom-alert .message").text("Error uploading file: " + error);
+                        $("#custom-alert").show();
+                        return;
+                    }
+                });
+
+                $.post('upload_content.php', { blog_id: blog_id, content: content }, function (response) {
                     if (response.includes('success')) {
-                        alert('Content uploaded successfully!');
+                        $("#custom-alert .message").text("Đã tạo blog mới thành công!");
+                        $("#custom-alert").show();
                     } else {
-                        alert('Error uploading content: ' + response);
+                        $("#custom-alert .message").text('Lỗi khi tạo content blog: ' + response);
+                        $("#custom-alert").show();
                     }
                 });
             }
@@ -49,49 +68,7 @@ $(document).ready(function () {
         e.preventDefault();
         $("#custom-alert").hide();
         $("#custom-close").hide();
+        window.scrollTo(0, 0);
+        location.reload();
     });
 })
-
-
-// Hàm tải lên hình ảnh cho blog
-function uploadImages(blogId, blobs) {
-    var formData = new FormData();
-
-    formData.append('blog_id', blogId);
-
-    blobs.forEach((blob, index) => {
-        var reader = new FileReader();
-        reader.onloadend = function () {
-            var base64Image = reader.result.split(',')[1];
-
-            formData.append('images[]', base64Image);
-
-            if (index === blobs.length - 1) {
-                $.post('upload_image.php', formData, function (response) {
-                    if (response === 'success') {
-                        alert("Images uploaded and saved successfully!");
-                    } else {
-                        alert("Image upload failed!");
-                    }
-                });
-            }
-        };
-
-        reader.readAsDataURL(blob);
-    });
-}
-
-// Khi nhấn nút Lưu
-
-
-// Hàm chuyển đổi Data URL thành Blob
-function dataURItoBlob(dataURI) {
-    var byteString = atob(dataURI.split(',')[1]);
-    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]; // Lấy loại MIME
-    var arrayBuffer = new ArrayBuffer(byteString.length);
-    var uint8Array = new Uint8Array(arrayBuffer);
-    for (var i = 0; i < byteString.length; i++) {
-        uint8Array[i] = byteString.charCodeAt(i);
-    }
-    return new Blob([uint8Array], { type: mimeString });
-}

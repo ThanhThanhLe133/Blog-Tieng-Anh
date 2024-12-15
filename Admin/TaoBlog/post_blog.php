@@ -1,10 +1,18 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    echo "<script>
+        alert('Vui lòng đăng nhập!');
+        window.location.href = '../ login/index.php';
+    </script>";
+    exit;
+}
+$user_id = $_SESSION['user_id'];
+
 include('../conn.php');
 
 $category = $_POST['category'];
 $title = $_POST['title'];
-
-
 $strSQL = "SELECT category_id FROM categories WHERE category_name = '$category'";
 $result = $conn->query($strSQL);
 
@@ -12,20 +20,15 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $category_id = $row['category_id'];
 
-    $sql = "INSERT INTO blogs (category_id, title) 
-            VALUES ('$category_id', '$title')";
+    $strSQL_admin = "SELECT admin_id FROM admin WHERE username = '$user_id'";
+    $result_admin = $conn->query($strSQL_admin);
+    $author_id = $result_admin->fetch_assoc()['admin_id'];
+
+    $sql = "INSERT INTO blogs (category_id, title, author_id) 
+            VALUES ('$category_id', '$title','$author_id')";
     if ($conn->query($sql) === TRUE) {
-        $strSql = "SELECT blog_id FROM blogs WHERE category_id = '$category_id' ORDER BY created_at DESC LIMIT 1";
-
-        $result = $conn->query($strSql);
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $blog_id = $row['blog_id']; 
-            echo $blog_id; 
-        } else {
-            echo "Error fetching blog ID";
-        }
+        $blog_id = $conn->insert_id;
+        echo $blog_id;
     } else {
         echo "Error inserting blog";
     }
