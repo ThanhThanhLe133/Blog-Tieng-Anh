@@ -97,14 +97,13 @@ $(document).ready(function () {
         $('#filterBox').hide();
         $('#blog-table tr').each(function () {
             var row = $(this);
-            var rowAuthor = row.find('.author').text().toLowerCase();;
+            var rowAuthor = row.find('.author').text();
             var rowCreated_at = row.find('.created_at').text()
             var rowUpdated_at = row.find('.updated_at').text();
-            var rowCategory = row.find('.category').text().toLowerCase();
-
+            var rowCategory = row.find('.category').text();
             var isAuthorMatch = filterAuthor.includes(rowAuthor);
-            var isCreated_atMatch = filterCreatedDate.includes(rowCreated_at);
-            var isUpdated_atMatch = filterUpdatedDate.includes(rowUpdated_at);
+            var isCreated_atMatch = rowCreated_at.includes(filterCreatedDate);
+            var isUpdated_atMatch = rowUpdated_at.includes(filterUpdatedDate);
             var isCategory = filterCategory.includes(rowCategory);
             if (isAuthorMatch || isCreated_atMatch || isUpdated_atMatch || isCategory) {
                 row.show();

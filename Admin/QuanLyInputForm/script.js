@@ -60,9 +60,9 @@ $(document).ready(function () {
         $('#guest-table tr').each(function () {
             var row = $(this);
             var rowBirthYear = row.find('.birthYear').text();
-            var rowFirstName = row.find('.firstName').text().toLowerCase();
-            var rowLastName = row.find('.lastName').text().toLowerCase();
-            var rowSchool = row.find('.studySchool').text().toLowerCase();
+            var rowFirstName = row.find('.firstName').text();
+            var rowLastName = row.find('.lastName').text();
+            var rowSchool = row.find('.studySchool').text();
             var rowDate = row.find('.formattedDate').text();
 
             var isBirthYearMatch = birthYearFilters.includes(rowBirthYear);

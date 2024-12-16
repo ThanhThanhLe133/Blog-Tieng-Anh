@@ -58,22 +58,26 @@ $(document).ready(function () {
         var dateFilters = $('#filterDate input:checked').map(function () {
             return $(this).val();
         }).get();
+        var statusFilter = $('#StatusCheckboxes input:checked').map(function () {
+            return $(this).val();
+        }).get()
         $('#filterBox').hide();
-        $('#guest-table tr').each(function () {
+        $('#user-table tr').each(function () {
             var row = $(this);
             var rowBirthYear = row.find('.birthYear').text();
-            var rowFirstName = row.find('.firstName').text().toLowerCase();
-            var rowLastName = row.find('.lastName').text().toLowerCase();
-            var rowSchool = row.find('.studySchool').text().toLowerCase();
+            var rowFirstName = row.find('.firstName').text();
+            var rowLastName = row.find('.lastName').text();
+            var rowSchool = row.find('.studySchool').text();
             var rowDate = row.find('.formattedDate').text();
+            var rowStatus = row.find('.approval_status').text();
 
             var isBirthYearMatch = birthYearFilters.includes(rowBirthYear);
             var isFirstNameMatch = firstNameFilters.includes(rowFirstName);
             var isLastNameMatch = lastNameFilters.includes(rowLastName);
             var isSchoolMatch = schoolFilters.includes(rowSchool);
             var isDateMatch = dateFilters.includes(rowDate);
-
-            if (isBirthYearMatch || isFirstNameMatch || isLastNameMatch || isSchoolMatch || isDateMatch) {
+            var isStatusMatch = statusFilter.includes(rowStatus);
+            if (isBirthYearMatch || isFirstNameMatch || isLastNameMatch || isSchoolMatch || isDateMatch||isStatusMatch) {
                 row.show();
             } else {
                 row.hide();
@@ -229,5 +233,10 @@ $(document).ready(function () {
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
         });
+    }
+    function decodeHtml(html) {
+        var textarea = document.createElement("textarea");
+        textarea.innerHTML = html;
+        return textarea.value;
     }
 });

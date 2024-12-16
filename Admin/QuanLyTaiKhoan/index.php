@@ -134,8 +134,8 @@
                     <div>
                         <label for="filterStatus">Status:</label>
                         <div id="StatusCheckboxes">
-                            <label><input type="checkbox" value="1"> approved</label><br>
-                            <label><input type="checkbox" value="0"> pending</label><br>
+                            <label><input type="checkbox" value="Approved"> Approved</label><br>
+                            <label><input type="checkbox" value="Pending"> Pending</label><br>
                         </div>
                     </div>
                     <div>
