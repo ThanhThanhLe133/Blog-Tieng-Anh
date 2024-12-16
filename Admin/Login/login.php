@@ -8,7 +8,7 @@ $strSQL = "Select * from admin where username='$username' && password='$password
 $result = $conn->query($strSQL);
 
 if ($result->num_rows > 0) {
-    $_SESSION['user_logged_in'] = true;
+    $_SESSION['admin_logged_in'] = true;
     $_SESSION['user_name'] = $username;
     echo "Chúc mừng bạn đã đăng nhập thành công";
 } else {

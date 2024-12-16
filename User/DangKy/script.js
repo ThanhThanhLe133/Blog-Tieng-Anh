@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     //click vào ô input -> xoá nội dung
     $("input").on('click', function () {
-        if ($("#username").val() !== "" && $("#new-password").val() !== "") {
+        if ($("#username").val() !== "" && $("#new-password").val() !== ""&& $("#confirm-password").val() !== "") {
             $(".kq").html("");
             $("#username").val("");
             $("#new-password").val("");
@@ -27,10 +27,10 @@ $(document).ready(function () {
             handleRegister();
         }
     });
-    //xử lý nút login-> handleLogin
+    //xử lý nút register-> handleRegister
     $("#btnRegister").on('click', function (e) {
         e.preventDefault();
-        handleLogin();
+        handleRegister();
     });
 
     //bỏ qua enter với input
@@ -60,7 +60,7 @@ $(document).ready(function () {
         let newPassword = $("#new-password").val();
         let confirmPassword = $("#confirm-password").val();
 
-        if (username === "" || password === "" || confirmPassword === "") {
+        if (username === "" || newPassword === "" || confirmPassword === "") {
             $(".kq")
                 .removeClass("success")
                 .addClass("error")
@@ -95,7 +95,7 @@ $(document).ready(function () {
         $(".btn-close").on('click', function (e) {
             e.preventDefault();
             setTimeout(function () {
-                window.location.href = "../DangNhap/index.php";
+                window.location.href = "../Login/index.php";
             }, 500);
         });
     }

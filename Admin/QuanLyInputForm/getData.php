@@ -15,7 +15,7 @@ $sql = "SELECT id,firstName, lastName, phone, email, studySchool, birthYear,
         FROM guest";
 
 $result = $conn->query($sql);
-
+$html="";
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $html .= "

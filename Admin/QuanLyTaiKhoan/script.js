@@ -163,7 +163,7 @@ $(document).ready(function () {
             $("#custom-close").hide();
 
             $("#custom-alert .message").text('Đang gửi xác nhận. Vui lòng chờ...');
-            $(".btn-close").hide();
+
             $("#custom-alert").show();
             $.post('approveUser.php', { users_id: users_id }, function (response) {
                 if (response.includes('success')) {
@@ -180,7 +180,6 @@ $(document).ready(function () {
         });
     });
 
-
     $("#custom-alert .btn-close").on("click", function (e) {
         e.preventDefault();
         $("#custom-alert").hide();
@@ -189,22 +188,6 @@ $(document).ready(function () {
     $("#custom-close .btn-close").on("click", function (e) {
         e.preventDefault();
         $("#custom-close").hide();
-    });
-
-    //đăng xuất
-    $('.header__action').on('click', function (e) {
-        if ($(this).children().first().hasClass('btn--logout')) {
-            e.preventDefault();
-            $("#custom-close .message").html("");
-            $("#custom-close .message").html("Bạn có chắc chắn muốn đăng xuất");
-            $("#custom-close").show();
-            $(".btn-ok").on('click', function (e) {
-                e.preventDefault();
-                setTimeout(function () {
-                    window.location.href = "../Login/index.php";
-                }, 500);
-            });
-        }
     });
 
     function loadFilterBox() {

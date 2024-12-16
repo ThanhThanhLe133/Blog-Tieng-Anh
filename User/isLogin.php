@@ -8,7 +8,7 @@ if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true) 
 </button>';
 
 } else {
-    echo '<a href="../web/Đăng ký/index.html" class="btn btn--register">ĐĂNG KÝ</a>';
+    echo '<a href="../../web/DangKy/index.html" class="btn btn--register">ĐĂNG KÝ</a>';
 }
 $conn->close();
 ?>

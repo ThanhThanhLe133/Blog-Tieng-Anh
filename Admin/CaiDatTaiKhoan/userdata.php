@@ -4,7 +4,7 @@ session_start();
 
 include "../conn.php";
 
-$user_id = $_SESSION['user_name'];
+$user_name = $_SESSION['user_name'];
 
 $sql = "SELECT first_name, last_name, username, email FROM admin WHERE username = '$user_name' ";
 

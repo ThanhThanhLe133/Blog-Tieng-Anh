@@ -78,6 +78,10 @@ a {
     align-items: center;
     justify-content: space-around;
 }
+#custom-alert>* {
+    display: flex;
+    margin:10px auto;
+}
 .message {
     font-size: 16px;
     margin-bottom: 20px;
@@ -91,7 +95,6 @@ a {
     border: none;
     cursor: pointer;
     border-radius: 3px;
-    padding: 5px 10px;
 }
 
 .btn-ok{

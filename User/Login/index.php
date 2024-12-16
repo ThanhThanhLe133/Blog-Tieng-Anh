@@ -80,7 +80,7 @@ session_destroy();
                                     <p class="nav__text">TRANG CHỦ</p>
                                 </a>
                             </li>
-                            <li class="nav__item nav__item--active">
+                            <li class="nav__item">
                                 <a class="nav__link" href="#">
                                     <span class="course-list">
                                         <p class="nav__text">CÁC KHOÁ HỌC &#x23F7</p>
@@ -182,7 +182,7 @@ session_destroy();
                     <a href="../XacThucTaiKhoan/index.php" class="text-blue-500 hover:underline"
                         style="font-style:italic">Quên mật khẩu?</a>
                     <p>
-                        Chưa có tài khoản? <a href="../DangKy/register.php" class="text-blue-500 hover:underline">
+                        Chưa có tài khoản? <a href="../DangKy/index.php" class="text-blue-500 hover:underline">
                             <strong>Đăng ký
                                 ngay!</strong></a>
                     </p>

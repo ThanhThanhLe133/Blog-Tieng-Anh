@@ -1,9 +1,3 @@
-<?php
-session_start();
-session_unset();
-session_destroy();
-?>
-
 <!DOCTYPE html>
 <html>
 <html>
@@ -21,7 +15,6 @@ session_destroy();
     <link rel="stylesheet" href="../../Styles/header.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../Styles/animation-general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,12 +54,6 @@ session_destroy();
                     </div>
                 </div>
             </div>
-            <div class="main-container__header--fixed">
-                <div class="header__body">
-                    <!-- logo -->
-                    <img src="../../Images/kids and us.png" alt="" class="logo" />
-                </div>
-            </div>
         </div>
         <div class="main-container__header--fixed">
             <div class="header__body">
@@ -81,7 +68,7 @@ session_destroy();
                                 <p class="nav__text">TRANG CHỦ</p>
                             </a>
                         </li>
-                        <li class="nav__item nav__item--active">
+                        <li class="nav__item">
                             <a class="nav__link" href="#">
                                 <span class="course-list">
                                     <p class="nav__text">CÁC KHOÁ HỌC &#x23F7</p>
@@ -199,7 +186,7 @@ session_destroy();
         </form>
         <div class="kq"></div>
         <div id="custom-alert">
-            <div class="message">
+            <div class="message" >
                 Thông tin của bạn đã được gửi. Chúng tôi sẽ gửi thông báo tới email của bạn!
             </div>
             <button class="btn-close">Đóng</button>

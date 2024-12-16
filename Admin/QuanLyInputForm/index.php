@@ -63,39 +63,29 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a class="nav__link" href="../../HomePage/index.html">
+                                <a class="nav__link" href="../QuanLyInputForm/index.php">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="../../PP của chúng tôi/index.html">
+                                <a class="nav__link" href="../TaoBlog/index.php">
                                     <p class="nav__text">THÊM MỚI BLOG</p>
                                 </a>
                             </li>
 
                             <li class="nav__item">
-                                <a class="nav__link" href="#">
-                                    <span class="link-before">
-                                        <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
-                                    </span>
+                                <a class="nav__link" href="../QuanLyBlog/index.php">
+                                    <p class="nav__text">QUẢN LÝ BLOG</p>
                                 </a>
-                                <ul class="nav__submenu blog">
-                                    <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
-                                            Anh trẻ em</a></li>
-                                    <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
-                                            con</a></li>
-                                    <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
-                                            kiện</a></li>
-                                </ul>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../../PP của chúng tôi/index.html">
+                                <a class="nav__link" href="../QuanLyTaiKhoan/index.php">
                                     <p class="nav__text">QUẢN LÝ TÀI KHOẢN</p>
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="../../PP của chúng tôi/index.html">
+                                <a class="nav__link" href="../CaiDatTaiKhoan/index.php">
                                     <p class="nav__text">CÀI ĐẶT</p>
                                 </a>
                             </li>
@@ -103,7 +93,7 @@
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                        <a href="../../Đăng ký/index.html" class="btn btn--logout">ĐĂNG XUẤT</a>
+
                     </div>
                 </div>
             </div>
@@ -217,7 +207,7 @@
         <div id="custom-close">
             <div class="message">
             </div>
-            <div> 
+            <div>
                 <button class="btn-ok">Ok</button>
                 <button class="btn-close">Đóng</button>
             </div>

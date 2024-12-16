@@ -67,7 +67,7 @@
                                     <p class="nav__text">TRANG CHỦ</p>
                                 </a>
                             </li>
-                            <li class="nav__item nav__item--active">
+                            <li class="nav__item">
                                 <a class="nav__link" href="#">
                                     <span class="course-list">
                                         <p class="nav__text">CÁC KHOÁ HỌC &#x23F7</p>

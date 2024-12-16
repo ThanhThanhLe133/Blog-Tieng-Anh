@@ -1,25 +1,26 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $('.register__button').on('click', function (event) {
         event.preventDefault();
-    console.log(1222);
-    
+
         const firstName = $('.firstName').val();
         const lastName = $('.lastName').val();
         const phone = $('.phone').val();
-        const email = $('.email').val();
+        const email = $('.emailInput').val();
         const studySchool = $('.studySchool').val();
         const birthYear = $('.birthYear').val();
-        const currentDate = new Date().toISOString().split('T')[0];
-    
-        console.log(firstName);
+        
+        if (firstName === "" || lastName === "" || phone === "" || email === "" || studySchool === "" || birthYear === "") {
+            $('#custom-close').show();
+            $(".message").text("Vui lòng nhập đầy đủ thông tin");
+            return;
+        }
         $.post("../../User/send-form.php", {
             firstName: firstName,
             lastName: lastName,
             phone: phone,
             email: email,
             studySchool: studySchool,
-            birthYear: birthYear,
-            currentDate: currentDate
+            birthYear: birthYear
         }, function (response) {
             if (response.includes("success")) {
                 $('#custom-close').show();
@@ -27,18 +28,17 @@ $(document).ready(function(){
             else {
                 $('#custom-close').show();
                 $(".privacy-policy").hide();
-                $(".message").text("Có lỗi xảy ra, vui lòng thử lại.");
+                $(".message").text(response);
+                $(".btn-ok").hide();
             }
         });
     });
-    $(".btn-ok").on('click', function (e) {
-        e.preventDefault();
+    $(".btn-ok").on('click', function () {
         setTimeout(function () {
-            window.location.href = "../../User/DangKy/register.php";
+            window.location.href = "../../User/DangKy/index.php";
         }, 500);
     });
-    $('#close-close').on('click', function (e) {
-        e.preventDefault();
+    $('.btn-close').on('click', function () {
         $('#custom-close').hide();
         window.scrollTo(0, 0);
         location.reload();
