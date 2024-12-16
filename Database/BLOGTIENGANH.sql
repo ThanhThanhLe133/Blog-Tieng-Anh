@@ -2,15 +2,16 @@
 -- Table structure for table `guest`
 --
 CREATE TABLE guest (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    firstName VARCHAR(100),
-    lastName VARCHAR(100),
-    phone VARCHAR(20),
-    email VARCHAR(100),
-    studySchool VARCHAR(100),
-    birthYear INT,
-    currentDate DATE
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,          -- Mã khách
+    firstName VARCHAR(255) NOT NULL,                 -- Tên
+    lastName VARCHAR(255) NOT NULL,                  -- Họ
+    phone VARCHAR(15) NOT NULL,                      -- Số điện thoại
+    email VARCHAR(255) NOT NULL,                     -- Email
+    studySchool VARCHAR(255),                        -- Trường học
+    birthYear INT(4),                                -- Năm sinh
+    currentDate DATE DEFAULT CURRENT_DATE            -- Ngày hiện tại, mặc định là ngày hôm nay
 );
+
 
 -- --------------------------------------------------------
 -- Table structure for table `admin`
