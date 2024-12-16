@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
     $html .= "<div class='flex items-center text-gray-500 text-sm mb-4'>
                         <span>" . date("F d, Y", strtotime($row['created_at'])) . "</span>
                         <span class='mx-2'>|</span>
-                        <span>Tiếng Anh trẻ em</span>
+                        <span>Nuôi Dạy Con</span>
                       </div>";
 
     if ($image_title_url) {

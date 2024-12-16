@@ -33,29 +33,6 @@ INSERT INTO `admin` (`first_name`, `last_name`, `email`, `username`, `password`)
 ('Ngan', 'Phuong','tthanh6b@gmail.com', 'admin', '123');
 
 -- --------------------------------------------------------
--- Table structure for table `branches`
---
-
-CREATE TABLE `branches` (
-  `branch_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `branch_name` VARCHAR(255) NOT NULL,
-  `address` VARCHAR(255) NOT NULL,
-  `city` VARCHAR(255) NOT NULL,
-  `district` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`branch_id`),
-  UNIQUE KEY `branch_name` (`branch_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- Dumping data for table branches INSERT INTO branches 
-INSERT INTO `branches` (`branch_name`, `address`, `city`, `district`) VALUES
-('Kid&Us Nguyen Thi Thap', '47-49 Nguyễn Thị Thập, KDC Him Lam', 'TP.HCM', 'Quận 7'),
-('Kid&Us City Land Park Hills', '3 Đường số 3, Phường 10', 'TP.HCM', 'Quận Gò Vấp'),
-('Kid&Us Cao Đức Lân', '126 Cao Đức Lân, An Phú', 'TP.HCM', 'Quận 2'),
-('Kid&Us Sư Vạn Hạnh', '770 Sư Vạn Hạnh, Phường 12', 'TP.HCM', 'Quận 10'),
-('Kid&Us Lê Văn Việt', '695 Lê Văn Việt', 'TP.HCM', 'Thủ Đức'),
-('Kid&Us Tên Lửa', '29-31 Tên Lửa, Phường Bình Trị Đông B', 'TP.HCM', 'Quận Bình Tân');
-
--- --------------------------------------------------------
 -- Table structure for table `users`
 --
 
@@ -152,7 +129,7 @@ CREATE TABLE `blog_images_title` (
   FOREIGN KEY (`blog_id`) REFERENCES `blogs`(`blog_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---comment
+-- comment
 CREATE TABLE `comment` (
   `comment_id` int(11) NOT NULL AUTO_INCREMENT,
   `comment` varchar(255) NOT NULL,
