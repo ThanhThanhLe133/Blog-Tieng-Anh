@@ -35,11 +35,10 @@ $(document).ready(function () {
             return;
         }
         $.post('post_blog.php', { title: title, category_id: category_id, blog_id: blog_id }, function (response) {
-            if (response.includes('Error') || response.includes('Category không tồn tại')) {
-                alert(response);
+            if (response.includes('Lỗi') || response.includes('Category không tồn tại')) {
+                return;
             } else {
                 var blog_id = response;
-                console.log(blog_id);
                 var formData = new FormData();
                 formData.append('image_title', $('#image_title')[0].files[0]);  // Thêm ảnh vào form data
                 formData.append('blog_id', blog_id);

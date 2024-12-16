@@ -63,16 +63,37 @@ if ($result->num_rows > 0) {
         }
     }
 
-    $html = '<div class="mb-4">
+    $html .= '<div class="mb-4">
     <label class="block text-gray-700 text-sm font-bold mb-2" for="content">Nội dung</label>
-    <div id="editor"
-         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ql-container ql-snow"
-         style="height: 300px;">
-        <div class="ql-editor" data-gramm="false" contenteditable="true">
-            ' . htmlspecialchars_decode($content) . '
+                           
+        <div id="editor"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ql-container ql-snow"
+            style="height: 300px;">
+            <div class="ql-editor ql-blank" data-gramm="false" contenteditable="true">
+            </div>
         </div>
-    </div>
-</div>';
+    </div>';
+    $html .="
+    <script>
+      var quill = new Quill('#editor', {
+        theme: 'snow',
+        modules: {
+            toolbar: [
+                [{ 'font': [] }, { 'size': [] }],
+                ['bold', 'italic', 'underline', 'strike'],
+                [{ 'color': [] }, { 'background': [] }],
+                [{ 'script': 'sub' }, { 'script': 'super' }],
+                [{ 'header': '1' }, { 'header': '2' }, 'blockquote', 'code-block'],
+                [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }],
+                [{ 'direction': 'rtl' }, { 'align': [] }],
+                ['link', 'image', 'video'],
+                ['clean']
+            ]
+        }
+    });
+        var content = ' . json_encode($content) . '; 
+        quill.root.innerHTML = content; 
+    </script>";
 
     if ($image_title_url) {
         $html .= "<div class='mb-4'>

@@ -1,55 +1,52 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_name'])) {
-    echo "<script>
-        alert('Vui lòng đăng nhập!');
-        window.location.href = '../ login/index.php';
-    </script>";
-    exit;
-}
 $user_name = $_SESSION['user_name'];
-$blog_id = $_SESSION['blog_id']?? "";
 
 include('../conn.php');
 
-$category_id = $_POST['category_id'];
-$title = $_POST['title'];
-$strSQL_admin = "SELECT admin_id FROM admin WHERE username = '$user_name'";
-$result_admin = $conn->query($strSQL_admin);
+// Lấy dữ liệu từ POST và kiểm tra
+$category_id = isset($_POST['category_id']) ? intval($_POST['category_id']) : 0;
+$title = isset($_POST['title']) ? trim($_POST['title']) : '';
+$blog_id = isset($_POST['blog_id']) ? intval($_POST['blog_id']) : 0;
+
+// Kiểm tra xem người dùng có tồn tại không
+$strSQL_admin = "SELECT admin_id FROM admin WHERE username = ?";
+$stmt_admin = $conn->prepare($strSQL_admin);
+$stmt_admin->bind_param("s", $user_name);
+$stmt_admin->execute();
+$result_admin = $stmt_admin->get_result();
 
 if ($result_admin->num_rows > 0) {
     $author_id = $result_admin->fetch_assoc()['admin_id'];
 
-    if ($blog_id !== null) {
-        $sql_update = "UPDATE blogs SET author_id = '$author_id',category_id='$category_id',title='$title' WHERE blog_id = '$blog_id'";
-        if ($conn->query($sql_update) === TRUE) {
-            echo $blog_id;
+    if (!empty($blog_id)) {
+        // Cập nhật blog
+        $sql_update = "UPDATE blogs SET author_id = ?, category_id = ?, title = ? WHERE blog_id = ?";
+        $stmt_update = $conn->prepare($sql_update);
+        $stmt_update->bind_param("iisi", $author_id, $category_id, $title, $blog_id);
+
+        if ($stmt_update->execute()) {
+            echo $blog_id; 
         } else {
-            echo "Không thể cập nhật blogs. Vui lòng thử lại.";
+            echo "Không thể cập nhật blog. Vui lòng thử lại.";
         }
+        $stmt_update->close();
         exit;
     }
 
-    $sql = "INSERT INTO blogs (category_id, title, author_id) 
-            VALUES ('$category_id', '$title','$author_id')";
-    $stmt = $conn->prepare($sql);
+    $sql_insert = "INSERT INTO blogs (category_id, title, author_id) VALUES (?, ?, ?)";
+    $stmt_insert = $conn->prepare($sql_insert);
+    $stmt_insert->bind_param("isi", $category_id, $title, $author_id);
 
-    if ($stmt) {
-        $stmt->bind_param("isi", $category_id, $title, $author_id);
-
-        if ($stmt->execute()) {
-            $blog_id = $stmt->insert_id; 
-            echo $blog_id;
-        } else {
-            echo "Lỗi khi tạo blog: " . $stmt->error;
-        }
-
-        $stmt->close();
+    if ($stmt_insert->execute()) {
+        $blog_id = $stmt_insert->insert_id; 
+        echo $blog_id;
     } else {
-        echo "Lỗi khi chuẩn bị câu lệnh: " . $conn->error;
+        echo "Lỗi khi tạo blog: " . $stmt_insert->error;
     }
+    $stmt_insert->close();
 } else {
-    echo "Category không tồn tại trong cơ sở dữ liệu.";
+    echo "Người dùng không tồn tại trong cơ sở dữ liệu.";
 }
 
 $conn->close();
