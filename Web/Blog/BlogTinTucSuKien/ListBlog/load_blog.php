@@ -4,13 +4,13 @@ include "../../conn.php";
 $page = $_POST['page'];
 $items_per_page = 3;
 
-$sql_count = "SELECT COUNT(*) as total FROM blogs WHERE category_id = 3";
+$sql_count = "SELECT COUNT(*) as total FROM blogs WHERE category_id = 2";
 $count_result = $conn->query($sql_count);
 $row_count = $count_result->fetch_assoc();
 $total_blogs = $row_count['total'];
 $offset = ($page - 1) * $items_per_page;
 
-$sql = "SELECT * FROM blogs WHERE category_id = 3 ORDER BY created_at DESC LIMIT $items_per_page OFFSET $offset";
+$sql = "SELECT * FROM blogs WHERE category_id = 2 ORDER BY created_at DESC LIMIT $items_per_page OFFSET $offset";
 $result = $conn->query($sql);
 $html = "";
 if ($result->num_rows > 0) {
@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
                         <p class='text-gray-500 text-sm mb-2'>
                             <i class='far fa-calendar-alt'></i> " . date("F d, Y", strtotime($row['created_at'])) . "
                             <span class='mx-1'>|</span>
-                            <i class='fas fa-user'></i> Nuôi Dạy Con
+                            <i class='fas fa-user'></i> Tin tức - Sự kiện
                         </p>
                         <p class='text-gray-700 mb-4'>";
 

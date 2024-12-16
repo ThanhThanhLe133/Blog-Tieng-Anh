@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
                         <p class='text-gray-500 text-sm mb-2'>
                             <i class='far fa-calendar-alt'></i> " . date("F d, Y", strtotime($row['created_at'])) . "
                             <span class='mx-1'>|</span>
-                            <i class='fas fa-user'></i> Nuôi Dạy Con
+                            <i class='fas fa-user'></i> Tiếng Anh trẻ em
                         </p>
                         <p class='text-gray-700 mb-4'>";
 
