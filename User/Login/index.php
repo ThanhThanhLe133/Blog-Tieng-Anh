@@ -150,7 +150,7 @@ session_destroy();
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                        <a href="../DangKy/index.php" class="btn btn--register">ĐĂNG KÝ</a>
+                    <a href="../../web/DangKy/index.html" class="btn btn--register">ĐĂNG KÝ</a>
                     </div>
                 </div>
             </div>
@@ -179,7 +179,8 @@ session_destroy();
                 <div class="items-center">
                     <button type="button" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700"
                         id="btnLogin" value="Login">Đăng nhập</button>
-                    <a href="../XacThucTaiKhoan/index.php" class="text-blue-500 hover:underline" style="font-style:italic">Quên mật khẩu?</a>
+                    <a href="../XacThucTaiKhoan/index.php" class="text-blue-500 hover:underline"
+                        style="font-style:italic">Quên mật khẩu?</a>
                     <p>
                         Chưa có tài khoản? <a href="../DangKy/register.php" class="text-blue-500 hover:underline">
                             <strong>Đăng ký
@@ -189,12 +190,6 @@ session_destroy();
             </div>
         </form>
         <div class="kq"></div>
-        <div id="custom-alert">
-            <div class="message">
-              Thông tin của bạn đã được gửi. Chúng tôi sẽ gửi thông báo tới email của bạn!
-            </div>
-            <button class="btn-close">Đóng</button>
-        </div>
     </main>
 
     <!-- footer -->

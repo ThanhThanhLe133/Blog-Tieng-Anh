@@ -138,6 +138,7 @@
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
+                    <a href="../../web/DangKy/index.html" class="btn btn--register">ĐĂNG KÝ</a>
                     </div>
                 </div>
             </div>
@@ -180,13 +181,6 @@
 
             </div>
         </form>
-        <div id="custom-alert">
-            <div class="message">
-                Vui lòng đăng nhập trước!
-            </div>
-            <button class="btn-close">Đóng</button>
-        </div>
-        <div class="kq"></div>
         <div id="custom-close">
             <div class="message">
                 Bạn có chắc chắn muốn thoát?

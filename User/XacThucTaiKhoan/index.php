@@ -62,30 +62,82 @@
                     <!-- nav -->
                     <nav class="header__nav">
                         <ul class="nav__list">
-
                             <li class="nav__item">
-                                <a class="nav__link" href="">
-                                    <p class="nav__text">THÊM MỚI BLOG</p>
+                                <a class="nav__link" href="../HomePage/index.html">
+                                    <p class="nav__text">TRANG CHỦ</p>
                                 </a>
                             </li>
-
-                            <li class="nav__item">
-                                <a class="nav__link" href="">
-                                    <span class="link-before">
-                                        <p class="nav__text">QUẢN LÝ BLOG &#x23F7</p>
+                            <li class="nav__item nav__item--active">
+                                <a class="nav__link" href="#">
+                                    <span class="course-list">
+                                        <p class="nav__text">CÁC KHOÁ HỌC &#x23F7</p>
                                     </span>
                                 </a>
+                                <ul class="nav__submenu course-list">
+                                    <li class="submenu__item"><a class="submenu__link" href="../Demo day/index.html">Học
+                                            thử miễn phí</a>
+                                    </li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../1-2/index.html">Khóa học
+                                            cho trẻ 1-2
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../3-8/index.html">Khóa học
+                                            cho trẻ 3-8
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../9-12/index.html">Khóa
+                                            học cho trẻ
+                                            9-12
+                                            tuổi</a></li>
+                                    <li class="submenu__item"><a class="submenu__link" href="../13-18/index.html">Khóa
+                                            học cho trẻ
+                                            13-18
+                                            tuổi</a></li>
+                                </ul>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="">
-                                    <p class="nav__text">CÀI ĐẶT</p>
+                                <a class="nav__link" href="../PP của chúng tôi/index.html">
+                                    <p class="nav__text">PHƯƠNG PHÁP CỦA CHÚNG TÔI</p>
                                 </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../Các cơ sở/index.html">
+                                    <p class="nav__text">CƠ SỞ</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="activities">
+                                        <p class="nav__text">CÁC HOẠT ĐỘNG &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu activities">
+                                    <li class="submenu__item English-activities"><a class="submenu__link"
+                                            href="../Các hoạt động bằng TA/index.html">Các
+                                            hoạt động bằng Tiếng Anh</a></li>
+                                    <li class="submenu__item Fun-week"><a class="submenu__link"
+                                            href="../Hội hè Fun Weeks/index.html">Hội hè
+                                            Fun-week</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">
+                                    <span class="link-before">
+                                        <p class="nav__text">BLOG &#x23F7</p>
+                                    </span>
+                                </a>
+                                <ul class="nav__submenu blog">
+                                    <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
+                                            Anh trẻ em</a></li>
+                                    <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
+                                            con</a></li>
+                                    <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
+                                            kiện</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                        <a href="../Login/index.php" class="btn btn--logout">ĐĂNG NHẬP</a>
+                    <a href="../../web/DangKy/index.html" class="btn btn--register">ĐĂNG KÝ</a>
                     </div>
                 </div>
             </div>
@@ -139,13 +191,6 @@
                 </div>
                 <div class="check-code"></div>
         </form>
-        <div id="custom-alert">
-            <div class="message">
-                Vui lòng đăng nhập trước!
-            </div>
-            <button class="btn-close">Đóng</button>
-        </div>
-        </div>
     </main>
 
     <!-- footer -->

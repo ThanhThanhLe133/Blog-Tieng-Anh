@@ -87,33 +87,4 @@ $(document).ready(function () {
         }
     })
 
-
-    //nếu chưa đăng nhập -> ngăn chặn mở menu
-    var targetLink = "";
-    $(".nav__item").on("click", function (e) {
-        e.preventDefault();
-        targetLink = $(this).children().attr("href");
-        $.post("../isLoginMenu.php", {}, function (response) {
-            if (response.includes("true")) {
-                window.location.href = targetLink;
-            } else {
-                $("#custom-alert").show();
-            }
-        }).fail(function () {
-            $(".message").text("Có lỗi xảy ra, vui lòng thử lại sau!");
-            $("#custom-alert").show();
-        });
-    })
-    $(".btn-ok").on('click', function (e) {
-        e.preventDefault();
-        setTimeout(function () {
-            window.location.href = "../Login/index.php";
-        }, 500);
-    });
-    $(".btn-close").on("click", function (e) {
-        e.preventDefault();
-        $("#custom-alert").hide();
-        $("#custom-close").hide();
-    });
-
 });

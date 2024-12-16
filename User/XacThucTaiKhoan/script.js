@@ -9,16 +9,6 @@ $(document).ready(function () {
         $("#email").val("");
     });
 
-    //chưa đăng nhập -> ko vào đc menu
-    $(".nav__item").on("click", function (e) {
-        e.preventDefault();
-        $("#custom-alert").show();
-    });
-
-    $(".btn-close").on("click", function () {
-        $("#custom-alert").hide();
-    });
-
     //click vào OTP -> xoá + thông báo
     $('#verification-code').on("click", function (e) {
         $("#verification-code").val("");

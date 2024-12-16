@@ -54,11 +54,6 @@ $(document).ready(function () {
             icon.attr("src", "../../Images/eye_close.png");
         }
     });
-    
-    $(".btn-close").on("click", function (e) {
-        e.preventDefault();
-        $("#custom-alert").hide();
-    });
 
     function handleRegister() {
         let username = $("#username").val();
@@ -96,6 +91,12 @@ $(document).ready(function () {
                 .removeClass("success")
                 .addClass("error")
                 .html("Có lỗi xảy ra, vui lòng thử lại.");
+        });
+        $(".btn-close").on('click', function (e) {
+            e.preventDefault();
+            setTimeout(function () {
+                window.location.href = "../DangNhap/index.php";
+            }, 500);
         });
     }
 })

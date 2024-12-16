@@ -37,8 +37,6 @@ session_destroy();
 </head>
 
 <body>
-
-    <!-- header -->
     <!-- header -->
     <header>
         <div class="main-container">
@@ -153,7 +151,7 @@ session_destroy();
                 </nav>
                 <!-- btn action -->
                 <div class="header__action">
-                    <a href="../Đăng ký/index.html" class="btn btn--register">ĐĂNG KÝ</a>
+                <a href="../../web/DangKy/index.html" class="btn btn--register">ĐĂNG KÝ</a>
                 </div>
             </div>
         </div>
@@ -202,7 +200,7 @@ session_destroy();
         <div class="kq"></div>
         <div id="custom-alert">
             <div class="message">
-                Vui lòng đăng nhập trước!
+                Thông tin của bạn đã được gửi. Chúng tôi sẽ gửi thông báo tới email của bạn!
             </div>
             <button class="btn-close">Đóng</button>
         </div>
