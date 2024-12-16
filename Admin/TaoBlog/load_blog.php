@@ -107,7 +107,8 @@ if ($result->num_rows > 0) {
     <input
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         id="image_title" name="image" type="file">
-        </div>';
+        </div>
+         <button class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 btnSaveBlog">Lưu</button>';
 
     echo $html;
 }

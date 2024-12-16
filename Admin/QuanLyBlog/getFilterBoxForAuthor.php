@@ -8,7 +8,7 @@ $author="";
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $first_name = $row['first_name'];
-        $author .= '<label><input type="checkbox" value="' . $first_name . '"> ' . $first_name . '</label><br>';
+        $author .= '<label><input type="checkbox" value="'.$first_name.'"> ' . $first_name . '</label><br>';
     }
 }
 else {

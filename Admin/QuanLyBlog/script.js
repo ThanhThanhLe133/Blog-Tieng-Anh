@@ -93,18 +93,20 @@ $(document).ready(function () {
         var filterCategory = $('#CategoryCheckboxes input:checked').map(function () {
             return $(this).val();
         }).get();
-
         $('#filterBox').hide();
         $('#blog-table tr').each(function () {
             var row = $(this);
+
             var rowAuthor = row.find('.author').text();
             var rowCreated_at = row.find('.created_at').text()
             var rowUpdated_at = row.find('.updated_at').text();
             var rowCategory = row.find('.category').text();
+
             var isAuthorMatch = filterAuthor.includes(rowAuthor);
             var isCreated_atMatch = rowCreated_at.includes(filterCreatedDate);
             var isUpdated_atMatch = rowUpdated_at.includes(filterUpdatedDate);
-            var isCategory = filterCategory.includes(rowCategory);
+            var isCategory = filterCategory===(rowCategory);
+  
             if (isAuthorMatch || isCreated_atMatch || isUpdated_atMatch || isCategory) {
                 row.show();
             } else {
@@ -119,6 +121,7 @@ $(document).ready(function () {
     });
     $('#applySortAZ').on('click', function () {
         var sortKey = $("#sortSelect").val();
+        
         $("#sortBox").hide();
         if (sortKey) {
             var rows = $('#blog-table tr').get();
