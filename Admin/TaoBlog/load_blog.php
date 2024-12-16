@@ -91,12 +91,12 @@ if ($result->num_rows > 0) {
             ]
         }
     });
-        var content = ' . json_encode($content) . '; 
+        var content = '$content'; 
         quill.root.innerHTML = content; 
     </script>";
 
     if ($image_title_url) {
-        $html .= "<div class='mb-4'>
+        $html .= "<div class='mb-4' id='currentImg'>
                 <label class='block text-gray-700 text-sm font-bold mb-2' for='image_title_display'>Hình ảnh tiêu đề hiện tại</label>
               <img alt='{$row['title']}' class='w-full mb-4' src='{$image_title_url}' style='height:100px; width:100px;'>
               </div>";
@@ -107,8 +107,7 @@ if ($result->num_rows > 0) {
     <input
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         id="image_title" name="image" type="file">
-        </div>
-         <button class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700" id="btnSaveBlog">Lưu</button>';
+        </div>';
 
     echo $html;
 }

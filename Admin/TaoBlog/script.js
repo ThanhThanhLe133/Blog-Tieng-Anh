@@ -38,30 +38,36 @@ $(document).ready(function () {
             if (response.includes('Lỗi') || response.includes('Category không tồn tại')) {
                 return;
             } else {
-                var blog_id = response;
+                var blog_id_new = response;
+                blog_id = blog_id_new;
                 var image_title = $('#image_title')[0].files[0];
-
-                uploadBlog(blog_id, image_title, content);
-
-
-                // $.post('upload_content.php', { blog_id: blog_id, content: content }, function (response) {
-                //     if (response.includes('success')) {
-                //         $("#custom-alert .message").text("Đã tạo blog mới thành công!");
-                //         $("#custom-alert").show();
-                //     } else {
-                //         $("#custom-alert .message").text('Lỗi khi tạo content blog: ' + response);
-                //         $("#custom-alert").show();
-                //     }
-                // });
+                uploadBlog(blog_id_new, image_title, content);
             }
         });
+    });
+    $("#addBlog").on('click', function() {
+        window.open("../TaoBlog/index.php", "_blank");
+    });
+    $("#image_title").on('click', function () {
+        if ($blog_id != null) {
+            $.post('delete_image_title.php', {blog_id: blog_id }, function (response) {
+                if (response.includes('success')) {
+                    $("#currentImg").hide();
+                    return;
+                } else {
+                    $("#custom-alert .message").text("Lỗi khi đổi ảnh tiêu đề");
+                    $("#custom-alert").show();
+                }
+            });
+        }
     });
     $(".btn-close").on("click", function (e) {
         e.preventDefault();
         $("#custom-alert").hide();
         $("#custom-close").hide();
-        window.scrollTo(0, 0);
-        location.reload();
+        if ($("#custom-alert .message").text().includes("thành công")) {
+            window.location.href="../TaoBlog/index.php?blog_id=" + blog_id, '_blank';
+        }        
     });
     function displayBlog(blog_id) {
         $.post("load_blog.php", { blog_id: blog_id }, function (response) {

@@ -106,7 +106,7 @@ $(document).ready(function () {
             var isCreated_atMatch = filterCreatedDate.includes(rowCreated_at);
             var isUpdated_atMatch = filterUpdatedDate.includes(rowUpdated_at);
             var isCategory = filterCategory.includes(rowCategory);
-            console.log(isCreated_atMatch,isUpdated_atMatch,isCategory);
+            console.log(isCreated_atMatch, isUpdated_atMatch, isCategory);
             if (isAuthorMatch || isCreated_atMatch || isUpdated_atMatch || isCategory) {
                 row.show();
             } else {
@@ -121,18 +121,36 @@ $(document).ready(function () {
     });
     $('#applySortAZ').on('click', function () {
         var sortKey = $("#sortSelect").val();
-
         $("#sortBox").hide();
         if (sortKey) {
-            var rows = $('#blog-table tr').get();
-            rows.sort(function (a, b) {
-                var keyA = $(a).children(`.${sortKey}`).text().toLowerCase();
-                var keyB = $(b).children(`.${sortKey}`).text().toLowerCase();
+            if (sortKey === "updated_at" || sortKey === "created_at") {
+                var rows = $('#blog-table tr').get();
+                rows.sort(function (a, b) {
+                    var keyA = $(a).children(`.${sortKey}`).text().trim();
+                    var keyB = $(b).children(`.${sortKey}`).text().trim();
 
-                if (keyA < keyB) return -1;
-                if (keyA > keyB) return 1;
-                return 0;
-            });
+                    // Chuyển đổi chuỗi "hh:mm dd/mm/yyyy" thành đối tượng Date
+                    var dateA = convertToDate(keyA);
+                    var dateB = convertToDate(keyB);
+
+                    // So sánh các đối tượng Date
+                    if (dateA < dateB) return -1;
+                    if (dateA > dateB) return 1;
+                    return 0;
+                });
+            }
+            else {
+                var rows = $('#blog-table tr').get();
+                rows.sort(function (a, b) {
+                    var keyA = $(a).children(`.${sortKey}`).text().toLowerCase();
+                    var keyB = $(b).children(`.${sortKey}`).text().toLowerCase();
+
+                    if (keyA < keyB) return -1;
+                    if (keyA > keyB) return 1;
+                    return 0;
+                });
+            }
+
             $.each(rows, function (index, row) {
                 $('#blog-table').append(row);
             });
@@ -146,18 +164,35 @@ $(document).ready(function () {
         var sortKey = $("#sortSelect").val();
         $("#sortBox").hide();
         if (sortKey) {
-            var rows = $('#blog-table tr').get();
-            rows.sort(function (a, b) {
-                var keyA = $(a).children(`.${sortKey}`).text().toLowerCase();
-                var keyB = $(b).children(`.${sortKey}`).text().toLowerCase();
+            if (sortKey === "updated_at" || sortKey === "created_at") {
+                var rows = $('#blog-table tr').get();
+                rows.sort(function (a, b) {
+                    var keyA = $(a).children(`.${sortKey}`).text().trim();
+                    var keyB = $(b).children(`.${sortKey}`).text().trim();
 
-                if (keyA < keyB) return 1;
-                if (keyA > keyB) return -1;
-                return 0;
-            });
-            $.each(rows, function (index, row) {
-                $('#blog-table').append(row);
-            });
+                    var dateA = convertToDate(keyA);
+                    var dateB = convertToDate(keyB);
+                    alert(dateA, dateB);
+                    // So sánh các đối tượng Date
+                    if (dateA < dateB) return 1;
+                    if (dateA > dateB) return -1;
+                    return 0;
+                });
+            }
+            else {
+                var rows = $('#blog-table tr').get();
+                rows.sort(function (a, b) {
+                    var keyA = $(a).children(`.${sortKey}`).text().toLowerCase();
+                    var keyB = $(b).children(`.${sortKey}`).text().toLowerCase();
+
+                    if (keyA < keyB) return 1;
+                    if (keyA > keyB) return -1;
+                    return 0;
+                });
+                $.each(rows, function (index, row) {
+                    $('#blog-table').append(row);
+                });
+            }
         }
         else {
             alert("Vui lòng chọn một cột để sắp xếp!");
@@ -190,5 +225,11 @@ $(document).ready(function () {
             return;
         });
     }
-
+    function convertToDate(timeString) {
+        var parts = timeString.split(' ');
+        var timeParts = parts[0].split(':');
+        var dateParts = parts[1].split('/');
+        var formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}T${timeParts[0]}:${timeParts[1]}:${timeParts[2]}Z`;
+        return new Date(formattedDate);
+    }
 });

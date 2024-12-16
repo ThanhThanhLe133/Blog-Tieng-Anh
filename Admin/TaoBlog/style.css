@@ -683,3 +683,13 @@ video {
     outline: 2px solid transparent;
     outline-offset: 2px
 }
+#btnSaveBlog{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #EE154B;
+}
+#blog-table{
+    max-width: 500px;
+    overflow-y: auto;
+}

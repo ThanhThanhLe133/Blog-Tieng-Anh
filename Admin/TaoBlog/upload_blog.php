@@ -10,11 +10,8 @@ if ($result->num_rows > 0) {
     $sql_delete_images = "DELETE FROM blog_images WHERE blog_id = '$blog_id'";
     $sql_delete_content = "UPDATE blogs SET content = NULL WHERE blog_id = '$blog_id'";
 
-    $sql_delete = "DELETE FROM blog_images_title WHERE blog_id = ?";
-    $stmt_delete = $conn->prepare($sql_delete);
-    $stmt_delete->bind_param("i", $blog_id);
 
-    if (!$stmt_delete->execute() || $conn->query($sql_delete_images) !== TRUE || $conn->query($sql_delete_content) !== TRUE) {
+    if ($conn->query($sql_delete_images) !== TRUE || $conn->query($sql_delete_content) !== TRUE) {
         echo "Lỗi khi cập nhập blog";
         exit;
     }
@@ -63,7 +60,7 @@ if (!empty($matches[1])) {
             echo "Error: Invalid image data";
             exit;
         }
-        $compressedBlob = compressImage2($blob);
+        $compressedBlob = compressImage($blob);
         if ($compressedBlob === false) {
             echo "Error: Could not compress image.";
             exit;

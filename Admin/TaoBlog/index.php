@@ -130,16 +130,22 @@
                             </div>
                         </div>
                     </div>
-                  
+
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="image">Hình ảnh tiêu đề</label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="image_title" name="image" type="file">
                     </div>
-                    <button class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700" id="btnSaveBlog">Lưu</button>
                 </div>
+
             </div>
+            <div style="display: flex; justify-content: flex-end; margin-top: 30px; width: 70%;">
+                <button class="text-white py-2 px-4 rounded hover:bg-gray-700" id="btnSaveBlog" style="background-color: #EE154B;width:100px;">
+                    Lưu
+                </button>
+            </div>
+
         </div>
         <div id="custom-alert">
             <div class="message">

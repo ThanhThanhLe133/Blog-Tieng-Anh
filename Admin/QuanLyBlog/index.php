@@ -93,7 +93,7 @@
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                      
+
                     </div>
                 </div>
             </div>
@@ -157,11 +157,17 @@
                 </div>
             </div>
         </div>
+
         <div class="mx-auto p-6 bg-white shadow-md rounded-lg mt-10 blogForm">
             <div class=" mb-6">
                 <h1 class="text-2xl font-semibold">Quản lý Blog</h1>
             </div>
-            <button class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 addBlog">Thêm Blog</button>
+            <div style="display: flex; justify-content: flex-end; margin: 30px;">
+                <button class="text-white py-2 px-4 rounded hover:bg-gray-700" id="addBlog"
+                    style="background-color: #EE154B;width:100px;">
+                    Thêm Blog
+                </button>
+            </div>
             <table class="min-w-full bg-white ">
                 <thead>
                     <tr>
