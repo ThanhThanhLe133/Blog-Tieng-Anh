@@ -151,3 +151,11 @@ CREATE TABLE `blog_images_title` (
   PRIMARY KEY (`image_title_id`),
   FOREIGN KEY (`blog_id`) REFERENCES `blogs`(`blog_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+---comment
+CREATE TABLE `comment` (
+  `comment_id` int(11) NOT NULL,
+  `comment` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `crated_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_name'])) {
     echo "<script>
         alert('Vui lòng đăng nhập!');
         window.location.href = '../ login/index.php';

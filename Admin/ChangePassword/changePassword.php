@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_name'])) {
     echo "<script>
         alert('Vui lòng đăng nhập!');
         window.location.href = '../ login/index.php';
@@ -10,10 +10,10 @@ if (!isset($_SESSION['user_id'])) {
 }
 include "../conn.php";
 
-$user_id = $_SESSION['user_id'];
+$user_name = $_SESSION['user_name'];
 
 $newPassword = $_POST["newPassword"];
-$strSQL = "SELECT * FROM admin WHERE username='$user_id'";
+$strSQL = "SELECT * FROM admin WHERE username='$user_name'";
 $result = $conn->query($strSQL);
 
 if ($result->num_rows > 0) {
@@ -28,7 +28,7 @@ if ($currentPassword === $newPassword) {
     echo "Mật khẩu mới không được trùng với mật khẩu hiện tại.";
     return;
 }
-$sql = "UPDATE admin SET password = '$newPassword' WHERE username='$user_id'";
+$sql = "UPDATE admin SET password = '$newPassword' WHERE username='$user_name'";
 
 if ($conn->query($sql) === TRUE) {
     $_SESSION = [];

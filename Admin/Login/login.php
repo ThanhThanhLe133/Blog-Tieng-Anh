@@ -9,7 +9,7 @@ $result = $conn->query($strSQL);
 
 if ($result->num_rows > 0) {
     $_SESSION['user_logged_in'] = true;
-    $_SESSION['user_id'] = $username;
+    $_SESSION['user_name'] = $username;
     echo "Chúc mừng bạn đã đăng nhập thành công";
 } else {
     echo "Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng đăng nhập lại!!!";

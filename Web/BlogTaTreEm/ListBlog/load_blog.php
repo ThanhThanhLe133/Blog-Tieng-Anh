@@ -3,7 +3,7 @@
 include "../../../Admin/conn.php";
 $page = $_POST['page'];
 $items_per_page = 3;
-echo($page);
+
 $sql_count = "SELECT COUNT(*) as total FROM blogs WHERE category_id = 1";
 $count_result = $conn->query($sql_count);
 $row_count = $count_result->fetch_assoc();

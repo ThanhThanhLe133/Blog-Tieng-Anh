@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
                       </div>";
 
     if ($image_title_url) {
-        $html .= "<img alt='{$row['title']}' class='w-full mb-4'  src='{$image_title_url}' style='height:400px; width:800px;>";
+        $html .= "<img alt='{$row['title']}' class='w-full mb-4' src='{$image_title_url}' id='imageblog'>";
     }
     $content = $row['content'];
     preg_match_all('/<img src="([^"]+)"/', $content, $matches);
@@ -54,7 +54,7 @@ if ($result->num_rows > 0) {
             }
         }
     }
-    $html .= "<div class='text-gray-700 mb-4'>{$content}</div>";
+    $html .= "<div class='text-gray-700 mb-4' id='contentBlog'>{$content}</div>";
     echo $html;
 }
 $conn->close();

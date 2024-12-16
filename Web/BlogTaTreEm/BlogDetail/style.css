@@ -4,22 +4,23 @@
 }
 
 .container {
-    padding: 20px 100px;
+    padding: 20px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    gap:50px;
+    gap:20px;
 }
 .new-article h2{
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 30px;
 }
+.new-article{
+    width: 20%;
+}
 .blog-post {
-    flex: 1 90%;
     margin:0 auto;
     margin-bottom: 40px;
-    padding: 20px 50px;
+    padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: justify;
@@ -28,9 +29,9 @@
     text-align:start;
 }
 .blog-post img {
-    width: 80%;
-    height: auto;
-    margin:20px auto;
+    width: 60%;
+    height: 50%;
+    margin: 20px auto;
 }
 
 .blog-post h1 {
@@ -38,9 +39,14 @@
     margin-bottom: 10px;
     font-weight: bold;
     line-height: 1.6em;
+    text-indent: 2rem;
+
 }
 .blog-post>*:not(.new-article){
     margin:0 auto;
+}
+.blog-post p>:not(.fas){
+    text-indent: 2rem;
 }
 .lg .p-4 p {
     font-size: 1.5rem;
@@ -97,16 +103,12 @@
 }
 
 .related-posts {
-    margin-top: 40px;
+    margin: 40px;
+    display: flex;
 }
 
 .related-posts h2 {
     font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.related-post {
-    display: flex;
     margin-bottom: 20px;
 }
 
@@ -128,7 +130,7 @@
 
 .comment {
     padding: 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
     margin: 10px;
 }

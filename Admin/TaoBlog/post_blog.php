@@ -1,20 +1,20 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_name'])) {
     echo "<script>
         alert('Vui lòng đăng nhập!');
         window.location.href = '../ login/index.php';
     </script>";
     exit;
 }
-$user_id = $_SESSION['user_id'];
+$user_name = $_SESSION['user_name'];
 $blog_id = $_SESSION['blog_id'];
 
 include('../conn.php');
 
 $category_id = $_POST['category_id'];
 $title = $_POST['title'];
-$strSQL_admin = "SELECT admin_id FROM admin WHERE username = '$user_id'";
+$strSQL_admin = "SELECT admin_id FROM admin WHERE username = '$user_name'";
 $result_admin = $conn->query($strSQL_admin);
 
 if ($result_admin->num_rows > 0) {

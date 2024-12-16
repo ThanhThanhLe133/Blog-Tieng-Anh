@@ -2,16 +2,16 @@
 
 session_start();
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_name'])) {
     echo "Chưa đăng nhập.";
     exit;
 }
 
 include "../conn.php";
 
-$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['user_name'];
 
-$sql = "SELECT first_name, last_name, username, email FROM admin WHERE username = '$user_id' ";
+$sql = "SELECT first_name, last_name, username, email FROM admin WHERE username = '$user_name' ";
 
 $result =$conn->query($sql);
 // Kiểm tra kết quả
