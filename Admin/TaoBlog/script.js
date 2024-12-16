@@ -24,8 +24,7 @@ $(document).ready(function () {
     quill.on('text-change', function () {
         $("#content").val(quill.root.innerHTML);
     });
-    $(".btnSaveBlog").on('click', function (e) {
-        e.preventDefault();
+    $("#btnSaveBlog").on('click', function () {
         var content = $(".ql-editor").html();
         var title = $("#title").val();
         var category_id = $("#category").val();
@@ -34,38 +33,26 @@ $(document).ready(function () {
             $("#custom-alert").show();
             return;
         }
+
         $.post('post_blog.php', { title: title, category_id: category_id, blog_id: blog_id }, function (response) {
             if (response.includes('Lỗi') || response.includes('Category không tồn tại')) {
                 return;
             } else {
                 var blog_id = response;
-                var formData = new FormData();
-                formData.append('image_title', $('#image_title')[0].files[0]);  // Thêm ảnh vào form data
-                formData.append('blog_id', blog_id);
-                $.ajax({
-                    url: 'upload_image_title.php',
-                    type: 'POST',
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    success: function (response) {
-                    },
-                    error: function (xhr, status, error) {
-                        $("#custom-alert .message").text("Error uploading file: " + error);
-                        $("#custom-alert").show();
-                        return;
-                    }
-                });
+                var image_title = $('#image_title')[0].files[0];
 
-                $.post('upload_content.php', { blog_id: blog_id, content: content }, function (response) {
-                    if (response.includes('success')) {
-                        $("#custom-alert .message").text("Đã tạo blog mới thành công!");
-                        $("#custom-alert").show();
-                    } else {
-                        $("#custom-alert .message").text('Lỗi khi tạo content blog: ' + response);
-                        $("#custom-alert").show();
-                    }
-                });
+                uploadBlog(blog_id, image_title, content);
+
+
+                // $.post('upload_content.php', { blog_id: blog_id, content: content }, function (response) {
+                //     if (response.includes('success')) {
+                //         $("#custom-alert .message").text("Đã tạo blog mới thành công!");
+                //         $("#custom-alert").show();
+                //     } else {
+                //         $("#custom-alert .message").text('Lỗi khi tạo content blog: ' + response);
+                //         $("#custom-alert").show();
+                //     }
+                // });
             }
         });
     });
@@ -81,6 +68,33 @@ $(document).ready(function () {
             $('#blog_editor').empty().append(response);
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
+        });
+    }
+    function uploadBlog(blogId, image_title, content) {
+        var formData = new FormData();
+        formData.append('image_title', image_title);
+        formData.append('blog_id', blogId);
+        formData.append('content', content);
+
+        // AJAX gửi dữ liệu đến PHP
+        $.ajax({
+            url: 'upload_blog.php',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                if (response.includes('success')) {
+                    $("#custom-alert .message").text("Blog đã được tải lên thành công!");
+                } else {
+                    $("#custom-alert .message").text("Lỗi: " + response);
+                }
+                $("#custom-alert").show();
+            },
+            error: function (xhr, status, error) {
+                $("#custom-alert .message").text("Lỗi khi tải lên: " + error);
+                $("#custom-alert").show();
+            }
         });
     }
 })

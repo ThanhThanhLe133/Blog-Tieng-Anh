@@ -20,7 +20,6 @@ if ($result_admin->num_rows > 0) {
     $author_id = $result_admin->fetch_assoc()['admin_id'];
 
     if (!empty($blog_id)) {
-        // Cập nhật blog
         $sql_update = "UPDATE blogs SET author_id = ?, category_id = ?, title = ? WHERE blog_id = ?";
         $stmt_update = $conn->prepare($sql_update);
         $stmt_update->bind_param("iisi", $author_id, $category_id, $title, $blog_id);
