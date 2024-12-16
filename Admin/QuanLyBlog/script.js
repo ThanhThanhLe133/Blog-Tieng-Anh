@@ -103,10 +103,10 @@ $(document).ready(function () {
             var rowCategory = row.find('.category').text();
 
             var isAuthorMatch = filterAuthor.includes(rowAuthor);
-            var isCreated_atMatch = rowCreated_at.includes(filterCreatedDate);
-            var isUpdated_atMatch = rowUpdated_at.includes(filterUpdatedDate);
-            var isCategory = filterCategory===(rowCategory);
-  
+            var isCreated_atMatch = filterCreatedDate.includes(rowCreated_at);
+            var isUpdated_atMatch = filterUpdatedDate.includes(rowUpdated_at);
+            var isCategory = filterCategory.includes(rowCategory);
+            console.log(isCreated_atMatch,isUpdated_atMatch,isCategory);
             if (isAuthorMatch || isCreated_atMatch || isUpdated_atMatch || isCategory) {
                 row.show();
             } else {
@@ -121,7 +121,7 @@ $(document).ready(function () {
     });
     $('#applySortAZ').on('click', function () {
         var sortKey = $("#sortSelect").val();
-        
+
         $("#sortBox").hide();
         if (sortKey) {
             var rows = $('#blog-table tr').get();

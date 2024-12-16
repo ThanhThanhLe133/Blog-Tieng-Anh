@@ -125,9 +125,9 @@
                     <div>
                         <label for="filterCategory">Category:</label>
                         <div id="CategoryCheckboxes">
-                            <label><input type="checkbox" value="1"> Tiếng anh trẻ em</label><br>
-                            <label><input type="checkbox" value="2"> Tin tức - Sự kiện</label><br>
-                            <label><input type="checkbox" value="3"> Nuôi dạy con</label><br>
+                            <label><input type="checkbox" value="Tiếng anh trẻ em"> Tiếng anh trẻ em</label><br>
+                            <label><input type="checkbox" value="Tin tức - Sự kiện"> Tin tức - Sự kiện</label><br>
+                            <label><input type="checkbox" value="Nuôi dạy con"> Nuôi dạy con</label><br>
                         </div>
                     </div>
                     <div>
@@ -144,11 +144,11 @@
                 <div id="sortBox" class="mt-2">
                     <select id="sortSelect" class="border rounded py-1 px-2">
                         <option value="">-- Chọn cách sắp xếp --</option>
-                        <option value="Author">Author</option>
-                        <option value="Created">Created Date</option>
-                        <option value="Updated">Updated Date</option>
-                        <option value="Category">Category</option>
-                        <option value="Title">Title</option>
+                        <option value="author">Author</option>
+                        <option value="created_at">Created Date</option>
+                        <option value="updated_at">Updated Date</option>
+                        <option value="category">Category</option>
+                        <option value="title_blog">Title</option>
                     </select>
                     <div>
                         <button id="applySortAZ" class="text-blue-500">A-Z</button>

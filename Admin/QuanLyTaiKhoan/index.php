@@ -152,13 +152,13 @@
                 <div id="sortBox" class="mt-2">
                     <select id="sortSelect" class="border rounded py-1 px-2">
                         <option value="">-- Chọn cách sắp xếp --</option>
-                        <option value="firstName">Fist Name </option>
+                        <option value="firstName">First Name</option>
                         <option value="lastName">Last Name</option>
                         <option value="birthYear">Birth Year</option>
-                        <option value="school">Study School</option>
-                        <option value="currentDate">Submission Date</option>
-                        <option value="currentDate">Username</option>
-                        <option value="currentDate">Password</option>
+                        <option value="studySchool">Study School</option>
+                        <option value="created_at">Submission Date</option>
+                        <option value="username">Username</option>
+                        <option value="password">Password</option>
                     </select>
                     <div>
                         <button id="applySortAZ" class="text-blue-500">A-Z</button>

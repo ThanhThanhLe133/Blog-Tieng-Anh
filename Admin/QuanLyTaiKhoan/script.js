@@ -91,6 +91,7 @@ $(document).ready(function () {
     });
     $('#applySortAZ').on('click', function () {
         var sortKey = $("#sortSelect").val();
+        
         $("#sortBox").hide();
         if (sortKey) {
             var rows = $('#user-table tr').get();

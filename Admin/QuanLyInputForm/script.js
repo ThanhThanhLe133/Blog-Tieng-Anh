@@ -53,7 +53,7 @@ $(document).ready(function () {
         var schoolFilters = $('#SchoolCheckboxes input:checked').map(function () {
             return $(this).val();
         }).get();
-        var dateFilters = $('#filterDate input:checked').map(function () {
+        var dateFilters = $('#SubDateCheckboxes input:checked').map(function () {
             return $(this).val();
         }).get();
         $('#filterBox').hide();
@@ -64,12 +64,13 @@ $(document).ready(function () {
             var rowLastName = row.find('.lastName').text();
             var rowSchool = row.find('.studySchool').text();
             var rowDate = row.find('.formattedDate').text();
+    
 
             var isBirthYearMatch = birthYearFilters.includes(rowBirthYear);
             var isFirstNameMatch = firstNameFilters.includes(rowFirstName);
             var isLastNameMatch = lastNameFilters.includes(rowLastName);
             var isSchoolMatch = schoolFilters.includes(rowSchool);
-            var isDateMatch = dateFilters.includes(rowDate);
+            var isDateMatch = rowDate.includes(dateFilters);
 
             if (isBirthYearMatch || isFirstNameMatch || isLastNameMatch || isSchoolMatch || isDateMatch) {
                 row.show();
@@ -85,6 +86,8 @@ $(document).ready(function () {
     });
     $('#applySortAZ').on('click', function () {
         var sortKey = $("#sortSelect").val();
+        alert(sortKey);
+        
         $("#sortBox").hide();
         if (sortKey) {
             var rows = $('#guest-table tr').get();
