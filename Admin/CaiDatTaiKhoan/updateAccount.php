@@ -8,7 +8,7 @@ $lastname = $_POST["lastname"];
 $username = $_POST["username"];
 $email = $_POST["email"];
 if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["username"]) && isset($_POST["email"])) {
-    $strSQL = "UPDATE admin SET first_name='$firstname',last_name='$lastname', username='$username', email='$email' where username = '$user_id'";
+    $strSQL = "UPDATE admin SET first_name='$firstname',last_name='$lastname', username='$username', email='$email' where username = '$username'";
 
     $result = $conn->query($strSQL);
 

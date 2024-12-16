@@ -27,7 +27,9 @@
 .input_pass {
     display: flex;
 }
-
+.showpass{
+    justify-content: end;
+}
 .eye {
     width: 15px;
 }
@@ -35,7 +37,6 @@
 form {
     max-width: 50%;
     margin: 20px auto;
-    margin-left: 30%;
 }
 
 .text-2xl,
