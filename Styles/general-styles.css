@@ -95,6 +95,7 @@ a {
     border: none;
     cursor: pointer;
     border-radius: 3px;
+    padding:10px;
 }
 
 .btn-ok{

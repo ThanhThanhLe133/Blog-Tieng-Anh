@@ -2,13 +2,13 @@
 session_start();
 include "conn.php";
 
-if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
+if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true) {
     echo '<button type="button" id="btnLogout" class="btn btn--logout">
     ĐĂNG XUẤT
 </button>';
 
 } else {
-    echo '<a href="Login/index.php" class="btn btn--login">ĐĂNG NHẬP</a>';
+    echo '<a href="../../web/DangKy/index.html" class="btn btn--register">ĐĂNG KÝ</a>';
 }
 $conn->close();
 ?>

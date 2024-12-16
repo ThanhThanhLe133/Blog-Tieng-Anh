@@ -15,16 +15,6 @@ $(document).ready(() => {
         english.find('.language__flag img').attr('src', vietnameseFlag);
     });
 
-    //.header.fixed
-    const header = $('.main-container__header--fixed');
-    $(window).on('scroll', function () {
-        if ($(this).scrollTop() === 0) {
-            header.css('top', '42px');
-        } else {
-            header.css('top', '0px');
-        }
-    });
-
     function loadData() {
         
         $.post("http://localhost/BlogTiengAnh/animation/islogin.php", {}, function (response) {
@@ -40,7 +30,7 @@ $(document).ready(() => {
            
             if (result) {
                 setTimeout(function () {
-                    window.location.href = "../user/login/index.php";
+                    window.location.href = "http://localhost/BlogTiengAnh/user/Login/index.php";
                 }, 500);
             }
         });

@@ -1,6 +1,6 @@
 <?php
 
-include "../../Admin/conn.php";
+include "../../conn.php";
 $blog_id = $_POST['blog_id'];
 $sql = "SELECT * FROM blogs where category_id=1 AND blog_id < $blog_id ORDER BY blog_id DESC LIMIT 4";
 $result = $conn->query($sql);

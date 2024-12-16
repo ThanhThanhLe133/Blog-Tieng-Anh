@@ -18,12 +18,19 @@ $(document).ready(function () {
 
         if (!isUserLoggedIn) {
             $("#custom-close").show();
-            $("#btn-ok").on("click", function () {
-                window.location.href = "../../user/login.php";
+            $(".btn-ok").one("click", function () {
+                window.location.href = "../../../../user/login/index.php";
             });
+            return;
         }
 
         let comment = $(".content-comment").val();
+        if (comment === "") {
+            $("#custom-alert .message").text("Bình luận không được để trống!");
+            $("#custom-alert").show();
+            return;
+        }
+
         $.post("postComment.php", { comment: comment, blog_id: blog_id }, function (response) {
             $('.commentArea').append(response);
             $("#custom-alert .message").text("Bình luận thành công!");
@@ -44,18 +51,18 @@ $(document).ready(function () {
         $("#deleteBtn").show();
     }
     $("#deleteBtn").on("click", function () {
-        var commentArea=$(this).closest('comment');
+        var commentArea = $(this).closest('comment');
         var comment_id = commentArea.data('comment_id');
         $.post("deleteComment.php", { comment_id: comment_id, blog_id: blog_id }, function (response) {
             if (response.includes("success")) {
                 $('.commentArea').append(response);
-            $("#custom-alert .message").text("Xoá bình luận thành công!");
-            $("#custom-alert").show();
+                $("#custom-alert .message").text("Xoá bình luận thành công!");
+                $("#custom-alert").show();
             }
-         else{
-            $("#custom-alert .message").text("Có lỗi xảy ra. Vui lòng thử lại!");
-            $("#custom-alert").show();
-         }
+            else {
+                $("#custom-alert .message").text("Có lỗi xảy ra. Vui lòng thử lại!");
+                $("#custom-alert").show();
+            }
         });
     });
 
@@ -89,18 +96,18 @@ $(document).ready(function () {
     }
 
     function checkIsUserLogin() {
-        $.post("../../isUserLogin.php", {}, function (response) {
+        $.post("../../../isUserLogin.php", {}, function (response) {
             if (response.includes("yes")) {
                 isUserLoggedIn = true;
             }
         });
     }
     function checkIsAdminLogin() {
-        $.post("../../isLogin.php", {}, function (response) {
+        $.post("../../../isAdminLogin.php", {}, function (response) {
             if (response.includes("yes")) {
                 isAdminLoggedIn = true;
             }
         });
     }
-    
+
 });

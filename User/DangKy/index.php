@@ -64,7 +64,7 @@
                 <nav class="header__nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a class="nav__link" href="../HomePage/index.html">
+                            <a class="nav__link" href="../../web/HomePage/index.html">
                                 <p class="nav__text">TRANG CHỦ</p>
                             </a>
                         </li>
@@ -75,32 +75,37 @@
                                 </span>
                             </a>
                             <ul class="nav__submenu course-list">
-                                <li class="submenu__item"><a class="submenu__link" href="../Demo day/index.html">Học
+                                <li class="submenu__item"><a class="submenu__link"
+                                        href="../../web/Demo day/index.html">Học
                                         thử miễn phí</a>
                                 </li>
-                                <li class="submenu__item"><a class="submenu__link" href="../1-2/index.html">Khóa học
+                                <li class="submenu__item"><a class="submenu__link" href="../../web/1-2/index.html">Khóa
+                                        học
                                         cho trẻ 1-2
                                         tuổi</a></li>
-                                <li class="submenu__item"><a class="submenu__link" href="../3-8/index.html">Khóa học
+                                <li class="submenu__item"><a class="submenu__link" href="../../web/3-8/index.html">Khóa
+                                        học
                                         cho trẻ 3-8
                                         tuổi</a></li>
-                                <li class="submenu__item"><a class="submenu__link" href="../9-12/index.html">Khóa
+                                <li class="submenu__item"><a class="submenu__link"
+                                        href="../../web/9-12/index.html">Khóa
                                         học cho trẻ
                                         9-12
                                         tuổi</a></li>
-                                <li class="submenu__item"><a class="submenu__link" href="../13-18/index.html">Khóa
+                                <li class="submenu__item"><a class="submenu__link"
+                                        href="../../web/13-18/index.html">Khóa
                                         học cho trẻ
                                         13-18
                                         tuổi</a></li>
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="../PP của chúng tôi/index.html">
+                            <a class="nav__link" href="../../web/PP của chúng tôi/index.html">
                                 <p class="nav__text">PHƯƠNG PHÁP CỦA CHÚNG TÔI</p>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="../Các cơ sở/index.html">
+                            <a class="nav__link" href="../../web/Các cơ sở/index.html">
                                 <p class="nav__text">CƠ SỞ</p>
                             </a>
                         </li>
@@ -112,10 +117,10 @@
                             </a>
                             <ul class="nav__submenu activities">
                                 <li class="submenu__item English-activities"><a class="submenu__link"
-                                        href="../Các hoạt động bằng TA/index.html">Các
+                                        href="../../web/Các hoạt động bằng TA/index.html">Các
                                         hoạt động bằng Tiếng Anh</a></li>
                                 <li class="submenu__item Fun-week"><a class="submenu__link"
-                                        href="../Hội hè Fun Weeks/index.html">Hội hè
+                                        href="../../web/Hội hè Fun Weeks/index.html">Hội hè
                                         Fun-week</a></li>
                             </ul>
                         </li>
@@ -126,11 +131,14 @@
                                 </span>
                             </a>
                             <ul class="nav__submenu blog">
-                                <li class="submenu__item children_English"><a class="submenu__link" href="#">Tiếng
+                                <li class="submenu__item children_English"><a class="submenu__link"
+                                        href="../../web/blog/BlogTaTreEm/listblog/index.html">Tiếng
                                         Anh trẻ em</a></li>
-                                <li class="submenu__item raise-children"><a class="submenu__link" href="#">Nuôi dạy
+                                <li class="submenu__item raise-children"><a class="submenu__link"
+                                        href="../../web/blog/BlogNuoiDayCon/listblog/index.html">Nuôi dạy
                                         con</a></li>
-                                <li class="submenu__item news"><a class="submenu__link" href="#">Tin tức - Sự
+                                <li class="submenu__item news"><a class="submenu__link"
+                                        href="../../web/blog/BlogTinTucSuKien/listblog/index.html">Tin tức - Sự
                                         kiện</a></li>
                             </ul>
                         </li>
@@ -138,7 +146,7 @@
                 </nav>
                 <!-- btn action -->
                 <div class="header__action">
-                <a href="../../web/DangKy/index.html" class="btn btn--register">ĐĂNG KÝ</a>
+                    <a href="../../web/DangKy/index.html" class="btn btn--register">ĐĂNG KÝ</a>
                 </div>
             </div>
         </div>
@@ -186,7 +194,7 @@
         </form>
         <div class="kq"></div>
         <div id="custom-alert">
-            <div class="message" >
+            <div class="message">
                 Thông tin của bạn đã được gửi. Chúng tôi sẽ gửi thông báo tới email của bạn!
             </div>
             <button class="btn-close">Đóng</button>

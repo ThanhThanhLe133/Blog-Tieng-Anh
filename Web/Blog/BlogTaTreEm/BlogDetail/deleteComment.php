@@ -1,5 +1,5 @@
 <?php
-include "conn.php";
+include "../../../conn.php";
 session_start();
 $comment_id = $_POST['comment_id'];
 
