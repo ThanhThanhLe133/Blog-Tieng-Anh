@@ -1,6 +1,6 @@
 <?php
 include "../conn.php";
-$sql = "SELECT DISTINCT DATE_FORMAT(updated_at, '%d/%m/%Y') AS formattedDate FROM users";
+$sql = "SELECT DISTINCT DATE_FORMAT(updated_at, '%d/%m/%Y') AS formattedDate FROM blogs";
 $result = $conn->query($sql);
 $formattedDate="";
 if ($result->num_rows > 0) {

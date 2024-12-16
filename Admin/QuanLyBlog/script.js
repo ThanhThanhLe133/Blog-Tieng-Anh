@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(".addBlog").on("click", function () {
         window.location.href = "../TaoBlog/index.php";
     })
-
+    loadFilterBox();
     //xử lý xoá
     $('#blog-table').on('click', '.deleteBtn', function () {
         var row = $(this).closest('tr');
@@ -168,4 +168,25 @@ $(document).ready(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
         });
     }
+    function loadFilterBox() {
+        $.post("getFilterBoxForAuthor.php", {}, function (response) {
+            $('#authorCheckboxes').append(response);
+        }).fail(function () {
+            alert("Không thể tải dữ liệu.");
+            return;
+        });
+        $.post("getFilterBoxForCreatedDate.php", {}, function (response) {
+            $('#CreatedDateCheckboxes').append(response);
+        }).fail(function () {
+            alert("Không thể tải dữ liệu.");
+            return;
+        });
+        $.post("getFilterBoxForUpdatedDate.php", {}, function (response) {
+            $('#UpdatedDateCheckboxes').append(response);
+        }).fail(function () {
+            alert("Không thể tải dữ liệu.");
+            return;
+        });
+    }
+
 });

@@ -104,7 +104,7 @@
     <main>
         <div class="mb-4 functionBtn">
             <input type="text" id="search-input" class="w-full px-4 py-2 border rounded-lg"
-                placeholder="Tìm kiếm theo tên, số điện thoại, email..." />
+                placeholder="Tìm kiếm theo tiêu đề, tác giả, thể loại..." />
             <div class="filterButton">
                 <button id="filterButton" class="text-green-500 hover:text-green-700">
                     <i class="fas fa-filter"></i> Lọc
