@@ -2,25 +2,28 @@
 $(document).ready(function () {
     const isUserLoggedIn = false;
     const isAdminLoggedIn = false;
+    var urlParams = new URLSearchParams(window.location.search);
+    var blog_id = urlParams.get('blog_id');
     //bình luận
     $(".send").on("click", function (event) {  
         event.preventDefault();
 
-
-        if (!isLoggedIn) {
+        if (!isUserLoggedIn) {
             $("#custom-close").show();
             $("#btn-ok").on("click", function(){
                 window.location.href = "../../user/login.php"; 
             });
         }
-        // const reviewContent = $(".content-review").val();
-        // if (reviewContent.trim() === "") {
-        //     alert("Nội dung đánh giá không được để trống!");
-        //     return;
-        // }
-        // alert("Đánh giá của bạn đã được gửi!"); 
+        
+        let comment = $(".content-comment").val();
+        $.post("../../postReview.php", {comment:comment,blog_id:blog_id }, function (response) {
+            if(response.include("succ")){
+                $("#custom-alert .message").text("Bình luận thành công!")
+                $("#custom-close").show();
+            }
+        });
+  
         let username = $(".username").val();
-        let review = $(".content-review").val();
 
         let user = {
             username: username,
@@ -39,9 +42,6 @@ $(document).ready(function () {
         $(".username").val("");
         $(".content-review").val("");
     });
-
-    var urlParams = new URLSearchParams(window.location.search);
-    var blog_id = urlParams.get('blog_id');
 
     displayBlog(blog_id);
     displayLatestBlog();
