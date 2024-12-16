@@ -75,7 +75,7 @@ $(document).ready(function () {
                     .addClass("success")
                     .html(response);
                 setTimeout(function () {
-                    window.location.href = "../../web/blogtintucsukien/listblog/index.html";
+                    window.location.href = "../../web/blog/blogtatreem/listblog/index.html";
                 }, 500);
             } else {
                 $(".kq")

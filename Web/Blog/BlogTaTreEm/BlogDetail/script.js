@@ -1,11 +1,12 @@
 
 $(document).ready(function () {
-    const isUserLoggedIn = false;
-    const isAdminLoggedIn = false;
+    let isUserLoggedIn = false;
+    let isAdminLoggedIn = false;
     var urlParams = new URLSearchParams(window.location.search);
     var blog_id = urlParams.get('blog_id');
 
     displayBlog(blog_id);
+    displayComment(blog_id);
     displayLatestBlog();
     displayRelatedBlog(blog_id);
     displayPrevNext(blog_id);
@@ -47,28 +48,16 @@ $(document).ready(function () {
         $("#custom-close").hide();
     });
 
-    if (isAdminLoggedIn) {
-        $("#deleteBtn").show();
-    }
-    $("#deleteBtn").on("click", function () {
-        var commentArea = $(this).closest('comment');
-        var comment_id = commentArea.data('comment_id');
-        $.post("deleteComment.php", { comment_id: comment_id, blog_id: blog_id }, function (response) {
-            if (response.includes("success")) {
-                $('.commentArea').append(response);
-                $("#custom-alert .message").text("Xoá bình luận thành công!");
-                $("#custom-alert").show();
-            }
-            else {
-                $("#custom-alert .message").text("Có lỗi xảy ra. Vui lòng thử lại!");
-                $("#custom-alert").show();
-            }
-        });
-    });
-
     function displayBlog(blog_id) {
         $.post("load_blog.php", { blog_id: blog_id }, function (response) {
             $('#blogPost').empty().append(response);
+        }).fail(function () {
+            alert("Có lỗi xảy ra, vui lòng thử lại.");
+        });
+    }
+    function displayComment(blog_id) {
+        $.post("load_comment.php", { blog_id: blog_id }, function (response) {
+            $('.commentArea').empty().append(response);
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
         });
@@ -106,6 +95,32 @@ $(document).ready(function () {
         $.post("../../../isAdminLogin.php", {}, function (response) {
             if (response.includes("yes")) {
                 isAdminLoggedIn = true;
+                if (isAdminLoggedIn === true) {
+                    $(".deleteBtn").css("display", "block");
+                    $(".deleteBtn").on("click", function () {
+
+                        var commentArea = $(this).closest('.comment');
+                        var comment_id = commentArea.data('comment_id');
+                        var blog_id = commentArea.closest('.blog').data('blog_id');
+                        $.post("deleteComment.php", { comment_id: comment_id, blog_id: blog_id }, function (response) {
+                            if (response.includes("success")) {
+                                $('.commentArea').append(response);
+                                $("#custom-alert .message").text("Xoá bình luận thành công!");
+                                $("#custom-alert").show();
+
+                                $(".btn-close").on("click", function (e) {
+                                    e.preventDefault();
+                                    $("#custom-alert").hide();
+                                    location.reload();
+                                });
+                            }
+                            else {
+                                $("#custom-alert .message").text(response);
+                                $("#custom-alert").show();
+                            }
+                        });
+                    });
+                }
             }
         });
     }
