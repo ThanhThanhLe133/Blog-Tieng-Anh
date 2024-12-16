@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var urlParams = new URLSearchParams(window.location.search);
     var blog_id = urlParams.get('blog_id');
-    if(blog_id!==null){
+    if (blog_id !== null) {
         displayBlog(blog_id);
     }
     var quill = new Quill('#editor', {
@@ -34,11 +34,12 @@ $(document).ready(function () {
             $("#custom-alert").show();
             return;
         }
-        $.post('post_blog.php', { title: title, category_id: category_id,blog_id:blog_id }, function (response) {
+        $.post('post_blog.php', { title: title, category_id: category_id, blog_id: blog_id }, function (response) {
             if (response.includes('Error') || response.includes('Category không tồn tại')) {
                 alert(response);
             } else {
                 var blog_id = response;
+                console.log(blog_id);
                 var formData = new FormData();
                 formData.append('image_title', $('#image_title')[0].files[0]);  // Thêm ảnh vào form data
                 formData.append('blog_id', blog_id);
@@ -78,7 +79,7 @@ $(document).ready(function () {
     });
     function displayBlog(blog_id) {
         $.post("load_blog.php", { blog_id: blog_id }, function (response) {
-            $('#blog_editor').empty().append(response); 
+            $('#blog_editor').empty().append(response);
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
         });

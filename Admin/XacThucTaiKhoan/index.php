@@ -262,7 +262,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="../../Animation/load-effect.js"></script>
 </body>
 
 </html>

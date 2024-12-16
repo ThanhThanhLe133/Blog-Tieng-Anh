@@ -19,7 +19,6 @@ if ($result->num_rows > 0) {
     }
 }
 
-
 preg_match_all('/<img[^>]+src="([^">]+)"/', $content, $matches);
 $image_ids = [];
 
@@ -48,9 +47,9 @@ if (!empty($matches[1])) {
 }
 
 
-$sql = "update blogs set content='$content' where blog_id='$blog_id'";
+$sql_update = "update blogs set content='$content' where blog_id='$blog_id'";
 
-if ($conn->query($sql) === TRUE) {
+if ($conn->query($sql_update ) === TRUE) {
     echo "success";
 } else {
     echo "error";

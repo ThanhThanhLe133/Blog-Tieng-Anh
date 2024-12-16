@@ -117,10 +117,11 @@
         <div class="kq"></div>
         <div id="custom-close">
             <div class="message">
-                Bạn có chắc chắn muốn thoát?
             </div>
-            <button class="btn-ok">Ok</button>
-            <button class="btn-close">Đóng</button>
+            <div>
+                <button class="btn-ok">Ok</button>
+                <button class="btn-close">Đóng</button>
+            </div>
         </div>
     </main>
 
@@ -232,7 +233,6 @@
     <script src="../preventAccess.js"></script>
     <script src="../logout.js"></script>
     <script src="script.js"></script>
-    <script src="../../Animation/header.js"></script>
 </body>
 
 </html>

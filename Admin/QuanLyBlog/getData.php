@@ -1,14 +1,5 @@
 <?php
 
-session_start();
-
-if (!isset($_SESSION['user_name'])) {
-    echo "<script>
-        alert('Vui lòng đăng nhập!');
-        window.location.href = '../login/index.php';
-    </script>";
-    exit;
-}
 include "../conn.php";
 $sql = "SELECT * FROM blogs";
 
@@ -28,7 +19,6 @@ if ($result->num_rows > 0) {
         $result_category = $conn->query($sql_category);
         $category = ($result_category && $result_category->num_rows > 0) ? $result_category->fetch_assoc()['category_name'] : 'Unknown';
         $html .= "
-
         <tr data-blog_id='{$row['blog_id']}'>
             <td class='py-2 px-4 border-b border-gray-200 title_blog'>{$row['title']}</td>
             <td class='py-2 px-4 border-b border-gray-200 author'>{$author}</td>

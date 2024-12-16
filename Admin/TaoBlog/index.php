@@ -147,6 +147,14 @@
             </div>
             <button class="btn-close">Đóng</button>
         </div>
+        <div id="custom-close">
+            <div class="message">
+            </div>
+            <div>
+                <button class="btn-ok">Ok</button>
+                <button class="btn-close">Đóng</button>
+            </div>
+        </div>
     </main>
 
     <!-- footer -->
@@ -258,7 +266,6 @@
     <script src="../loadHeader.js"></script>
     <script src="../preventAccess.js"></script>
     <script src="../logout.js"></script>
-    <script src="../../Animation/header.js"></script>
 </body>
 
 </html>

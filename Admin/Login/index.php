@@ -19,7 +19,6 @@ session_destroy();
     <link rel="stylesheet" href="../../Styles/general-styles.css">
     <link rel="stylesheet" href="../../Styles/header.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
-    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../Styles/animation-general.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">

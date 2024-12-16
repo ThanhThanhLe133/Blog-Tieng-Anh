@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_name'])) {
     exit;
 }
 $user_name = $_SESSION['user_name'];
-$blog_id = $_SESSION['blog_id'];
+$blog_id = $_SESSION['blog_id']?? "";
 
 include('../conn.php');
 
@@ -20,7 +20,7 @@ $result_admin = $conn->query($strSQL_admin);
 if ($result_admin->num_rows > 0) {
     $author_id = $result_admin->fetch_assoc()['admin_id'];
 
-    if($blog_id!==null){
+    if ($blog_id !== null) {
         $sql_update = "UPDATE blogs SET author_id = '$author_id',category_id='$category_id',title='$title' WHERE blog_id = '$blog_id'";
         if ($conn->query($sql_update) === TRUE) {
             echo $blog_id;
@@ -32,11 +32,21 @@ if ($result_admin->num_rows > 0) {
 
     $sql = "INSERT INTO blogs (category_id, title, author_id) 
             VALUES ('$category_id', '$title','$author_id')";
-    if ($conn->query($sql) === TRUE) {
-        $blog_id = $conn->insert_id;
-        echo $blog_id;
+    $stmt = $conn->prepare($sql);
+
+    if ($stmt) {
+        $stmt->bind_param("isi", $category_id, $title, $author_id);
+
+        if ($stmt->execute()) {
+            $blog_id = $stmt->insert_id; 
+            echo $blog_id;
+        } else {
+            echo "Lỗi khi tạo blog: " . $stmt->error;
+        }
+
+        $stmt->close();
     } else {
-        echo "Lỗi khi tạo blog";
+        echo "Lỗi khi chuẩn bị câu lệnh: " . $conn->error;
     }
 } else {
     echo "Category không tồn tại trong cơ sở dữ liệu.";

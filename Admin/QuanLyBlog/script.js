@@ -20,7 +20,7 @@ $(document).ready(function () {
                     row.remove();
                     $("#custom-alert").show();
                 } else {
-                    $("#custom-alert .message").text('Xóa thất bại. Vui lòng thử lại.');
+                    $("#custom-alert .message").text(response);
                     $("#custom-alert").show();
                 }
             });

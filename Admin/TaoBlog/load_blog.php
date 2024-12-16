@@ -63,17 +63,16 @@ if ($result->num_rows > 0) {
         }
     }
 
-    $html .= '<div class="mb-4">
+    $html = '<div class="mb-4">
     <label class="block text-gray-700 text-sm font-bold mb-2" for="content">Nội dung</label>
     <div id="editor"
          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ql-container ql-snow"
          style="height: 300px;">
-        <div class="ql-editor ql-blank" data-gramm="false" contenteditable="true">
-         ' . $content. '
-            <p><br></p>
+        <div class="ql-editor" data-gramm="false" contenteditable="true">
+            ' . htmlspecialchars_decode($content) . '
         </div>
     </div>
-    </div>';
+</div>';
 
     if ($image_title_url) {
         $html .= "<div class='mb-4'>
