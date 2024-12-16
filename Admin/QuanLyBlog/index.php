@@ -132,7 +132,7 @@
                     </div>
                     <div>
                         <button id="applyFilter" class="text-blue-500">Áp dụng</button>
-                        <button id="close" class="text-red-500">Đóng</button>
+                        <button id="closeFilter" class="text-red-500">Đóng</button>
                     </div>
 
                 </div>
@@ -312,6 +312,9 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="../loadHeader.js"></script>
+    <script src="../preventAccess.js"></script>
+    <script src="../logout.js"></script>
     <script src="../../Animation/header.js"></script>
 </body>
 

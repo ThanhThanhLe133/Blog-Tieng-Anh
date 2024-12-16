@@ -16,7 +16,6 @@ $(document).ready(function () {
         });
     });
 
-
     $('#search-input').keydown(function (e) {
         if (e.which === 13) {
             var searchTerm = $(this).val().toLowerCase();
@@ -35,9 +34,8 @@ $(document).ready(function () {
     $('#filterButton').on("click", function () {
         $('#filterBox').slideToggle(300);
     });
-    $('#close').on("click", function () {
+    $('#closeFilter').on("click", function () {
         $('#filterBox').hide();
-        $('#sortBox').hide();
     });
 
 
@@ -153,22 +151,6 @@ $(document).ready(function () {
         e.preventDefault();
         $("#custom-alert").hide();
         $("#custom-close").hide();
-    });
-
-    //đăng xuất
-    $('.header__action').on('click', function (e) {
-        if ($(this).children().first().hasClass('btn--logout')) {
-            e.preventDefault();
-            $("#custom-close .message").html("");
-            $("#custom-close .message").html("Bạn có chắc chắn muốn đăng xuất");
-            $("#custom-close").show();
-            $(".btn-ok").on('click', function (e) {
-                e.preventDefault();
-                setTimeout(function () {
-                    window.location.href = "../Login/index.php";
-                }, 500);
-            });
-        }
     });
 
     function loadFilterBox() {

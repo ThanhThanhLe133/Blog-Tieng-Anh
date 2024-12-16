@@ -2,11 +2,6 @@
 
 session_start();
 
-if (!isset($_SESSION['user_name'])) {
-    echo "Chưa đăng nhập.";
-    exit;
-}
-
 include "../conn.php";
 
 $user_id = $_SESSION['user_name'];

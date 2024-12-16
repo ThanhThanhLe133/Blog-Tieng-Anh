@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     //click email -> xoá OTP + email + thông báo
     $('#email').on("click", function (e) {
         e.preventDefault();

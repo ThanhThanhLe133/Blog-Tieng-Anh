@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
             $image_title_url = 'data:image/jpeg;base64,' . base64_encode($image_data);
         }
         $html .= "
-        <div class='bg-white shadow-md rounded-lg overflow-hidden'>
+        <div class='bg-white shadow-md rounded-lg overflow-hidden blog-card'>
             <img alt='{$row['title']}' class='w-full h-40 object-cover'
                  height='400' src='{$image_title_url}' width='600'>
             <div class='p-4'>

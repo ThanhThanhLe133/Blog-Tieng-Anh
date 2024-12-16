@@ -16,6 +16,7 @@ if ($result->num_rows > 0) {
     }
     $_SESSION['user_logged_in'] = true;
     $_SESSION['username'] = $username;
+    $_SESSION['user_id'] = $row['user_id'];
     echo "Chúc mừng bạn đã đăng nhập thành công";
 } else {
     echo "Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng đăng nhập lại!!!";

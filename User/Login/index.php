@@ -303,6 +303,8 @@ session_destroy();
     </footer>
 
     <script src="script.js"> </script>
+    <script src="../../Animation/load-effect.js"></script>
+    <script src="../Animation/Header.js"> </script>
 
 </body>
 

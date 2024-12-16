@@ -4,44 +4,6 @@ $(document).ready(function () {
     const isAdminLoggedIn = false;
     var urlParams = new URLSearchParams(window.location.search);
     var blog_id = urlParams.get('blog_id');
-    //bình luận
-    $(".send").on("click", function (event) {  
-        event.preventDefault();
-
-        if (!isUserLoggedIn) {
-            $("#custom-close").show();
-            $("#btn-ok").on("click", function(){
-                window.location.href = "../../user/login.php"; 
-            });
-        }
-        
-        let comment = $(".content-comment").val();
-        $.post("../../postReview.php", {comment:comment,blog_id:blog_id }, function (response) {
-            if(response.include("succ")){
-                $("#custom-alert .message").text("Bình luận thành công!")
-                $("#custom-close").show();
-            }
-        });
-  
-        let username = $(".username").val();
-
-        let user = {
-            username: username,
-            time: formatDay(new Date()),
-            review: review
-        };
-        let text =
-            `<div class="comment">
-        <div>@<span class="name">${user.username}</span></div>
-        <div class="datetime">${user.time}</div>
-        <div class="review">${user.review}</div>
-            </div>`
-
-        $(".review-area").last().append(text);
-
-        $(".username").val("");
-        $(".content-review").val("");
-    });
 
     displayBlog(blog_id);
     displayLatestBlog();
@@ -49,9 +11,57 @@ $(document).ready(function () {
     displayPrevNext(blog_id);
     checkIsUserLogin();
     checkIsAdminLogin();
+
+    //bình luận
+    $(".send").on("click", function (event) {
+        event.preventDefault();
+
+        if (!isUserLoggedIn) {
+            $("#custom-close").show();
+            $("#btn-ok").on("click", function () {
+                window.location.href = "../../user/login.php";
+            });
+        }
+
+        let comment = $(".content-comment").val();
+        $.post("postComment.php", { comment: comment, blog_id: blog_id }, function (response) {
+            $('.commentArea').append(response);
+            $("#custom-alert .message").text("Bình luận thành công!");
+            $("#custom-alert").show();
+        }).fail(function () {
+            alert("Có lỗi xảy ra, vui lòng thử lại.");
+        });
+
+        $(".content-comment").val("");
+    });
+    $(".btn-close").on("click", function (e) {
+        e.preventDefault();
+        $("#custom-alert").hide();
+        $("#custom-close").hide();
+    });
+
+    if (isAdminLoggedIn) {
+        $("#deleteBtn").show();
+    }
+    $("#deleteBtn").on("click", function () {
+        var commentArea=$(this).closest('comment');
+        var comment_id = commentArea.data('comment_id');
+        $.post("deleteComment.php", { comment_id: comment_id, blog_id: blog_id }, function (response) {
+            if (response.includes("success")) {
+                $('.commentArea').append(response);
+            $("#custom-alert .message").text("Xoá bình luận thành công!");
+            $("#custom-alert").show();
+            }
+         else{
+            $("#custom-alert .message").text("Có lỗi xảy ra. Vui lòng thử lại!");
+            $("#custom-alert").show();
+         }
+        });
+    });
+
     function displayBlog(blog_id) {
         $.post("load_blog.php", { blog_id: blog_id }, function (response) {
-            $('#blogPost').empty().append(response); 
+            $('#blogPost').empty().append(response);
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
         });
@@ -64,7 +74,7 @@ $(document).ready(function () {
         });
     }
     function displayRelatedBlog() {
-        $.post("../load_related_blog.php", {blog_id: blog_id }, function (response) {
+        $.post("../load_related_blog.php", { blog_id: blog_id }, function (response) {
             $('#relatedBlog').append(response);
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
@@ -72,33 +82,25 @@ $(document).ready(function () {
     }
     function displayPrevNext() {
         $.post("load_prev_next.php", { blog_id: blog_id }, function (response) {
-            $('#prev_next').empty().append(response); 
+            $('#prev_next').empty().append(response);
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
         });
     }
-    function formatDay(date) {
-        const days = ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"];
-        const hour = date.getHours().toString().padStart(2, "0");
-        const minute = date.getMinutes().toString().padStart(2, "0");
-        const day = date.getDate().toString().padStart(2, "0");
-        const month = (date.getMonth() + 1).toString().padStart(2, "0");
-        const year = date.getFullYear();
 
-        return `${hour}:${minute} ${days[date.getDate()]} ngày ${day}/${month}/${year}`;
-    }
-    function checkIsUserLogin(){
-        $.post("../../isUserLogin.php", { }, function (response) {
-            if(response.include("yes")){
-                isUserLoggedIn=true;
+    function checkIsUserLogin() {
+        $.post("../../isUserLogin.php", {}, function (response) {
+            if (response.includes("yes")) {
+                isUserLoggedIn = true;
             }
         });
     }
-    function checkIsAdminLogin(){
-        $.post("../../isLogin.php", { }, function (response) {
-            if(response.include("yes")){
-                isAdminLoggedIn=true;
+    function checkIsAdminLogin() {
+        $.post("../../isLogin.php", {}, function (response) {
+            if (response.includes("yes")) {
+                isAdminLoggedIn = true;
             }
         });
     }
-})
+    
+});

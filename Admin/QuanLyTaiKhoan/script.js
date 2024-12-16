@@ -1,6 +1,5 @@
 $(document).ready(function () {
     //load ds user
-    loadData();
     displayUserData();
     loadFilterBox();
 
@@ -248,10 +247,4 @@ $(document).ready(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
         });
     }
-    function loadData() {
-        $.post("../isLogin.php", {}, function (response) {
-            $(".header__action").html(response);
-        });
-    }
-
 });

@@ -1,13 +1,4 @@
 $(document).ready(function () {
-
-    //load button đăng nhập/đăng ký
-    function loadData() {
-        $.post("../isLogin.php", {}, function (response) {
-            $(".header__action").html(response);
-        });
-    }
-    loadData();
-
     //click vào input -> xoá
     $("#new-password, #confirm-password").on('click', function () {
         $(".kq").html("");
@@ -96,7 +87,6 @@ $(document).ready(function () {
         }
     })
 
-  
 
     //nếu chưa đăng nhập -> ngăn chặn mở menu
     var targetLink = "";
@@ -126,11 +116,4 @@ $(document).ready(function () {
         $("#custom-close").hide();
     });
 
-    //đăng xuất
-    $('.header__action').on('click', function (e) {
-        if ($(this).children().first().hasClass('btn--logout')) {
-            e.preventDefault();
-            $("#custom-close").show();
-        }
-    });
 });

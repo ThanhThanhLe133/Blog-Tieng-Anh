@@ -1,21 +1,5 @@
 $(document).ready(function () {
-    //load button đăng nhập/đăng ký +user info
-    function loadData() {
-        $.post("userdata.php", {}, function (response) {
-            $("#user-info").html(response);
-        }).fail(function () {
-            $("#error").html(response);
-            $("#btnSave").hide();
-            $(".changePass").hide();
-        });
-
-        $.post("../isLogin.php", {}, function (response) {
-            $(".header__action").html(response);
-        });
-    }
-
     loadData();
-
     //sự kiện enter tới form -> handleUpdateSettings
     $("#settingForm").on('keydown', function (e) {
         if (e.keyCode === 13) {
@@ -29,6 +13,24 @@ $(document).ready(function () {
         e.preventDefault();
         handleUpdateSettings();
     });
+
+    //nhấn đăng xuất
+    $('.header__action').on('click', function (e) {
+        e.preventDefault();
+        $("#custom-close").show();
+
+    });
+    $(".btn-ok").on('click', function (e) {
+        e.preventDefault();
+        setTimeout(function () {
+            window.location.href = "../Login/index.php";
+        }, 500);
+    });
+    $(".btn-close").on('click', function (e) {
+        e.preventDefault();
+        $("#custom-alert").hide();
+    });
+
     function handleUpdateSettings() {
         let firstname = $("#firstname").val();
         let lastname = $("#lastname").val();
@@ -63,21 +65,14 @@ $(document).ready(function () {
                 .html("Có lỗi xảy ra, vui lòng thử lại.");
         });
     }
+    function loadData() {
+        $.post("userdata.php", {}, function (response) {
+            $("#user-info").html(response);
+        }).fail(function () {
+            $("#error").html(response);
+            $("#btnSave").hide();
+            $(".changePass").hide();
+        });
+    }
 
-    //nhấn đăng xuất
-    $('.header__action').on('click', function (e) {
-        e.preventDefault();
-        $("#custom-close").show();
-
-    });
-    $(".btn-ok").on('click', function (e) {
-        e.preventDefault();
-        setTimeout(function () {
-            window.location.href = "../Login/index.php";
-        }, 500);
-    });
-    $(".btn-close").on('click', function (e) {
-        e.preventDefault();
-        $("#custom-alert").hide();
-    });
 })

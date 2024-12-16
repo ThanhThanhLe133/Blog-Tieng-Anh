@@ -228,7 +228,11 @@
             </div>
         </div>
     </footer>
+    <script src="../loadHeader.js"></script>
+    <script src="../preventAccess.js"></script>
+    <script src="../logout.js"></script>
     <script src="script.js"></script>
+    <script src="../../Animation/header.js"></script>
 </body>
 
 </html>

@@ -95,10 +95,5 @@ $(document).ready(function () {
                 .html("Có lỗi xảy ra, vui lòng thử lại.");
         });
     }
-    function preventEnter(event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-        }
-    }
 })
 

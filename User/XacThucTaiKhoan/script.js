@@ -20,7 +20,7 @@ $(document).ready(function () {
     });
 
     //click vào OTP -> xoá + thông báo
-    $('#verification-code').on("click",function (e) {
+    $('#verification-code').on("click", function (e) {
         $("#verification-code").val("");
         $(".check-code").html("");
         $(".check-code").removeClass("error success");

@@ -138,7 +138,6 @@
                     </nav>
                     <!-- btn action -->
                     <div class="header__action">
-                        <a href="../Đăng ký/index.html" class="btn btn--register">ĐĂNG KÝ</a>
                     </div>
                 </div>
             </div>
@@ -303,6 +302,8 @@
     </footer>
 
     <script src="script.js"> </script>
+    <script src="../../Animation/load-effect.js"></script>
+    <script src="../Animation/Header.js"> </script>
 </body>
 
 </html>

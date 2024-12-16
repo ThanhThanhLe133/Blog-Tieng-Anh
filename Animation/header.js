@@ -1,8 +1,8 @@
 $(document).ready(() => {
-    $('.language').click(function() {
+    $('.language').click(function () {
         var vietnamese = $('.language.vietnamese');
         var english = $('.language.english');
-        
+
         var vietnameseText = vietnamese.find('.language__text').text();
         var englishText = english.find('.language__text').text();
         var vietnameseFlag = vietnamese.find('.language__flag img').attr('src');
@@ -14,7 +14,7 @@ $(document).ready(() => {
         english.find('.language__text').text(vietnameseText);
         english.find('.language__flag img').attr('src', vietnameseFlag);
     });
-    
+
     //.header.fixed
     const header = $('.main-container__header--fixed');
     $(window).on('scroll', function () {
@@ -24,4 +24,22 @@ $(document).ready(() => {
             header.css('top', '0px');
         }
     });
+    //load button đăng nhập/đăng ký
+    function loadData() {
+        $.post("../User/isLogin.php", {}, function (response) {
+            $(".header__action").html(response);
+        });
+    }
+    loadData();
+    $(document).ready(function () {
+        $('.header__action').on('click', function () {
+            var result = confirm("Bạn có chắc chắn muốn thoát?");
+
+            if (result) {
+                setTimeout(function () {
+                    window.location.href = "../user/login/index.php";
+                }, 500);
+            }
+        });
+    })
 })

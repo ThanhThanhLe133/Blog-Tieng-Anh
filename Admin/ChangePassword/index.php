@@ -261,6 +261,9 @@
     </footer>
 
     <script src="script.js"> </script>
+    <script src="../loadHeader.js"></script>
+    <script src="../logout.js"></script>
+    <script src="../../Animation/header.js"></script>
 </body>
 
 </html>

@@ -143,7 +143,7 @@
                         name="verifyCode" id="verifyCode">
                         Gửi
                     </button>
-                    <a href="../Login/index.html" class="text-blue-500 hover:underline">Quay lại đăng nhập</a>
+                    <a href="../Login/index.php" class="text-blue-500 hover:underline">Quay lại đăng nhập</a>
                 </div>
                 <div class="check-code"></div>
         </form>
@@ -263,7 +263,6 @@
 
     <script src="script.js"></script>
     <script src="../../Animation/load-effect.js"></script>
-
 </body>
 
 </html>
