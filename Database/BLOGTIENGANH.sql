@@ -46,7 +46,7 @@ CREATE TABLE `users` (
   `phone_number` VARCHAR(15) NOT NULL,                 -- Số điện thoại
   `email` VARCHAR(255) NOT NULL,                       -- Email
   `birth_year` INT(4) NOT NULL,         
-  `approval_status` TINYINT(1) DEFAULT 0 NOT NULL,                 -- Năm sinh
+  `approval_status` TINYINT(1) DEFAULT 0 NOT NULL,                 -- Trạng thái phê duyệt
   `branch_name` VARCHAR(255) NOT NULL,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,    -- Thời gian tạo
   PRIMARY KEY (`users_id`),
@@ -130,7 +130,9 @@ CREATE TABLE `blog_images_title` (
   FOREIGN KEY (`blog_id`) REFERENCES `blogs`(`blog_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- comment
+-- --------------------------------------------------------
+-- Table structure for table `comments`
+--
 CREATE TABLE `comment` (
   `comment_id` int(11) NOT NULL AUTO_INCREMENT,
   `comment` varchar(255) NOT NULL,
