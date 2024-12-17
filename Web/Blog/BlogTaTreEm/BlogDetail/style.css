@@ -114,11 +114,9 @@
     color: chocolate;
 }
 #relatedBlog {
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    justify-content: center;
 }
 
 #relatedBlog h2 {
@@ -164,7 +162,6 @@
 #custom-alert .btn-close{
     margin:0 auto;
 }
-
 *,
 ::before,
 ::after {
@@ -556,7 +553,7 @@ video {
 }
 
 .max-w-4xl {
-    min-width: 70%
+    max-width: 300rem
 }
 
 .list-inside {

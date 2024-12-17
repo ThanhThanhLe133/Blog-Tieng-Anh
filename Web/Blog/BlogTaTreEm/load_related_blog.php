@@ -2,7 +2,12 @@
 
 include "../../conn.php";
 $blog_id = $_POST['blog_id'];
-$sql = "SELECT * FROM blogs where category_id=1 AND blog_id < $blog_id ORDER BY blog_id DESC LIMIT 4";
+$sql = "
+    (SELECT * FROM blogs WHERE category_id = 1 AND blog_id < $blog_id ORDER BY blog_id DESC LIMIT 2)
+    UNION
+    (SELECT * FROM blogs WHERE category_id = 1 AND blog_id > $blog_id ORDER BY blog_id ASC LIMIT 2)
+";
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -24,7 +29,9 @@ if ($result->num_rows > 0) {
                  height='400' src='{$image_title_url}' width='600'>
             <div class='p-4'>
                 <h3 class='font-semibold mb-2'>
+                <a href='index.html?blog_id={$row['blog_id']}' class='text-blue-600'>
                     {$row['title']}
+                </a>
                 </h3>
                 <p class='text-gray-600 text-sm mb-2'>
                     <i class='fas fa-calendar-alt'></i>

@@ -16,9 +16,7 @@
     font-weight: bold;
     margin-bottom: 30px;
 }
-.new-article{
-    width: 30%;
-}
+
 .blog-post {
     margin:0 auto;
     margin-bottom: 40px;
@@ -116,11 +114,9 @@
     color: chocolate;
 }
 #relatedBlog {
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    justify-content: center;
 }
 
 #relatedBlog h2 {

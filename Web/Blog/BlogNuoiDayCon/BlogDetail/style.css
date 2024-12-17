@@ -114,11 +114,9 @@
     color: chocolate;
 }
 #relatedBlog {
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    justify-content: center;
 }
 
 #relatedBlog h2 {
