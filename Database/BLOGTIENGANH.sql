@@ -163,12 +163,42 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`comment_id`, `comment`, `user_id`, `blog_id`, `created_at`) VALUES
-(1, 'Bài viết rất hay, cảm ơn Kids&Us đã chia sẻ!', 1, 1, '2024-12-17 15:27:31'),
-(2, 'Trẻ em thật sự thích những câu chuyện này, rất bổ ích!', 2, 2, '2024-12-17 15:27:31'),
-(3, 'Bài viết rất hữu ích, tôi sẽ áp dụng cho con của mình.', 3, 3, '2024-12-17 15:27:31'),
-(4, 'Cảm ơn các bạn đã cung cấp thông tin về các hoạt động ngoại khóa.', 4, 4, '2024-12-17 15:27:31'),
-(5, 'Đây là một bài viết tuyệt vời cho các bậc phụ huynh, tôi đã tìm thấy nhiều ý tưởng hay.', 5, 5, '2024-12-17 15:27:31'),
-(6, 'Những mẹo này rất thực tế, cảm ơn vì đã chia sẻ.', 6, 6, '2024-12-17 15:27:31');
+(7, 'Bài viết rất hữu ích, tôi sẽ thử áp dụng cho con của mình.', 2, 1, '2024-12-17 16:00:00'),
+(8, 'Các câu chuyện rất thú vị và dễ hiểu cho trẻ nhỏ. Cảm ơn Kids&Us!', 3, 1, '2024-12-17 16:05:00'),
+(9, 'Cảm ơn bài viết, tôi đã biết thêm nhiều cách dạy tiếng Anh hiệu quả cho con.', 4, 1, '2024-12-17 16:10:00'),
+
+(10, 'Trẻ em rất thích những câu chuyện này, đặc biệt là câu chuyện về cậu bé chăn cừu.', 5, 2, '2024-12-17 16:15:00'),
+(11, 'Cảm ơn vì đã chia sẻ những câu chuyện này, tôi đã áp dụng cho con và thấy rất hiệu quả.', 6, 2, '2024-12-17 16:20:00'),
+(12, 'Một bài viết rất hay, tôi sẽ chia sẻ với các bậc phụ huynh khác.', 1, 2, '2024-12-17 16:25:00'),
+
+(13, 'Cảm ơn Kids&Us đã chia sẻ cách học đa giác quan cho trẻ, tôi sẽ đăng ký ngay!', 3, 3, '2024-12-17 16:30:00'),
+(14, 'Đây là một phương pháp tuyệt vời! Tôi đã thấy con tôi hứng thú hơn với việc học tiếng Anh.', 2, 3, '2024-12-17 16:35:00'),
+(15, 'Bài viết rất hay, tôi đã hiểu rõ hơn về phương pháp học tiếng Anh cho trẻ nhỏ.', 4, 3, '2024-12-17 16:40:00'),
+
+(16, 'Những mẹo này rất bổ ích, cảm ơn Kids&Us!', 5, 4, '2024-12-17 16:45:00'),
+(17, 'Bài viết giúp tôi nhận thức rõ hơn về sự phát triển ngôn ngữ của trẻ nhỏ.', 6, 4, '2024-12-17 16:50:00'),
+(18, 'Một bài viết rất hữu ích cho các bậc phụ huynh. Cảm ơn các bạn!', 1, 4, '2024-12-17 16:55:00'),
+
+(19, 'Bài viết này rất hay, tôi sẽ áp dụng những gì học được cho con của mình.', 4, 5, '2024-12-17 17:00:00'),
+(20, 'Cảm ơn vì đã chia sẻ những thông tin hữu ích về sự phát triển của trẻ.', 2, 5, '2024-12-17 17:05:00'),
+(21, 'Mọi bậc phụ huynh nên đọc bài này để hiểu rõ hơn về giai đoạn phát triển của trẻ.', 3, 5, '2024-12-17 17:10:00'),
+
+(22, 'Các hoạt động ngoại khóa rất thú vị, tôi sẽ đăng ký cho con tham gia.', 6, 6, '2024-12-17 17:15:00'),
+(23, 'Chắc chắn các bé sẽ rất thích những hoạt động này, tôi đang mong chờ tháng 4 tới.', 5, 6, '2024-12-17 17:20:00'),
+(24, 'Cảm ơn vì đã chia sẻ các hoạt động ngoại khóa. Đây là những lựa chọn tuyệt vời cho trẻ nhỏ.', 4, 6, '2024-12-17 17:25:00'),
+
+(25, 'Các hoạt động này rất ý nghĩa, tôi sẽ cho con tham gia ngay.', 1, 7, '2024-12-17 17:30:00'),
+(26, 'Một bài viết rất hay về các hoạt động ngoại khóa cho bé. Cảm ơn Kids&Us!', 3, 7, '2024-12-17 17:35:00'),
+(27, 'Đây là những hoạt động tuyệt vời giúp trẻ phát triển. Cảm ơn bài viết!', 2, 7, '2024-12-17 17:40:00'),
+
+(28, 'Các hoạt động này rất thú vị và bổ ích cho trẻ nhỏ, tôi sẽ chia sẻ cho mọi người.', 4, 8, '2024-12-17 17:45:00'),
+(29, 'Đây là một ý tưởng tuyệt vời, tôi đã tham gia và rất hài lòng với kết quả.', 5, 8, '2024-12-17 17:50:00'),
+(30, 'Tôi rất thích không gian trang trí sinh nhật của Kids&Us, rất dễ thương!', 6, 8, '2024-12-17 17:55:00'),
+
+(31, 'Một bài viết rất ý nghĩa. Các bé sẽ rất thích tham gia vào các hoạt động ngoại khóa.', 3, 9, '2024-12-17 18:00:00'),
+(32, 'Cảm ơn bài viết, tôi đã cho con tham gia hoạt động và rất vui với kết quả.', 4, 9, '2024-12-17 18:05:00'),
+(33, 'Các hoạt động như thế này giúp bé phát triển kỹ năng và tạo ra những kỷ niệm đẹp.', 5, 9, '2024-12-17 18:10:00');
+
 
 -- --------------------------------------------------------
 
