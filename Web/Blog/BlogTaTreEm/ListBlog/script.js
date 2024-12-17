@@ -14,7 +14,7 @@ $(document).ready(function () {
         });
     }
     function displayLatestBlog() {
-        $.post("../load_latest_blog.php", {}, function (response) {
+        $.post("load_latest_blog.php", {}, function (response) {
             $('#latestBlog').append(response);
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
