@@ -88,7 +88,21 @@ $(document).ready(function () {
             icon.attr("src", "../../Images/eye_close.png");
         }
     })
-
+    $(".showpass").on("mousedown", function (e) {
+        e.preventDefault();
+        let pass = $(this).siblings("input");
+        let icon = $(this).find("img");
+        pass.attr("type", "text"); 
+        icon.attr("src", "../../Images/eye.png")
+    });
+    
+    $(".showpass").on("mouseup mouseleave", function (e) {
+        e.preventDefault();
+        let pass = $(this).siblings("input");
+        let icon = $(this).find("img");
+        pass.attr("type", "password");
+        icon.attr("src", "../../Images/eye_close.png");
+    })
     //nếu chưa đăng nhập -> ngăn chặn mở menu
     var targetLink = "";
     $(".nav__item").on("click", function (e) {
