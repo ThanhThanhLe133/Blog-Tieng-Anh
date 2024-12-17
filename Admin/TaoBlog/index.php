@@ -63,6 +63,11 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
+                                <a class="nav__link" href="../../Web/Homepage/index.html">
+                                    <p class="nav__text">HOMEPAGE (for guest)</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
                                 <a class="nav__link" href="../QuanLyInputForm/index.php">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
@@ -141,7 +146,8 @@
 
             </div>
             <div style="display: flex; justify-content: flex-end; margin-top: 30px; width: 70%;">
-                <button class="text-white py-2 px-4 rounded hover:bg-gray-700" id="btnSaveBlog" style="background-color: #EE154B;width:100px;">
+                <button class="text-white py-2 px-4 rounded hover:bg-gray-700" id="btnSaveBlog"
+                    style="background-color: #EE154B;width:100px;">
                     Lưu
                 </button>
             </div>

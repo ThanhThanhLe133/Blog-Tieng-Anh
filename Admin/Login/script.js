@@ -33,10 +33,10 @@ $(document).ready(function () {
     });
 
     //chưa login -> ko vào đc menu
-    $(".nav__item").on("click", function (e) {
+    $(".nav__item:not(#homepageLink)").on("click", function (e) {
         e.preventDefault();
         $("#custom-alert").show();
-    });
+    });    
 
     $(".btn-close").on("click", function (e) {
         e.preventDefault();

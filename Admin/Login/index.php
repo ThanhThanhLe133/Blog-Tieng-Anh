@@ -68,6 +68,11 @@ session_destroy();
                     <!-- nav -->
                     <nav class="header__nav">
                         <ul class="nav__list">
+                            <li class="nav__item" id="homepageLink">
+                                <a class="nav__link" href="../../Web/Homepage/index.html">
+                                    <p class="nav__text">HOMEPAGE (for guest)</p>
+                                </a>
+                            </li>
                             <li class="nav__item">
                                 <a class="nav__link" href="../Login/index.php">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>

@@ -64,6 +64,16 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
+                                <a class="nav__link" href="../../Web/Homepage/index.html">
+                                    <p class="nav__text">HOMEPAGE (for guest)</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="../../Web/Homepage/index.php">
+                                    <p class="nav__text">HOMEPAGE (for guest)</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
                                 <a class="nav__link" href="../QuanLyInputForm/index.html">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
@@ -140,11 +150,11 @@
             </div>
         </form>
         <div id="custom-alert">
-                <div class="message">
-                    Vui lòng đăng nhập trước!
-                </div>
-                <button class="btn-close">Đóng</button>
+            <div class="message">
+                Vui lòng đăng nhập trước!
             </div>
+            <button class="btn-close">Đóng</button>
+        </div>
         <div class="kq"></div>
         <div id="custom-close">
             <div class="message">

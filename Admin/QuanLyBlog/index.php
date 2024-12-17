@@ -63,6 +63,11 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
+                                <a class="nav__link" href="../../Web/Homepage/index.html">
+                                    <p class="nav__text">HOMEPAGE (for guest)</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
                                 <a class="nav__link" href="../QuanLyInputForm/index.php">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
@@ -156,9 +161,9 @@
                         <button id="cancelSort" class="text-blue-500">Huỷ Sort</button>
                         <button id="closeSort" class="text-red-500">Đóng</button>
                     </div>
-                    </div>
                 </div>
             </div>
+        </div>
         </div>
 
         <div class="mx-auto p-6 bg-white shadow-md rounded-lg mt-10 blogForm">

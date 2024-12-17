@@ -63,6 +63,11 @@
                     <nav class="header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
+                                <a class="nav__link" href="../../Web/Homepage/index.html">
+                                    <p class="nav__text">HOMEPAGE (for guest)</p>
+                                </a>
+                            </li>
+                            <li class="nav__item">
                                 <a class="nav__link" href="">
                                     <p class="nav__text">QUẢN LÝ THÔNG TIN FORM</p>
                                 </a>
@@ -76,7 +81,7 @@
 
                             <li class="nav__item">
                                 <a class="nav__link" href="">
-                                        <p class="nav__text">QUẢN LÝ BLOG</p>
+                                    <p class="nav__text">QUẢN LÝ BLOG</p>
                                 </a>
                             </li>
                             <li class="nav__item">
