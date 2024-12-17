@@ -213,10 +213,10 @@ CREATE TABLE `guest` (
 --
 
 INSERT INTO `guest` (`id`, `firstName`, `lastName`, `phone`, `email`, `studySchool`, `birthYear`, `currentDate`) VALUES
-(1, 'John', 'Doe', '1234567890', 'john.doe@example.com', 'Harvard University', 1990, '2024-12-17 15:31:30'),
-(2, 'Jane', 'Smith', '0987654321', 'jane.smith@example.com', 'Oxford University', 1992, '2024-12-17 15:31:30'),
-(3, 'Michael', 'Johnson', '5678901234', 'michael.johnson@example.com', 'Stanford University', 1988, '2024-12-17 15:31:30'),
-(4, 'Emily', 'Brown', '4321098765', 'emily.brown@example.com', 'MIT', 1995, '2024-12-17 15:31:30');
+(1, 'John', 'Doe', '1234567890', 'john.doe@example.com', 'Kid&Us City Land Park Hills', 2009, '2024-12-17 15:31:30'),
+(2, 'Jane', 'Smith', '0987654321', 'jane.smith@example.com', 'Kid&Us Tên Lửa', 2019, '2024-12-17 15:31:30'),
+(3, 'Michael', 'Johnson', '5678901234', 'michael.johnson@example.com', 'Kid&Us Lê Văn Việt', 2022, '2024-12-17 15:31:30'),
+(4, 'Emily', 'Brown', '4321098765', 'emily.brown@example.com', 'Kid&Us Nguyen Thi Thap', 2010, '2024-12-17 15:31:30');
 
 -- --------------------------------------------------------
 
