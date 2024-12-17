@@ -48,19 +48,7 @@ $(document).ready(function () {
     $("#addBlog").on('click', function() {
         window.open("../TaoBlog/index.php", "_blank");
     });
-    $("#image_title").on('click', function () {
-        if ($blog_id != null) {
-            $.post('delete_image_title.php', {blog_id: blog_id }, function (response) {
-                if (response.includes('success')) {
-                    $("#currentImg").hide();
-                    return;
-                } else {
-                    $("#custom-alert .message").text("Lỗi khi đổi ảnh tiêu đề");
-                    $("#custom-alert").show();
-                }
-            });
-        }
-    });
+
     $(".btn-close").on("click", function (e) {
         e.preventDefault();
         $("#custom-alert").hide();

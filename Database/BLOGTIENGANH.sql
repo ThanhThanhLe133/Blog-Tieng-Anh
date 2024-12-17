@@ -282,8 +282,7 @@ ALTER TABLE `blog_images`
 -- Indexes for table `blog_images_title`
 --
 ALTER TABLE `blog_images_title`
-  ADD PRIMARY KEY (`image_title_id`),
-  ADD KEY `blog_id` (`blog_id`);
+  ADD PRIMARY KEY (`blog_id`);
 
 --
 -- Indexes for table `categories`
@@ -336,11 +335,6 @@ ALTER TABLE `blogs`
 ALTER TABLE `blog_images`
   MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `blog_images_title`
---
-ALTER TABLE `blog_images_title`
-  MODIFY `image_title_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `categories`

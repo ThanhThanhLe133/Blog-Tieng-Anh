@@ -15,6 +15,13 @@ if ($result->num_rows > 0) {
         echo "Lỗi khi cập nhập blog";
         exit;
     }
+    $sql_delete = "DELETE FROM blog_images_title WHERE blog_id = '$blog_id'";
+    if ($conn->query($sql_delete)) {
+        echo "success";
+    } else {
+        echo "error";
+        exit;
+    }
 }
 
 if (isset($_FILES['image_title']) && $_FILES['image_title']['error'] === UPLOAD_ERR_OK) {
