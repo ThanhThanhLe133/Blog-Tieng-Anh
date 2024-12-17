@@ -22,12 +22,28 @@ $(document).ready(() => {
     $('.register__button').on('click', function (event) {
         event.preventDefault();
 
-        const firstName = $('.firstName').val();
-        const lastName = $('.lastName').val();
-        const phone = $('.phone').val();
-        const email = $('.email').val();
-        const studySchool = $('.studySchool').val();
-        const birthYear = $('.birthYear').val();
+        let firstName = $('.firstName').val();
+        let lastName = $('.lastName').val();
+        let phone = $('.phone').val();
+        let email = $('.email').val();
+        let studySchool = $('.studySchool').val();
+        let birthYear = $('.birthYear').val();
+
+        if (!firstName || !lastName || !phone || !email || !studySchool || !birthYear) {
+            $('#custom-alert').show();
+            $(".message").text("Vui lòng nhập đầy đủ tất cả thông tin.");
+            return;
+        }
+        else if (email.indexOf('@') === -1) {
+            $('#custom-alert').show();
+            $(".message").text("Email phải chứa ký tự '@'.");
+            return;
+        }
+        else if (/[^0-9]/.test(phone)) {
+            $('#custom-alert').show();
+            $(".message").text("Số điện thoại không được chứa ký tự chữ cái hoặc ký tự đặc biệt.");
+            return;
+        }
 
         console.log(firstName);
         $.post("../../Admin/send-form.php", {
@@ -49,7 +65,9 @@ $(document).ready(() => {
     $('#close-alert').on('click', function (e) {
         e.preventDefault();
         $('#custom-alert').hide();
-        window.scrollTo(0, 0);
-        location.reload();
+        if( $(".message").text().includes("đã")){
+            window.scrollTo(0, 0);
+            location.reload();
+        }
     });
 })
