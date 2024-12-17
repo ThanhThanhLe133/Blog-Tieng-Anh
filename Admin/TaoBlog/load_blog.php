@@ -50,15 +50,15 @@ if ($result->num_rows > 0) {
 
                 $sql_image_title = "SELECT * FROM blog_images WHERE image_id = $img_id";
                 $result_image_title = $conn->query($sql_image_title);
-                $image_title_url = '';
+                $image_content_url = '';
 
                 if ($result_image_title && $result_image_title->num_rows > 0) {
                     $image_title_row = $result_image_title->fetch_assoc();
                     $image_data = $image_title_row['image'];
-                    $image_title_url = 'data:image/jpeg;base64,' . base64_encode($image_data);
+                    $image_content_url = 'data:image/jpeg;base64,' . base64_encode($image_data);
                 }
 
-                $content = str_replace($img_src, $image_title_url, $content);
+                $content = str_replace($img_src, $image_content_url, $content);
             }
         }
     }

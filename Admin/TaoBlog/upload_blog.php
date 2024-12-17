@@ -10,7 +10,6 @@ if ($result->num_rows > 0) {
     $sql_delete_images = "DELETE FROM blog_images WHERE blog_id = '$blog_id'";
     $sql_delete_content = "UPDATE blogs SET content = NULL WHERE blog_id = '$blog_id'";
 
-
     if ($conn->query($sql_delete_images) !== TRUE || $conn->query($sql_delete_content) !== TRUE) {
         echo "Lỗi khi cập nhập blog";
         exit;
