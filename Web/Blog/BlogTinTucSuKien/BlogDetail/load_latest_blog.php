@@ -1,7 +1,7 @@
 <?php
 
 include "../../conn.php";
-$sql = "SELECT * FROM blogs where category_id=1 ORDER BY created_at DESC LIMIT 3";
+$sql = "SELECT * FROM blogs where category_id=2 ORDER BY created_at DESC LIMIT 3";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
