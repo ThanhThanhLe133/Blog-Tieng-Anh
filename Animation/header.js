@@ -26,7 +26,7 @@ $(document).ready(() => {
     });
 
     function loadData() {
-        $.post("../islogin.php", {}, function (response) {
+        $.post("../../animation/islogin.php", {}, function (response) {
             $(".header__action").html(response);
         });
     }
@@ -39,7 +39,7 @@ $(document).ready(() => {
            
             if (result) {
                 setTimeout(function () {
-                    window.location.href = "../user/login/index.php";
+                    window.location.href = "../../user/login/index.php";
                 }, 500);
             }
         });
