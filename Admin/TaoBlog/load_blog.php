@@ -7,17 +7,6 @@ $result = $conn->query($sql);
 $html = "";
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $sql_image_title = "SELECT * FROM blog_images_title WHERE blog_id = $blog_id";
-
-    $result_image_title = $conn->query($sql_image_title);
-    $image_title_url = '';
-    if ($result_image_title && $result_image_title->num_rows > 0) {
-        $image_title_row = $result_image_title->fetch_assoc();
-        $image_data = $image_title_row['image'];
-
-        $image_title_url = 'data:image/jpeg;base64,' . base64_encode($image_data);
-    }
-
     $html .= "<h1 class='text-2xl font-bold mb-4'>Sửa blog</h1>";
 
     $html .= '<div class="mb-4">
@@ -73,7 +62,7 @@ if ($result->num_rows > 0) {
             </div>
         </div>
     </div>';
-    $html .="
+    $html .= "
     <script>
       var quill = new Quill('#editor', {
         theme: 'snow',
@@ -94,6 +83,16 @@ if ($result->num_rows > 0) {
         var content = '$content'; 
         quill.root.innerHTML = content; 
     </script>";
+    $sql_image_title = "SELECT * FROM blog_images_title WHERE blog_id = $blog_id";
+
+    $result_image_title = $conn->query($sql_image_title);
+    $image_title_url = '';
+    if ($result_image_title && $result_image_title->num_rows > 0) {
+        $image_title_row = $result_image_title->fetch_assoc();
+        $image_data = $image_title_row['image'];
+
+        $image_title_url = 'data:image/jpeg;base64,' . base64_encode($image_data);
+    }
 
     if ($image_title_url) {
         $html .= "<div class='mb-4' id='currentImg'>
