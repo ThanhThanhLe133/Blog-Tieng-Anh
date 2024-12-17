@@ -9,7 +9,7 @@ CREATE TABLE guest (
     email VARCHAR(255) NOT NULL,                     -- Email
     studySchool VARCHAR(255),                        -- Trường học
     birthYear INT(4),                                -- Năm sinh
-    currentDate DATE DEFAULT CURRENT_DATE            -- Ngày hiện tại, mặc định là ngày hôm nay
+    currentDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP           -- Ngày hiện tại, mặc định là ngày hôm nay
 );
 
 

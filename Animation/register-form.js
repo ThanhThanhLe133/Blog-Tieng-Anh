@@ -28,7 +28,6 @@ $(document).ready(() => {
         const email = $('.email').val();
         const studySchool = $('.studySchool').val();
         const birthYear = $('.birthYear').val();
-        const currentDate = new Date().toISOString().split('T')[0];  
 
         console.log(firstName);
         $.post("../../Admin/send-form.php", {
@@ -37,8 +36,7 @@ $(document).ready(() => {
             phone: phone,
             email: email,
             studySchool: studySchool,
-            birthYear: birthYear,
-            currentDate: currentDate
+            birthYear: birthYear
         }, function (response) {
             $('#custom-alert').show();
             $(".message").text(response);

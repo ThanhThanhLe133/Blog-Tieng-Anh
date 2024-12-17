@@ -6,9 +6,8 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 $studySchool = $_POST['studySchool'];
 $birthYear = $_POST['birthYear'];
-$currentDate = $_POST['currentDate'];
-$strSQL = "INSERT INTO guest (firstName, lastName, phone, email, studySchool, birthYear, currentDate) 
-               VALUES ('$firstName', '$lastName', '$phone', '$email', '$studySchool', '$birthYear', '$currentDate')";
+$strSQL = "INSERT INTO guest (firstName, lastName, phone, email, studySchool, birthYear) 
+               VALUES ('$firstName', '$lastName', '$phone', '$email', '$studySchool', '$birthYear')";
 
 if ($conn->query($strSQL) === TRUE) {
     echo "Thông tin của bạn đã được gửi tới chúng tôi!";
