@@ -57,7 +57,10 @@ $(document).ready(function () {
                         .removeClass("error")
                         .addClass("success")
                         .html(response);
-                        window.location.href = "../Login/index.php";
+                        setTimeout(function () {
+                            window.location.href = "../Login/index.php";
+                        }, 800);
+                       
                 } else {
                     $(".kq")
                         .removeClass("success")

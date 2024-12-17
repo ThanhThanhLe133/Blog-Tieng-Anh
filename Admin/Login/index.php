@@ -117,7 +117,7 @@ session_destroy();
     <main>
         <form method="post" id="loginForm">
             <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
-                <h2 class="text-2xl font-bold mb-4">Đăng nhập</h2>
+                <h2 class="text-2xl font-bold mb-4">Đăng nhập Admin</h2>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
                     <input

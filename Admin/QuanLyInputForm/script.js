@@ -3,6 +3,7 @@ $(document).ready(function () {
     displayGuestData();
     loadFilterBox();
     var originalRows = [];
+    
     //nút tìm kiếm
     $('#search-input').on('keyup', function () {
         var searchTerm = $(this).val().toLowerCase();
@@ -88,7 +89,6 @@ $(document).ready(function () {
     });
     $('#applySortAZ').on('click', function () {
         var sortKey = $("#sortSelect").val();
-        alert(sortKey);
         
         $("#sortBox").hide();
         if (sortKey) {
