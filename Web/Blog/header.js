@@ -30,7 +30,7 @@ $(document).ready(() => {
            
             if (result) {
                 setTimeout(function () {
-                    window.location.href = "../../user/login/index.php";
+                    window.location.href = "../../../../user/login/index.php";
                 }, 500);
             }
         });

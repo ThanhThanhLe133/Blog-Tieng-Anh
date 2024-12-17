@@ -17,7 +17,7 @@ if ($conn->query($strSQL) === TRUE) {
 
     if ($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $html = '<div class="comment" id="comment" data-comment_id="' . htmlspecialchars($row['comment_id']) . '">
+        $html = '<div class="comment" id="commentUser" data-comment_id="' . htmlspecialchars($row['comment_id']) . '">
         <div><span class="name">@' . htmlspecialchars($row['f_name']) . ' ' . htmlspecialchars($row['l_name']) . '</span></div>
         <div class="datetime">' . htmlspecialchars($row['created_at']) . '</div>
         <div class="comment">' . htmlspecialchars($comment) . '</div>
