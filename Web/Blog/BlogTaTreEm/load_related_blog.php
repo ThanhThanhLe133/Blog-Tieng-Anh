@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
             <img alt='{$row['title']}' class='w-full h-40 object-cover'
                  height='400' src='{$image_title_url}' width='600'>
             <div class='p-4'>
-                <h3 class='text-lg font-semibold mb-2'>
+                <h3 class='font-semibold mb-2'>
                     {$row['title']}
                 </h3>
                 <p class='text-gray-600 text-sm mb-2'>

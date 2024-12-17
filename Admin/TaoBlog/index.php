@@ -146,8 +146,7 @@
 
             </div>
             <div style="display: flex; justify-content: flex-end; margin-top: 30px; width: 70%;">
-                <button class="text-white py-2 px-4 rounded hover:bg-gray-700" id="btnSaveBlog"
-                    style="background-color: #EE154B;width:100px;">
+                <button class="btn text-white py-2 px-4 rounded hover:bg-gray-700" id="btnSaveBlog">
                     Lưu
                 </button>
             </div>

@@ -44,7 +44,7 @@ if (isset($_FILES['image_title']) && $_FILES['image_title']['error'] === UPLOAD_
         exit;
     }
 } else {
-    echo "Không có hình ảnh được gửi lên.";
+    echo "Không có hình ảnh tiêu đề được gửi lên.";
     exit;
 }
 

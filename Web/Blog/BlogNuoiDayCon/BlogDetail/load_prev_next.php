@@ -12,7 +12,7 @@ if ($result_prev->num_rows > 0) {
 $next_sql = "SELECT * FROM blogs WHERE blog_id > $blog_id ORDER BY blog_id ASC LIMIT 1";
 $result_next = $conn->query($next_sql);
 if ($result_next->num_rows > 0) {
-    $row=$result_prev->fetch_assoc();
+    $row=$result_next->fetch_assoc();
     $html.= "<a class='text-blue-600' href='index.html?blog_id={$row['blog_id']}'>NEXT</a>
     <h3 class='text-xl font-semibold'>{$row['title']}</h3>";
 }

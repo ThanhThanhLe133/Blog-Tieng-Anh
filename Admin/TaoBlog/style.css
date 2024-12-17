@@ -2,38 +2,11 @@
     position: relative;
     top: 0px;
 }
-#custom-alert {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 48%;
-    transform: translate(-50%, -50%);
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    padding: 50px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-}
 
-#custom-alert .message {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-#custom-alert .btn-close {
-    background-color: #721c24;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 3px;
-    margin: 0 60px;
-}
-
-#custom-alert .btn-close:hover {
-    background-color: #a71d2a;
+#btnSaveBlog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -629,6 +602,7 @@ video {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1))
 }
+
 .notification-modal {
     position: fixed;
     top: 50%;
@@ -642,9 +616,11 @@ video {
     width: 300px;
     text-align: center;
 }
+
 .notification-content p {
     margin-bottom: 10px;
 }
+
 .close-btn {
     background-color: #007BFF;
     color: white;
@@ -653,6 +629,7 @@ video {
     padding: 8px 16px;
     cursor: pointer;
 }
+
 .close-btn:hover {
     background-color: #0056b3;
 }
@@ -683,13 +660,15 @@ video {
     outline: 2px solid transparent;
     outline-offset: 2px
 }
-#btnSaveBlog{
+
+#btnSaveBlog {
     margin: 30px;
     display: flex;
     flex-direction: column;
     background-color: #EE154B;
 }
-#blog-table{
+
+#blog-table {
     max-width: 500px;
     overflow-y: auto;
 }
