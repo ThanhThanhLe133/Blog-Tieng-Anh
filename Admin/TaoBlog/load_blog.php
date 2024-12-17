@@ -48,13 +48,13 @@ if ($result->num_rows > 0) {
             if (!empty($img_id_match[1])) {
                 $img_id = $img_id_match[1];
 
-                $sql_image_title = "SELECT * FROM blog_images WHERE image_id = $img_id";
-                $result_image_title = $conn->query($sql_image_title);
+                $sql_image_content = "SELECT * FROM blog_images WHERE image_id = $img_id";
+                $result_image_content = $conn->query($sql_image_content);
                 $image_content_url = '';
 
-                if ($result_image_title && $result_image_title->num_rows > 0) {
-                    $image_title_row = $result_image_title->fetch_assoc();
-                    $image_data = $image_title_row['image'];
+                if ($result_image_content && $result_image_content->num_rows > 0) {
+                    $image_content_row = $result_image_content->fetch_assoc();
+                    $image_data = $image_content_row['image'];
                     $image_content_url = 'data:image/jpeg;base64,' . base64_encode($image_data);
                 }
 
