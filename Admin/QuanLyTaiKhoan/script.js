@@ -184,7 +184,7 @@ $(document).ready(function () {
         $("#custom-close").show();
         $(".btn-ok").on('click', function (e) {
             e.preventDefault();
-            $("#custom-close").hide()
+            $("#custom-close").hide();
             $.post('deleteUser.php', { users_id: users_id }, function (response) {
                 if (response.includes('success')) {
                     row.remove();
@@ -205,11 +205,10 @@ $(document).ready(function () {
         $("#custom-close .message").html("Bạn có chắc chắn muốn duyệt người dùng này?");
         $("#custom-close").show();
         $(".btn-ok").on('click', function (e) {
+            $("#custom-alert").hide();
             e.preventDefault();
-            $("#custom-close").prop("disabled", true);
-            $("#custom-alert .message").text('Đang gửi xác nhận. Vui lòng chờ...');
+            $("#custom-close").hide();
 
-            $("#custom-alert").show();
             $.post('approveUser.php', { users_id: users_id }, function (response) {
                 if (response.includes('success')) {
                     row.remove();
