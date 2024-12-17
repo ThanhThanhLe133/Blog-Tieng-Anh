@@ -1,9 +1,12 @@
 $(document).ready(function () {
     //click vào input -> xoá
-    $("#new-password, #confirm-password").on('click', function () {
+    $("#new-password").on('click', function () {
         $(".kq").html("");
-        $("#new-password").val("");
-        $("#confirm-password").val("");
+        if($("#new-password").val()!==null)
+        {
+            $("#new-password").val("");
+            $("#confirm-password").val("");
+        }
         $(".kq")
             .removeClass("success")
             .removeClass("error")
@@ -23,16 +26,15 @@ $(document).ready(function () {
             handleUpdatePass();
         }
     });
-
     //sự kiện nhấn nút thay đổi pass-> handleUpdatePass
     $("#updatePass").on('click', function (e) {
         e.preventDefault();
+
         handleUpdatePass();
     });
     function handleUpdatePass() {
         let newPassword = $("#new-password").val();
         let confirmPassword = $("#confirm-password").val();
-        
         if (newPassword === "" || confirmPassword === "") {
             $(".kq")
                 .removeClass("success")
@@ -46,6 +48,8 @@ $(document).ready(function () {
                 .html("Xác nhận mật khẩu không khớp!");
         }
         else {
+
+            
             $.post("changePassword.php", {
                 newPassword: newPassword
             }, function (response) {
@@ -86,5 +90,18 @@ $(document).ready(function () {
             icon.attr("src", "../../Images/eye_close.png");
         }
     })
-
+    $(".showpass").on("mousedown", function (e) {
+        e.preventDefault();
+        let pass = $(this).siblings("input");
+        let icon = $(this).find("img");
+        pass.attr("type", "text"); 
+        icon.attr("src", "../../Images/eye.png")
+    });
+    $(".showpass").on("mouseup mouseleave", function (e) {
+        e.preventDefault();
+        let pass = $(this).siblings("input");
+        let icon = $(this).find("img");
+        pass.attr("type", "password");
+        icon.attr("src", "../../Images/eye_close.png");
+    })
 });

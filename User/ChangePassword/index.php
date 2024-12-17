@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../../Styles/general-styles.css">
     <link rel="stylesheet" href="../../Styles/header.css">
     <link rel="stylesheet" href="../../Styles/footer.css">
-    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="../../Styles/animation-general.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,7 +146,7 @@
 
     <!-- main -->
     <main>
-        <form action="#" method="POST" id="changePassForm">
+        <form action="" method="POST" id="changePassForm">
             <div class="w-3/4 bg-white p-8 ml-8 shadow-lg">
                 <h2 class="text-2xl font-bold mb-4">Cập nhật mật khẩu mới</h2>
                 <p class="text-gray-600 text-sm mb-4">
@@ -181,6 +180,7 @@
 
             </div>
         </form>
+        <div class="kq"></div>
         <div id="custom-close">
             <div class="message">
                 Bạn có chắc chắn muốn thoát?
@@ -297,7 +297,7 @@
 
     <script src="script.js"> </script>
     <script src="../../Animation/load-effect.js"></script>
-    <script src="../Animation/Header.js"> </script>
+    <script src="../Header.js"> </script>
 </body>
 
 </html>

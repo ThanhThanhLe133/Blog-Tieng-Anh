@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION['user_name'])) {
     echo "<script>
         alert('Vui lòng đăng nhập!');
-        window.location.href = '../ login/index.php';
+        window.location.href = '../login/index.php';
     </script>";
     exit;
 }
@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
 
 if ($currentPassword === $newPassword) {
     echo "Mật khẩu mới không được trùng với mật khẩu hiện tại.";
-    return;
+    exit;
 }
 $sql = "UPDATE admin SET password = '$newPassword' WHERE username='$user_name'";
 

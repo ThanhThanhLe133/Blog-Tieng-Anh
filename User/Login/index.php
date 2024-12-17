@@ -299,7 +299,7 @@ session_destroy();
 
     <script src="script.js"> </script>
     <script src="../../Animation/load-effect.js"></script>
-    <script src="../Animation/Header.js"> </script>
+    <script src="../Header.js"> </script>
 
 </body>
 

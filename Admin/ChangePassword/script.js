@@ -1,9 +1,12 @@
 $(document).ready(function () {
     //click vào input -> xoá
-    $("#new-password, #confirm-password").on('click', function () {
+    $("#new-password").on('click', function () {
         $(".kq").html("");
-        $("#new-password").val("");
-        $("#confirm-password").val("");
+        if($("#new-password").val()!==null)
+        {
+            $("#new-password").val("");
+            $("#confirm-password").val("");
+        }
         $(".kq")
             .removeClass("success")
             .removeClass("error")
@@ -32,8 +35,6 @@ $(document).ready(function () {
     function handleUpdatePass() {
         let newPassword = $("#new-password").val();
         let confirmPassword = $("#confirm-password").val();
-        console.log(newPassword);
-        console.log(confirmPassword);
 
         if (newPassword === "" || confirmPassword === "") {
             $(".kq")
@@ -51,14 +52,12 @@ $(document).ready(function () {
             $.post("changePassword.php", {
                 newPassword: newPassword
             }, function (response) {
-                if (response.includes("thành công")) {
+                if (response.includes("công")) {
                     $(".kq")
                         .removeClass("error")
                         .addClass("success")
                         .html(response);
-                    setTimeout(function () {
                         window.location.href = "../Login/index.php";
-                    }, 500);
                 } else {
                     $(".kq")
                         .removeClass("success")
