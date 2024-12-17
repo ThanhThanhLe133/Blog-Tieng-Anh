@@ -1,14 +1,4 @@
 <?php
-
-session_start();
-
-if (!isset($_SESSION['user_name'])) {
-    echo "<script>
-        alert('Vui lòng đăng nhập!');
-        window.location.href = '../login/index.php';
-    </script>";
-    exit;
-}
 include "../conn.php";
 $sql = "SELECT * FROM users";
 

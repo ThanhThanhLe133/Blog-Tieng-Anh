@@ -153,6 +153,9 @@
                     <div>
                         <button id="applySortAZ" class="text-blue-500">A-Z</button>
                         <button id="applySortZA" class="text-blue-500">Z-A</button>
+                        <button id="cancelSort" class="text-blue-500">Huỷ Sort</button>
+                        <button id="closeSort" class="text-red-500">Đóng</button>
+                    </div>
                     </div>
                 </div>
             </div>

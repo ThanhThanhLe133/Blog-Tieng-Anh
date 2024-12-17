@@ -1,10 +1,13 @@
+
 $(document).ready(function () {
     //load ds blogs
     displayBlogData();
-    $(".addBlog").on("click", function () {
+    $("#addBlog").on("click", function () {
         window.location.href = "../TaoBlog/index.php";
     })
+    var originalRows = [];
     loadFilterBox();
+
     //xử lý xoá
     $('#blog-table').on('click', '.deleteBtn', function () {
         var row = $(this).closest('tr');
@@ -55,7 +58,6 @@ $(document).ready(function () {
         });
     });
 
-
     $('#search-input').keydown(function (e) {
         if (e.which === 13) {
             var searchTerm = $(this).val().toLowerCase();
@@ -77,7 +79,6 @@ $(document).ready(function () {
     $('#closeFilter').on("click", function () {
         $('#filterBox').hide();
     });
-
 
     // Áp dụng bộ lọc khi nhấn nút Áp dụng
     $('#applyFilter').on("click", function () {
@@ -114,7 +115,9 @@ $(document).ready(function () {
             }
         });
     });
-
+    $("#closeSort").on("click", function () {
+        $('#sortBox').hide();
+    });
     // Mở/đóng hộp sắp xếp khi nhấn nút sắp xếp
     $('#sortButton').on("click", function () {
         $('#sortBox').slideToggle(300);
@@ -129,13 +132,11 @@ $(document).ready(function () {
                     var keyA = $(a).children(`.${sortKey}`).text().trim();
                     var keyB = $(b).children(`.${sortKey}`).text().trim();
 
-                    // Chuyển đổi chuỗi "hh:mm dd/mm/yyyy" thành đối tượng Date
                     var dateA = convertToDate(keyA);
                     var dateB = convertToDate(keyB);
 
-                    // So sánh các đối tượng Date
-                    if (dateA < dateB) return -1;
-                    if (dateA > dateB) return 1;
+                    if (dateA < dateB) return 1;
+                    if (dateA > dateB) return -1;
                     return 0;
                 });
             }
@@ -172,10 +173,9 @@ $(document).ready(function () {
 
                     var dateA = convertToDate(keyA);
                     var dateB = convertToDate(keyB);
-                    alert(dateA, dateB);
-                    // So sánh các đối tượng Date
-                    if (dateA < dateB) return 1;
-                    if (dateA > dateB) return -1;
+
+                    if (dateA < dateB) return -1;
+                    if (dateA > dateB) return 1;
                     return 0;
                 });
             }
@@ -189,18 +189,32 @@ $(document).ready(function () {
                     if (keyA > keyB) return -1;
                     return 0;
                 });
-                $.each(rows, function (index, row) {
-                    $('#blog-table').append(row);
-                });
             }
+
+            $.each(rows, function (index, row) {
+                $('#blog-table').append(row);
+            });
         }
         else {
             alert("Vui lòng chọn một cột để sắp xếp!");
         }
     });
+
+    $('#cancelSort').on('click', function () {
+        $("#sortBox").hide();
+        $('#blog-table').empty();
+        $.each(originalRows, function (index, row) {
+            $('#blog-table').append(row);
+        });
+        $("#sortSelect").val("");
+    });
+
     function displayBlogData() {
         $.post("getData.php", {}, function (response) {
             $('#blog-table').append(response);
+            $('#blog-table tr').each(function () {
+                originalRows.push($(this).clone());
+            });
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
         });
@@ -225,11 +239,19 @@ $(document).ready(function () {
             return;
         });
     }
-    function convertToDate(timeString) {
-        var parts = timeString.split(' ');
+    function convertToDate(dateString) {
+        var parts = dateString.split(' ');
         var timeParts = parts[0].split(':');
         var dateParts = parts[1].split('/');
-        var formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}T${timeParts[0]}:${timeParts[1]}:${timeParts[2]}Z`;
-        return new Date(formattedDate);
+
+        // Lấy các giá trị
+        var hours = parseInt(timeParts[0], 10);
+        var minutes = parseInt(timeParts[1], 10);
+        var seconds = parseInt(timeParts[2], 10);
+        var day = parseInt(dateParts[0], 10);
+        var month = parseInt(dateParts[1], 10) - 1;
+        var year = parseInt(dateParts[2], 10);
+
+        return new Date(year, month, day, hours, minutes, seconds);
     }
 });

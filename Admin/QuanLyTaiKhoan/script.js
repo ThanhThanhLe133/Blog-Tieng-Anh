@@ -2,7 +2,7 @@ $(document).ready(function () {
     //load ds user
     displayUserData();
     loadFilterBox();
-
+    var originalRows = [];
     //nút tìm kiếm
     $('#search-input').on('keyup', function () {
         var searchTerm = $(this).val().toLowerCase();
@@ -84,25 +84,43 @@ $(document).ready(function () {
             }
         });
     });
-
+    $("#closeSort").on("click", function () {
+        $('#sortBox').hide();
+    });
     // Mở/đóng hộp sắp xếp khi nhấn nút sắp xếp
     $('#sortButton').on("click", function () {
         $('#sortBox').slideToggle(300);
     });
     $('#applySortAZ').on('click', function () {
         var sortKey = $("#sortSelect").val();
-        
         $("#sortBox").hide();
         if (sortKey) {
-            var rows = $('#user-table tr').get();
-            rows.sort(function (a, b) {
-                var keyA = $(a).children(`.${sortKey}`).text().toLowerCase();
-                var keyB = $(b).children(`.${sortKey}`).text().toLowerCase();
+            if (sortKey === "created_at") {
+                var rows = $('#user-table tr').get();
+                rows.sort(function (a, b) {
+                    var keyA = $(a).children(`.${sortKey}`).text().trim();
+                    var keyB = $(b).children(`.${sortKey}`).text().trim();
 
-                if (keyA < keyB) return -1;
-                if (keyA > keyB) return 1;
-                return 0;
-            });
+                    var dateA = convertToDate(keyA);
+                    var dateB = convertToDate(keyB);
+
+                    if (dateA < dateB) return 1;
+                    if (dateA > dateB) return -1;
+                    return 0;
+                });
+            }
+            else {
+                var rows = $('#user-table tr').get();
+                rows.sort(function (a, b) {
+                    var keyA = $(a).children(`.${sortKey}`).text().toLowerCase();
+                    var keyB = $(b).children(`.${sortKey}`).text().toLowerCase();
+
+                    if (keyA < keyB) return -1;
+                    if (keyA > keyB) return 1;
+                    return 0;
+                });
+            }
+
             $.each(rows, function (index, row) {
                 $('#user-table').append(row);
             });
@@ -116,15 +134,31 @@ $(document).ready(function () {
         var sortKey = $("#sortSelect").val();
         $("#sortBox").hide();
         if (sortKey) {
-            var rows = $('#user-table tr').get();
-            rows.sort(function (a, b) {
-                var keyA = $(a).children(`.${sortKey}`).text().toLowerCase();
-                var keyB = $(b).children(`.${sortKey}`).text().toLowerCase();
+            if (sortKey === "created_at") {
+                var rows = $('#user-table tr').get();
+                rows.sort(function (a, b) {
+                    var keyA = $(a).children(`.${sortKey}`).text().trim();
+                    var keyB = $(b).children(`.${sortKey}`).text().trim();
 
-                if (keyA < keyB) return 1;
-                if (keyA > keyB) return -1;
-                return 0;
-            });
+                    var dateA = convertToDate(keyA);
+                    var dateB = convertToDate(keyB);
+
+                    if (dateA < dateB) return -1;
+                    if (dateA > dateB) return 1;
+                    return 0;
+                });
+            }
+            else {
+                var rows = $('#user-table tr').get();
+                rows.sort(function (a, b) {
+                    var keyA = $(a).children(`.${sortKey}`).text().toLowerCase();
+                    var keyB = $(b).children(`.${sortKey}`).text().toLowerCase();
+
+                    if (keyA < keyB) return 1;
+                    if (keyA > keyB) return -1;
+                    return 0;
+                });
+            }
             $.each(rows, function (index, row) {
                 $('#user-table').append(row);
             });
@@ -133,7 +167,14 @@ $(document).ready(function () {
             alert("Vui lòng chọn một cột để sắp xếp!");
         }
     });
-
+    $('#cancelSort').on('click', function () {
+        $("#sortBox").hide();
+        $('#user-table').empty();
+        $.each(originalRows, function (index, row) {
+            $('#user-table').append(row);
+        });
+        $("#sortSelect").val("");
+    });
     //xử lý xoá
     $('#user-table').on('click', '.deleteBtn', function () {
         var row = $(this).closest('tr');
@@ -231,13 +272,25 @@ $(document).ready(function () {
     function displayUserData() {
         $.post("getData.php", {}, function (response) {
             $('#user-table').append(response);
+            $('#user-table tr').each(function () {
+                originalRows.push($(this).clone());
+            });
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
         });
     }
-    function decodeHtml(html) {
-        var textarea = document.createElement("textarea");
-        textarea.innerHTML = html;
-        return textarea.value;
+    function convertToDate(dateString) {
+        var parts = dateString.split(' ');
+        var timeParts = parts[0].split(':');
+        var dateParts = parts[1].split('/');
+
+        var hours = parseInt(timeParts[0], 10);
+        var minutes = parseInt(timeParts[1], 10);
+        var seconds = parseInt(timeParts[2], 10);
+        var day = parseInt(dateParts[0], 10);
+        var month = parseInt(dateParts[1], 10) - 1;
+        var year = parseInt(dateParts[2], 10);
+
+        return new Date(year, month, day, hours, minutes, seconds);
     }
 });
