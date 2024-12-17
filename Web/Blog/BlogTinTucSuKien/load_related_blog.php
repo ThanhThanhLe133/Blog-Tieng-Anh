@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
                 </p>
                 <p class='text-gray-600 text-sm'>
                     <i class='fas fa-folder-open'></i>
-                    Nuôi Dạy Con
+                    Tin tức - Sự kiện
                 </p>
             </div>
         </div>";
