@@ -42,6 +42,7 @@ $(document).ready(function () {
 
     // Áp dụng bộ lọc khi nhấn nút Áp dụng
     $('#applyFilter').on("click", function () {
+
         var birthYearFilters = $('#birthYearCheckboxes input:checked').map(function () {
             return $(this).val();
         }).get();
@@ -59,19 +60,19 @@ $(document).ready(function () {
         }).get();
         $('#filterBox').hide();
         $('#guest-table tr').each(function () {
+
             var row = $(this);
             var rowBirthYear = row.find('.birthYear').text();
             var rowFirstName = row.find('.firstName').text();
             var rowLastName = row.find('.lastName').text();
             var rowSchool = row.find('.studySchool').text();
             var rowDate = row.find('.formattedDate').text();
-    
 
             var isBirthYearMatch = birthYearFilters.includes(rowBirthYear);
             var isFirstNameMatch = firstNameFilters.includes(rowFirstName);
             var isLastNameMatch = lastNameFilters.includes(rowLastName);
             var isSchoolMatch = schoolFilters.includes(rowSchool);
-            var isDateMatch = rowDate.includes(dateFilters);
+            var isDateMatch = dateFilters.includes(rowDate);
 
             if (isBirthYearMatch || isFirstNameMatch || isLastNameMatch || isSchoolMatch || isDateMatch) {
                 row.show();
