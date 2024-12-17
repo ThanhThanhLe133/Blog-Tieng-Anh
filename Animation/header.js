@@ -26,7 +26,6 @@ $(document).ready(() => {
     });
 
     function loadData() {
-        
         $.post("http://localhost/BlogTiengAnh/animation/islogin.php", {}, function (response) {
             $(".header__action").html(response);
         });
