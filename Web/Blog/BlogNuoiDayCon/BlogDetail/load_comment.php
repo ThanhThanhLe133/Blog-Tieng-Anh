@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
     }
     echo $html;
 } else {
-    echo "Không tìm thấy bản ghi.";
+    echo "";
 }
 
 $conn->close();
