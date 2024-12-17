@@ -627,3 +627,7 @@ video {
 .blog-list{
     margin: 50px;
 }
+.current {
+    font-weight: bold;
+    color: #282626;
+}

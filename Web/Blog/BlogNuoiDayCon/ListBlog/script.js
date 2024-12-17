@@ -22,6 +22,10 @@ $(document).ready(function () {
     function seperatePage(page) {
         $.post("seperate_page.php", { page: page }, function (response) {
             $('#navigationPage').append(response);
+            $('#navigationPage li').each(function() {
+                $(this).removeClass('current');
+            });
+            $('#page' + page).addClass('current');
         }).fail(function () {
             alert("Có lỗi xảy ra, vui lòng thử lại.");
         });

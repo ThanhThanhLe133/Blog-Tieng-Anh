@@ -17,7 +17,7 @@ if ($page > 1) {
 }
 
 for ($i = 1; $i <= $total_pages; $i++) {
-    $html.= "<li><a class='py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700' href='index.html?page=$i'>$i</a></li>";
+    $html.= "<li><a id='page" . $page."'class='py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700' href='index.html?page=$i'>$i</a></li>";
 }
 
 if ($page < $total_pages) {
