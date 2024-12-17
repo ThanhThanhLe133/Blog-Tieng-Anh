@@ -6,7 +6,7 @@ if (isset($_POST['verification_code'])) {
     $input_code = $_POST['verification_code'];
     
     if (isset($_SESSION['verification_code'])) {
-        if (time() - $_SESSION['verification_code_time'] > 30) {
+        if (time() - $_SESSION['verification_code_time'] > 60) {
             echo "Mã xác thực đã hết hạn. Vui lòng yêu cầu mã mới.";
         } elseif ($_SESSION['verification_code'] == $input_code) {
             echo "Mã xác thực đúng!";

@@ -3,9 +3,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require '../PHPMailer/src/SMTP.php';
-require '../PHPMailer/src/PHPMailer.php';
-require '../PHPMailer/src/Exception.php';
+require '../../admin/PHPMailer/src/SMTP.php';
+require '../../admin/PHPMailer/src/PHPMailer.php';
+require '../../admin/PHPMailer/src/Exception.php';
 session_start();
 
 include "../conn.php";
