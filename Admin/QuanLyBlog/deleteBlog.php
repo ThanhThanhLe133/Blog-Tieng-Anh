@@ -10,7 +10,7 @@ $result2 = $conn->query($sql_img);
 
 if($result1->num_rows>0)
 {
-    $sql_image_title = "DELETE FROM blogs_images_title WHERE blog_id  = '$blog_id' ";
+    $sql_image_title = "DELETE FROM blog_images_title WHERE blog_id  = '$blog_id' ";
     $conn->query($sql_image_title);
 }
 if($result2->num_rows>0)

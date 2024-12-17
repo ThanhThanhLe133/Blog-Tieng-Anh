@@ -206,8 +206,7 @@ $(document).ready(function () {
         $("#custom-close").show();
         $(".btn-ok").on('click', function (e) {
             e.preventDefault();
-            $("#custom-close").hide();
-
+            $("#custom-close").prop("disabled", true);
             $("#custom-alert .message").text('Đang gửi xác nhận. Vui lòng chờ...');
 
             $("#custom-alert").show();
