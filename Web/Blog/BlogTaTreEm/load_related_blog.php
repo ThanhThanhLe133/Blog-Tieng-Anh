@@ -3,9 +3,9 @@
 include "../../conn.php";
 $blog_id = $_POST['blog_id'];
 $sql = "
-    (SELECT * FROM blogs WHERE category_id = 1 AND blog_id < $blog_id ORDER BY blog_id DESC LIMIT 2)
+    (SELECT * FROM blogs WHERE category_id = 1 AND blog_id < '$blog_id' ORDER BY blog_id DESC LIMIT 2)
     UNION
-    (SELECT * FROM blogs WHERE category_id = 1 AND blog_id > $blog_id ORDER BY blog_id ASC LIMIT 2)
+    (SELECT * FROM blogs WHERE category_id = 1 AND blog_id > '$blog_id' ORDER BY blog_id ASC LIMIT 2)
 ";
 
 $result = $conn->query($sql);
