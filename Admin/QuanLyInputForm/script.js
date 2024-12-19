@@ -72,12 +72,20 @@ $(document).ready(function () {
             var isFirstNameMatch = firstNameFilters.includes(rowFirstName);
             var isLastNameMatch = lastNameFilters.includes(rowLastName);
             var isSchoolMatch = schoolFilters.includes(rowSchool);
-            var isDateMatch = dateFilters.includes(rowDate);
 
-            if (isBirthYearMatch || isFirstNameMatch || isLastNameMatch || isSchoolMatch || isDateMatch) {
+            var isDateMatch = dateFilters.some(function (filterDate) {
+                var rowDateMatch = extractDate(rowDate); 
+                return rowDateMatch === filterDate; 
+            });
+
+            if (isBirthYearMatch || isFirstNameMatch || isLastNameMatch || isSchoolMatch) {
                 row.show();
             } else {
                 row.hide();
+            }
+            if(isDateMatch===true)
+            {
+                row.show();
             }
         });
     });
@@ -255,5 +263,9 @@ $(document).ready(function () {
         var year = parseInt(dateParts[2], 10);
 
         return new Date(year, month, day, hours, minutes, seconds);
+    }
+    function extractDate(dateTimeStr) {
+       
+        return dateTimeStr.split(' ')[1]; 
     }
 });

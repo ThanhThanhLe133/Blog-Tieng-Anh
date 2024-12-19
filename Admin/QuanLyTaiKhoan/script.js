@@ -70,17 +70,26 @@ $(document).ready(function () {
             var rowSchool = row.find('.studySchool').text();
             var rowDate = row.find('.formattedDate').text();
             var rowStatus = row.find('.approval_status').text();
-
+            
             var isBirthYearMatch = birthYearFilters.includes(rowBirthYear);
             var isFirstNameMatch = firstNameFilters.includes(rowFirstName);
             var isLastNameMatch = lastNameFilters.includes(rowLastName);
             var isSchoolMatch = schoolFilters.includes(rowSchool);
-            var isDateMatch = dateFilters.includes(rowDate);
+
+            var isDateMatch = dateFilters.some(function (filterDate) {
+                var rowDateMatch = extractDate(rowDate); 
+                return rowDateMatch === filterDate; 
+            });
+            
             var isStatusMatch = statusFilter.includes(rowStatus);
-            if (isBirthYearMatch || isFirstNameMatch || isLastNameMatch || isSchoolMatch || isDateMatch||isStatusMatch) {
+            if (isBirthYearMatch || isFirstNameMatch || isLastNameMatch || isSchoolMatch ||isStatusMatch) {
                 row.show();
             } else {
                 row.hide();
+            }
+            if(isDateMatch===true)
+            {
+                row.show();
             }
         });
     });

@@ -4,12 +4,11 @@ $user_name = $_SESSION['user_name'];
 
 include('../conn.php');
 
-// Lấy dữ liệu từ POST và kiểm tra
 $category_id = isset($_POST['category_id']) ? intval($_POST['category_id']) : 0;
 $title = isset($_POST['title']) ? trim($_POST['title']) : '';
 $blog_id = isset($_POST['blog_id']) ? intval($_POST['blog_id']) : 0;
 
-// Kiểm tra xem người dùng có tồn tại không
+
 $strSQL_admin = "SELECT admin_id FROM admin WHERE username = ?";
 $stmt_admin = $conn->prepare($strSQL_admin);
 $stmt_admin->bind_param("s", $user_name);

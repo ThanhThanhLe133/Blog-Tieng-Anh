@@ -96,23 +96,39 @@ $(document).ready(function () {
         }).get();
         $('#filterBox').hide();
         $('#blog-table tr').each(function () {
+      
             var row = $(this);
 
             var rowAuthor = row.find('.author').text();
-            var rowCreated_at = row.find('.created_at').text()
+            var rowCreated_at = row.find('.created_at').text();
             var rowUpdated_at = row.find('.updated_at').text();
             var rowCategory = row.find('.category').text();
 
             var isAuthorMatch = filterAuthor.includes(rowAuthor);
-            var isCreated_atMatch = filterCreatedDate.includes(rowCreated_at);
-            var isUpdated_atMatch = filterUpdatedDate.includes(rowUpdated_at);
+            var isCreated_atMatch = filterCreatedDate.some(function (filterDate) {
+                var rowDate = extractDate(rowCreated_at); 
+                return rowDate === filterDate; 
+            });
+            var isUpdated_atMatch = filterUpdatedDate.some(function (filterDate) {
+                var rowDate = extractDate(rowUpdated_at); 
+                return rowDate === filterDate; 
+            });
+
             var isCategory = filterCategory.includes(rowCategory);
-            console.log(isCreated_atMatch, isUpdated_atMatch, isCategory);
-            if (isAuthorMatch || isCreated_atMatch || isUpdated_atMatch || isCategory) {
+          
+            if (isAuthorMatch===true || isCategory===true) {
                 row.show();
-            } else {
+            }
+            else
+            {
                 row.hide();
             }
+
+            if(isCreated_atMatch===true||isUpdated_atMatch===true)
+            {
+                row.show();
+            }
+                    
         });
     });
     $("#closeSort").on("click", function () {
@@ -253,5 +269,9 @@ $(document).ready(function () {
         var year = parseInt(dateParts[2], 10);
 
         return new Date(year, month, day, hours, minutes, seconds);
+    }
+    function extractDate(dateTimeStr) {
+       
+        return dateTimeStr.split(' ')[1]; 
     }
 });

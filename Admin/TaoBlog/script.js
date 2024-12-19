@@ -45,9 +45,6 @@ $(document).ready(function () {
             }
         });
     });
-    $("#addBlog").on('click', function() {
-        window.open("../TaoBlog/index.php", "_blank");
-    });
 
     $(".btn-close").on("click", function (e) {
         e.preventDefault();
