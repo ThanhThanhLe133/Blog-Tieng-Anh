@@ -31,11 +31,9 @@ C:\xampp
 2. Find and open the php.ini file using Notepad or any text editor.
 3. Search for the following line in the file (you can use Ctrl + F to find it quickly):
 
-ini
 ;extension=gd
 Remove the semicolon (;) at the beginning of the line to enable it:
 
-ini
 extension=gd
 Save the php.ini file.
 
